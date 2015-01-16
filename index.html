@@ -1,0 +1,95 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width" />
+
+  <title>Flickity &middot; beta</title>
+
+  <link rel="stylesheet" href="flickity-docs.css" media="screen" />
+
+</head>
+<body>
+
+<h1>Flickity &middot; beta</h1>
+
+<p class="tagline">Touch, responsive galleries</p>
+
+<h2>Install</h2>
+
+<ul>
+  <li>
+    <a href="flickity.pkgd.js">flickity.pkgd.js</a> uncompressed
+  </li>
+  <li>
+    <a href="flickity.pkgd.min.js">flickity.pkgd.min.js</a> minified
+  </li>
+</ul>
+
+<p>Install with Bower: <code>bower install flickity --save</code></p>
+
+<p>Install with npm: <code>npm install flickity</code></p>
+
+<h2>How to use</h2>
+
+<p>Flickity works on a container gallery element with a group of similar child cell elements.</p>
+
+``` html
+<div id="main-gallery">
+  <div class="gallery-cell">...</div>
+  <div class="gallery-cell">...</div>
+  <div class="gallery-cell">...</div>
+  ...
+</div>
+```
+
+<p>Include the Flickity .js file in your site.</p>
+
+``` html
+<script src="/path/to/flickity.pkgd.min.js"></script>
+```
+
+<p>There are several ways to initialize a Flickity instance.</p>
+
+<p>You can use Flickity as a jQuery plugin: <code>$('selector').flickity()</code>.</p>
+
+``` js
+// init Flickity
+$('#main-gallery).flickity({
+  // options
+  cellAlign: 'left',
+  contain: true
+});
+```
+
+<p>You can use Flickity with vanilla JS: <code>new Flickity( elem )</code>. The <code>Flickity()</code> constructor accepts two arguments: the container element and an options object.</p>
+
+``` js
+var elem = document.querySelector('#main-gallery');
+var flicky = new Flickity( elem, {
+  // options
+  cellAlign: 'left',
+  contain: true
+});
+
+// element argument can be a selector string
+//   for an individual element
+var flicky = new Flickity( '#main-gallery, {
+  // options
+});
+```
+
+<p>You can initialize Flickity in HTML, without writing any JavaScript. Add <code>js-flickity</code> to the class of the container element. Options can be set with a <code>data-flickity-options</code> attribute.</p>
+
+
+``` html
+<div id="main-gallery" class="js-flickity"
+  data-flickity-options='{ "cellAlign": "left", "contain": true }'>
+```
+
+<p><strong>Options set in HTML must be valid JSON.</strong> Keys need to be quoted, for example <code>"cellAlign":</code>. Note that the attribute value uses single quotes <code>'</code>, but the JSON entities use double-quotes <code>"</code>.</p>
+
+<h2>Options</h2>
+
+</body>
+</html>

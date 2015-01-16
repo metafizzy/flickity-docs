@@ -63,6 +63,11 @@ body {
   margin-right: 2%;
 }
 
+.show-neighbors .gallery-cell {
+  width: 66%;
+  margin: 0 5px;
+}
+
 @media screen and ( min-width: 768px ) {
   .example__code,
   .example__demo {

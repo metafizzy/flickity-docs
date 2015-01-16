@@ -186,6 +186,173 @@ var flicky = new Flickity( '#main-gallery', {
 
 <h2>Options</h2>
 
+<h3>cellAlign</h3>
+
+<p>Align cells within the container element.</p>
+
+<ul>
+  <li>Values: <code>'center'</code>, <code>'left'</code>, <code>'right'</code></li>
+  <li>Default: <code>'center'</code></li>
+</ul>
+
+<div class="example">
+  <div class="example__code">
+``` js
+{ cellAlign: 'left' }
+```
+  </div>
+  <div class="example__demo">
+    <div class="gallery show-neighbors js-flickity"
+      data-flickity-options='{ "cellAlign": "left" }'>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
+
+<div class="example">
+  <div class="example__code">
+``` js
+/* default 'center' */
+```
+  </div>
+  <div class="example__demo">
+    <div class="gallery show-neighbors js-flickity">
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
+
+<div class="example">
+  <div class="example__code">
+``` js
+{ cellAlign: 'right' }
+```
+  </div>
+  <div class="example__demo">
+    <div class="gallery show-neighbors js-flickity"
+      data-flickity-options='{ "cellAlign": "right" }'>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
+
+<h3>wrapAround</h3>
+
+<p>At the end of cells, wrap-around to the other end for infinite scrolling.</p>
+
+<ul>
+  <li>Values: <code>true</code>, <code>false</code></li>
+  <li>Default: <code>false</code></li>
+</ul>
+
+<div class="example">
+  <div class="example__code">
+``` js
+{ wrapAround: true }
+```
+  </div>
+  <div class="example__demo">
+    <div class="gallery show-neighbors js-flickity"
+      data-flickity-options='{ "wrapAround": true }'>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
+
+<h3>contain</h3>
+
+  contain: false,
+  // will contain cells to container
+  // so no excess scroll at beginning or end
+  // has no effect if wrapAround is enabled
+
+<h3>autoPlay</h3>
+
+  autoPlay: false,
+  // advances to the next cell
+  // if true, default is 3 seconds
+  // or set time between advances in milliseconds
+  // i.e. `autoPlay: 1000` will advance every 1 second
+
+<h3>watching</h3>
+
+  watching: false,
+  // watches the content of :after of the element
+  // activates if #element:after { content: 'flickity' }
+  // IE8 and Android 2.3 do not support watching :after
+  // set watch: 'fallbackOn' to enable for these browsers
+
+
+
+<h3>accessibility</h3>
+
+  accessibility: true,
+  // enable keyboard navigation, pressing left & right keys
+
+
+<h3>cellSelector</h3>
+
+  cellSelector: undefined,
+  // specify selector for cell elements
+
+
+
+<p>draggable</p>
+
+  draggable: true,
+  // enables dragging & flicking
+
+<p>friction</p>
+
+  friction: 0.2,
+  // smaller number = easier to flick farther
+
+<p>imagesLoaded</p>
+
+  imagesLoaded: false,
+  // if imagesLoaded is present, Flickity can re-position cells
+  // once images are loaded
+
+<h3>initialIndex</h3>
+
+  initialIndex: 0,
+  // zero-based index of the initial selected cell
+
+<h3>pageDots</h3>
+
+<h3>percentPosition</h3>
+
+  percentPosition: true,
+  // sets positioning in percent values, rather than pixels
+  // Enable if items have percent widths
+  // Disable if items have pixel widths, like images
+
+<h3>prevNextButtons</h3>
+
+  prevNextButtons: true,
+  // creates and enables buttons to click to previous & next cells
+
+<h3>resizeBound</h3>
+
+  resizeBound: true,
+  // listens to window resize events to adjust size & positions
+
+
+
+
+
+
+
 <script src="../lib/flickity.pkgd.js"></script>
 
 </body>

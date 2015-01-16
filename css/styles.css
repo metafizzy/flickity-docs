@@ -1,0 +1,64 @@
+body {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+  font-family: sans-serif;
+  color: #333;
+  line-height: 1.5;
+}
+
+
+/* ---- code ---- */
+
+pre, code {
+  font-family: Consolas, Menlo, monospace;
+  font-size: 15px;
+  background: #111;
+  color: white;
+}
+
+pre {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+code {
+  padding: 2px 3px;
+  line-height: 1.2;
+  border-radius: 3px;
+}
+
+pre code {
+  padding: 0;
+  line-height: 1.5;
+  background: none;
+}
+
+/* ---- syntax highlight ---- */
+
+code .string,
+code .tag .value { color: #0C4; }
+code .number, /* integer */
+code .cp, /* doctype */
+code .literal { color: #38F; } /*boolean*/
+code .keyword { color: #F73; } /* keyword */
+code .kd, /* storage */
+code .attribute { color: #DC8; } /* markup attribute */
+code .title { color: #9CF; }
+code .params { color: #98D; }
+code .regexp  { color: #FC8; } /* regex */
+code .o  { color: #F63; }   /* operator */
+code .nb { color: #AA97AC;} /* support */
+
+/* comment */
+code .comment { color: #999; font-style: italic; }
+
+code .tag { color: #6CF; } /* Markup open tag */
+
+code .id { color: #ABC; } /* css id */
+code .class { color: #A63; }  /* CSS class */
+code .rules { color: #FED; }
+code .m  { color: #DE8E50; } /* CSS value */
+code .nd { color: #9FAD7E; } /* CSS pseudo selector */
+code .hexcolor { color: #F63; }
+code .at_rule { color: #088; }

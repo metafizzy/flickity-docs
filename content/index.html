@@ -6,6 +6,7 @@
 
   <title>Flickity &middot; beta</title>
 
+  <link rel="stylesheet" href="../lib/flickity.css" media="screen" />
   <link rel="stylesheet" href="../css/styles.css" media="screen" />
 
 </head>
@@ -17,13 +18,13 @@
 
 <h2>Install</h2>
 
+<p>Download</p>
+
 <ul>
   <li>
-    <a href="flickity.pkgd.js">flickity.pkgd.js</a> uncompressed
+    JavaScript: <a href="flickity.pkgd.js">flickity.pkgd.js</a> uncompressed or <a href="flickity.pkgd.min.js">flickity.pkgd.min.js</a> minified
   </li>
-  <li>
-    <a href="flickity.pkgd.min.js">flickity.pkgd.min.js</a> minified
-  </li>
+  <li>CSS: <a href="flickity.css">flickity.css</a></li>
 </ul>
 
 <p>Install with Bower: <code>bower install flickity --save</code></p>
@@ -32,7 +33,7 @@
 
 <h2>How to use</h2>
 
-<p>Flickity works on a container gallery element with a group of similar child cell elements.</p>
+<p>Flickity works on a container gallery element with a group of cell elements.</p>
 
 ``` html
 <div id="main-gallery">
@@ -43,9 +44,11 @@
 </div>
 ```
 
-<p>Include the Flickity .js file in your site.</p>
+<p>Include the Flickity .js and .css files in your site.</p>
 
 ``` html
+<link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+
 <script src="/path/to/flickity.pkgd.min.js"></script>
 ```
 
@@ -74,7 +77,7 @@ var flicky = new Flickity( elem, {
 
 // element argument can be a selector string
 //   for an individual element
-var flicky = new Flickity( '#main-gallery, {
+var flicky = new Flickity( '#main-gallery', {
   // options
 });
 ```
@@ -89,7 +92,101 @@ var flicky = new Flickity( '#main-gallery, {
 
 <p><strong>Options set in HTML must be valid JSON.</strong> Keys need to be quoted, for example <code>"cellAlign":</code>. Note that the attribute value uses single quotes <code>'</code>, but the JSON entities use double-quotes <code>"</code>.</p>
 
+<h2>Cell style</h2>
+
+<p>All sizing and styling of the cells are handled by your own CSS.</p>
+
+<div class="example">
+  <div class="example__code">
+``` css
+/* cells will take up entire container */
+.gallery-cell {
+  width: 100%;
+}
+```
+  </div>
+  <div class="example__demo">
+    <div class="gallery js-flickity">
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
+
+<div class="example">
+  <div class="example__code">
+``` css
+/* half-width cells with margin */
+.gallery-cell {
+  width: 50%;
+  margin-right: 10px;
+}
+```
+  </div>
+  <div class="example__demo">
+    <div class="gallery half-width-margin js-flickity">
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
+
+<p>Cells can be different sizes. You can use any unit you like: percent, pixels, etc.</p>
+
+<div class="example">
+  <div class="example__code">
+``` css
+.gallery-cell {
+  width: 33%;
+  margin-right: 10px;
+}
+.gallery-cell.size-180 { width: 180px; }
+.gallery-cell.size-large { width: 75%; }
+```
+  </div>
+  <div class="example__demo">
+    <div class="gallery various-size js-flickity">
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell size-180"></div>
+      <div class="gallery-cell size-large"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell size-large"></div>
+    </div>
+  </div>
+</div>
+
+<p>You can use media queries to show different number of cells for different breakpoints.</p>
+
+
+``` css
+.gallery-cell {
+  width: 100%;
+  margin-right: 2%;
+}
+
+@media screen and ( min-width: 768px; ) {
+  /* show 2 cells for larger devices */
+  .gallery-cell { width: 49%; }
+}
+```
+
+<div class="gallery media-queried js-flickity">
+  <div class="gallery-cell"></div>
+  <div class="gallery-cell"></div>
+  <div class="gallery-cell"></div>
+  <div class="gallery-cell"></div>
+  <div class="gallery-cell"></div>
+</div>
+
 <h2>Options</h2>
+
+<script src="../lib/flickity.pkgd.js"></script>
 
 </body>
 </html>

@@ -1,11 +1,79 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
   padding: 10px;
   font-family: sans-serif;
   color: #333;
   line-height: 1.5;
 }
+
+.example {
+  margin-bottom: 40px;
+}
+
+.example:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* demo flickities */
+
+.gallery {
+  background: #EEE;
+  margin-bottom: 30px;
+  counter-reset: gallery-cell;
+}
+
+.gallery-cell {
+  width: 100%;
+  height: 160px;
+  background: #F50;
+  counter-increment: gallery-cell;
+}
+
+.gallery-cell:before {
+  content: counter(gallery-cell);
+  display: block;
+  text-align: center;
+  line-height: 160px;
+  font-size: 80px;
+  font-weight: bold;
+  color: white;
+}
+
+.half-width-margin .gallery-cell {
+  width: 50%;
+  margin-right: 10px;
+}
+
+.various-size .gallery-cell {
+  width: 33%;
+  margin-right: 10px;
+}
+.various-size .gallery-cell.size-180 { width: 180px; }
+.various-size .gallery-cell.size-large { width: 75%; }
+
+.media-queried .gallery-cell {
+  width: 100%;
+  margin-right: 2%;
+}
+
+@media screen and ( min-width: 768px ) {
+  .example__code,
+  .example__demo {
+    float: left;
+    width: 48%;
+  }
+  .example__code { margin-right: 4%; }
+
+  .media-queried .gallery-cell { width: 49%; }
+}
+
 
 
 /* ---- code ---- */
@@ -61,4 +129,4 @@ code .rules { color: #FED; }
 code .m  { color: #DE8E50; } /* CSS value */
 code .nd { color: #9FAD7E; } /* CSS pseudo selector */
 code .hexcolor { color: #F63; }
-code .at_rule { color: #088; }
+code .at_rule { color: #0BB; }

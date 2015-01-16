@@ -38,3 +38,7 @@ gulp.task( 'build', function() {
     .pipe( replace( /```[^```]+```/gi, highlightCodeBlock ) )
     .pipe( gulp.dest('build') );
 });
+
+gulp.task( 'watch', function() {
+  gulp.watch( 'content/*.html', [ 'build' ] );
+});

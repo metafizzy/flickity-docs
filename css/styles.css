@@ -2,13 +2,54 @@
   box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'Texta Book';
+  src: url('../lib/texta-book.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Texta Heavy';
+  src: url('../lib/texta-heavy.woff') format('woff');
+  font-weight: 800;
+  font-style: normal;
+}
+
 body {
   max-width: 900px;
   margin: 0 auto;
   padding: 10px;
-  font-family: sans-serif;
+  font-family: 'Texta Book', sans-serif;
+/*  font-family: 'Lucida Grande', sans-serif;*/
   color: #333;
   line-height: 1.5;
+  font-size: 19px;
+}
+
+h1, h2, h3 {
+/*  font-family: 'Texta Heavy', sans-serif;*/
+}
+
+h1 {
+  font-family: 'Texta Heavy', sans-serif;
+  font-size: 110px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+h2 {
+  font-size: 50px;
+  border-top: 4px double #DDD;
+  padding-top: 60px;
+  margin-top: 80px;
+}
+
+h3 {
+  font-family: 'Texta Heavy', sans-serif;
+  font-size: 32px;
+  border-top: 1px solid #DDD;
+  padding-top: 30px;
 }
 
 .example {
@@ -32,8 +73,7 @@ body {
 .gallery-cell {
   width: 100%;
   height: 160px;
-  background: #DA5;
-/*  background: #BBB;*/
+  background: #8C8;
   counter-increment: gallery-cell;
 }
 
@@ -105,8 +145,7 @@ body {
 pre, code {
   font-family: Consolas, Menlo, monospace;
   font-size: 15px;
-  background: #111;
-  color: white;
+  background: #EEE;
 }
 
 pre {
@@ -128,29 +167,31 @@ pre code {
 
 /* ---- syntax highlight ---- */
 
+
+
 code .string,
-code .tag .value { color: #0C4; }
+code .tag .value { color: #072; }
 code .number, /* integer */
 code .cp, /* doctype */
-code .literal { color: #38F; } /*boolean*/
-code .keyword { color: #F73; } /* keyword */
+code .literal { color: #07D; } /*boolean*/
+code .keyword { color: #C31; } /* keyword */
 code .kd, /* storage */
-code .attribute { color: #DC8; } /* markup attribute */
-code .title { color: #9CF; }
-code .params { color: #98D; }
-code .regexp  { color: #FC8; } /* regex */
+code .attribute { color: #A61; } /* markup attribute */
+code .title  { color: #39A; }
+code .params  { color: #98D; }
+code .p  { color: #EDB; } /* punctuation */
 code .o  { color: #F63; }   /* operator */
 code .nb { color: #AA97AC;} /* support */
 
 /* comment */
 code .comment { color: #999; font-style: italic; }
 
-code .tag { color: #6CF; } /* Markup open tag */
+code .tag { color: #37B; } /* Markup open tag */
 
-code .id { color: #ABC; } /* css id */
+code .id { color: #567; } /* css id */
 code .class { color: #A63; }  /* CSS class */
-code .rules { color: #FED; }
+code .rules { color: #431; }
 code .m  { color: #DE8E50; } /* CSS value */
 code .nd { color: #9FAD7E; } /* CSS pseudo selector */
 code .hexcolor { color: #F63; }
-code .at_rule { color: #0BB; }
+code .at_rule { color: #088; }

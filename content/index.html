@@ -198,7 +198,7 @@ var flicky = new Flickity( '#main-gallery', {
 <div class="example">
   <div class="example__code">
 ``` js
-{ cellAlign: 'left' }
+cellAlign: 'left'
 ```
   </div>
   <div class="example__demo">
@@ -229,7 +229,7 @@ var flicky = new Flickity( '#main-gallery', {
 <div class="example">
   <div class="example__code">
 ``` js
-{ cellAlign: 'right' }
+cellAlign: 'right'
 ```
   </div>
   <div class="example__demo">
@@ -254,7 +254,7 @@ var flicky = new Flickity( '#main-gallery', {
 <div class="example">
   <div class="example__code">
 ``` js
-{ wrapAround: true }
+wrapAround: true
 ```
   </div>
   <div class="example__demo">
@@ -271,18 +271,114 @@ var flicky = new Flickity( '#main-gallery', {
 
 <h3>contain</h3>
 
-  contain: false,
-  // will contain cells to container
-  // so no excess scroll at beginning or end
-  // has no effect if wrapAround is enabled
+<p>Contains cells to container element, so no excell scroll at beginning or end. Has no effect if <code>wrapAround: true</code>.</p>
+
+<ul>
+  <li>Values: <code>true</code>, <code>false</code></li>
+  <li>Default: <code>false</code></li>
+</ul>
+
+<div class="example">
+  <div class="example__code">
+``` js
+contain: true
+```
+  </div>
+  <div class="example__demo">
+    <div class="gallery gallery--contain-demo js-flickity"
+      data-flickity-options='{ "contain": true }'>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
+
+<h3>freeScroll</h3>
+
+<p>Enables content to be freely scrolled and flicked without aligning cells to an end position.</p>
+
+<ul>
+  <li>Values: <code>true</code>, <code>false</code></li>
+  <li>Default: <code>false</code></li>
+</ul>
+
+<div class="example">
+  <div class="example__code">
+``` js
+freeScroll: true
+```
+  </div>
+  <div class="example__demo">
+    <div class="gallery show-neighbors js-flickity"
+      data-flickity-options='{ "freeScroll": true }'>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
+
+<p>Enable freeScroll and wrapAround and you can flick forever, man.</p>
+
+<div class="example">
+  <div class="example__code">
+``` js
+freeScroll: true,
+wrapAround: true
+```
+  </div>
+  <div class="example__demo">
+    <div class="gallery show-neighbors js-flickity"
+      data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
 
 <h3>autoPlay</h3>
 
-  autoPlay: false,
-  // advances to the next cell
-  // if true, default is 3 seconds
-  // or set time between advances in milliseconds
-  // i.e. `autoPlay: 1000` will advance every 1 second
+<p>Automatically advances to the next cell. If <code>true</code>, delay is 3 seconds. Set time between advances in milliseconds, for example <code>autoPlay: 1500</code> will advance every 1.5 seconds.</p>
+
+<p>Auto-playing will pause when mouse is hovered over, and resume when mouse is hovered off. Auto-playing will stop when the gallery is clicked or a cell is selected.</p>
+
+<ul>
+  <li>Values: <code>true</code>, <code>false</code>, <i>Integer</i></li>
+  <li>Default: <code>false</code></li>
+</ul>
+
+<div class="example">
+  <div class="example__code">
+``` js
+autoPlay: true
+```
+  </div>
+  <div class="example__demo">
+    <div class="gallery gallery--auto-play-demo js-flickity"
+      data-flickity-options='{ "autoPlay": true }'>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
+
+<h3>imagesLoaded</h3>
+
+  imagesLoaded: false,
+  // if imagesLoaded is present, Flickity can re-position cells
+  // once images are loaded
+
 
 <h3>watching</h3>
 
@@ -292,61 +388,37 @@ var flicky = new Flickity( '#main-gallery', {
   // IE8 and Android 2.3 do not support watching :after
   // set watch: 'fallbackOn' to enable for these browsers
 
+<h2>Other options</h2>
 
+<p>Defaults shown.</p>
 
-<h3>accessibility</h3>
+``` js
+accessibility: true,
+// enable keyboard navigation, pressing left & right keys
 
-  accessibility: true,
-  // enable keyboard navigation, pressing left & right keys
+cellSelector: undefined,
+// specify selector for cell elements
 
+draggable: true,
+// enables dragging & flicking
 
-<h3>cellSelector</h3>
+initialIndex: 0,
+// zero-based index of the initial selected cell
 
-  cellSelector: undefined,
-  // specify selector for cell elements
+percentPosition: true,
+// sets positioning in percent values, rather than pixels
+// Enable if items have percent widths
+// Disable if items have pixel widths, like images
 
+pageDots: true,
+// enables page dots
 
+prevNextButtons: true,
+// creates and enables buttons to click to previous & next cells
 
-<p>draggable</p>
-
-  draggable: true,
-  // enables dragging & flicking
-
-<p>friction</p>
-
-  friction: 0.2,
-  // smaller number = easier to flick farther
-
-<p>imagesLoaded</p>
-
-  imagesLoaded: false,
-  // if imagesLoaded is present, Flickity can re-position cells
-  // once images are loaded
-
-<h3>initialIndex</h3>
-
-  initialIndex: 0,
-  // zero-based index of the initial selected cell
-
-<h3>pageDots</h3>
-
-<h3>percentPosition</h3>
-
-  percentPosition: true,
-  // sets positioning in percent values, rather than pixels
-  // Enable if items have percent widths
-  // Disable if items have pixel widths, like images
-
-<h3>prevNextButtons</h3>
-
-  prevNextButtons: true,
-  // creates and enables buttons to click to previous & next cells
-
-<h3>resizeBound</h3>
-
-  resizeBound: true,
-  // listens to window resize events to adjust size & positions
-
+resizeBound: true,
+// listens to window resize events to adjust size & positions
+```
 
 
 

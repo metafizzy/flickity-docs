@@ -375,18 +375,78 @@ autoPlay: true
 
 <h3>imagesLoaded</h3>
 
-  imagesLoaded: false,
-  // if imagesLoaded is present, Flickity can re-position cells
-  // once images are loaded
+<p>Unloaded images have no size. If imagesLoaded is present on your site, Flickity can re-position cells once images have loaded.</p>
+
+<ul>
+  <li>Values: <code>true</code>, <code>false</code></li>
+  <li>Default: <code>false</code></li>
+</ul>
+
+<div class="example">
+  <div class="example__code">
+``` js
+imagesLoaded: true
+```
+  </div>
+  <div class="example__demo">
+    <div class="gallery gallery--images-loaded-demo js-flickity"
+      data-flickity-options='{ "imagesLoaded": true }'>
+        <!-- images from unsplash.com -->
+        <img src="http://i.imgur.com/bwy74ok.jpg" />
+        <img src="http://i.imgur.com/bAZWoqx.jpg" />
+        <img src="http://i.imgur.com/PgmEBSB.jpg" />
+        <img src="http://i.imgur.com/aboaFoB.jpg" />
+        <img src="http://i.imgur.com/LkmcILl.jpg" />
+        <img src="http://i.imgur.com/q9zO6tw.jpg" />
+        <!-- <img src="http://i.imgur.com/r8p3Xgq.jpg" />
+        <img src="http://i.imgur.com/hODreXI.jpg" />
+        <img src="http://i.imgur.com/UORFJ3w.jpg" /> -->
+    </div>
+  </div>
+</div>
 
 
 <h3>watching</h3>
 
-  watching: false,
-  // watches the content of :after of the element
-  // activates if #element:after { content: 'flickity' }
-  // IE8 and Android 2.3 do not support watching :after
-  // set watch: 'fallbackOn' to enable for these browsers
+<p>You can enable and disable Flickity with CSS. <code>watching</code> option watches the content of <code>:after</code> of the gallery element. Flickity is enabled if <code>:after</code> <code>content</code> is <code>'flickity'</code>.</p>
+
+<p>IE8 and Android 2.3 do not support watching <code>:after</code>. Set <code>watching: 'fallbackOn'</code> to enable Flickity for these browsers.</p>
+
+<ul>
+  <li>Values: <code>true</code>, <code>false</code>, <code>'fallbackOn'</code></li>
+  <li>Default: <code>false</code></li>
+</ul>
+
+<div class="example">
+  <div class="example__code">
+``` js
+watching: true
+```
+
+``` css
+/* enable Flickity by default */
+.watching-demo:after {
+  content: 'flickity';
+  display: none; /* hide :after */
+}
+
+@media screen and ( min-width: 768px ) {
+  /* disable Flickity for large devices */
+  .watching-demo:after {
+    content: '';
+  }
+}
+```
+  </div>
+  <div class="example__demo">
+    <div class="gallery gallery--watching-demo js-flickity"
+      data-flickity-options='{ "watching": true }'>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
 
 <h2>Other options</h2>
 
@@ -423,11 +483,7 @@ rightToLeft: false
 // enables right-to-left ordering for right-to-left languages
 ```
 
-
-
-
-
-
+<script src="../bower_components/imagesloaded/imagesloaded.pkgd.js"></script>
 <script src="../lib/flickity.pkgd.js"></script>
 
 </body>

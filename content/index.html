@@ -49,10 +49,12 @@
 <div class="call-out call-out--beta-testing">
   <h2>Beta testing</h2>
 
-  <p>Help make Flickity better for it&rsquo;s v1.0.0 release. Try out Flickity and provide any feedback: bugs, feature requests, trouble-spots. We&rsquo;re happy to hear it all.</p>
+  <p>Help make Flickity better for it&rsquo;s v1.0.0 release. Try out Flickity and provide any feedback.</p>
+
+  <p>Did it work as expected? What trouble did you run into? Is there something else you&rsquo;d like? Bugs, feature requests, questions &mdash; we&rsquo;re happy to hear it all.</p>
 
   <p>
-    Submit an <a href="https://github.com/metafizzy/flickity">issue on GitHub</a>
+    Submit an <a href="https://github.com/metafizzy/flickity/issues">issue on GitHub</a>
     &nbsp; &middot; &nbsp;
     Email <a href="mailto:yo@metafizzy.co">yo@metafizzy.co</a>
     &nbsp; &middot; &nbsp;<br />
@@ -266,7 +268,7 @@ cellAlign: 'left'
 <div class="example">
   <div class="example__code">
 ``` js
-/* default 'center' */
+// default 'center'
 ```
   </div>
   <div class="example__demo">
@@ -398,7 +400,7 @@ wrapAround: true
 
 <h3>autoPlay</h3>
 
-<p>Automatically advances to the next cell. If <code>true</code>, delay is 3 seconds. Set time between advances in milliseconds, for example <code>autoPlay: 1500</code> will advance every 1.5 seconds.</p>
+<p>Automatically advances to the next cell. Delay is 3 seconds if <code>autoPlay: true</code>. Set delay time in milliseconds, for example <code>autoPlay: 1500</code> will advance every 1.5 seconds.</p>
 
 <p>Auto-playing will pause when mouse is hovered over, and resume when mouse is hovered off. Auto-playing will stop when the gallery is clicked or a cell is selected.</p>
 
@@ -427,7 +429,7 @@ autoPlay: true
 
 <h3>imagesLoaded</h3>
 
-<p>Unloaded images have no size. If imagesLoaded is present on your site, Flickity can re-position cells once images have loaded.</p>
+<p>Re-position cells once images have loaded.</p>
 
 <ul>
   <li>Values: <code>true</code>, <code>false</code></li>
@@ -457,12 +459,20 @@ imagesLoaded: true
   </div>
 </div>
 
+<div class="call-out">
+  <p>This option requires you to include <a href="http://imagesloaded.desandro.com">imagesLoaded</a> on your site.</p>
 
-<h3>watching</h3>
+``` html
+<script src="/path/to/imagesloaded.pkgd.js"></script>
+```
+  <p>This option may not work with RequireJS or Browserify for Flickity beta.</p>
+</div>
 
-<p>You can enable and disable Flickity with CSS. <code>watching</code> option watches the content of <code>:after</code> of the gallery element. Flickity is enabled if <code>:after</code> <code>content</code> is <code>'flickity'</code>.</p>
+<h3>watchCSS</h3>
 
-<p>IE8 and Android 2.3 do not support watching <code>:after</code>. Set <code>watching: 'fallbackOn'</code> to enable Flickity for these browsers.</p>
+<p>You can enable and disable Flickity with CSS. <code>watchCSS</code> option watches the content of <code>:after</code> of the gallery element. Flickity is enabled if <code>:after</code> <code>content</code> is <code>'flickity'</code>.</p>
+
+<p>IE8 and Android 2.3 do not support watching <code>:after</code>. Flickity will be disabled when <code>watchCSS: true</code>. Set <code>watchCSS: 'fallbackOn'</code> to enable Flickity for these browsers.</p>
 
 <ul>
   <li>Values: <code>true</code>, <code>false</code>, <code>'fallbackOn'</code></li>
@@ -472,27 +482,27 @@ imagesLoaded: true
 <div class="example">
   <div class="example__code">
 ``` js
-watching: true
+watchCSS: true
 ```
 
 ``` css
 /* enable Flickity by default */
-.watching-demo:after {
+.gallery:after {
   content: 'flickity';
   display: none; /* hide :after */
 }
 
 @media screen and ( min-width: 768px ) {
   /* disable Flickity for large devices */
-  .watching-demo:after {
+  .gallery:after {
     content: '';
   }
 }
 ```
   </div>
   <div class="example__demo">
-    <div class="gallery gallery--watching-demo js-flickity"
-      data-flickity-options='{ "watching": true }'>
+    <div class="gallery gallery--watch-demo js-flickity"
+      data-flickity-options='{ "watchCSS": true }'>
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>

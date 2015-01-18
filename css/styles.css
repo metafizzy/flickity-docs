@@ -40,6 +40,19 @@ body {
   padding: 0;
 }
 
+a {
+  color: #6A6;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #E90;
+}
+
+b, strong {
+  font-family: 'Texta Heavy', sans-serif;
+}
+
 h1, h2, h3 {
   line-height: 1.2;
 /*  font-family: 'Texta Heavy', sans-serif;*/
@@ -73,6 +86,10 @@ h3 {
 
 /* hero-gallery
 ------------------------- */
+
+.hero-gallery {
+  margin-bottom: 80px;
+}
 
 .hero-gallery__cell {
   width: 100%;
@@ -137,6 +154,45 @@ h3 {
 }
 
 .by-line--made b { font-family: 'Texta Heavy', sans-serif; }
+
+/* ---- call-out ---- */
+
+.call-out {
+  border: 2px solid #ED2;
+  padding: 10px 10px 10px 80px;
+  border-radius: 10px;
+  position: relative;
+  margin: 20px 0;
+}
+
+.call-out:before {
+  content: 'i';
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 20px;
+  top: 30px;
+  background: #ED2;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  font-size: 36px;
+  font-family: Consolas, Georgia, serif;
+  font-style: italic;
+  line-height: 46px;
+}
+
+.call-out h2 {
+  margin-top: 0;
+  padding-top: 10px;
+  border-top: none;
+}
+
+.call-out--beta-testing p {
+  font-size: 1.4em;
+  line-height: 1.2;
+}
 
 /* example
 ------------------------- */

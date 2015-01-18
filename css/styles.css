@@ -96,6 +96,19 @@ h3 {
   background: #ED2;
 }
 
+.slogan {
+  font-size: 60px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.slogan--setup {
+  padding-top: 80px;
+  margin-bottom: 20px;
+}
+
+.slogan--hook { color: #333; }
+
 .feature-list {
   font-size: 60px;
   list-style: none;
@@ -106,6 +119,24 @@ h3 {
 .hero-gallery__cell--3 {
   background: #E90;
 }
+
+.hero-gallery__cell--4 {
+  background: #E5A;
+}
+
+.by-line {
+  line-height: 1.2;
+  margin: 0;
+  font-size: 60px;
+}
+
+.by-line--made {
+  padding-top: 80px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.by-line--made b { font-family: 'Texta Heavy', sans-serif; }
 
 /* example
 ------------------------- */

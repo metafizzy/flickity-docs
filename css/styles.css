@@ -31,25 +31,22 @@
 }
 
 body {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 10px;
   font-family: 'Texta Regular', sans-serif;
 /*  font-family: 'Lucida Grande', sans-serif;*/
   color: #333;
   line-height: 1.5;
   font-size: 19px;
+  margin: 0;
+  padding: 0;
 }
 
 h1, h2, h3 {
+  line-height: 1.2;
 /*  font-family: 'Texta Heavy', sans-serif;*/
 }
 
 h1 {
   font-family: 'Texta Heavy', sans-serif;
-  font-size: 110px;
-  margin-top: 40px;
-  margin-bottom: 20px;
 }
 
 h2 {
@@ -66,6 +63,53 @@ h3 {
   padding-top: 30px;
 }
 
+/* ---- content ---- */
+
+.content-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* hero-gallery
+------------------------- */
+
+.hero-gallery__cell {
+  width: 100%;
+  height: 440px;
+  color: white;
+  background: #8C8;
+}
+
+.hero-gallery h1 {
+  font-size: 110px;
+  padding-top: 100px;
+  margin: 0;
+}
+
+.hero-gallery .tagline {
+  font-size: 40px;
+  margin: 0;
+}
+
+.hero-gallery__cell--2 {
+  background: #ED2;
+}
+
+.feature-list {
+  font-size: 60px;
+  list-style: none;
+  padding: 40px 0 0;
+  margin: 0;
+}
+
+.hero-gallery__cell--3 {
+  background: #E90;
+}
+
+/* example
+------------------------- */
+
 .example {
   margin-bottom: 40px;
 }
@@ -76,7 +120,10 @@ h3 {
   clear: both;
 }
 
-/* demo flickities */
+
+
+/* demo galleries
+------------------------- */
 
 .gallery {
   background: #EEE;
@@ -209,8 +256,6 @@ pre code {
 }
 
 /* ---- syntax highlight ---- */
-
-
 
 code .string,
 code .tag .value { color: #072; }

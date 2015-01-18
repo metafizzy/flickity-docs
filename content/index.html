@@ -12,9 +12,35 @@
 </head>
 <body>
 
-<h1>Flickity &middot; beta</h1>
+<div class="hero-gallery js-flickity">
+  <div class="hero-gallery__cell hero-gallery__cell--1">
+    <div class="content-wrap">
+      <h1>Flickity beta</h1>
+      <p class="tagline">Touch, responsive galleries</p>
+    </div>
+  </div>
+  <div class="hero-gallery__cell hero-gallery__cell--2">
+    <div class="content-wrap">
+      <ul class="feature-list">
+        <li>Physics-based animation</li>
+        <li>Touch device support</li>
+        <li>Responsive styling</li>
+        <li>Full-feature API</li>
+      </ul>
+    </div>
+  </div>
+  <div class="hero-gallery__cell hero-gallery__cell--3">
+    <div class="content-wrap">
+    </div>
+  </div>
+  <div class="hero-gallery__cell hero-gallery__cell--4">
+    <div class="content-wrap">
 
-<p class="tagline">Touch, responsive galleries</p>
+    </div>
+  </div>
+</div>
+
+<div class="content-wrap">
 
 <h2>Install</h2>
 
@@ -54,6 +80,8 @@
 
 <p>There are several ways to initialize a Flickity instance.</p>
 
+<h3>Initialize with jQuery</h3>
+
 <p>You can use Flickity as a jQuery plugin: <code>$('selector').flickity()</code>.</p>
 
 ``` js
@@ -64,6 +92,8 @@ $('#main-gallery').flickity({
   contain: true
 });
 ```
+
+<h3>Initialize with Vanilla JavaScript</h3>
 
 <p>You can use Flickity with vanilla JS: <code>new Flickity( elem )</code>. The <code>Flickity()</code> constructor accepts two arguments: the container element and an options object.</p>
 
@@ -81,6 +111,8 @@ var flicky = new Flickity( '#main-gallery', {
   // options
 });
 ```
+
+<h3>Initialize with HTML</h3>
 
 <p>You can initialize Flickity in HTML, without writing any JavaScript. Add <code>js-flickity</code> to the class of the container element. Options can be set with a <code>data-flickity-options</code> attribute.</p>
 
@@ -482,6 +514,12 @@ resizeBound: true,
 rightToLeft: false
 // enables right-to-left ordering for right-to-left languages
 ```
+
+<h2>Previous &amp; next buttons</h2>
+
+<h2>Page dots</h2>
+
+</div> <!-- .content-wrap -->
 
 <script src="../bower_components/imagesloaded/imagesloaded.pkgd.js"></script>
 <script src="../lib/flickity.pkgd.js"></script>

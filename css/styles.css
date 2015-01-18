@@ -249,6 +249,10 @@ h3 {
 .gallery-cell:nth-child(5n+4):before { color: #588; }
 .gallery-cell:nth-child(5n):before { color: #668; }*/
 
+.gallery--margin .gallery-cell {
+  margin-right: 10px;
+}
+
 .half-width-margin .gallery-cell {
   width: 50%;
   margin-right: 10px;
@@ -293,6 +297,23 @@ h3 {
   margin-right: 10px;
 }
 
+/* prev/next demos
+------------------------- */
+
+.gallery--prev-next-1 .flickity-prev-next-button {
+  width: 100px;
+  height: 100px;
+  background: transparent;
+}
+
+.gallery--prev-next-1 .flickity-prev-next-button .arrow { fill: white; }
+.gallery--prev-next-1 .flickity-prev-next-button.no-svg { color: white; }
+
+/*.gallery--prev-next-1 .flickity-prev-next-button.previous { left: -10px; }
+.gallery--prev-next-1 .flickity-prev-next-button.next { right: -10px; }*/
+
+.gallery--prev-next-1 .flickity-prev-next-button:disabled { display: none; }
+
 @media screen and ( min-width: 768px ) {
   .example__code,
   .example__demo {
@@ -324,6 +345,7 @@ pre, code {
   font-size: 15px;
   background: #FAFAFA;
   border: 1px solid #DDD;
+  white-space: pre-wrap;
 }
 
 pre {

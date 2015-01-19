@@ -490,47 +490,6 @@ autoPlay: true
   </div>
 </div>
 
-<h3>imagesLoaded</h3>
-
-<p>Re-position cells once images have loaded.</p>
-
-<ul>
-  <li>Values: <code>true</code>, <code>false</code></li>
-  <li>Default: <code>false</code></li>
-</ul>
-
-<div class="example">
-  <div class="example__code">
-``` js
-imagesLoaded: true
-```
-  </div>
-  <div class="example__demo">
-    <div class="gallery gallery--images-loaded-demo js-flickity"
-      data-flickity-options='{ "imagesLoaded": true }'>
-        <!-- images from unsplash.com -->
-        <img src="http://i.imgur.com/bwy74ok.jpg" />
-        <img src="http://i.imgur.com/bAZWoqx.jpg" />
-        <img src="http://i.imgur.com/PgmEBSB.jpg" />
-        <img src="http://i.imgur.com/aboaFoB.jpg" />
-        <img src="http://i.imgur.com/LkmcILl.jpg" />
-        <img src="http://i.imgur.com/q9zO6tw.jpg" />
-        <!-- <img src="http://i.imgur.com/r8p3Xgq.jpg" />
-        <img src="http://i.imgur.com/hODreXI.jpg" />
-        <img src="http://i.imgur.com/UORFJ3w.jpg" /> -->
-    </div>
-  </div>
-</div>
-
-<div class="call-out">
-  <p>This option requires you to include <a href="http://imagesloaded.desandro.com">imagesLoaded</a> on your site.</p>
-
-``` html
-<script src="/path/to/imagesloaded.pkgd.js"></script>
-```
-  <p>This option may not work with RequireJS or Browserify for Flickity beta.</p>
-</div>
-
 <h3>watchCSS</h3>
 
 <p>You can enable and disable Flickity with CSS. <code>watchCSS</code> option watches the content of <code>:after</code> of the gallery element. Flickity is enabled if <code>:after</code> <code>content</code> is <code>'flickity'</code>.</p>
@@ -571,6 +530,75 @@ watchCSS: true
       <div class="gallery-cell"></div>
     </div>
   </div>
+</div>
+
+<h2>Images</h2>
+
+<p>Flickity makes beautiful image galleries.</p>
+
+``` html
+<div class="gallery js-flickity"
+  data-flickity-options='{ "imagesLoaded": true, "percentPosition": false }'>
+  <img src="orange-tree.jpg" alt="orange tree" />
+  <img src="submerged.jpg" alt="submerged" />
+  <img src="look-out.jpg" alt="look-out" />
+  ...
+</div>
+```
+
+<div class="gallery gallery--images-demo js-flickity"
+  data-flickity-options='{ "imagesLoaded": true, "percentPosition": false }'>
+    <!-- images from unsplash.com -->
+    <img src="http://i.imgur.com/bwy74ok.jpg" alt="orange tree" />
+    <img src="http://i.imgur.com/bAZWoqx.jpg" alt="submerged" />
+    <img src="http://i.imgur.com/PgmEBSB.jpg" alt="look-out" />
+    <img src="http://i.imgur.com/aboaFoB.jpg" alt="freedom tower" />
+    <img src="http://i.imgur.com/LkmcILl.jpg" alt="drizzle" />
+    <img src="http://i.imgur.com/q9zO6tw.jpg" alt="cat nose" />
+    <!-- <img src="http://i.imgur.com/r8p3Xgq.jpg" />
+    <img src="http://i.imgur.com/hODreXI.jpg" />
+    <img src="http://i.imgur.com/UORFJ3w.jpg" /> -->
+</div>
+
+<h3>imagesLoaded</h3>
+
+<p>Unloaded images have no size, which can throw off cell positions. To fix this, the <code>imagesLoaded</code> option re-positions cells once their images have loaded.</p>
+
+<ul>
+  <li>Values: <code>true</code>, <code>false</code></li>
+  <li>Default: <code>false</code></li>
+</ul>
+
+<div class="example">
+  <div class="example__code">
+``` js
+imagesLoaded: true
+```
+  </div>
+  <div class="example__demo">
+    <div class="gallery gallery--images-loaded-demo js-flickity"
+      data-flickity-options='{ "imagesLoaded": true }'>
+        <!-- images from unsplash.com -->
+        <img src="http://i.imgur.com/bwy74ok.jpg" />
+        <img src="http://i.imgur.com/bAZWoqx.jpg" />
+        <img src="http://i.imgur.com/PgmEBSB.jpg" />
+        <img src="http://i.imgur.com/aboaFoB.jpg" />
+        <img src="http://i.imgur.com/LkmcILl.jpg" />
+        <img src="http://i.imgur.com/q9zO6tw.jpg" />
+        <!-- <img src="http://i.imgur.com/r8p3Xgq.jpg" />
+        <img src="http://i.imgur.com/hODreXI.jpg" />
+        <img src="http://i.imgur.com/UORFJ3w.jpg" /> -->
+    </div>
+  </div>
+</div>
+
+<div class="call-out">
+  <p>This option requires you to include <a href="http://imagesloaded.desandro.com">imagesLoaded</a> on your site.</p>
+
+``` html
+<script src="/path/to/imagesloaded.pkgd.js"></script>
+```
+  <p>This option may not work with RequireJS or Browserify for Flickity beta.</p>
 </div>
 
 <h2>Other options</h2>

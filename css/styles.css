@@ -319,8 +319,17 @@ h3 {
 .gallery--images-loaded-demo img {
   display: block;
   height: 160px;
-  margin: 0 5px;
 }
+
+.gallery--images-demo {
+  margin-bottom: 40px;
+}
+
+.gallery--images-demo img {
+  display: block;
+  height: 160px;
+}
+
 
 .gallery--watch-demo:after {
   content: 'flickity';
@@ -423,6 +432,10 @@ h3 {
 
   .gallery--watch-demo .gallery-cell {
     margin-bottom: 10px;
+  }
+
+  .gallery--images-demo img {
+    height: 400px;
   }
 
 }

@@ -21,8 +21,9 @@
   </div>
   <div class="hero-gallery__cell hero-gallery__cell--2">
     <div class="content-wrap">
-      <p class="slogan slogan--setup">There are many galleries, sliders, and&nbsp;carousels.</p>
-      <p class="slogan slogan--hook">Flickity will be your favorite.</p>
+      <p class="slogan slogan--easy">Easy to use.</p>
+      <p class="slogan slogan--fun">Fun to flick.</p>
+      <p class="slogan slogan--tagline">Flickity makes galleries, sliders, &amp; carousels that feel lively and effortless.</p>
     </div>
   </div>
   <div class="hero-gallery__cell hero-gallery__cell--3">
@@ -92,7 +93,7 @@
     </li>
   </ol>
 
-  <p>That's it! Everything else is just details.</p>
+  <p>That&rsquo;s it! You&rsquo;re all set to start using and customizing Flickity.</p>
 </div>
 
 <h2>Install</h2>
@@ -110,7 +111,17 @@
 
 <p>Install with npm: <code>npm install flickity</code></p>
 
-<h2>How to use</h2>
+<h2>Getting started</h2>
+
+<p>Include the Flickity <code>.css</code> and <code>.js</code> files in your site.</p>
+
+``` html
+<link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+```
+
+``` html
+<script src="/path/to/flickity.pkgd.min.js"></script>
+```
 
 <p>Flickity works on a container gallery element with a group of cell elements.</p>
 
@@ -123,22 +134,13 @@
 </div>
 ```
 
-<p>Include the Flickity .js and .css files in your site.</p>
-
-``` html
-<link rel="stylesheet" href="/path/to/flickity.css" media="screen">
-
-<script src="/path/to/flickity.pkgd.min.js"></script>
-```
-
-<p>There are several ways to initialize a Flickity instance.</p>
+<p>There are several ways to initialize Flickity.</p>
 
 <h3>Initialize with jQuery</h3>
 
 <p>You can use Flickity as a jQuery plugin: <code>$('selector').flickity()</code>.</p>
 
 ``` js
-// init Flickity
 $('#main-gallery').flickity({
   // options
   cellAlign: 'left',
@@ -148,7 +150,7 @@ $('#main-gallery').flickity({
 
 <h3>Initialize with Vanilla JavaScript</h3>
 
-<p>You can use Flickity with vanilla JS: <code>new Flickity( elem )</code>. The <code>Flickity()</code> constructor accepts two arguments: the container element and an options object.</p>
+<p>You can use Flickity with vanilla JS: <code>new Flickity( elem )</code>. The <code>Flickity()</code> constructor accepts two arguments: the gallery element and an options object.</p>
 
 ``` js
 var elem = document.querySelector('#main-gallery');
@@ -167,7 +169,7 @@ var flicky = new Flickity( '#main-gallery', {
 
 <h3>Initialize with HTML</h3>
 
-<p>You can initialize Flickity in HTML, without writing any JavaScript. Add <code>js-flickity</code> to the class of the container element. Options can be set with a <code>data-flickity-options</code> attribute.</p>
+<p>You can initialize Flickity in HTML, without writing any JavaScript. Add <code>js-flickity</code> to the class of the gallery element. Options can be set with a <code>data-flickity-options</code> attribute.</p>
 
 
 ``` html
@@ -279,7 +281,7 @@ var flicky = new Flickity( '#main-gallery', {
 
 <h3>cellAlign</h3>
 
-<p>Align cells within the container element.</p>
+<p>Align cells within the gallery element.</p>
 
 <ul>
   <li>Values: <code>'center'</code>, <code>'left'</code>, <code>'right'</code></li>
@@ -362,7 +364,7 @@ wrapAround: true
 
 <h3>contain</h3>
 
-<p>Contains cells to container element to prevent excess scroll at beginning or end. Has no effect if <code>wrapAround: true</code>.</p>
+<p>Contains cells to gallery element to prevent excess scroll at beginning or end. Has no effect if <code>wrapAround: true</code>.</p>
 
 <ul>
   <li>Values: <code>true</code>, <code>false</code></li>

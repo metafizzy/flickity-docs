@@ -63,7 +63,7 @@ h1 {
 }
 
 h2 {
-  font-size: 50px;
+  font-size: 46px;
   border-top: 4px double #DDD;
   padding-top: 60px;
   margin-top: 80px;
@@ -71,7 +71,7 @@ h2 {
 
 h3 {
   font-family: 'Texta Heavy', sans-serif;
-  font-size: 32px;
+  font-size: 30px;
   border-top: 1px solid #DDD;
   padding-top: 30px;
 }
@@ -114,17 +114,23 @@ h3 {
 }
 
 .slogan {
-  font-size: 60px;
   line-height: 1.2;
   margin: 0;
 }
 
-.slogan--setup {
-  padding-top: 80px;
-  margin-bottom: 20px;
+.slogan--easy { padding-top: 40px; }
+
+.slogan--easy,
+.slogan--fun {
+  font-size: 4.8em;
+  line-height: 1.1;
 }
 
-.slogan--hook { color: #333; }
+.slogan--tagline {
+  margin-top: 20px;
+  font-size: 3.0em;
+  color: #333;
+}
 
 .feature-list {
   font-size: 60px;
@@ -190,7 +196,7 @@ h3 {
 }
 
 .call-out--beta-testing p {
-  font-size: 1.3em;
+  font-size: 1.25em;
   line-height: 1.2;
 }
 
@@ -199,7 +205,7 @@ h3 {
 
 .quick-start p,
 .quick-start li:before {
-  font-size: 1.3em;
+  font-size: 1.25em;
   line-height: 1.2;
 }
 

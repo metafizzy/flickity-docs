@@ -587,14 +587,57 @@ rightToLeft: false
   background: transparent;
 }
 /* arrow color */
-.flickity-prev-next-button .arrow { fill: white; }
-.flickity-prev-next-button.no-svg { color: white; }
+.flickity-prev-next-button .arrow {
+  fill: white;
+}
+.flickity-prev-next-button.no-svg {
+  color: white;
+}
 /* hide disabled button */
-.flickity-prev-next-button:disabled { display: none; }
+.flickity-prev-next-button:disabled {
+  display: none;
+}
 ```
   </div>
   <div class="example__demo">
-    <div class="gallery gallery--margin gallery--prev-next-1 js-flickity">
+    <div class="gallery gallery--margin gallery--prev-next-big-arrow js-flickity">
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
+
+<div class="example">
+  <div class="example__code">
+``` css
+/* smaller, dark, rounded square */
+.flickity-prev-next-button {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  background: #333;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  fill: white;
+}
+.flickity-prev-next-button.no-svg {
+  color: white;
+}
+/* position outside */
+.flickity-prev-next-button.previous {
+  left: -40px;
+}
+.flickity-prev-next-button.next {
+  right: -40px;
+}
+```
+  </div>
+  <div class="example__demo">
+    <div class="gallery gallery--margin gallery--prev-next-small-outside js-flickity">
+      <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
@@ -603,6 +646,67 @@ rightToLeft: false
 </div>
 
 <h2>Page dots</h2>
+
+<p>Style and position page dots with CSS.</p>
+
+<div class="example">
+  <div class="example__code">
+``` css
+/* position dots in gallery */
+.flickity-page-dots {
+  bottom: 0px;
+}
+/* white circles */
+.flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white;
+}
+/* fill-in selected dot */
+.flickity-page-dots .dot.is-selected {
+  background: white;
+}
+```
+  </div>
+  <div class="example__demo">
+    <div class="gallery gallery--margin gallery--o-dots js-flickity">
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
+
+<div class="example">
+  <div class="example__code">
+``` css
+/* position dots up a bit */
+.flickity-page-dots {
+  bottom: -22px;
+}
+/* dots are lines */
+.flickity-page-dots .dot {
+  height: 4px;
+  width: 40px;
+  margin: 0;
+  border-radius: 0;
+}
+```
+  </div>
+  <div class="example__demo">
+    <div class="gallery gallery--margin gallery--line-dots js-flickity">
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
 
 </div> <!-- .content-wrap -->
 

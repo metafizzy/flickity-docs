@@ -2,37 +2,8 @@
   box-sizing: border-box;
 }
 
-@font-face {
-  font-family: 'Texta Book';
-  src: url('../lib/texta-book.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Texta Regular';
-  src: url('../lib/texta-regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Texta Heavy';
-  src: url('../lib/texta-heavy.woff') format('woff');
-  font-weight: 800;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Texta Black';
-  src: url('../lib/texta-black.woff') format('woff');
-  font-weight: 800;
-  font-style: normal;
-}
-
 body {
   font-family: 'Texta Regular', sans-serif;
-/*  font-family: 'Lucida Grande', sans-serif;*/
   color: #333;
   line-height: 1.5;
   font-size: 19px;
@@ -53,9 +24,13 @@ b, strong {
   font-family: 'Texta Heavy', sans-serif;
 }
 
+em, i {
+  font-family: 'Texta Italic', sans-serif;
+  font-style: normal;
+}
+
 h1, h2, h3 {
   line-height: 1.2;
-/*  font-family: 'Texta Heavy', sans-serif;*/
 }
 
 h1 {
@@ -467,7 +442,6 @@ h3 {
   top: 0;
   width: 100%;
   max-width: 120px;
-  margin-right: 1.0em;
   border-radius: 5px 0 0 5px;
 }
 

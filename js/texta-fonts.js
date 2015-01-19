@@ -25,6 +25,10 @@
  ? 2015 MyFonts Inc
 */
 
+( function() {
+
+var customPath = '../fonts/';
+
 var protocol = document.location.protocol;
 "https:" != protocol && (protocol = "http:");
 var count = document.createElement("script");
@@ -44,7 +48,7 @@ else {
   script.match("://") || "/" == script.charAt(0) || (script = "./" + script);
   path = script.replace(/\\/g, "/").replace(/\/[^\/]*\/?$/, "")
 }
-var wfpath = path + "/webfonts/",
+var wfpath = path,
   browsers = [{
     regex: "MSIE (\\d+\\.\\d+)",
     versionRegex: "new Number(RegExp.$1)",
@@ -178,3 +182,5 @@ for (var fonts = [{
   css += "}"
 }
 stylesheet.styleSheet ? stylesheet.styleSheet.cssText = css : stylesheet.innerHTML = css;
+
+})();

@@ -194,6 +194,34 @@ h3 {
   line-height: 1.2;
 }
 
+.call-out--chill { border-color: #8C8; }
+.call-out--chill:before { background: #8C8; }
+
+.quick-start p,
+.quick-start li:before {
+  font-size: 1.3em;
+  line-height: 1.2;
+}
+
+.quick-start ol {
+  list-style: none;
+}
+
+.quick-start li {
+  position: relative;
+  counter-increment: quick-start-item;
+}
+
+.quick-start li:before {
+  content: counter(quick-start-item) ".";
+  position: absolute;
+  left: -1.2em;
+  color: #8C8;
+  font-size: 1.3em;
+  font-weight: bold;
+  font-family: 'Texta Heavy', sans-serif;
+}
+
 /* example
 ------------------------- */
 

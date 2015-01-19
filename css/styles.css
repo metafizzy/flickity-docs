@@ -72,8 +72,6 @@ h2 {
 h3 {
   font-family: 'Texta Heavy', sans-serif;
   font-size: 30px;
-  border-top: 1px solid #DDD;
-  padding-top: 30px;
 }
 
 /* ---- content ---- */
@@ -84,11 +82,26 @@ h3 {
   padding: 0 10px;
 }
 
+/* ---- main ---- */
+
+.main h2 {
+  border-top: 4px double #DDD;
+  padding-top: 60px;
+  margin-top: 80px;
+}
+
+.main h3 {
+  border-top: 1px solid #DDD;
+  padding-top: 30px;
+}
+
 /* hero-gallery
 ------------------------- */
 
 .hero-gallery {
   margin-bottom: 80px;
+  background: #FAFAFA url('http://i.imgur.com/R60qKwS.jpg');
+  background-size: cover;
 }
 
 .hero-gallery__cell {
@@ -413,6 +426,63 @@ h3 {
   border-radius: 0;
 }
 
+/* site-footer
+------------------------- */
+
+.site-footer {
+  margin-top: 80px;
+  background: #FAFAFA;
+  padding: 40px 0 ;
+}
+
+.site-footer p {
+  font-size: 1.2em;
+}
+
+.other-products:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.other-products__cell a {
+  display: block;
+  position: relative;
+  padding: 10px 10px 10px 135px;;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  min-height: 120px;
+  background: #EEE;
+}
+
+.other-products__cell a:hover {
+  background: #8C8;
+  color: white;
+}
+
+.other-products__cell img {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  max-width: 120px;
+  margin-right: 1.0em;
+  border-radius: 5px 0 0 5px;
+}
+
+.other-products__cell h3 {
+  margin: 0 0 0px;
+}
+
+.other-products__cell .description {
+  font-size: 1.1em;
+  line-height: 1.2;
+  margin: 0;
+}
+
+
+
 /* media query
 ------------------------- */
 
@@ -438,6 +508,13 @@ h3 {
     height: 400px;
   }
 
+
+  .other-products__cell {
+    float: left;
+    width: 49%;
+  }
+
+  .other-products__cell:nth-child(2n+1) { margin-right: 2%; }
 }
 
 

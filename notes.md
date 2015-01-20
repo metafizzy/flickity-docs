@@ -5,7 +5,7 @@
 <!-- Texta font -->
 <!-- font-sizes in em -->
 <!-- mobile hero gallery -->
-GitHub link
+<!-- GitHub link -->
 <!-- copy assets to build/ -->
 copy flickity files to build/
 dev build

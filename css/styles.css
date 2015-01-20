@@ -1,7 +1,9 @@
 /* webfonts
 ------------------------- */
 
-@import url("//hello.myfonts.net/count/2d1b53");
+/*
+  getting buggy
+  @import url("//hello.myfonts.net/count/2d1b53");*/
 
 /*
   Just use WOFF2 and WOFF for webfonts
@@ -53,6 +55,7 @@ a:hover {
 
 b, strong {
   font-family: 'Texta Heavy', sans-serif;
+  font-weight: normal;
 }
 
 em, i {
@@ -184,6 +187,56 @@ h3 {
 }
 
 .by-line--made b { font-family: 'Texta Heavy', sans-serif; }
+
+/* ---- big-links ---- */
+
+.big-links {
+  list-style: none;
+  margin: 0 0 60px;
+  padding: 0;
+}
+
+.big-links:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+
+.big-links__item {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+}
+
+.big-links__item a {
+  display: block;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.big-links__item--fill a {
+  background: #8C8;
+  color: white;
+}
+
+.big-links__item--fill a:hover {
+  background: #EC5;
+}
+
+.big-links__item--stroke a {
+  border: 2px solid #8C8;
+}
+
+.big-links__item--stroke a:hover { border-color: #EC5; }
+
+
+.big-links__link {
+}
+
+.big-links__link:hover {
+  background: #EC5;
+  color: white;
+}
 
 /* ---- call-out ---- */
 
@@ -540,6 +593,20 @@ h3 {
     padding-top: 40px;
     margin-bottom: 20px;
   }
+
+  /* ---- big-links ---- */
+
+  .big-links__item {
+    float: left;
+    width: 49%;
+    font-size: 1.4em;
+  }
+
+  .big-links__item a {
+    padding: 20px;
+  }
+
+  .big-links__item:nth-child(2n+1) { margin-right: 2%; }
 
   /* ---- example ---- */
 

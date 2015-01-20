@@ -13,3 +13,5 @@ dev build
   list out all sources
 <!-- figure out s3cmd -->
 <!-- tag version 0.1.0, npm publish -->
+
+document how to style prev/next button :focus, when removing outline

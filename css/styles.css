@@ -113,19 +113,20 @@ h3 {
 
 .hero-gallery__cell {
   width: 100%;
-  height: 440px;
+  height: 240px;
   color: white;
   background: #8C8;
+  padding: 20px 60px;
 }
 
 .hero-gallery h1 {
-  font-size: 5.8em;
-  padding-top: 100px;
+  font-size: 3.2em;
+  padding-top: 20px;
   margin: 0;
 }
 
 .hero-gallery .tagline {
-  font-size: 2.1em;
+  font-size: 1.4em;
   margin: 0;
 }
 
@@ -138,25 +139,28 @@ h3 {
   margin: 0;
 }
 
-.slogan--easy { padding-top: 40px; }
-
 .slogan--easy,
 .slogan--fun {
-  font-size: 4.8em;
+  font-size: 2.2em;
   line-height: 1.1;
 }
 
 .slogan--tagline {
-  margin-top: 20px;
-  font-size: 3.0em;
+  margin-top: 10px;
+  font-size: 1.2em;
   color: #333;
 }
 
 .feature-list {
-  font-size: 60px;
+  font-size: 1.8em;
   list-style: none;
-  padding: 40px 0 0;
+  line-height: 1.2;
   margin: 0;
+  padding: 0;
+}
+
+.feature-list li {
+  margin-bottom: 10px;
 }
 
 .hero-gallery__cell--3 {
@@ -170,12 +174,12 @@ h3 {
 .by-line {
   line-height: 1.2;
   margin: 0;
-  font-size: 3.1em;
+  font-size: 1.8em;
 }
 
 .by-line--made {
-  padding-top: 80px;
-  margin-bottom: 20px;
+  padding-top: 20px;
+  margin-bottom: 10px;
   color: #333;
 }
 
@@ -493,6 +497,52 @@ h3 {
 ------------------------- */
 
 @media screen and ( min-width: 768px ) {
+
+  /* ---- hero gallery ---- */
+
+  .hero-gallery__cell {
+    height: 440px;
+    padding: 40px 0 0;
+  }
+
+  .hero-gallery h1 {
+    font-size: 5.8em;
+    padding-top: 60px;
+  }
+
+  .hero-gallery .tagline {
+    font-size: 2.1em;
+  }
+
+  .slogan--easy,
+  .slogan--fun {
+    font-size: 4.8em;
+  }
+
+  .slogan--tagline {
+    margin-top: 20px;
+    font-size: 2.4em;
+  }
+
+  .feature-list {
+    font-size: 3.1em;
+  }
+
+  .feature-list li {
+    margin-bottom: 20px;
+  }
+
+  .by-line {
+    font-size: 3.1em;
+  }
+
+  .by-line--made {
+    padding-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  /* ---- example ---- */
+
   .example__code,
   .example__demo {
     float: left;

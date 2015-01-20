@@ -4,7 +4,7 @@
 <!-- re-direct flickityjs.com -->
 <!-- Texta font -->
 <!-- font-sizes in em -->
-mobile hero gallery
+<!-- mobile hero gallery -->
 GitHub link
 <!-- copy assets to build/ -->
 copy flickity files to build/

@@ -32,13 +32,58 @@ function highlightCodeBlock( block ) {
   return html;
 }
 
-gulp.task( 'build', function() {
-  gulp.src('content/index.html')
-    // .pipe( highlight() )
+var contentSrc = 'content/*.html';
+
+gulp.task( 'content', function() {
+  gulp.src( contentSrc )
     .pipe( replace( /```[^```]+```/gi, highlightCodeBlock ) )
     .pipe( gulp.dest('build') );
 });
 
-gulp.task( 'watch', function() {
-  gulp.watch( 'content/*.html', [ 'build' ] );
+// ----- copy assets ----- //
+
+var assetsSrc = [
+  'css/*.*',
+  'js/*.*'
+];
+
+gulp.task( 'copy-assets', function() {
+  // base opt for copying directory content
+  // http://stackoverflow.com/a/25038015/182183
+  gulp.src( assetsSrc, { base: '.' } )
+    .pipe( gulp.dest('build') );
 });
+
+// ----- copy prod assets ----- //
+
+var prodAssetsSrc = assetsSrc.concat([
+  'fonts/*.*'
+]);
+
+gulp.task( 'copy-prod-assets', function() {
+  gulp.src( prodAssetsSrc, { base: '.' } )
+    .pipe( gulp.dest('build') );
+});
+
+// -----  ----- //
+
+// TODO copy flickity src
+// gulp.task( 'copy-flickity', function() {});
+
+// TODO concat css
+
+// TODO concat & minify js
+
+// ----- watch ----- //
+
+gulp.task( 'watch', function() {
+  gulp.watch( contentSrc, [ 'content' ] );
+  gulp.watch( assetsSrc, [ 'copy-assets' ] );
+});
+
+// ----- default ----- //
+
+gulp.task( 'default', [
+  'content',
+  'copy-prod-assets'
+] );

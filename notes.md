@@ -3,7 +3,7 @@
 <!-- hover.com account -->
 <!-- re-direct flickityjs.com -->
 <!-- Texta font -->
-font-sizes in em
+<!-- font-sizes in em -->
 mobile hero gallery
 GitHub link
 <!-- copy assets to build/ -->

@@ -70,7 +70,7 @@ h1 {
 }
 
 h2 {
-  font-size: 46px;
+  font-size: 2.4em;
   border-top: 4px double #DDD;
   padding-top: 60px;
   margin-top: 80px;
@@ -78,7 +78,7 @@ h2 {
 
 h3 {
   font-family: 'Texta Heavy', sans-serif;
-  font-size: 30px;
+  font-size: 1.6em;
 }
 
 /* ---- content ---- */
@@ -119,13 +119,13 @@ h3 {
 }
 
 .hero-gallery h1 {
-  font-size: 110px;
+  font-size: 5.8em;
   padding-top: 100px;
   margin: 0;
 }
 
 .hero-gallery .tagline {
-  font-size: 40px;
+  font-size: 2.1em;
   margin: 0;
 }
 
@@ -170,7 +170,7 @@ h3 {
 .by-line {
   line-height: 1.2;
   margin: 0;
-  font-size: 60px;
+  font-size: 3.1em;
 }
 
 .by-line--made {
@@ -203,7 +203,7 @@ h3 {
   border-radius: 50%;
   text-align: center;
   color: white;
-  font-size: 36px;
+  font-size: 1.9em;
   font-family: Consolas, Georgia, serif;
   font-style: italic;
   line-height: 46px;
@@ -216,7 +216,7 @@ h3 {
 }
 
 .call-out--beta-testing p {
-  font-size: 1.25em;
+  font-size: 1.2em;
   line-height: 1.2;
 }
 
@@ -225,7 +225,7 @@ h3 {
 
 .quick-start p,
 .quick-start li:before {
-  font-size: 1.25em;
+  font-size: 1.2em;
   line-height: 1.2;
 }
 
@@ -243,7 +243,7 @@ h3 {
   position: absolute;
   left: -1.2em;
   color: #8C8;
-  font-size: 1.3em;
+  font-size: 1.2em;
   font-weight: bold;
   font-family: 'Texta Heavy', sans-serif;
 }

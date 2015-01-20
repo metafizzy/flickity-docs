@@ -272,10 +272,12 @@ h3 {
   border-top: none;
 }
 
-.call-out--beta-testing p {
+.call-out--beta-testing p,
+.call-out--beta-testing li {
   font-size: 1.2em;
-  line-height: 1.2;
 }
+
+.call-out--beta-testing p { line-height: 1.3; }
 
 .call-out--chill { border-color: #8C8; }
 .call-out--chill:before { background: #8C8; }

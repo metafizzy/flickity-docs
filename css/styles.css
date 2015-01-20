@@ -299,7 +299,6 @@ h3 {
   content: counter(quick-start-item) ".";
   position: absolute;
   left: -1.2em;
-  color: #8C8;
   font-size: 1.2em;
   font-weight: bold;
   font-family: 'Texta Heavy', sans-serif;
@@ -318,7 +317,7 @@ h3 {
   clear: both;
 }
 
-
+.example__code pre { margin: 0 0 20px; }
 
 /* demo galleries
 ------------------------- */

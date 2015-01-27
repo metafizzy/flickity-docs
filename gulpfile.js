@@ -1,5 +1,6 @@
 /*jshint node: true, undef: true, unused: true */
 
+var fs = require('fs');
 var gulp = require('gulp');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
@@ -77,22 +78,26 @@ gulp.task( 'css', function() {
 // ----- content ----- //
 
 var contentSrc = 'content/*.html';
-var pageTemplate = require('./tasks/page-template');
 var highlightCodeBlock = require('./tasks/highlight-code-block');
 var build = require('./tasks/build');
 
 function buildContent( isDev ) {
+  var data = {
+    is_dev: isDev,
+    cssSrc: cssSrc,
+    jsSrc: jsSrc
+  };
+
+  var pageTemplate = fs.readFileSync( 'templates/page.mustache', 'utf8' );
+  var buildOptions = {
+    layout: pageTemplate
+  };
+
   // gulp task
   return function() {
     gulp.src( contentSrc )
-      .pipe( pageTemplate() )
       .pipe( highlightCodeBlock() )
-      // .pipe( builder )
-      .pipe( build({
-        is_dev: isDev,
-        cssSrc: cssSrc,
-        jsSrc: jsSrc
-      }) )
+      .pipe( build( data, buildOptions ) )
       .pipe( gulp.dest('build') );
   };
 }

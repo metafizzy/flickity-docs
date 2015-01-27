@@ -87,8 +87,7 @@ var through2 = require('through2');
 
 var partials = [];
 
-gulp.task( 'template', function() {
-
+gulp.task( 'partials', function() {
   var addPartial = through2.obj( function( file, enc, callback ) {
     partials.push({
       name: path.basename( file.path, path.extname( file.path ) ),
@@ -98,8 +97,8 @@ gulp.task( 'template', function() {
     callback();
   });
 
-  return gulp.src('templates/*.*')
-  .pipe( addPartial );
+  return gulp.src('templates/partials/*.*')
+    .pipe( addPartial );
 });
 
 function buildContent( isDev ) {
@@ -111,7 +110,8 @@ function buildContent( isDev ) {
 
   var pageTemplate = fs.readFileSync( 'templates/page.mustache', 'utf8' );
   var buildOptions = {
-    layout: pageTemplate
+    layout: pageTemplate,
+    partials: partials
   };
 
   // gulp task
@@ -128,9 +128,9 @@ function buildContent( isDev ) {
 }
 
 
-gulp.task( 'content', buildContent() );
+gulp.task( 'content', [ 'partials' ], buildContent() );
 
-gulp.task( 'content-dev', buildContent(true) );
+gulp.task( 'content-dev', [ 'partials' ], buildContent(true) );
 
 // ----- default ----- //
 

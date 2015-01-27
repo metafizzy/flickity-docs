@@ -2,9 +2,7 @@
 
 var gulp = require('gulp');
 var concat = require('gulp-concat');
-var replace = require('gulp-replace');
 var uglify = require('gulp-uglify');
-var build = require('gulp-build');
 
 // ----- prod assets ----- //
 
@@ -81,6 +79,7 @@ gulp.task( 'css', function() {
 var contentSrc = 'content/*.html';
 var pageTemplate = require('./tasks/page-template');
 var highlightCodeBlock = require('./tasks/highlight-code-block');
+var build = require('./tasks/build');
 
 function buildContent( isDev ) {
   // gulp task
@@ -88,9 +87,9 @@ function buildContent( isDev ) {
     gulp.src( contentSrc )
       .pipe( pageTemplate() )
       .pipe( highlightCodeBlock() )
+      // .pipe( builder )
       .pipe( build({
         is_dev: isDev,
-        page: 'page_name',
         cssSrc: cssSrc,
         jsSrc: jsSrc
       }) )

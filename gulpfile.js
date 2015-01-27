@@ -1,13 +1,10 @@
 /*jshint node: true, undef: true, unused: true */
 
-var fs = require('fs');
 var gulp = require('gulp');
 var concat = require('gulp-concat');
-var highlightjs = require('highlight.js');
 var replace = require('gulp-replace');
 var uglify = require('gulp-uglify');
 var build = require('gulp-build');
-var through2 = require('through2');
 
 // ----- prod assets ----- //
 
@@ -81,54 +78,16 @@ gulp.task( 'css', function() {
 
 // ----- content ----- //
 
-highlightjs.configure({
-  classPrefix: ''
-});
-
-var reFirstLine = /.*\n/;
-
-function highlightCodeBlock( block ) {
-  // remove ticks
-  block = block.replace( /```/g, '' );
-  var langMatch = block.match( reFirstLine );
-  var language = langMatch && langMatch[0];
-  // remove first line
-  block = block.replace( reFirstLine, '' );
-  if ( language ) {
-    language = language.trim();
-  }
-
-  var highlighted = language ? highlightjs.highlight( language, block, true ).value : block;
-  var html = '<pre><code' +
-    ( language ? ' class="' + language + '"' : '' ) + '>' +
-    highlighted + '</code></pre>';
-
-  return html;
-}
-
 var contentSrc = 'content/*.html';
-
-gulp.task( 'content', buildContent() );
-
-gulp.task( 'content-dev', buildContent( true ) );
+var pageTemplate = require('./tasks/page-template');
+var highlightCodeBlock = require('./tasks/highlight-code-block');
 
 function buildContent( isDev ) {
-  // page template
-  var pageContent = fs.readFileSync( 'templates/page.mustache', 'utf8' );
-  var pageTemplate = through2.obj( function( file, enc, callback ) {
-    var contents = file.contents.toString();
-    contents = pageContent.replace( '{{{content}}}', contents );
-    file.contents = new Buffer( contents );
-
-    this.push( file );
-    callback();
-  });
-
   // gulp task
   return function() {
     gulp.src( contentSrc )
-      .pipe( pageTemplate )
-      .pipe( replace( /```[^```]+```/gi, highlightCodeBlock ) )
+      .pipe( pageTemplate() )
+      .pipe( highlightCodeBlock() )
       .pipe( build({
         is_dev: isDev,
         page: 'page_name',
@@ -138,6 +97,10 @@ function buildContent( isDev ) {
       .pipe( gulp.dest('build') );
   };
 }
+
+gulp.task( 'content', buildContent() );
+
+gulp.task( 'content-dev', buildContent(true) );
 
 // ----- default ----- //
 

@@ -39,9 +39,9 @@ Options
 Events
 Methods
 Extras
+  RequireJS
+  Browserify
+  Video
+  Angular
 License
 
-RequireJS
-Browserify
-Video
-Angular

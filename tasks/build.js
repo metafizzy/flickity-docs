@@ -38,8 +38,9 @@ module.exports = function(data, config) {
       template = hbs.compile(fileContents);
     }
 
-    // add file data to data
+    // add file data, front matter data to data obj
     _.extend( data, {
+      page: file.frontMatter,
       basename: path.basename( file.path, path.extname( file.path ) )
     });
 

@@ -77,9 +77,30 @@ gulp.task( 'css', function() {
 
 // ----- content ----- //
 
-var contentSrc = 'content/*.html';
+var contentSrc = [ 'content/*.html' ];
 var highlightCodeBlock = require('./tasks/highlight-code-block');
 var build = require('./tasks/build');
+var frontMatter = require('gulp-front-matter');
+// var gulpFilter = require('gulp-filter');
+var path = require('path');
+var through2 = require('through2');
+
+var partials = [];
+
+gulp.task( 'template', function() {
+
+  var addPartial = through2.obj( function( file, enc, callback ) {
+    partials.push({
+      name: path.basename( file.path, path.extname( file.path ) ),
+      tpl: file.contents.toString()
+    });
+    this.push( file );
+    callback();
+  });
+
+  return gulp.src('templates/*.*')
+  .pipe( addPartial );
+});
 
 function buildContent( isDev ) {
   var data = {
@@ -96,11 +117,16 @@ function buildContent( isDev ) {
   // gulp task
   return function() {
     gulp.src( contentSrc )
+    .pipe( frontMatter({
+        property: 'frontMatter',
+        remove: true
+      }) )
       .pipe( highlightCodeBlock() )
       .pipe( build( data, buildOptions ) )
       .pipe( gulp.dest('build') );
   };
 }
+
 
 gulp.task( 'content', buildContent() );
 
@@ -116,9 +142,21 @@ gulp.task( 'default', [
   'prod-assets'
 ] );
 
+// ----- dev ----- //
+
+gulp.task( 'dev', [
+  'content-dev',
+  'prod-assets'
+] );
+
 // ----- watch ----- //
 
 gulp.task( 'watch', function() {
   gulp.watch( contentSrc, [ 'content' ] );
   gulp.watch( 'css/*.css', [ 'css' ] );
+});
+
+
+gulp.task( 'watch-dev', function() {
+  gulp.watch( contentSrc, [ 'content-dev' ] );
 });

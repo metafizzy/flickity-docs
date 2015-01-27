@@ -18,7 +18,8 @@
     "highlight.js": "^8.4.0",
     "gulp-uglify": "^1.1.0",
     "gulp-concat": "^2.4.3",
-    "gulp-build": "^0.5.3"
+    "gulp-build": "^0.5.3",
+    "through2": "^0.6.3"
   },
   "devDependencies": {},
   "repository": {

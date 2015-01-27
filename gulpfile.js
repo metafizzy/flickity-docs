@@ -1,11 +1,13 @@
 /*jshint node: true, undef: true, unused: true */
 
+var fs = require('fs');
 var gulp = require('gulp');
 var concat = require('gulp-concat');
 var highlightjs = require('highlight.js');
 var replace = require('gulp-replace');
 var uglify = require('gulp-uglify');
 var build = require('gulp-build');
+var through2 = require('through2');
 
 // ----- prod assets ----- //
 
@@ -111,16 +113,30 @@ gulp.task( 'content', buildContent() );
 gulp.task( 'content-dev', buildContent( true ) );
 
 function buildContent( isDev ) {
+  // page template
+  var pageContent = fs.readFileSync( 'templates/page.mustache', 'utf8' );
+  var pageTemplate = through2.obj( function( file, enc, callback ) {
+    var contents = file.contents.toString();
+    contents = pageContent.replace( '{{{content}}}', contents );
+    file.contents = new Buffer( contents );
+
+    this.push( file );
+    callback();
+  });
+
+  // gulp task
   return function() {
     gulp.src( contentSrc )
+      .pipe( pageTemplate )
       .pipe( replace( /```[^```]+```/gi, highlightCodeBlock ) )
       .pipe( build({
         is_dev: isDev,
+        page: 'page_name',
         cssSrc: cssSrc,
         jsSrc: jsSrc
       }) )
       .pipe( gulp.dest('build') );
-  }
+  };
 }
 
 // ----- default ----- //

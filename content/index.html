@@ -1,22 +1,3 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="description" content="Touch, responsive, flickable galleries" />
-  <meta name="viewport" content="width=device-width" />
-
-  <title>Flickity &middot; beta</title>
-
-  {{#if is_dev}}
-    {{#each cssSrc}}
-      <link rel="stylesheet" href="../{{this}}" />
-    {{/each}}
-  {{else}}
-    <link rel="stylesheet" href="css/flickity-docs.css" media="screen" />
-  {{/if}}
-
-</head>
-<body>
 
 <div class="hero-gallery js-flickity">
   <div class="hero-gallery__cell hero-gallery__cell--1">
@@ -805,54 +786,3 @@ rightToLeft: false
 
 </div> <!-- .content-wrap -->
 </div> <!-- .main -->
-
-
-<div class="site-footer">
-  <div class="content-wrap">
-    <p class="site-footer__made-by">Metafizzy makes delightful web UI. Also made by Metafizzy</p>
-
-    <div class="other-products">
-      <div class="other-products__cell other-products__cell--isotope">
-        <a href="http://isotope.metafizzy.co/">
-          <img src="http://i.imgur.com/xfGupRf.png" alt="Isotope" />
-          <h3>Isotope</h3>
-          <p class="description">Filter &amp; sort magical layouts</p>
-        </a>
-      </div>
-
-      <div class="other-products__cell other-products__cell--packery">
-        <a href="http://packery.metafizzy.co/">
-          <img src="http://i.imgur.com/uRXPQfm.png" alt="Packery" />
-          <h3>Packery</h3>
-          <p class="description">Gap-less, draggable, bin-packing layout library</p>
-        </a>
-      </div>
-    </div>
-
-    <p class="site-footer__follow">Follow <a href="https://twitter.com/metafizzyco">@metafizzyco on Twitter for Flickity updates</a></p>
-
-  </div> {{! .content-wrap }}
-</div> {{! .site-footer }}
-
-{{#if is_dev}}
-  {{#each jsSrc}}
-    <script src="../{{this}}"></script>
-  {{/each}}
-{{else}}
-  <script src="js/flickity-docs.min.js"></script>
-{{/if}}
-
-{{#unless is_dev}}
-  <script>
-    // Google Analytics
-    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-    e.src='//www.google-analytics.com/analytics.js';
-    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-    ga('create','UA-58739927-1','auto');ga('send','pageview');
-  </script>
-{{/unless}}
-
-</body>
-</html>

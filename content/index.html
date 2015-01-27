@@ -7,7 +7,13 @@
 
   <title>Flickity &middot; beta</title>
 
-  <link rel="stylesheet" href="css/flickity-docs.css" media="screen" />
+  {{#if is_dev}}
+    {{#each cssSrc}}
+      <link rel="stylesheet" href="../{{this}}" />
+    {{/each}}
+  {{else}}
+    <link rel="stylesheet" href="css/flickity-docs.css" media="screen" />
+  {{/if}}
 
 </head>
 <body>
@@ -825,20 +831,28 @@ rightToLeft: false
 
     <p class="site-footer__follow">Follow <a href="https://twitter.com/metafizzyco">@metafizzyco on Twitter for Flickity updates</a></p>
 
-  </div> <!-- .content-wrap -->
-</div> <!-- .site-footer -->
+  </div> {{! .content-wrap }}
+</div> {{! .site-footer }}
 
-<script src="js/flickity-docs.min.js"></script>
+{{#if is_dev}}
+  {{#each jsSrc}}
+    <script src="../{{this}}"></script>
+  {{/each}}
+{{else}}
+  <script src="js/flickity-docs.min.js"></script>
+{{/if}}
 
-<script>
-  // Google Analytics
-  (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-  function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-  e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-  e.src='//www.google-analytics.com/analytics.js';
-  r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-  ga('create','UA-58739927-1','auto');ga('send','pageview');
-</script>
+{{#unless is_dev}}
+  <script>
+    // Google Analytics
+    (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+    function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+    e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+    e.src='//www.google-analytics.com/analytics.js';
+    r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+    ga('create','UA-58739927-1','auto');ga('send','pageview');
+  </script>
+{{/unless}}
 
 </body>
 </html>

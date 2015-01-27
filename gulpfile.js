@@ -5,41 +5,7 @@ var concat = require('gulp-concat');
 var highlightjs = require('highlight.js');
 var replace = require('gulp-replace');
 var uglify = require('gulp-uglify');
-
-// ----- content ----- //
-
-highlightjs.configure({
-  classPrefix: ''
-});
-
-var reFirstLine = /.*\n/;
-
-function highlightCodeBlock( block ) {
-  // remove ticks
-  block = block.replace( /```/g, '' );
-  var langMatch = block.match( reFirstLine );
-  var language = langMatch && langMatch[0];
-  // remove first line
-  block = block.replace( reFirstLine, '' );
-  if ( language ) {
-    language = language.trim();
-  }
-  
-  var highlighted = language ? highlightjs.highlight( language, block, true ).value : block;
-  var html = '<pre><code' +
-    ( language ? ' class="' + language + '"' : '' ) + '>' +
-    highlighted + '</code></pre>';
-
-  return html;
-}
-
-var contentSrc = 'content/*.html';
-
-gulp.task( 'content', function() {
-  gulp.src( contentSrc )
-    .pipe( replace( /```[^```]+```/gi, highlightCodeBlock ) )
-    .pipe( gulp.dest('build') );
-});
+var build = require('gulp-build');
 
 // ----- prod assets ----- //
 
@@ -63,7 +29,7 @@ gulp.task( 'dist', function() {
 
 // ----- js ----- //
 
-var packageJsSrc = [
+var jsSrc = [
   // dependencies
   'bower_components/get-style-property/get-style-property.js',
   'bower_components/get-size/get-size.js',
@@ -89,7 +55,7 @@ var packageJsSrc = [
 
 // concat & minify js
 gulp.task( 'js', function() {
-  gulp.src( packageJsSrc )
+  gulp.src( jsSrc )
     .pipe( uglify() )
     .pipe( concat('flickity-docs.min.js') )
     .pipe( gulp.dest('build/js') );
@@ -110,6 +76,52 @@ gulp.task( 'css', function() {
     .pipe( concat('flickity-docs.css') )
     .pipe( gulp.dest('build/css') );
 });
+
+// ----- content ----- //
+
+highlightjs.configure({
+  classPrefix: ''
+});
+
+var reFirstLine = /.*\n/;
+
+function highlightCodeBlock( block ) {
+  // remove ticks
+  block = block.replace( /```/g, '' );
+  var langMatch = block.match( reFirstLine );
+  var language = langMatch && langMatch[0];
+  // remove first line
+  block = block.replace( reFirstLine, '' );
+  if ( language ) {
+    language = language.trim();
+  }
+
+  var highlighted = language ? highlightjs.highlight( language, block, true ).value : block;
+  var html = '<pre><code' +
+    ( language ? ' class="' + language + '"' : '' ) + '>' +
+    highlighted + '</code></pre>';
+
+  return html;
+}
+
+var contentSrc = 'content/*.html';
+
+gulp.task( 'content', buildContent() );
+
+gulp.task( 'content-dev', buildContent( true ) );
+
+function buildContent( isDev ) {
+  return function() {
+    gulp.src( contentSrc )
+      .pipe( replace( /```[^```]+```/gi, highlightCodeBlock ) )
+      .pipe( build({
+        is_dev: isDev,
+        cssSrc: cssSrc,
+        jsSrc: jsSrc
+      }) )
+      .pipe( gulp.dest('build') );
+  }
+}
 
 // ----- default ----- //
 

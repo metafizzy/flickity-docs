@@ -17,6 +17,16 @@
     "gulp-replace": "^0.5.1",
     "highlight.js": "^8.4.0",
     "gulp-uglify": "^1.1.0",
-    "gulp-concat": "^2.4.3"
-  }
+    "gulp-concat": "^2.4.3",
+    "gulp-build": "^0.5.3"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/metafizzy/flickity-docs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/metafizzy/flickity-docs/issues"
+  },
+  "homepage": "https://github.com/metafizzy/flickity-docs"
 }

@@ -18,6 +18,8 @@
 </head>
 <body class="page--{{basename}}">
 
+{{> site_header}}
+
 {{#if page.is_homepage}}
   {{> hero_gallery}}
 {{/if}}
@@ -34,32 +36,7 @@ https://github.com/wycats/handlebars.js/issues/858 }}
   </div>
 </div>
 
-<div class="site-footer">
-  <div class="content-wrap">
-    <p class="site-footer__made-by">Metafizzy makes delightful web UI. Also made by Metafizzy</p>
-
-    <div class="other-products">
-      <div class="other-products__cell other-products__cell--isotope">
-        <a href="http://isotope.metafizzy.co/">
-          <img src="http://i.imgur.com/xfGupRf.png" alt="Isotope" />
-          <h3>Isotope</h3>
-          <p class="description">Filter &amp; sort magical layouts</p>
-        </a>
-      </div>
-
-      <div class="other-products__cell other-products__cell--packery">
-        <a href="http://packery.metafizzy.co/">
-          <img src="http://i.imgur.com/uRXPQfm.png" alt="Packery" />
-          <h3>Packery</h3>
-          <p class="description">Gap-less, draggable, bin-packing layout library</p>
-        </a>
-      </div>
-    </div>
-
-    <p class="site-footer__follow">Follow <a href="https://twitter.com/metafizzyco">@metafizzyco on Twitter for Flickity updates</a></p>
-
-  </div> {{! .content-wrap }}
-</div> {{! .site-footer }}
+{{> site_footer}}
 
 {{#if is_dev}}
   {{#each js_paths}}

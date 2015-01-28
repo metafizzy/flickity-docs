@@ -112,6 +112,7 @@ var frontMatter = require('gulp-front-matter');
 var path = require('path');
 var through2 = require('through2');
 
+var partialsSrc = 'templates/partials/*.*';
 var partials = [];
 
 gulp.task( 'partials', function() {
@@ -124,12 +125,14 @@ gulp.task( 'partials', function() {
     callback();
   });
 
-  return gulp.src('templates/partials/*.*')
+  return gulp.src( partialsSrc )
     .pipe( addPartial );
 });
 
+var pageTemplateSrc = 'templates/page.mustache';
+
 function buildContent( isDev ) {
-  var pageTemplate = fs.readFileSync( 'templates/page.mustache', 'utf8' );
+  var pageTemplate = fs.readFileSync( pageTemplateSrc, 'utf8' );
 
   // gulp task
   return function() {
@@ -182,10 +185,14 @@ gulp.task( 'dev', [
 
 gulp.task( 'watch', function() {
   gulp.watch( contentSrc, [ 'content' ] );
+  gulp.watch( partialsSrc, [ 'content' ] );
+  gulp.watch( pageTemplateSrc, [ 'content' ] );
   gulp.watch( 'css/*.css', [ 'css' ] );
 });
 
 
 gulp.task( 'watch-dev', function() {
   gulp.watch( contentSrc, [ 'content-dev' ] );
+  gulp.watch( partialsSrc, [ 'content-dev' ] );
+  gulp.watch( pageTemplateSrc, [ 'content-dev' ] );
 });

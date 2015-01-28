@@ -1,0 +1,79 @@
+/* site nav
+------------------------- */
+
+.site-header {
+  background: #8C8;
+}
+
+.site-nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.site-nav:after {
+  content: '';
+  clear: both;
+  display: block;
+}
+
+.site-nav__item {
+  width: 33.333%;
+  float: left;
+  line-height: 28px;
+}
+
+.site-nav__item a {
+  display: block;
+  color: white;
+  padding: 5px
+}
+
+.site-nav__item--homepage {
+  font-family: 'Texta Heavy', sans-serif;
+  font-size: 21px;
+}
+
+.site-nav__item--homepage a {
+}
+
+.site-nav__item a:hover {
+  background: #E5A;
+  color: white;
+}
+
+.site-nav__item a:active {
+  background: white;
+  color: #8C8;
+}
+
+/* selected */
+.page--index .site-nav__item--homepage a,
+.page--style .site-nav__item--style a,
+.page--options .site-nav__item--options a,
+.page--methods .site-nav__item--methods a,
+.page--events .site-nav__item--events a,
+.page--extras .site-nav__item--extras a,
+.page--license .site-nav__item--license a {
+  background: #ED2;
+  color: white;
+}
+
+/* size at which it can fit */
+@media screen and ( min-width: 840px ) {
+
+  .site-nav__item {
+    width: auto;
+    font-size: 21px;
+    line-height: 70px;
+  }
+
+  .site-nav__item a {
+    padding: 0px 25px;
+  }
+
+  .site-nav__item--homepage {
+    font-size: 26px;
+  }
+
+}

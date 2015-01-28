@@ -67,7 +67,6 @@ pre, code {
 pre {
   padding: 10px;
   border-radius: 6px;
-  overflow-x: auto;
 }
 
 code {

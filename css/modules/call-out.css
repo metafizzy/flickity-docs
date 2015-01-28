@@ -1,0 +1,45 @@
+/* call out
+------------------------- */
+
+.call-out {
+  border: 2px solid #ED2;
+  padding: 10px 20px 10px 80px;
+  border-radius: 6px;
+  position: relative;
+  margin: 20px 0;
+}
+
+/* (i) */
+.call-out:before {
+  content: 'i';
+  display: block;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 20px;
+  top: 30px;
+  background: #ED2;
+  border-radius: 50%;
+  text-align: center;
+  color: white;
+  font-size: 1.9em;
+  font-family: Consolas, Georgia, serif;
+  font-style: italic;
+  line-height: 46px;
+}
+
+.call-out h2 {
+  margin-top: 0;
+  padding-top: 10px;
+  border-top: none;
+}
+
+.call-out--beta-testing p,
+.call-out--beta-testing li {
+  font-size: 1.2em;
+}
+
+.call-out--beta-testing p { line-height: 1.3; }
+
+.call-out--chill { border-color: #8C8; }
+.call-out--chill:before { background: #8C8; }

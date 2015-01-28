@@ -1,9 +1,31 @@
 /*jshint node: true, undef: true, unused: true */
 
 var fs = require('fs');
+var glob = require('glob');
 var gulp = require('gulp');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+
+// ----- getGlobPaths ----- //
+
+/**
+ * takes glob src and returns expanded paths
+ * @param {Array} src
+ * @returns {Array} paths
+ */
+function getGlobPaths( src ) {
+  // copy src
+  var paths = src.slice(0);
+  // replace all glob paths with expanded paths
+  src.forEach( function( path, i ) {
+    if ( glob.hasMagic( path ) ) {
+      var files = glob.sync( path );
+      // replace glob with paths
+      paths.splice.apply( paths, [ i, 1 ].concat( files ) );
+    }
+  });
+  return paths;
+}
 
 // ----- prod assets ----- //
 
@@ -63,10 +85,15 @@ gulp.task( 'js', function() {
 // ----- css ----- //
 
 var cssSrc = [
+  // dependencies
+  'bower_components/normalize.css/normalize.css',
   // flickity
   'bower_components/flickity/css/flickity.css',
   // docs
-  'css/styles.css'
+  'css/web-fonts.css',
+  'css/base.css',
+  'css/gallery.css',
+  'css/modules/*.css'
 ];
 
 gulp.task( 'css', function() {
@@ -102,20 +129,21 @@ gulp.task( 'partials', function() {
 });
 
 function buildContent( isDev ) {
-  var data = {
-    is_dev: isDev,
-    cssSrc: cssSrc,
-    jsSrc: jsSrc
-  };
-
   var pageTemplate = fs.readFileSync( 'templates/page.mustache', 'utf8' );
-  var buildOptions = {
-    layout: pageTemplate,
-    partials: partials
-  };
 
   // gulp task
   return function() {
+    var data = {
+      is_dev: isDev,
+      css_paths: getGlobPaths( cssSrc ),
+      js_paths: jsSrc
+    };
+
+    var buildOptions = {
+      layout: pageTemplate,
+      partials: partials
+    };
+
     gulp.src( contentSrc )
     .pipe( frontMatter({
         property: 'frontMatter',
@@ -127,10 +155,11 @@ function buildContent( isDev ) {
   };
 }
 
+var dependencyTasks = [ 'partials' ];
 
-gulp.task( 'content', [ 'partials' ], buildContent() );
+gulp.task( 'content', dependencyTasks, buildContent() );
 
-gulp.task( 'content-dev', [ 'partials' ], buildContent(true) );
+gulp.task( 'content-dev', dependencyTasks, buildContent(true) );
 
 // ----- default ----- //
 

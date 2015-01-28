@@ -1,0 +1,33 @@
+/* page-dot demos
+------------------------- */
+
+/* ---- o dots ---- */
+
+.gallery--o-dots .flickity-page-dots {
+  bottom: 0px;
+}
+
+.gallery--o-dots .flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white;
+}
+
+.gallery--o-dots .flickity-page-dots .dot.is-selected {
+  background: white;
+}
+
+/* ---- line-dots ---- */
+
+.gallery--line-dots .flickity-page-dots {
+  bottom: -22px;
+}
+
+.gallery--line-dots .flickity-page-dots .dot {
+  height: 4px;
+  width: 40px;
+  margin: 0;
+  border-radius: 0;
+}

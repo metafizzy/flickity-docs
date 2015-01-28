@@ -1,0 +1,105 @@
+/* base
+------------------------- */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Texta Regular', sans-serif;
+  color: #333;
+  line-height: 1.5;
+  font-size: 19px;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #6A6;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #E90;
+}
+
+b, strong {
+  font-family: 'Texta Heavy', sans-serif;
+  font-weight: normal;
+}
+
+em, i {
+  font-family: 'Texta Italic', sans-serif;
+  font-style: normal;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+  font-weight: normal;
+}
+
+h1 {
+  font-family: 'Texta Heavy', sans-serif;
+}
+
+h2 {
+  font-size: 2.4em;
+  border-top: 4px double #DDD;
+  padding-top: 60px;
+  margin-top: 80px;
+}
+
+h3 {
+  font-family: 'Texta Heavy', sans-serif;
+  font-size: 1.6em;
+}
+
+/* ---- code ---- */
+
+pre, code {
+  font-family: Consolas, Menlo, monospace;
+  font-size: 15px;
+  background: #FAFAFA;
+  border: 1px solid #DDD;
+  white-space: pre-wrap;
+}
+
+pre {
+  padding: 10px;
+  border-radius: 6px;
+  overflow-x: auto;
+}
+
+code {
+  padding: 2px 3px;
+  line-height: 1.2;
+  border-radius: 3px;
+}
+
+pre code {
+  padding: 0;
+  line-height: 1.5;
+  background: none;
+  border: none;
+}
+
+/* ---- content ---- */
+
+.content-wrap {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* ---- main ---- */
+
+.main h2 {
+  border-top: 4px double #DDD;
+  padding-top: 60px;
+  margin-top: 80px;
+}
+
+.main h3 {
+  border-top: 1px solid #DDD;
+  padding-top: 30px;
+}

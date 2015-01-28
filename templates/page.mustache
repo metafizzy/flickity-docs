@@ -8,7 +8,7 @@
   <title>Flickity &middot; beta</title>
 
   {{#if is_dev}}
-    {{#each cssSrc}}
+    {{#each css_paths}}
       <link rel="stylesheet" href="../{{this}}" />
     {{/each}}
   {{else}}
@@ -60,7 +60,7 @@
 </div> {{! .site-footer }}
 
 {{#if is_dev}}
-  {{#each jsSrc}}
+  {{#each js_paths}}
     <script src="../{{this}}"></script>
   {{/each}}
 {{else}}

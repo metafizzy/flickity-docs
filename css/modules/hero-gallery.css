@@ -1,0 +1,129 @@
+/* hero-gallery
+------------------------- */
+
+.hero-gallery {
+  margin-bottom: 80px;
+  background: #FAFAFA url('http://i.imgur.com/R60qKwS.jpg');
+  background-size: cover;
+}
+
+.hero-gallery__cell {
+  width: 100%;
+  height: 240px;
+  color: white;
+  background: #8C8;
+  padding: 20px 60px;
+}
+
+.hero-gallery h1 {
+  font-size: 3.2em;
+  padding-top: 20px;
+  margin: 0;
+}
+
+.hero-gallery .tagline {
+  font-size: 1.4em;
+  margin: 0;
+}
+
+.hero-gallery__cell--2 {
+  background: #ED2;
+}
+
+.slogan {
+  line-height: 1.2;
+  margin: 0;
+}
+
+.slogan--easy,
+.slogan--fun {
+  font-size: 2.2em;
+  line-height: 1.1;
+}
+
+.slogan--tagline {
+  margin-top: 10px;
+  font-size: 1.2em;
+  color: #333;
+}
+
+.feature-list {
+  font-size: 1.8em;
+  list-style: none;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0;
+}
+
+.feature-list li {
+  margin-bottom: 10px;
+}
+
+.hero-gallery__cell--3 {
+  background: #E90;
+}
+
+.hero-gallery__cell--4 {
+  background: #E5A;
+}
+
+.by-line {
+  line-height: 1.2;
+  margin: 0;
+  font-size: 1.8em;
+}
+
+.by-line--made {
+  padding-top: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.by-line--made b { font-family: 'Texta Heavy', sans-serif; }
+
+/* ---- large device styles ---- */
+
+@media screen and ( min-width: 768px ) {
+
+  .hero-gallery__cell {
+    height: 440px;
+    padding: 40px 0 0;
+  }
+
+  .hero-gallery h1 {
+    font-size: 5.8em;
+    padding-top: 60px;
+  }
+
+  .hero-gallery .tagline {
+    font-size: 2.1em;
+  }
+
+  .slogan--easy,
+  .slogan--fun {
+    font-size: 4.8em;
+  }
+
+  .slogan--tagline {
+    margin-top: 20px;
+    font-size: 2.4em;
+  }
+
+  .feature-list {
+    font-size: 3.1em;
+  }
+
+  .feature-list li {
+    margin-bottom: 20px;
+  }
+
+  .by-line {
+    font-size: 3.1em;
+  }
+
+  .by-line--made {
+    padding-top: 40px;
+    margin-bottom: 20px;
+  }
+
+}

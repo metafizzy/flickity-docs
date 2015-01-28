@@ -39,6 +39,7 @@ Options
 Events
 Methods
 Extras
+  Custom page navigation
   RequireJS
   Browserify
   Video

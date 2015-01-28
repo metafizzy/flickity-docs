@@ -9,7 +9,7 @@ body {
   font-family: 'Texta Regular', sans-serif;
   color: #333;
   line-height: 1.5;
-  font-size: 19px;
+  font-size: 17px;
   margin: 0;
   padding: 0;
 }
@@ -42,23 +42,15 @@ h1 {
   font-family: 'Texta Heavy', sans-serif;
 }
 
-h2 {
-  font-size: 2.4em;
-  border-top: 4px double #DDD;
-  padding-top: 60px;
-  margin-top: 80px;
-}
-
 h3 {
   font-family: 'Texta Heavy', sans-serif;
-  font-size: 1.6em;
 }
 
 /* ---- code ---- */
 
 pre, code {
   font-family: Consolas, Menlo, monospace;
-  font-size: 15px;
+  font-size: 14px;
   background: #FAFAFA;
   border: 1px solid #DDD;
   white-space: pre-wrap;
@@ -90,15 +82,50 @@ pre code {
   padding: 0 10px;
 }
 
+/* ---- page-title ---- */
+
+.page-title {
+  font-size: 2.2em;
+  margin: 0.4em 0;
+}
+
 /* ---- main ---- */
 
 .main h2 {
+  font-size: 1.6em;
   border-top: 4px double #DDD;
-  padding-top: 60px;
-  margin-top: 80px;
+  padding-top: 1.1em;
+  margin-top: 1.4em;
 }
 
 .main h3 {
+  font-size: 1.3em;
   border-top: 1px solid #DDD;
-  padding-top: 30px;
+  padding-top: 15px;
+}
+
+
+@media screen and ( min-width: 768px ) {
+
+  body {
+    font-size: 19px;
+  }
+
+  .page-title {
+    font-size: 4.0em;
+  }
+
+  .main h3 {
+    font-size: 1.6em;
+    padding-top: 30px;
+  }
+
+  .main h2 {
+    font-size: 2.4em;
+  }
+
+  pre, code {
+    font-size: 15px;
+  }
+
 }

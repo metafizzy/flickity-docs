@@ -2,20 +2,23 @@
 is_homepage: true
 ---
 
-<ul class="big-links">
-  <li class="big-links__item big-links__item--fill">
-    <a href="flickity.pkgd.js">Download <b>flickity.&#8203;pkgd.&#8203;min.js</b></a>
-  </li>
-  <li class="big-links__item big-links__item--fill">
-    <a href="flickity.css">Download <b>flickity.&#8203;css</b></a>
-  </li>
-  <li class="big-links__item big-links__item--stroke">
-    <a href="flickity-docs.zip">Download these <b>docs</b></a>
-  </li>
-  <li class="big-links__item big-links__item--stroke">
-    <a href="https://github.com/metafizzy/flickity">Flickity on <b>GitHub</b></a>
-  </li>
-</ul>
+<div class="duo">
+  <div class="duo__cell">
+    <a class="big-link big-link--fill" href="flickity.pkgd.js">Download <b>flickity.&#8203;pkgd.&#8203;min.js</b></a>
+  </div>
+  <div class="duo__cell">
+    <a class="big-link big-link--fill" href="flickity.css">Download <b>flickity.&#8203;css</b></a>
+  </div>
+</div>
+
+<div class="duo">
+  <div class="duo__cell">
+    <a class="big-link big-link--stroke" href="flickity-docs.zip">Download these <b>docs</b></a>
+  </div>
+  <div class="duo__cell">
+    <a class="big-link big-link--stroke" href="https://github.com/metafizzy/flickity">Flickity on <b>GitHub</b></a>
+  </div>
+</div>
 
 <div class="call-out call-out--beta-testing">
   <h2>Beta testing</h2>
@@ -166,13 +169,13 @@ var flicky = new Flickity( '#main-gallery', {
   <li>Default: <code>'center'</code></li>
 </ul>
 
-<div class="example">
-  <div class="example__code">
+<div class="example duo">
+  <div class="example__code duo__cell">
 ``` js
 cellAlign: 'left'
 ```
   </div>
-  <div class="example__demo">
+  <div class="example__demo duo__cell">
     <div class="gallery show-neighbors js-flickity"
       data-flickity-options='{ "cellAlign": "left" }'>
       <div class="gallery-cell"></div>
@@ -182,13 +185,13 @@ cellAlign: 'left'
   </div>
 </div>
 
-<div class="example">
-  <div class="example__code">
+<div class="example duo">
+  <div class="example__code duo__cell">
 ``` js
 // default 'center'
 ```
   </div>
-  <div class="example__demo">
+  <div class="example__demo duo__cell">
     <div class="gallery show-neighbors js-flickity">
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
@@ -197,13 +200,13 @@ cellAlign: 'left'
   </div>
 </div>
 
-<div class="example">
-  <div class="example__code">
+<div class="example duo">
+  <div class="example__code duo__cell">
 ``` js
 cellAlign: 'right'
 ```
   </div>
-  <div class="example__demo">
+  <div class="example__demo duo__cell">
     <div class="gallery show-neighbors js-flickity"
       data-flickity-options='{ "cellAlign": "right" }'>
       <div class="gallery-cell"></div>
@@ -222,13 +225,13 @@ cellAlign: 'right'
   <li>Default: <code>false</code></li>
 </ul>
 
-<div class="example">
-  <div class="example__code">
+<div class="example duo">
+  <div class="example__code duo__cell">
 ``` js
 wrapAround: true
 ```
   </div>
-  <div class="example__demo">
+  <div class="example__demo duo__cell">
     <div class="gallery show-neighbors js-flickity"
       data-flickity-options='{ "wrapAround": true }'>
       <div class="gallery-cell"></div>
@@ -249,13 +252,13 @@ wrapAround: true
   <li>Default: <code>false</code></li>
 </ul>
 
-<div class="example">
-  <div class="example__code">
+<div class="example duo">
+  <div class="example__code duo__cell">
 ``` js
 contain: true
 ```
   </div>
-  <div class="example__demo">
+  <div class="example__demo duo__cell">
     <div class="gallery gallery--contain-demo js-flickity"
       data-flickity-options='{ "contain": true }'>
       <div class="gallery-cell"></div>
@@ -276,13 +279,13 @@ contain: true
   <li>Default: <code>false</code></li>
 </ul>
 
-<div class="example">
-  <div class="example__code">
+<div class="example duo">
+  <div class="example__code duo__cell">
 ``` js
 freeScroll: true
 ```
   </div>
-  <div class="example__demo">
+  <div class="example__demo duo__cell">
     <div class="gallery show-neighbors js-flickity"
       data-flickity-options='{ "freeScroll": true }'>
       <div class="gallery-cell"></div>
@@ -296,8 +299,8 @@ freeScroll: true
 
 <p>Enable <code>freeScroll</code> and <code>contain</code> for a simple horizontal scroller.</p>
 
-<div class="example">
-  <div class="example__code">
+<div class="example duo">
+  <div class="example__code duo__cell">
 ``` js
 freeScroll: true,
 contain: true,
@@ -306,7 +309,7 @@ prevNextButtons: false,
 pageDots: false
 ```
   </div>
-  <div class="example__demo">
+  <div class="example__demo duo__cell">
     <div class="gallery show-neighbors js-flickity"
       data-flickity-options='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false }'>
       <div class="gallery-cell"></div>
@@ -320,14 +323,14 @@ pageDots: false
 
 <p>Enable <code>freeScroll</code> and <code>wrapAround</code> and you can flick forever, man.</p>
 
-<div class="example">
-  <div class="example__code">
+<div class="example duo">
+  <div class="example__code duo__cell">
 ``` js
 freeScroll: true,
 wrapAround: true
 ```
   </div>
-  <div class="example__demo">
+  <div class="example__demo duo__cell">
     <div class="gallery show-neighbors js-flickity"
       data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
       <div class="gallery-cell"></div>
@@ -350,13 +353,13 @@ wrapAround: true
   <li>Default: <code>false</code></li>
 </ul>
 
-<div class="example">
-  <div class="example__code">
+<div class="example duo">
+  <div class="example__code duo__cell">
 ``` js
 autoPlay: true
 ```
   </div>
-  <div class="example__demo">
+  <div class="example__demo duo__cell">
     <div class="gallery gallery--auto-play-demo js-flickity"
       data-flickity-options='{ "autoPlay": true }'>
       <div class="gallery-cell"></div>
@@ -379,8 +382,8 @@ autoPlay: true
   <li>Default: <code>false</code></li>
 </ul>
 
-<div class="example">
-  <div class="example__code">
+<div class="example duo">
+  <div class="example__code duo__cell">
 ``` js
 watchCSS: true
 ```
@@ -400,7 +403,7 @@ watchCSS: true
 }
 ```
   </div>
-  <div class="example__demo">
+  <div class="example__demo duo__cell">
     <div class="gallery gallery--watch-demo js-flickity"
       data-flickity-options='{ "watchCSS": true }'>
       <div class="gallery-cell"></div>
@@ -447,13 +450,13 @@ watchCSS: true
   <li>Default: <code>false</code></li>
 </ul>
 
-<div class="example">
-  <div class="example__code">
+<div class="example duo">
+  <div class="example__code duo__cell">
 ``` js
 imagesLoaded: true
 ```
   </div>
-  <div class="example__demo">
+  <div class="example__demo duo__cell">
     <div class="gallery gallery--images-loaded-demo js-flickity"
       data-flickity-options='{ "imagesLoaded": true }'>
         <!-- images from unsplash.com -->

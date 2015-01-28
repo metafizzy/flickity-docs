@@ -1,0 +1,26 @@
+/* duo
+two columns for large devices
+------------------------- */
+
+.duo:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.duo__cell {
+  margin-bottom: 20px;
+}
+
+@media screen and ( min-width: 768px ) {
+
+  .duo__cell {
+    float: left;
+    width: 48%;
+  }
+
+  .duo__cell:first-child {
+    margin-right: 4%;
+  }
+
+}

@@ -43,6 +43,7 @@
 }
 
 .other-products__cell h3 {
+  font-size: 1.6em;
   margin: 0 0 0px;
 }
 
@@ -50,16 +51,4 @@
   font-size: 1.1em;
   line-height: 1.2;
   margin: 0;
-}
-
-/* ---- large device ---- */
-
-@media screen and ( min-width: 768px ) {
-
-  .other-products__cell {
-    float: left;
-    width: 49%;
-  }
-
-  .other-products__cell:nth-child(2n+1) { margin-right: 2%; }
 }

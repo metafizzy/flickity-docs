@@ -2,23 +2,4 @@
   margin-bottom: 40px;
 }
 
-.example:after {
-  content: '';
-  display: block;
-  clear: both;
-}
-
 .example__code pre { margin: 0 0 20px; }
-
-@media screen and ( min-width: 768px ) {
-
-  /* ---- example ---- */
-
-  .example__code,
-  .example__demo {
-    float: left;
-    width: 48%;
-  }
-  .example__code { margin-right: 4%; }
-
-}

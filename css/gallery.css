@@ -10,7 +10,7 @@
 .gallery-cell {
   width: 66%;
   height: 160px;
-  margin: 0 5px;
+  margin-right: 10px;;
   background: #8C8;
   counter-increment: gallery-cell;
 }

@@ -1,0 +1,31 @@
+<h3>contain</h3>
+
+<p>Contains cells to gallery element to prevent excess scroll at beginning or end. Has no effect if <code>wrapAround: true</code>.</p>
+
+``` js
+contain: false // default
+contain: true
+```
+
+<!-- <ul>
+  <li>Values: <code>true</code>, <code>false</code></li>
+  <li>Default: <code>false</code></li>
+</ul> -->
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+``` js
+contain: true
+```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="gallery gallery--contain-demo js-flickity"
+      data-flickity-options='{ "contain": true }'>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>

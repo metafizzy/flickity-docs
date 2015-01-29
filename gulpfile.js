@@ -152,8 +152,8 @@ function buildContent( isDev ) {
         property: 'frontMatter',
         remove: true
       }) )
-      .pipe( highlightCodeBlock() )
       .pipe( build( data, buildOptions ) )
+      .pipe( highlightCodeBlock() )
       .pipe( gulp.dest('build') );
   };
 }

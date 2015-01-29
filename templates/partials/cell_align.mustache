@@ -1,0 +1,66 @@
+<h3>cellAlign</h3>
+
+<p>Align cells within the gallery element.</p>
+
+``` js
+cellAlign: 'center'
+// default, align cells center
+
+cellAlign: 'left'
+// align cells left
+
+cellAlign: 'right'
+// align cells right
+```
+
+<!-- <ul>
+  <li>Values: <code>'center'</code>, <code>'left'</code>, <code>'right'</code></li>
+  <li>Default: <code>'center'</code></li>
+</ul> -->
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+``` js
+cellAlign: 'left'
+```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="gallery show-neighbors js-flickity"
+      data-flickity-options='{ "cellAlign": "left" }'>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+``` js
+// default 'center'
+```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="gallery show-neighbors js-flickity">
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+``` js
+cellAlign: 'right'
+```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="gallery show-neighbors js-flickity"
+      data-flickity-options='{ "cellAlign": "right" }'>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>

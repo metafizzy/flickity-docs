@@ -44,7 +44,7 @@
 .slogan--tagline {
   margin-top: 10px;
   font-size: 1.2em;
-  color: #333;
+  color: #444;
 }
 
 .feature-list {
@@ -76,7 +76,7 @@
 .by-line--made {
   padding-top: 20px;
   margin-bottom: 10px;
-  color: #333;
+  color: #444;
 }
 
 .by-line--made b { font-family: 'Texta Heavy', sans-serif; }

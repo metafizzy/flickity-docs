@@ -8,19 +8,12 @@
 }
 
 .gallery-cell {
-  width: 100%;
+  width: 66%;
   height: 160px;
+  margin: 0 5px;
   background: #8C8;
   counter-increment: gallery-cell;
 }
-
-/*.gallery-cell:nth-child(5n+2) { background: #6A6; }
-.gallery-cell:nth-child(5n+3) { background: #E8A; }
-.gallery-cell:nth-child(5n+4) { background: #FD0; }
-.gallery-cell:nth-child(5n) { background: #66A; }*/
-
-/*.gallery-cell:nth-child(3n+2) { background: #ED2; }
-.gallery-cell:nth-child(3n+0) { background: #E90; }*/
 
 .gallery-cell:before {
   content: counter(gallery-cell);
@@ -32,44 +25,34 @@
   color: white;
 }
 
-/*.gallery-cell:nth-child(5n+1):before { color: #868; }
-.gallery-cell:nth-child(5n+2):before { color: #875; }
-.gallery-cell:nth-child(5n+3):before { color: #686; }
-.gallery-cell:nth-child(5n+4):before { color: #588; }
-.gallery-cell:nth-child(5n):before { color: #668; }*/
 
-.gallery--margin .gallery-cell {
-  margin-right: 10px;
-}
+/* ---- style ---- */
 
-.half-width-margin .gallery-cell {
-  width: 50%;
-  margin-right: 10px;
-}
-
-.various-size .gallery-cell {
-  width: 33%;
-  margin-right: 10px;
-}
-.various-size .gallery-cell.size-180 { width: 180px; }
-.various-size .gallery-cell.size-large { width: 75%; }
-
-.media-queried .gallery-cell {
+.gallery--full-width .gallery-cell {
   width: 100%;
-  margin-right: 2%;
 }
 
-.show-neighbors .gallery-cell {
-  width: 66%;
-  margin: 0 5px;
+.gallery--half-width .gallery-cell {
+  width: 50%;
 }
+
+.gallery--various-widths .gallery-cell { width: 33%; }
+.gallery--various-widths .gallery-cell.size-180 { width: 180px; }
+.gallery--various-widths .gallery-cell.size-large { width: 75%; }
+
+.gallery--media-queried .gallery-cell {
+  width: 100%;
+}
+
+/* ---- contain ---- */
 
 .gallery--contain-demo .gallery-cell {
   width: 30%;
-  margin-right: 2%;
 }
 
-.gallery--auto-play-demo .gallery-cell { margin-right: 2%; }
+/* ---- auto-play ---- */
+
+/* ---- images-loaded ---- */
 
 .gallery--images-loaded-demo img {
   display: block;
@@ -85,6 +68,7 @@
   height: 160px;
 }
 
+/* ---- watch-demo ---- */
 
 .gallery--watch-demo:after {
   content: 'flickity';
@@ -95,11 +79,34 @@
   margin-right: 10px;
 }
 
+/* ---- cell-seletor-demo ---- */
+
+.static-banner {
+  position: absolute;
+  background: hsla(0, 0%, 0%, 0.3);
+}
+
+.static-banner1 {
+  left: 10px;
+  top: 10px;
+}
+
+.static-banner2 {
+  right: 10px;
+  bottom: 10px;
+}
+
+/* ---- resize-bound-demo ---- */
+
+.gallery--resize-bound-demo {
+  width: 300px;
+}
+
 /* ---- large device media query ---- */
 
 @media screen and ( min-width: 768px ) {
 
-  .media-queried .gallery-cell { width: 49%; }
+  .gallery--media-queried .gallery-cell { width: 50%; }
 
   .gallery--watch-demo:after {
     content: '';

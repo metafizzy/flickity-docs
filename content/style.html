@@ -12,12 +12,13 @@ title: Style
 /* cells will take up entire width of container */
 .gallery-cell {
   width: 100%;
-  height: 140px;
+  height: 160px;
+  margin: 0 5px;
 }
 ```
   </div>
   <div class="example__demo duo__cell">
-    <div class="gallery js-flickity">
+    <div class="gallery gallery--full-width js-flickity">
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
@@ -33,13 +34,13 @@ title: Style
 /* half-width cells with margin */
 .gallery-cell {
   width: 50%;
-  height: 140px;
-  margin-right: 10px;
+  height: 160px;
+  margin: 0 5px;
 }
 ```
   </div>
   <div class="example__demo duo__cell">
-    <div class="gallery half-width-margin js-flickity">
+    <div class="gallery gallery--half-width js-flickity">
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
@@ -56,7 +57,7 @@ title: Style
 ``` css
 .gallery-cell {
   width: 33%;
-  height: 140px;
+  height: 160px;
   margin-right: 10px;
 }
 .gallery-cell.size-180 { width: 180px; }
@@ -64,7 +65,7 @@ title: Style
 ```
   </div>
   <div class="example__demo duo__cell">
-    <div class="gallery various-size js-flickity">
+    <div class="gallery gallery--various-widths js-flickity">
       <div class="gallery-cell"></div>
       <div class="gallery-cell size-180"></div>
       <div class="gallery-cell size-large"></div>
@@ -78,19 +79,20 @@ title: Style
 
 
 ``` css
+/* default full-width cells */
 .gallery-cell {
   width: 100%;
-  height: 140px;
-  margin-right: 2%;
+  height: 160px;
+  margin: 0 5px;
 }
 
 @media screen and ( min-width: 768px; ) {
-  /* show 2 cells for larger devices */
-  .gallery-cell { width: 49%; }
+  /* half-width cells for larger devices */
+  .gallery-cell { width: 50%; }
 }
 ```
 
-<div class="gallery media-queried js-flickity">
+<div class="gallery gallery--media-queried js-flickity">
   <div class="gallery-cell"></div>
   <div class="gallery-cell"></div>
   <div class="gallery-cell"></div>
@@ -127,7 +129,7 @@ title: Style
 ```
   </div>
   <div class="example__demo duo__cell">
-    <div class="gallery gallery--margin gallery--prev-next-big-arrow js-flickity">
+    <div class="gallery gallery--full-width gallery--prev-next-big-arrow js-flickity">
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
@@ -163,7 +165,7 @@ title: Style
 ```
   </div>
   <div class="example__demo duo__cell">
-    <div class="gallery gallery--margin gallery--prev-next-small-outside js-flickity">
+    <div class="gallery gallery--full-width gallery--prev-next-small-outside js-flickity">
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
@@ -200,7 +202,7 @@ title: Style
 ```
   </div>
   <div class="example__demo duo__cell">
-    <div class="gallery gallery--margin gallery--o-dots js-flickity">
+    <div class="gallery gallery--full-width gallery--o-dots js-flickity">
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
@@ -227,7 +229,7 @@ title: Style
 ```
   </div>
   <div class="example__demo duo__cell">
-    <div class="gallery gallery--margin gallery--line-dots js-flickity">
+    <div class="gallery gallery--full-width gallery--line-dots js-flickity">
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>

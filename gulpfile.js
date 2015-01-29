@@ -183,7 +183,7 @@ gulp.task( 'dev', [
 
 // ----- watch ----- //
 
-gulp.task( 'watch', function() {
+gulp.task( 'watch', [ 'default' ], function() {
   gulp.watch( contentSrc, [ 'content' ] );
   gulp.watch( partialsSrc, [ 'content' ] );
   gulp.watch( pageTemplateSrc, [ 'content' ] );
@@ -191,7 +191,7 @@ gulp.task( 'watch', function() {
 });
 
 
-gulp.task( 'watch-dev', function() {
+gulp.task( 'watch-dev', [ 'dev' ], function() {
   gulp.watch( contentSrc, [ 'content-dev' ] );
   gulp.watch( partialsSrc, [ 'content-dev' ] );
   gulp.watch( pageTemplateSrc, [ 'content-dev' ] );

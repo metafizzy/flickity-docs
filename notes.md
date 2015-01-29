@@ -46,3 +46,77 @@ Extras
   Angular
 License
 
+
+### methods
+
+destroy
+select
+previous
+next
+resize
+
+prepend
+insert
+append
+remove
+
+reloadCells
+
+positionCells
+
+on
+off
+once
+
+### properties
+
+x
+selectedIndex
+slideableWidth
+
+### events
+
+staticClick
+pointerDown
+pointerMove
+pointerUp
+dragStart
+dragMove
+dragEnd
+settle
+cellSelect
+
+### options
+
+**setup**
+cellSelector
+initialIndex
+accessibility
+resizeBound
+
+**cell position**
+cellAlign
+contain
+imagesLoaded
+percentPosition
+rightToLeft
+
+**dragging**
+draggable
+freeScroll
+touchVerticalScroll
+
+**behavior**
+wrapAround
+autoPlay
+watchCSS
+sync
+
+**UI**
+prevNextButtons
+pageDots
+
+## Blog about
+
+Instead of ordering content alphabetically, order it by similar groups. Make a story of out it
+

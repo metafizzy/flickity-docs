@@ -4,32 +4,36 @@
 
 <p>Auto-playing will pause when mouse is hovered over, and resume when mouse is hovered off. Auto-playing will stop when the gallery is clicked or a cell is selected.</p>
 
-``` js
-// values
-// autoPlay: 
-
-autoPlay: true
-// advance cells every 3 seconds
-
-autoPlay: 1500 // {Number}
-// advance cells ever {Number} milliseconds
-// 1500 will advance cells ever 1.5 seconds
-```
-
-<!-- <ul>
-  <li>Values: <code>true</code>, <code>false</code>, <i>Integer</i></li>
-  <li>Default: <code>false</code></li>
-</ul> -->
-
 <div class="example duo">
   <div class="example__code duo__cell">
 ``` js
 autoPlay: true
+// advance cells every 3 seconds
 ```
   </div>
   <div class="example__demo duo__cell">
     <div class="gallery gallery--auto-play-demo js-flickity"
       data-flickity-options='{ "autoPlay": true }'>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+``` js
+autoPlay: 1500 // {Number}
+// advance cells ever {Number} milliseconds
+// 1500 will advance cells every 1.5 seconds
+```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="gallery gallery--auto-play-demo js-flickity"
+      data-flickity-options='{ "autoPlay": 1500 }'>
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>

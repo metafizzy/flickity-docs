@@ -2,30 +2,15 @@
 
 <p>You can enable and disable Flickity with CSS. <code>watchCSS</code> option watches the content of <code>:after</code> of the gallery element. Flickity is enabled if <code>:after</code> <code>content</code> is <code>'flickity'</code>.</p>
 
-<p>IE8 and Android 2.3 do not support watching <code>:after</code>. Flickity will be disabled when <code>watchCSS: true</code>. Set <code>watchCSS: 'fallbackOn'</code> to enable Flickity for these browsers.</p>
-
-<ul>
-  <li>Values: <code>true</code>, <code>false</code>, <code>'fallbackOn'</code></li>
-  <li>Default: <code>false</code></li>
-</ul>
-
-``` js
-// values
-// default watchCSS: false
-
-watchCSS: true
-// enable Flickity when element:after { content: 'flickity' } in CSS
-// Flickity is disabled for IE8 and Android 2.3
-
-watchCSS: 'fallbackOn'
-// enable Flickity in CSS
-// and enable Flickity for IE8 and Android 2.3
-```
+<p>IE8 and Android 2.3 do not support watching <code>:after</code>. Flickity will be disabled when <code>watchCSS: true</code>. Set <code>watchCSS: <span class="string">'fallbackOn'</span></code> to enable Flickity for these browsers.</p>
 
 <div class="example duo">
   <div class="example__code duo__cell">
 ``` js
 watchCSS: true
+// enable Flickity in CSS when
+// element:after { content: 'flickity' }
+// Flickity is disabled for IE8 and Android 2.3
 ```
 
 ``` css
@@ -46,6 +31,24 @@ watchCSS: true
   <div class="example__demo duo__cell">
     <div class="gallery gallery--watch-demo js-flickity"
       data-flickity-options='{ "watchCSS": true }'>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+``` js
+watchCSS: 'fallbackOn'
+// enable Flickity in CSS
+// and enable Flickity for IE8 and Android 2.3
+```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="gallery gallery--watch-demo js-flickity"
+      data-flickity-options='{ "watchCSS": "fallbackOn" }'>
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>

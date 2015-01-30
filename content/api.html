@@ -48,6 +48,33 @@ flkty.select( index )
   <span class="argument__description">Zero-based index of the cell to select.</span>
 </p>
 
+<div class="example duo">
+  <div class="example__code duo__cell">
+``` js
+$('.button-group').on( 'click', '.button', function() {
+  var index = $(this).index();
+  $gallery.flickity( 'select', index );
+});
+```
+  </div>
+  <div class="example__demo duo__cell" data-js-module="select">
+    <div class="button-row button-group">
+      <button class="button">1</button>
+      <button class="button">2</button>
+      <button class="button">3</button>
+      <button class="button">4</button>
+      <button class="button">5</button>
+    </div>
+    <div class="gallery">
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
+
 {{! ----------------------------------------------------------------- }}
 
 <h3>previous</h3>
@@ -81,7 +108,7 @@ $('.button--previous-wrapped').on( 'click', function() {
 ```
 
   </div>
-  <div class="example__demo example__demo--previous duo__cell" data-js-module="previous">
+  <div class="example__demo duo__cell" data-js-module="previous">
     <div class="button-row">
       <button class="button button--previous">Previous</button>
       <button class="button button--previous-wrapped">Previous wrapped</button>
@@ -127,9 +154,8 @@ $('.button--next-wrapped').on( 'click', function() {
   $gallery.flickity( 'next', true );
 });
 ```
-
   </div>
-  <div class="example__demo example__demo--previous duo__cell" data-js-module="next">
+  <div class="example__demo duo__cell" data-js-module="next">
     <div class="button-row">
       <button class="button button--next">Next</button>
       <button class="button button--next-wrapped">Next wrapped</button>

@@ -15,6 +15,7 @@
   "dependencies": {
     "imagesloaded": "~3.1.8",
     "flickity": "~0.1.0",
-    "normalize.css": "~3.0.2"
+    "normalize.css": "~3.0.2",
+    "fizzy-ui-utils": "~0.1.0"
   }
 }

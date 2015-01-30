@@ -5,7 +5,9 @@
   "strict": true,
   "predef": {
     "docReady": false,
+    "eventie": false,
     "Flickity": false,
-    "FlickityDocs": true
+    "FlickityDocs": true,
+    "matchesSelector": false
   }
 }

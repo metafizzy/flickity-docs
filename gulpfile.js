@@ -59,6 +59,7 @@ var jsSrc = [
   'bower_components/doc-ready/doc-ready.js',
   'bower_components/classie/classie.js',
   'bower_components/imagesloaded/imagesloaded.js',
+  'bower_components/fizzy-ui-utils/utils.js',
   // flickity
   'bower_components/flickity/js/utils.js',
   'bower_components/flickity/js/unipointer.js',
@@ -84,6 +85,23 @@ gulp.task( 'js', function() {
     .pipe( gulp.dest('build/js') );
 });
 
+// ----- hint ----- //
+
+var jshint = require('gulp-jshint');
+
+gulp.task( 'hint-js', function() {
+  return gulp.src('js/**/*.js')
+    .pipe( jshint() )
+    .pipe( jshint.reporter('default') );
+});
+
+gulp.task( 'hint-tasks', function() {
+  return gulp.src([ 'gulpfile.js', 'tasks/*.js' ])
+    .pipe( jshint() )
+    .pipe( jshint.reporter('default') );
+});
+
+gulp.task( 'hint', [ 'hint-js', 'hint-tasks' ]);
 
 // ----- css ----- //
 
@@ -170,6 +188,7 @@ gulp.task( 'content-dev', dependencyTasks, buildContent(true) );
 // ----- default ----- //
 
 gulp.task( 'default', [
+  'hint',
   'content',
   'js',
   'css',
@@ -180,6 +199,7 @@ gulp.task( 'default', [
 // ----- dev ----- //
 
 gulp.task( 'dev', [
+  'hint',
   'content-dev',
   'prod-assets'
 ] );

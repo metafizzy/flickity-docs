@@ -96,6 +96,10 @@
   bottom: 10px;
 }
 
+/* ---- gallery--pixel-position-demo ---- */
+
+.gallery--pixel-position-demo .gallery-cell { width: 300px; }
+
 /* ---- resize-bound-demo ---- */
 
 .gallery--resize-bound-demo {

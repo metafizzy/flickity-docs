@@ -68,26 +68,7 @@ initialIndex: 2
 
 <h3>accessibility</h3>
 
-<p>Enable keyboard navigation. Users can tab to a Flickity gallery, and pressing left &amp; right keys to change cells.</p>
-
-<div class="duo example">
-  <div class="duo__cell example__code">
-``` js
-// default accessibility: true
-// enables being able to tab to Flickity
-// and keyboard navigation
-```
-  </div>
-  <div class="duo__cell example__demo">
-    <div class="gallery js-flickity">
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-    </div>
-  </div>
-</div>
+<p>Enable keyboard navigation. Users can tab to a Flickity gallery, and pressing left &amp; right keys to change cells. Enabled by default <code><span class="comment">accessibility: true</span></code>.</p>
 
 <div class="duo example">
   <div class="duo__cell example__code">
@@ -113,7 +94,7 @@ accessibility: false
 
 <h3>resizeBound</h3>
 
-<p>Adjusts sizes and positions when window is resized.</p>
+<p>Adjusts sizes and positions when window is resized. Enabled by default <code><span class="comment">resizeBound: true</span></code>.</p>
 
 <div class="duo example">
   <div class="duo__cell example__code">
@@ -161,11 +142,69 @@ resizeBound: false
 
 <p>Sets positioning in percent values, rather than pixel values. If your cells do not have percent widths, we recommended <code>percentPosition: false</code>.</p>
 
+<div class="duo example">
+  <div class="duo__cell example__code">
+``` js
+// default percentPosition: false
+// sets cell position in percentages
+```
+
+``` css
+/* cell width in percent */
+.gallery-celll {
+  width: 66%;
+}
+```
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="gallery js-flickity"
+      data-flickity-options='{ "percentPosition": false }'>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+``` js
+percentPosition: false
+// sets cell position in pixels
+```
+
+``` css
+/* cell width in pixels */
+.gallery-cell {
+  width: 300px;
+}
+```
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="gallery gallery--pixel-position-demo js-flickity"
+      data-flickity-options='{ "percentPosition": false }'>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
+
 {{! ----------------------------------------------------------------- }}
 
 <h3>rightToLeft</h3>
 
 <p>Enables right-to-left layout.</p>
+
+``` js
+rightToLeft: true
+```
+
+{{! waiting for Flickity v0.1.0 }}
 
 {{! ----------------------------------------------------------------- }}
 
@@ -175,17 +214,29 @@ resizeBound: false
 
 <h3>draggable</h3>
 
-<p>Enables dragging and flicking.</p>
+<p>Enables dragging and flicking. Enabled by default <code><span class="comment">dragging: true</span></code>.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+``` js
+draggable: false
+```
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="gallery js-flickity"
+      data-flickity-options='{ "draggable": false }'>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
 
 {{! ----------------------------------------------------------------- }}
 
 {{> free_scroll}}
-
-{{! ----------------------------------------------------------------- }}
-
-<h3>touchVerticalScroll</h3>
-
-<p>Enables user to vertically scroll the page on touch devices.</p>
 
 {{! ----------------------------------------------------------------- }}
 
@@ -212,12 +263,50 @@ resizeBound: false
 
 <h3>prevNextButtons</h3
 
-<p>Creates and enables previous &amp; next buttons.</p>
+<p>Creates and enables previous &amp; next buttons. Enabled by default <code><span class="comment">prevNextButtons: true</span></code>.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+``` js
+prevNextButtons: false
+// Disable previous & next buttons
+```
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="gallery js-flickity"
+      data-flickity-options='{ "prevNextButtons": false }'>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
 
 {{! ----------------------------------------------------------------- }}
 
 <h3>pageDots</h3
 
-<p>Creates and enables page dots.</p>
+<p>Creates and enables page dots. Enabled by default <code><span class="comment">pageDots: true</span></code>.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+``` js
+pageDots: false
+// Disable page dots
+```
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="gallery js-flickity"
+      data-flickity-options='{ "pageDots": false }'>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
 
 {{! ----------------------------------------------------------------- }}

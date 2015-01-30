@@ -279,6 +279,33 @@ flkty.prepend( elements )
   <span class="argument__type"><i>jQuery</i> object, <i>Array</i> of <i>Elements</i>, <i>Element</i>, or <i>NodeList</i></span>
 </p>
 
+<div class="duo example">
+  <div class="duo__cell example__code">
+``` js
+$('.button').on( 'click', function() {
+  var $cellElems = $('<div class="gallery-cell">...</div>');
+  $gallery.flickity( 'prepend', $cellElems );
+});
+```
+  </div>
+  <div class="duo__cell example__demo" data-js-module="prepend">
+    <div class="button-row">
+      <button class="button">Prepend cells</button>
+    </div>
+    <div class="gallery gallery--not-counting gallery--show-several">
+      <div class="gallery-cell">
+        <span class="gallery-cell__number">1</span>
+      </div>
+      <div class="gallery-cell">
+        <span class="gallery-cell__number">2</span>
+      </div>
+      <div class="gallery-cell">
+        <span class="gallery-cell__number">3</span>
+      </div>
+    </div>
+  </div>
+</div>
+
 {{! ----------------------------------------------------------------- }}
 
 <h3>append</h3>

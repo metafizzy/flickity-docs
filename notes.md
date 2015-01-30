@@ -133,3 +133,18 @@ pageDots
 
 Instead of ordering content alphabetically, order it by similar groups. Make a story of out it
 
+---
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="gallery">
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>

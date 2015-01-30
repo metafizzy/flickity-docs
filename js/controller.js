@@ -2,6 +2,9 @@
 
 'use strict';
 
+// map utils to fizzyUIUtils
+window.utils = window.fizzyUIUtils;
+
 var FlickityDocs = window.FlickityDocs = {};
 FlickityDocs.modules = {};
 // add modules:

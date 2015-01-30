@@ -9,6 +9,7 @@
     "eventie": false,
     "Flickity": false,
     "FlickityDocs": true,
-    "matchesSelector": false
+    "matchesSelector": false,
+    "utils": true
   }
 }

@@ -10,12 +10,16 @@
 .gallery-cell {
   width: 66%;
   height: 160px;
-  margin-right: 10px;;
+  margin-right: 10px;
+  margin-bottom: 10px;
   background: #8C8;
   counter-increment: gallery-cell;
 }
 
-.gallery-cell:before {
+.flickity-enabled .gallery-cell { margin-bottom: 0; }
+
+.gallery-cell:before,
+.gallery-cell__number {
   display: block;
   width: 100px;
   margin: 0 auto;
@@ -27,6 +31,7 @@
   color: white;
 }
 
+.gallery--not-counting .gallery-cell:before { content: none; }
 
 /* ---- style ---- */
 
@@ -46,11 +51,9 @@
   width: 100%;
 }
 
-/* ---- contain ---- */
+/* ---- show-several ---- */
 
-.gallery--contain-demo .gallery-cell {
-  width: 30%;
-}
+.gallery--show-several .gallery-cell { width: 28%; }
 
 /* ---- auto-play ---- */
 
@@ -152,10 +155,6 @@
 
   .gallery--watch-demo:after {
     content: '';
-  }
-
-  .gallery--watch-demo .gallery-cell {
-    margin-bottom: 10px;
   }
 
   .gallery--images-demo img {

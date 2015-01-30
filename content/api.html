@@ -31,7 +31,6 @@ flkty.select( 3 );
 
 <h2>Selecting cells</h2>
 
-
 <h3>select</h3>
 
 <p>Select a cell.</p>
@@ -68,6 +67,35 @@ flkty.previous( isWrapped )
   <span class="argument__description">Optional. If <code><span class="literal">true</span></code>, the last cell will be selected if at the first cell.</span>
 </p>
 
+<div class="example duo">
+  <div class="example__code duo__cell">
+``` js
+// previous
+$('.button--previous').on( 'click', function() {
+  $gallery.flickity('previous');
+});
+// previous wrapped
+$('.button--previous-wrapped').on( 'click', function() {
+  $gallery.flickity( 'previous', true );
+});
+```
+
+  </div>
+  <div class="example__demo example__demo--previous duo__cell" data-js-module="previous">
+    <div class="button-row">
+      <button class="button button--previous">Previous</button>
+      <button class="button button--previous-wrapped">Previous wrapped</button>
+    </div>
+    <div class="gallery">
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
+
 {{! ----------------------------------------------------------------- }}
 
 <h3>next</h3>
@@ -86,6 +114,35 @@ flkty.next( isWrapped )
   <span class="argument__type"><i>Boolean</i></span>
   <span class="argument__description">Optional. If <code><span class="literal">true</span></code>, the first cell will be selected if at the last cell.</span>
 </p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+``` js
+// next
+$('.button--next').on( 'click', function() {
+  $gallery.flickity('next');
+});
+// next wrapped
+$('.button--next-wrapped').on( 'click', function() {
+  $gallery.flickity( 'next', true );
+});
+```
+
+  </div>
+  <div class="example__demo example__demo--previous duo__cell" data-js-module="next">
+    <div class="button-row">
+      <button class="button button--next">Next</button>
+      <button class="button button--next-wrapped">Next wrapped</button>
+    </div>
+    <div class="gallery">
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
 
 {{! ----------------------------------------------------------------- }}
 
@@ -179,20 +236,6 @@ flkty.remove( elements )
 
 {{! ----------------------------------------------------------------- }}
 
-<h2>Event binding</h2>
-
-<h3>on</h3>
-
-{{! ----------------------------------------------------------------- }}
-
-<h3>off</h3>
-
-{{! ----------------------------------------------------------------- }}
-
-<h3>once</h3>
-
-{{! ----------------------------------------------------------------- }}
-
 <h2>Utilities</h2>
 
 <h3>destroy</h3>
@@ -258,5 +301,41 @@ flkty.once( 'eventName', function() {
   console.log('eventName happened just once');
 });
 ```
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>cellSelect</h3>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>settle</h3>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>dragStart</h3>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>dragMove</h3>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>dragEnd</h3>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>pointerDown</h3>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>pointerMove</h3>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>pointerUp</h3>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>staticClick</h3>
 
 {{! ----------------------------------------------------------------- }}

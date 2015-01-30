@@ -69,7 +69,10 @@ var jsSrc = [
   'bower_components/flickity/js/drag.js',
   'bower_components/flickity/js/animate.js',
   'bower_components/flickity/js/cell-change.js',
-  'bower_components/flickity/js/flickity.js'
+  'bower_components/flickity/js/flickity.js',
+  // docs
+  'js/controller.js',
+  'js/modules/*.js'
 ];
 
 
@@ -139,7 +142,7 @@ function buildContent( isDev ) {
     var data = {
       is_dev: isDev,
       css_paths: getGlobPaths( cssSrc ),
-      js_paths: jsSrc
+      js_paths: getGlobPaths( jsSrc )
     };
 
     var buildOptions = {

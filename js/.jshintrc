@@ -1,0 +1,11 @@
+{
+  "browser": true,
+  "unused": true,
+  "undef": true,
+  "strict": true,
+  "predef": {
+    "docReady": false,
+    "Flickity": false,
+    "FlickityDocs": true
+  }
+}

@@ -49,30 +49,43 @@ License
 
 ### methods
 
-destroy
+**selecting cells**
 select
 previous
 next
-resize
 
+**adding and removing cells**
 prepend
 insert
 append
 remove
 
-reloadCells
-
+**size and position**
+resize
 positionCells
 
+**events**
 on
 off
 once
 
+**utilities**
+destroy
+reloadCells
+getSelectedCellElement
+getCellElements
+jQuery.fn.data('flickity')
+Flickity.data()
+
+
 ### properties
 
-x
-selectedIndex
-slideableWidth
+Flickity.x
+Flickity.selectedIndex
+Flickity.cells
+Flickity.slideableWidth
+
+Cell.x
 
 ### events
 

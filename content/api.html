@@ -1,0 +1,262 @@
+---
+title: API
+---
+
+<h2>Methods</h2>
+
+<p>Methods are actions done by Flickity instances.</p>
+
+<p>With jQuery, methods follow the jQuery UI pattern
+  <code>$gallery.flickity( <span class="string">'methodName'</span> <span class="comment">/*, arguments */</span> )</code>.</p>
+
+``` js
+var $gallery = $('.gallery').flickity()
+  .flickity('next')
+  .flickity( 'select', 4 );
+```
+
+<div class="call-out">
+  <p>jQuery chaining is broken by methods that return values: <code>getCellElements</code>, <code>on</code>, <code>off</code>.</p>
+</div>
+
+<p>Vanilla JavaScript methods look like
+  <code>flickity.methodName( <span class="comment">/* arguments */</span> )</code>. Unlike jQuery methods, they cannot be chained together.</p>
+
+``` js
+// vanilla JS
+var flkty = new Flickity('.gallery');
+flkty.next();
+flkty.select( 3 );
+```
+
+<h2>Selecting cells</h2>
+
+
+<h3>select</h3>
+
+<p>Select a cell.</p>
+
+``` js
+// jQuery
+$gallery.flickity( 'select', index )
+// vanilla JS
+flkty.select( index )
+```
+
+<p class="argument">
+  <code class="argument__code">index</code>
+  <span class="argument__type"><i>Integer</i></span>
+  <span class="argument__description">Zero-based index of the cell to select.</span>
+</p>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>previous</h3>
+
+<p>Select the previous cell.</p>
+
+``` js
+// jQuery
+$gallery.flickity( 'previous', isWrapped )
+// vanilla JS
+flkty.previous( isWrapped )
+```
+
+<p class="argument">
+  <code class="argument__code">isWrapped</code>
+  <span class="argument__type"><i>Boolean</i></span>
+  <span class="argument__description">Optional. If <code><span class="literal">true</span></code>, the last cell will be selected if at the first cell.</span>
+</p>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>next</h3>
+
+<p>Select the next cell.</p>
+
+``` js
+// jQuery
+$gallery.flickity( 'next', isWrapped )
+// vanilla JS
+flkty.next( isWrapped )
+```
+
+<p class="argument">
+  <code class="argument__code">isWrapped</code>
+  <span class="argument__type"><i>Boolean</i></span>
+  <span class="argument__description">Optional. If <code><span class="literal">true</span></code>, the first cell will be selected if at the last cell.</span>
+</p>
+
+{{! ----------------------------------------------------------------- }}
+
+<h2>Adding and removing cells</h2>
+
+<h3>prepend</h3>
+
+<p>Prepend elements and create cells to the beginning of the gallery.</p>
+
+``` js
+// jQuery
+$gallery.flickity( 'prepend', elements )
+// vanilla JS
+flkty.prepend( elements )
+```
+
+<p class="argument">
+  <code class="argument__code">elements</code>
+  <span class="argument__type"><i>jQuery</i> object, <i>Array</i> of <i>Elements</i>, <i>Element</i>, or <i>NodeList</i></span>
+</p>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>append</h3>
+
+<p>Append elements and create cells to the end of the gallery.</p>
+
+``` js
+// jQuery
+$gallery.flickity( 'append', elements )
+// vanilla JS
+flkty.append( elements )
+```
+
+<p class="argument">
+  <code class="argument__code">elements</code>
+  <span class="argument__type"><i>jQuery</i> object, <i>Array</i> of <i>Elements</i>, <i>Element</i>, or <i>NodeList</i></span>
+</p>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>insert</h3>
+
+<p>Insert elements into the gallery and create cells.</p>
+
+``` js
+// jQuery
+$gallery.flickity( 'insert', elements, index )
+// vanilla JS
+flkty.insert( elements, index )
+```
+
+<p class="argument">
+  <code class="argument__code">elements</code>
+  <span class="argument__type"><i>jQuery</i> object, <i>Array</i> of <i>Elements</i>, <i>Element</i>, or <i>NodeList</i></span>
+</p>
+
+<p class="argument">
+  <code class="argument__code">index</code>
+  <span class="argument__type"><i>Integer</i></span>
+  <span class="argument__description">Zero-based index to insert elements.</span>
+</p>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>remove</h3>
+
+<p>Remove cells from gallery and remove elements from DOM.</p>
+
+``` js
+// jQuery
+$gallery.flickity( 'remove', elements )
+// vanilla JS
+flkty.remove( elements )
+```
+
+<p class="argument">
+  <code class="argument__code">elements</code>
+  <span class="argument__type"><i>jQuery</i> object, <i>Array</i> of <i>Elements</i>, <i>Element</i>, or <i>NodeList</i></span>
+</p>
+
+{{! ----------------------------------------------------------------- }}
+
+<h2>Sizing and positioning</h2>
+
+<h3>resize</h3>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>positionCells</h3>
+
+{{! ----------------------------------------------------------------- }}
+
+<h2>Event binding</h2>
+
+<h3>on</h3>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>off</h3>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>once</h3>
+
+{{! ----------------------------------------------------------------- }}
+
+<h2>Utilities</h2>
+
+<h3>destroy</h3>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>reloadCells</h3>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>getSelectedCellElement</h3>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>getCellElements</h3>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>jQuery.fn.data('flickity')</h3>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>Flickity.data()</h3>
+
+{{! ----------------------------------------------------------------- }}
+
+<h2>Events</h2>
+
+<h3>Event binding</h3>
+
+<p>Bind events with jQuery with standard jQuery event methods <code>.on()</code>, <code>.off()</code>, and <code>.one()</code>.</p>
+
+``` js
+// jQuery
+// event listener
+function onEventName(/* parameters */) {
+  console.log('eventName happened');
+}
+// bind event listener
+$gallery.on( 'eventName', onEventName );
+// unbind event listener
+$gallery.off( 'eventName', onEventName );
+// bind event listener to trigger once. note ONE not ON
+$gallery.one( 'eventName', function() { // 
+  console.log('eventName happened just once');
+});
+```
+
+<p>Bind event with vanilla JS with <code>.on()</code>, <code>.off()</code>, and <code>.once()</code> methods.</p>
+
+``` js
+// vanilla JS
+// event listener
+function onEventName(/* parameters */) {
+  console.log('eventName happened');
+}
+// bind event listener
+flkty.on( 'eventName', onEventName );
+// unbind event listener
+flkty.off( 'eventName', onEventName );
+// bind event listener to trigger once. note ONCE not ONE or ON
+flkty.once( 'eventName', function() {
+  console.log('eventName happened just once');
+});
+```
+
+{{! ----------------------------------------------------------------- }}

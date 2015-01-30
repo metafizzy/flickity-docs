@@ -4,6 +4,7 @@
   "undef": true,
   "strict": true,
   "predef": {
+    "classie": false,
     "docReady": false,
     "eventie": false,
     "Flickity": false,

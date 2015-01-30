@@ -172,6 +172,95 @@ $('.button--next-wrapped').on( 'click', function() {
 
 {{! ----------------------------------------------------------------- }}
 
+<h2>Sizing and positioning</h2>
+
+<h3>resize</h3>
+
+<p>Resize the gallery and re-position cells.</p>
+
+``` js
+// jQuery
+$gallery.flickity('resize')
+// vanilla JS
+flkty.resize()
+```
+
+<div class="example">
+  <div class="example__code">
+``` js
+$('.button').on( 'click', function() {
+  // expand gallery by toggling class
+  $gallery.toggleClass('is-expanded')
+    .flickity('resize');
+});
+```
+``` css
+.gallery {
+  width: 50%;
+}
+.gallery.is-expanded {
+  width: 100%;
+}
+
+.gallery.is-expanded .gallery-cell {
+  height: 320px;
+}
+```
+  </div>
+  <div class="example__demo" data-js-module="resize">
+    <div class="button-row">
+      <button class="button button--resize">Resize</button>
+    </div>
+    <div class="gallery gallery--resize">
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+{{!
+<h3>positionCells</h3>
+
+<p>Position cells. Trigger `positoinCells` after the size of a cell has been changed.</p>
+
+``` js
+// jQuery
+$gallery.flickity('positionCells')
+// vanilla JS
+flkty.positionCells()
+```
+
+<div class="example">
+  <div class="example__code">
+  </div>
+  <div class="example__demo" data-js-module="position-cells">
+    <div class="gallery gallery--position-cells">
+      <div class="gallery-cell">
+        <button class="button">Expand</button>
+      </div>
+      <div class="gallery-cell">
+        <button class="button">Expand</button>
+      </div>
+      <div class="gallery-cell">
+        <button class="button">Expand</button>
+      </div>
+      <div class="gallery-cell">
+        <button class="button">Expand</button>
+      </div>
+      <div class="gallery-cell">
+        <button class="button">Expand</button>
+      </div>
+    </div>
+  </div>
+</div>
+}}
+
+{{! ----------------------------------------------------------------- }}
+
 <h2>Adding and removing cells</h2>
 
 <h3>prepend</h3>
@@ -249,16 +338,6 @@ flkty.remove( elements )
   <code class="argument__code">elements</code>
   <span class="argument__type"><i>jQuery</i> object, <i>Array</i> of <i>Elements</i>, <i>Element</i>, or <i>NodeList</i></span>
 </p>
-
-{{! ----------------------------------------------------------------- }}
-
-<h2>Sizing and positioning</h2>
-
-<h3>resize</h3>
-
-{{! ----------------------------------------------------------------- }}
-
-<h3>positionCells</h3>
 
 {{! ----------------------------------------------------------------- }}
 

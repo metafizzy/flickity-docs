@@ -10,6 +10,21 @@ FlickityDocs.modules = {};
 // add modules:
 // FlickityDocs.modules.moduleName = function( elem ) {...}
 
+// ----- helpers ----- //
+
+// for prepend, append, insert demos
+Flickity.makeCellElem = function( num ) {
+  var cellElem = document.createElement('div');
+  cellElem.className = 'gallery-cell';
+  var number = document.createElement('span');
+  number.className = 'gallery-cell__number';
+  utils.setText( number, num );
+  cellElem.appendChild( number );
+  return cellElem;
+};
+
+// --------------------------  -------------------------- //
+
 // init all modules, based on their data-js-module attribute
 docReady( function() {
   var jsModuleElems = document.querySelectorAll('[data-js-module]');

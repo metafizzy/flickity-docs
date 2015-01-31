@@ -141,7 +141,7 @@
   width: 80%;
 }
 
-.gallery--position-cells .button {
+.gallery-cell .button {
   position: absolute;
   left: 10px;
   top: 10px;

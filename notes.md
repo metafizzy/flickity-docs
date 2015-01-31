@@ -23,6 +23,8 @@ document :focus
       outline: 5px auto -webkit-focus-ring-color;
     }
 
+is-selected cell
+is-pointer-down when dragging
 
 ## IA
 

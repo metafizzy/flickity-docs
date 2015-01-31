@@ -324,6 +324,33 @@ flkty.append( elements )
   <span class="argument__type"><i>jQuery</i> object, <i>Array</i> of <i>Elements</i>, <i>Element</i>, or <i>NodeList</i></span>
 </p>
 
+<div class="duo example">
+  <div class="duo__cell example__code">
+``` js
+$('.button').on( 'click', function() {
+  var $cellElems = $('<div class="gallery-cell">...</div>');
+  $gallery.flickity( 'append', $cellElems );
+});
+```
+  </div>
+  <div class="duo__cell example__demo" data-js-module="append">
+    <div class="button-row">
+      <button class="button">Append cells</button>
+    </div>
+    <div class="gallery gallery--not-counting gallery--show-several">
+      <div class="gallery-cell">
+        <span class="gallery-cell__number">1</span>
+      </div>
+      <div class="gallery-cell">
+        <span class="gallery-cell__number">2</span>
+      </div>
+      <div class="gallery-cell">
+        <span class="gallery-cell__number">3</span>
+      </div>
+    </div>
+  </div>
+</div>
+
 {{! ----------------------------------------------------------------- }}
 
 <h3>insert</h3>
@@ -348,6 +375,33 @@ flkty.insert( elements, index )
   <span class="argument__description">Zero-based index to insert elements.</span>
 </p>
 
+<div class="duo example">
+  <div class="duo__cell example__code">
+``` js
+$('.button').on( 'click', function() {
+  var $cellElems = $('<div class="gallery-cell">...</div>');
+  $gallery.flickity( 'insert', $cellElems, 1 );
+});
+```
+  </div>
+  <div class="duo__cell example__demo" data-js-module="insert">
+    <div class="button-row">
+      <button class="button">Insert cells after 2nd</button>
+    </div>
+    <div class="gallery gallery--not-counting gallery--show-several">
+      <div class="gallery-cell">
+        <span class="gallery-cell__number">1</span>
+      </div>
+      <div class="gallery-cell">
+        <span class="gallery-cell__number">2</span>
+      </div>
+      <div class="gallery-cell">
+        <span class="gallery-cell__number">3</span>
+      </div>
+    </div>
+  </div>
+</div>
+
 {{! ----------------------------------------------------------------- }}
 
 <h3>remove</h3>
@@ -366,19 +420,66 @@ flkty.remove( elements )
   <span class="argument__type"><i>jQuery</i> object, <i>Array</i> of <i>Elements</i>, <i>Element</i>, or <i>NodeList</i></span>
 </p>
 
+<div class="example">
+  <div class="example__code">
+``` js
+$('.gallery').on( 'click', '.button', function() {
+  var $cellElem = $(this).parents('.gallery-cell');
+  $gallery.flickity( 'remove', $cellElem );
+});
+```
+  </div>
+  <div class="example__demo" data-js-module="remove">
+    <div class="gallery gallery--not-counting gallery--show-several">
+      <div class="gallery-cell">
+        <span class="gallery-cell__number">1</span>
+        <button class="button">Remove</button>
+      </div>
+      <div class="gallery-cell">
+        <span class="gallery-cell__number">2</span>
+        <button class="button">Remove</button>
+      </div>
+      <div class="gallery-cell">
+        <span class="gallery-cell__number">3</span>
+        <button class="button">Remove</button>
+      </div>
+      <div class="gallery-cell">
+        <span class="gallery-cell__number">4</span>
+        <button class="button">Remove</button>
+      </div>
+      <div class="gallery-cell">
+        <span class="gallery-cell__number">5</span>
+        <button class="button">Remove</button>
+      </div>
+      <div class="gallery-cell">
+        <span class="gallery-cell__number">6</span>
+        <button class="button">Remove</button>
+      </div>
+      <div class="gallery-cell">
+        <span class="gallery-cell__number">7</span>
+        <button class="button">Remove</button>
+      </div>
+      <div class="gallery-cell">
+        <span class="gallery-cell__number">8</span>
+        <button class="button">Remove</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 {{! ----------------------------------------------------------------- }}
 
 <h2>Utilities</h2>
 
 <h3>destroy</h3>
 
+<p>Remove Flickity functionality completely. <code>destroy</code> will return the element back to its pre-initialized state.</p>
+
 {{! ----------------------------------------------------------------- }}
 
 <h3>reloadCells</h3>
 
-{{! ----------------------------------------------------------------- }}
-
-<h3>getSelectedCellElement</h3>
+<p>Re-collect all cell elements in <code>flickity-slider</code>.</p>
 
 {{! ----------------------------------------------------------------- }}
 
@@ -394,6 +495,41 @@ flkty.remove( elements )
 
 {{! ----------------------------------------------------------------- }}
 
+<h2>Properties</h2>
+
+<div class="call-out">
+  <p>Properties are accessed Flickity instances. If you initialized Flickity with jQuery, use <code>.data(<span class="string">'flickity'</span>)</code> to get the instance.</p>
+
+``` js
+// init Flickity with jQuery
+var $gallery = $('.gallery').flickity();
+// get instance
+var flkty = $gallery.data('flickity');
+// access properties
+console.log( flkty.selectedIndex, flkty.selectedElement );
+```
+</div>
+
+<h3>selectedIndex</h3>
+
+<p>The selected index.</p>
+
+``` js
+flkty.selectedIndex
+```
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>selectedElement</h3>
+
+<p>The selected cell element.</p>
+
+``` js
+flkty.selectedElement
+```
+
+{{! ----------------------------------------------------------------- }}
+
 <h2>Events</h2>
 
 <h3>Event binding</h3>
@@ -402,14 +538,13 @@ flkty.remove( elements )
 
 ``` js
 // jQuery
-// event listener
-function onEventName(/* parameters */) {
+function listener(/* parameters */) {
   console.log('eventName happened');
 }
 // bind event listener
-$gallery.on( 'eventName', onEventName );
+$gallery.on( 'eventName', listener );
 // unbind event listener
-$gallery.off( 'eventName', onEventName );
+$gallery.off( 'eventName', listener );
 // bind event listener to trigger once. note ONE not ON
 $gallery.one( 'eventName', function() { // 
   console.log('eventName happened just once');
@@ -420,14 +555,13 @@ $gallery.one( 'eventName', function() { //
 
 ``` js
 // vanilla JS
-// event listener
-function onEventName(/* parameters */) {
+function listener(/* parameters */) {
   console.log('eventName happened');
 }
 // bind event listener
-flkty.on( 'eventName', onEventName );
+flkty.on( 'eventName', listener );
 // unbind event listener
-flkty.off( 'eventName', onEventName );
+flkty.off( 'eventName', listener );
 // bind event listener to trigger once. note ONCE not ONE or ON
 flkty.once( 'eventName', function() {
   console.log('eventName happened just once');

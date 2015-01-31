@@ -493,12 +493,47 @@ $('.gallery').on( 'click', '.button', function() {
 
 <h3>Flickity.data()</h3>
 
+<p>Get the Flickity instance via its element. <code>Flickity.data()</code> is useful for getting the Flickity instance in JavaScript, after it has been initalized in HTML.</p>
+
+``` js
+var flkty = Flickity.data( element )
+```
+
+<p class="argument">
+  <code class="argument__code">element</code>
+  <span class="argument__type"><i>Element</i> or Selector <i>String</i></span>
+</p>
+<p class="argument">
+  <code class="argument__code">flkty</code>
+  <span class="argument__type"><i>Flickity</i></span>
+</p>
+
+<div class="example">
+  <div class="example__code">
+``` html
+<!-- init Flickity in HTML -->
+<div class="main-gallery js-flickity">...</div>
+```
+
+``` js
+// jQuery
+// pass in the element, $element[0], not the jQuery object
+var flkty = Flickity.data( $('.main-gallery')[0] )
+// vanilla JS
+var gallery = document.querySelector('.main-gallery')
+var flkty = Flickity.data( gallery )
+// using a selector string
+var flkty = Flickity.data('.main-gallery')
+```
+  </div>
+</div>
+
 {{! ----------------------------------------------------------------- }}
 
 <h2>Properties</h2>
 
 <div class="call-out">
-  <p>Properties are accessed Flickity instances. If you initialized Flickity with jQuery, use <code>.data(<span class="string">'flickity'</span>)</code> to get the instance.</p>
+  <p>Properties are accessed only on Flickity instances. If you initialized Flickity with jQuery, use <code>.data(<span class="string">'flickity'</span>)</code> to get the instance.</p>
 
 ``` js
 // init Flickity with jQuery
@@ -570,38 +605,212 @@ flkty.once( 'eventName', function() {
 
 {{! ----------------------------------------------------------------- }}
 
-<h3>cellSelect</h3>
+<h3>select</h3>
+
+<p>Triggered when a cell is selected.</p>
+
+``` js
+// jQuery
+$gallery.on( 'select', function() {
+  console.log( 'Flickity select ' + flkty.selectedIndex )
+})
+// vanilla JS
+flkty.on( 'select', function() {...})
+```
 
 {{! ----------------------------------------------------------------- }}
 
 <h3>settle</h3>
 
+<p>Triggered when the slider is settled at its end position.</p>
+
+``` js
+// jQuery
+$gallery.on( 'select', function() {
+  console.log( 'Flickity settled at ' + flkty.selectedIndex )
+})
+// vanilla JS
+flkty.on( 'select', function() {...})
+```
+
 {{! ----------------------------------------------------------------- }}
 
 <h3>dragStart</h3>
+
+<p>Triggered when dragging starts and the slider starts moving.</p>
+
+``` js
+// jQuery
+$gallery.on( 'dragStart', function( event, pointer ) {...})
+// vanilla JS
+flkty.on( 'dragStart', function( event, pointer ) {...})
+```
+
+<p class="argument">
+  <code class="argument__code">event</code>
+  <span class="argument__type"><i>Event</i></span>
+  <span class="argument__description">Original <code>event</code> object, like <code>mousedown</code>, <code>touchstart</code>, or <code>pointerdown</code>.</span>
+</p>
+<p class="argument">
+  <code class="argument__code">pointer</code>
+  <span class="argument__type"><i>Event</i> or <i>Touch</i></span>
+  <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
+</p>
 
 {{! ----------------------------------------------------------------- }}
 
 <h3>dragMove</h3>
 
+<p>Triggered when dragging moves and the slider moves.</p>
+
+``` js
+// jQuery
+$gallery.on( 'dragMove', function( event, pointer, moveVector ) {...})
+// vanilla JS
+flkty.on( 'dragMove', function( event, pointer, moveVector ) {...})
+```
+
+<p class="argument">
+  <code class="argument__code">event</code>
+  <span class="argument__type"><i>Event</i></span>
+  <span class="argument__description">Original <code>event</code> object, like <code>mousemove</code>, <code>touchmove</code>, or <code>pointermove</code>.</span>
+</p>
+<p class="argument">
+  <code class="argument__code">pointer</code>
+  <span class="argument__type"><i>Event</i> or <i>Touch</i></span>
+  <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
+</p>
+<p class="argument">
+  <code class="argument__code">moveVector</code>
+  <span class="argument__type"><i>Object</i></span>
+  <span class="argument__description">How far the pointer has moved from its start position <code>{ x: 20, y: -30 }</code>.</span>
+</p>
+
 {{! ----------------------------------------------------------------- }}
 
 <h3>dragEnd</h3>
+
+<p>Triggered when dragging ends.</p>
+
+``` js
+// jQuery
+$gallery.on( 'dragEnd', function( event, pointer ) {...})
+// vanilla JS
+flkty.on( 'dragEnd', function( event, pointer ) {...})
+```
+
+<p class="argument">
+  <code class="argument__code">event</code>
+  <span class="argument__type"><i>Event</i></span>
+  <span class="argument__description">Original <code>event</code> object, like <code>mouseup</code>, <code>touchend</code>, or <code>pointerup</code>.</span>
+</p>
+<p class="argument">
+  <code class="argument__code">pointer</code>
+  <span class="argument__type"><i>Event</i> or <i>Touch</i></span>
+  <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
+</p>
 
 {{! ----------------------------------------------------------------- }}
 
 <h3>pointerDown</h3>
 
+<p>Triggered when the user's pointer (mouse, touch, pointer) presses down.</p>
+
+``` js
+// jQuery
+$gallery.on( 'pointerDown', function( event, pointer ) {...})
+// vanilla JS
+flkty.on( 'pointerDown', function( event, pointer ) {...})
+```
+
+<p class="argument">
+  <code class="argument__code">event</code>
+  <span class="argument__type"><i>Event</i></span>
+  <span class="argument__description">Original <code>event</code> object, like <code>mousedown</code>, <code>touchstart</code>, or <code>pointerdown</code>.</span>
+</p>
+<p class="argument">
+  <code class="argument__code">pointer</code>
+  <span class="argument__type"><i>Event</i> or <i>Touch</i></span>
+  <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
+</p>
+
 {{! ----------------------------------------------------------------- }}
 
 <h3>pointerMove</h3>
+
+<p>Triggered when the user's pointer moves.</p>
+
+``` js
+// jQuery
+$gallery.on( 'pointerMove', function( event, pointer, moveVector ) {...})
+// vanilla JS
+flkty.on( 'pointerMove', function( event, pointer, moveVector ) {...})
+```
+
+<p class="argument">
+  <code class="argument__code">event</code>
+  <span class="argument__type"><i>Event</i></span>
+  <span class="argument__description">Original <code>event</code> object, like <code>mousemove</code>, <code>touchmove</code>, or <code>pointermove</code>.</span>
+</p>
+<p class="argument">
+  <code class="argument__code">pointer</code>
+  <span class="argument__type"><i>Event</i> or <i>Touch</i></span>
+  <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
+</p>
+<p class="argument">
+  <code class="argument__code">moveVector</code>
+  <span class="argument__type"><i>Object</i></span>
+  <span class="argument__description">How far the pointer has moved from its start position <code>{ x: 20, y: -30 }</code>.</span>
+</p>
 
 {{! ----------------------------------------------------------------- }}
 
 <h3>pointerUp</h3>
 
+<p>Triggered when the user's pointer unpresses.</p>
+
+``` js
+// jQuery
+$gallery.on( 'pointerUp', function( event, pointer ) {...})
+// vanilla JS
+flkty.on( 'pointerUp', function( event, pointer ) {...})
+```
+
+<p class="argument">
+  <code class="argument__code">event</code>
+  <span class="argument__type"><i>Event</i></span>
+  <span class="argument__description">Original <code>event</code> object, like <code>mouseup</code>, <code>touchend</code>, or <code>pointerup</code>.</span>
+</p>
+<p class="argument">
+  <code class="argument__code">pointer</code>
+  <span class="argument__type"><i>Event</i> or <i>Touch</i></span>
+  <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
+</p>
+
 {{! ----------------------------------------------------------------- }}
 
 <h3>staticClick</h3>
+
+<p>Triggered when the user's pointer is pressed and unpressed and has not moved enough to start dragging.</p>
+
+<p><code>click</code> events are hard to detect with draggable UI, as they are triggered whenever a user drags. Flickity's <code>staticClick</code> event resolves this, as it is triggered when the user has not dragged.</p>
+
+``` js
+// jQuery
+$gallery.on( 'staticClick', function( event, pointer ) {...})
+// vanilla JS
+flkty.on( 'select', function( event, pointer ) {...})
+```
+
+<p class="argument">
+  <code class="argument__code">event</code>
+  <span class="argument__type"><i>Event</i></span>
+  <span class="argument__description">Original <code>event</code> object.</span>
+</p>
+<p class="argument">
+  <code class="argument__code">pointer</code>
+  <span class="argument__type"><i>Event</i> or <i>Touch</i></span>
+  <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
+</p>
 
 {{! ----------------------------------------------------------------- }}

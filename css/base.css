@@ -74,6 +74,26 @@ pre code {
   border: none;
 }
 
+/* ---- table ---- */
+
+th, td {
+  padding: 3px 20px 3px 0;
+}
+
+th {
+  text-align: left;
+  color: #AAA;
+  font-weight: normal;
+}
+
+td {
+  border-top: 1px solid #DDD;
+}
+
+tr:nth-child(2) td {
+  border-top: 3px double #DDD;
+}
+
 /* ---- content ---- */
 
 .content-wrap {

@@ -1,0 +1,23 @@
+/* event-table
+------------------------- */
+
+.event-table {
+  width: 100%;
+}
+
+.event-table th,
+.event-table td {
+  padding
+}
+
+.event-table td {
+  font-size: 0.9em;
+}
+
+td.event-table__time {
+  font-size: 0.9em;
+}
+
+.event-table__message {
+  width: 100%;
+}

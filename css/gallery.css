@@ -51,6 +51,8 @@
   width: 100%;
 }
 
+.gallery--selected-cell .gallery-cell.is-selected { background: #ED2; }
+
 /* ---- show-several ---- */
 
 .gallery--show-several .gallery-cell { width: 28%; }

@@ -4,6 +4,8 @@ title: Style
 
 <h2>Cell style</h2>
 
+<h3>Cell sizing</h3>
+
 <p>All sizing and styling of the cells are handled by your own CSS.</p>
 
 <div class="example duo">
@@ -77,7 +79,8 @@ title: Style
 
 <p>You can use media queries to show different number of cells for different breakpoints.</p>
 
-
+<div class="example">
+  <div class="example__code">
 ``` css
 /* default full-width cells */
 .gallery-cell {
@@ -91,13 +94,41 @@ title: Style
   .gallery-cell { width: 50%; }
 }
 ```
+  </div>
+  <div class="example__demo">
+    <div class="gallery gallery--media-queried js-flickity">
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
 
-<div class="gallery gallery--media-queried js-flickity">
-  <div class="gallery-cell"></div>
-  <div class="gallery-cell"></div>
-  <div class="gallery-cell"></div>
-  <div class="gallery-cell"></div>
-  <div class="gallery-cell"></div>
+<h3>Selected cell</h3>
+
+<p>Flickity adds <code>is-selected</code> class to the selected cell.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+``` css
+.gallery-cell.is-selected {
+  background: #ED2;
+}
+```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="gallery gallery--selected-cell gallery--show-several js-flickity">
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
 </div>
 
 {{! ---------------------------------------------- }}

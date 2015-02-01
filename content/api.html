@@ -521,13 +521,42 @@ flkty.destroy()
 
 <p>Re-collect all cell elements in <code>flickity-slider</code>.</p>
 
+``` js
+// jQuery
+$gallery.flickity('reloadCells')
+// vanilla JS
+flkty.reloadCells()
+```
+
 {{! ----------------------------------------------------------------- }}
 
 <h3>getCellElements</h3>
 
+<p>Get the elements of the cells.</p>
+
+``` js
+// jQuery
+var cellElements = $gallery.flickity('getCellElements')
+// vanilla JS
+var cellElements = flkty.getCellElements()
+```
+
+<p class="argument">
+  <code class="argument__code">cellElements</code>
+  <span class="argument__type"><i>Array</i> of <i>Elements</i></span>
+</p>
+
 {{! ----------------------------------------------------------------- }}
 
 <h3>jQuery.fn.data('flickity')</h3>
+
+<p>Get the Flickity instance from a jQuery object. Flickity instances are useful to access Flickity properties.</p>
+
+``` js
+var flkty = $('.gallery').data('flickity')
+// access Flickity properties
+console.log( 'gallery at ' + flkty.selectedIndex )
+```
 
 {{! ----------------------------------------------------------------- }}
 

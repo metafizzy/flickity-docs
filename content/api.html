@@ -187,6 +187,8 @@ flkty.resize()
 
 <div class="example">
   <div class="example__code">
+    <div class="duo">
+      <div class="duo__cell">
 ``` js
 $('.button').on( 'click', function() {
   // expand gallery by toggling class
@@ -194,18 +196,19 @@ $('.button').on( 'click', function() {
     .flickity('resize');
 });
 ```
+      </div>
+      <div class="duo__cell">
 ``` css
-.gallery {
-  width: 50%;
-}
-.gallery.is-expanded {
-  width: 100%;
-}
+.gallery { width: 50%; }
+.gallery.is-expanded { width: 100%; }
 
 .gallery.is-expanded .gallery-cell {
   height: 320px;
 }
 ```
+      </div>
+    </div>
+
   </div>
   <div class="example__demo" data-js-module="resize">
     <div class="button-row">
@@ -475,6 +478,44 @@ $('.gallery').on( 'click', '.button', function() {
 
 <p>Remove Flickity functionality completely. <code>destroy</code> will return the element back to its pre-initialized state.</p>
 
+``` js
+// jQuery
+$gallery.flickity('destroy')
+// vanilla JS
+flkty.destroy()
+```
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+``` js
+var $gallery = $('.gallery').flickity();
+var isFlickity = true;
+// toggle Flickity on/off
+$button.on( 'click', function() {
+  if ( isFlickity ) {
+    // destroy Flickity
+    $gallery.flickity('destroy');
+  } else {
+    // init new Flickity
+    $gallery.flickity();
+  }
+  isFlickity = !isFlickity;
+});
+```
+  </div>
+  <div class="example__demo duo__cell" data-js-module="destroy">
+    <div class="button-row">
+      <button class="button">Toggle Flickity</button>
+    </div>
+    <div class="gallery">
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
+
+
 {{! ----------------------------------------------------------------- }}
 
 <h3>reloadCells</h3>
@@ -606,6 +647,8 @@ flkty.once( 'eventName', function() {
 {{! ----------------------------------------------------------------- }}
 
 <h3>Events demo</h3>
+
+<p>Play around with this gallery to see how events are triggered.</p>
 
 <div class="example duo" data-js-module="events">
   <div class="example__demo duo__cell">

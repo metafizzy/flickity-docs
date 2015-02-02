@@ -1,7 +1,7 @@
 /* web fonts
 ------------------------- */
 
-@import url("//hello.myfonts.net/count/2d1b53");
+@import url("//hello.myfonts.net/count/2d333f");
 
 /*
   Just use WOFF2 and WOFF for webfonts
@@ -9,18 +9,18 @@
 
 @font-face {
   font-family: 'Texta Heavy';
-  src: url('../fonts/2D1B55_0_0.woff2') format('woff2'),
-    url('../fonts/2D1B55_0_0.woff') format('woff');
+  src: url('../fonts/2D333F_0_0.woff2') format('woff2'),
+    url('../fonts/2D333F_0_0.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Texta Italic';
-  src: url('../fonts/2D1B55_1_0.woff2') format('woff2'),
-    url('../fonts/2D1B55_1_0.woff') format('woff');
+  src: url('../fonts/2D333F_1_0.woff2') format('woff2'),
+    url('../fonts/2D333F_1_0.woff') format('woff');
 }
 
 @font-face {
   font-family: 'Texta Regular';
-  src: url('../fonts/2D1B55_2_0.woff2') format('woff2'),
-    url('../fonts/2D1B55_2_0.woff') format('woff');
+  src: url('../fonts/2D333F_2_0.woff2') format('woff2'),
+    url('../fonts/2D333F_2_0.woff') format('woff');
 }

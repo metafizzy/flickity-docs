@@ -199,11 +199,23 @@ cellSelector: '.gallery-cell'
 
 <p>Enables right-to-left layout.</p>
 
-``` js
-rightToLeft: true
-```
-
-{{! waiting for Flickity v0.1.0 }}
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    rightToLeft: true
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="gallery js-flickity"
+      data-flickity-options='{ "rightToLeft": true }'>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
 
 {{! ----------------------------------------------------------------- }}
 

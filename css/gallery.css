@@ -111,9 +111,9 @@
 
 .gallery--pixel-position-demo .gallery-cell { width: 300px; }
 
-/* ---- resize-bound-demo ---- */
+/* ---- resize-option ---- */
 
-.gallery--resize-bound-demo {
+.gallery--resize-option {
   width: 300px;
 }
 

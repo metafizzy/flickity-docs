@@ -26,6 +26,9 @@ document :focus
 is-selected cell
 is-pointer-down when dragging
 
+title id's
+page nav
+
 ## IA
 
 Home

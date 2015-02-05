@@ -91,6 +91,10 @@
 .static-banner {
   position: absolute;
   background: hsla(0, 0%, 0%, 0.3);
+  z-index: 1;
+  padding: 2px 20px;
+  color: white;
+  pointer-events: none;
 }
 
 .static-banner1 {

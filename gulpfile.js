@@ -58,19 +58,24 @@ var jsSrc = [
   'bower_components/eventie/eventie.js',
   'bower_components/doc-ready/doc-ready.js',
   'bower_components/classie/classie.js',
-  'bower_components/imagesloaded/imagesloaded.js',
   'bower_components/fizzy-ui-utils/utils.js',
+  'bower_components/unipointer/unipointer.js',
+  'bower_components/unidragger/unidragger.js',
+  'bower_components/tap-listener/tap-listener.js',
   // flickity
-  'bower_components/flickity/js/utils.js',
-  'bower_components/flickity/js/unipointer.js',
   'bower_components/flickity/js/cell.js',
+  'bower_components/flickity/js/animate.js',
+  'bower_components/flickity/js/flickity.js',
+  'bower_components/flickity/js/drag.js',
   'bower_components/flickity/js/prev-next-button.js',
   'bower_components/flickity/js/page-dots.js',
   'bower_components/flickity/js/player.js',
-  'bower_components/flickity/js/drag.js',
-  'bower_components/flickity/js/animate.js',
-  'bower_components/flickity/js/cell-change.js',
-  'bower_components/flickity/js/flickity.js',
+  'bower_components/flickity/js/add-remove-cell.js',
+  // flickity-imagesloaded
+  'bower_components/imagesloaded/imagesloaded.js',
+  'bower_components/flickity-imagesloaded/flickity-imagesloaded.js',
+  // flickity-sync
+  'bower_components/flickity-sync/flickity-sync.js',
   // docs
   'js/controller.js',
   'js/modules/*.js'

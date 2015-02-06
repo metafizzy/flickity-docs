@@ -153,6 +153,20 @@
   top: 10px;
 }
 
+/* ---- sync / gallery-nav ---- */
+
+.gallery--sync-opt-a { margin-bottom: 40px; }
+
+.gallery--nav .gallery-cell {
+  height: 80px;
+  width: 100px;
+}
+
+.gallery--nav .gallery-cell:before {
+  font-size: 50px;
+  line-height: 80px;
+}
+
 /* ---- large device media query ---- */
 
 @media screen and ( min-width: 768px ) {

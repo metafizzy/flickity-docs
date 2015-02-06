@@ -29,6 +29,8 @@ is-pointer-down when dragging
 title id's
 page nav
 
+getting the clicked cell element
+
 ## IA
 
 Home

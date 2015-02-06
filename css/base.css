@@ -126,6 +126,15 @@ tr:nth-child(2) td {
 }
 
 
+/* ---- hide-small ---- */
+
+
+@media screen and ( max-width: 640px ) {
+  .hidden-small {
+    display: none;
+  }
+}
+
 @media screen and ( min-width: 768px ) {
 
   body {

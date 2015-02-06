@@ -12,4 +12,9 @@ deploy:
 gulp:
 	gulp
 
-prod: gulp zip deploy
+gulp-export:
+	rm -rf build/
+	gulp export
+	make zip
+
+prod: gulp-export gulp deploy

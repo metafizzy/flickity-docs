@@ -8,9 +8,9 @@
 <!-- GitHub link -->
 <!-- copy assets to build/ -->
 <!-- copy flickity files to build/ -->
-dev build
-  don't copy fonts
-  list out all sources
+<!-- dev build -->
+  <!-- don't copy fonts -->
+  <!-- list out all sources -->
 <!-- figure out s3cmd -->
 <!-- tag version 0.1.0, npm publish -->
 
@@ -30,6 +30,13 @@ title id's
 page nav
 
 getting the clicked cell element
+
+cdnjs
+
+how to use imagesLoaded with RequireJS / Browserify
+How to use sync with RequireJS / Browserify
+
+export footer
 
 ## IA
 

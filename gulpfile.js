@@ -157,16 +157,21 @@ gulp.task( 'partials', function() {
 
 var pageTemplateSrc = 'templates/page.mustache';
 
-function buildContent( isDev ) {
-  var pageTemplate = fs.readFileSync( pageTemplateSrc, 'utf8' );
+function extend( a, b ) {
+  for ( var prop in b ) {
+    a[ prop ] = b[ prop ];
+  }
+  return a;
+}
 
+function buildContent( dataOptions ) {
+  var pageTemplate = fs.readFileSync( pageTemplateSrc, 'utf8' );
   // gulp task
   return function() {
-    var data = {
-      is_dev: isDev,
+    var data = extend( dataOptions || {}, {
       css_paths: getGlobPaths( cssSrc ),
       js_paths: getGlobPaths( jsSrc )
-    };
+    });
 
     var buildOptions = {
       layout: pageTemplate,
@@ -188,7 +193,9 @@ var dependencyTasks = [ 'partials' ];
 
 gulp.task( 'content', dependencyTasks, buildContent() );
 
-gulp.task( 'content-dev', dependencyTasks, buildContent(true) );
+gulp.task( 'content-dev', dependencyTasks, buildContent({ is_dev: true }) );
+
+gulp.task( 'content-export', dependencyTasks, buildContent({ is_export: true }) );
 
 // ----- default ----- //
 
@@ -205,8 +212,19 @@ gulp.task( 'default', [
 
 gulp.task( 'dev', [
   'hint',
-  'content-dev',
-  'prod-assets'
+  'content-dev'
+] );
+
+// ----- export ----- //
+
+// version of site used in flickity-docs.zip
+
+gulp.task( 'export', [
+  'hint',
+  'content-export',
+  'js',
+  'css',
+  'dist'
 ] );
 
 // ----- watch ----- //

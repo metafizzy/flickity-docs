@@ -81,7 +81,7 @@ requirejs( [
 });
 ```
 
-<p>To use Flickity as a jQuery plugin with RequireJS and flickity.pkgd.js, you need to run jQuery Bridget.</p>
+<p>To use Flickity as a jQuery plugin with RequireJS and flickity.pkgd.js, you need to call jQuery Bridget.</p>
 
 ``` js
 // require the require function
@@ -140,7 +140,7 @@ requirejs( [
 });
 ```
 
-<p><code>flickity.pkgd.js</code> does not include <code>imagesLoaded</code> and <code>sync</code> code. You can require these packages separately.</p>
+<p>As a stand-alone package, Flickity does not include <code>imagesLoaded</code> and <code>sync</code> code. You can require these packages separately.</p>
 
 ``` js
 requirejs( [
@@ -159,6 +159,55 @@ requirejs( [
 {{! ----------------------------------------------------------------- }}
 
 <h2>Browserify</h2>
+
+<p>Flickity works with <a href="http://browserify.org/">Browserify</a>. Install <a href="https://www.npmjs.com/package/flickity">Flickity with npm</a>.</p>
+
+``` bash
+npm install flickity
+```
+
+``` js
+var Flickity = require('flickity');
+
+var flickity = new Flickity( '.gallery', {
+  // options
+});
+```
+
+<p>To use Flickity as a jQuery plugin with Browserify, you need to call <a href="https://www.npmjs.com/package/jquery-bridget">jQuery Bridget</a>.</p>
+
+``` bash
+npm install jquery-bridget
+```
+
+``` js
+var $ = require('jquery');
+require('jquery-bridget');
+var Flickity = require('flickity');
+
+// make Flickity a jQuery plugin
+$.bridget( 'flickity', Flickity );
+// now you can use $().flickity()
+$('.gallery').flickity({...});
+```
+
+<p>As a stand-alone package, Flickity does not include <code>imagesLoaded</code> and <code>sync</code> code. You can install and require the <a href="https://www.npmjs.com/package/flickity-imagesloaded"><code>flickity-imagesloaded</code></a> and <a href="https://www.npmjs.com/package/flickity-sync"><code>flickity-sync</code></a> packages separately.</p>
+
+``` bash
+npm install flickity-imagesloaded
+npm install flickity-sync
+```
+
+``` js
+var Flickity = require('flickity-imagesloaded');
+require('flickity-sync');
+
+// now use imagesLoaded and sync
+var flkty = new Flickity( '.gallery-a', {
+  imagesLoaded: true,
+  sync: '.gallery-b'
+});
+```
 
 {{! ----------------------------------------------------------------- }}
 

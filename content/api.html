@@ -636,7 +636,7 @@ flkty.selectedElement
 
 <h2>Events</h2>
 
-<h3>Event binding</h3>
+<h3>jQuery event binding</h3>
 
 <p>Bind events with jQuery with standard jQuery event methods <code>.on()</code>, <code>.off()</code>, and <code>.one()</code>.</p>
 
@@ -655,7 +655,22 @@ $gallery.one( 'eventName', function() { //
 });
 ```
 
-<p>Bind event with vanilla JS with <code>.on()</code>, <code>.off()</code>, and <code>.once()</code> methods.</p>
+<p>jQuery events are namespaced with <code>.flickity</code>. Use this namespace to specify Flickity events.</p>
+
+``` js
+$gallery.on( 'select.flickity', function() {
+  // Flickity gallery cell select event
+});
+
+$gallery.on( 'select', function() {
+  // may be text select event
+  // or Flickity gallery cell select event
+});
+```
+
+<h3>Vanilla JS event binding</h3>
+
+<p>Bind events with vanilla JS with <code>.on()</code>, <code>.off()</code>, and <code>.once()</code> methods.</p>
 
 ``` js
 // vanilla JS

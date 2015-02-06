@@ -203,6 +203,29 @@ title: Style
   </div>
 </div>
 
+<p>Previous &amp; next buttons have <code>:focus</code> style. Click on a gallery, then hit <kbd>TAB</kbd> to see it.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` css
+    /* already included in flickity.css */
+    .flickity-prev-next-button:focus {
+      outline: none;
+      box-shadow: 0 0 0 5px #09F;
+    }
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="gallery js-flickity">
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
+
 {{! ---------------------------------------------- }}
 
 <h2>Page dots</h2>

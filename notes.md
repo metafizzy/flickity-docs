@@ -23,7 +23,7 @@ document :focus
       outline: 5px auto -webkit-focus-ring-color;
     }
 
-is-selected cell
+<!-- is-selected cell -->
 is-pointer-down when dragging
 
 title id's
@@ -33,8 +33,8 @@ getting the clicked cell element
 
 cdnjs
 
-how to use imagesLoaded with RequireJS / Browserify
-How to use sync with RequireJS / Browserify
+<!-- how to use imagesLoaded with RequireJS / Browserify -->
+<!-- How to use sync with RequireJS / Browserify -->
 
 export footer
 

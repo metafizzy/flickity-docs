@@ -38,7 +38,12 @@
   margin-bottom: 10px;
 }
 
-/* ---- button-row ---- */
+/* ---- button-group ---- */
+
+.button-group--inline {
+  display: inline-block;
+  vertical-align: bottom;
+}
 
 .button-group:after {
   content: '';

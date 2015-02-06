@@ -2,11 +2,159 @@
 title: Extras
 ---
 
-<h2>Custom page navigation</h2>
+<h2>Custom navigation</h2>
+
+<p>With the <a href="api.html">Flickity API</a>, you can build custom gallery navigation UI.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    // init Flickity
+    var $gallery = $('.gallery').flickity({
+      prevNextButtons: false,
+      pageDots: false
+    });
+    // Flickity instance
+    var flkty = $gallery.data('flickity');
+    // elements
+    var $cellButtonGroup = $('.button-group--cells');
+    var $cellButtons = $cellButtonGroup.find('.button');
+
+    // update selected cellButtons
+    $gallery.on( 'select.flickity', function() {
+      $cellButtons.filter('.is-selected')
+        .removeClass('is-selected');
+      $cellButtons.eq( flkty.selectedIndex )
+        .addClass('is-selected');
+    });
+
+    // select cell on button click
+    $cellButtonGroup.on( 'click', '.button', function() {
+      var index = $(this).index();
+      $gallery.flickity( 'select', index );
+    });
+    // previous
+    $('.button--previous').on( 'click', function() {
+      $gallery.flickity('previous');
+    });
+    // next
+    $('.button--next').on( 'click', function() {
+      $gallery.flickity('next');
+    });
+    ```
+  </div>
+  <div class="example__demo duo__cell" data-js-module="custom-nav">
+    <div class="gallery">
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+    <div class="button-row">
+      <button class="button button--previous">&larr;</button>
+      <div class="button-group button-group--cells button-group--inline">
+        <button class="button is-selected">1</button>
+        <button class="button">2</button>
+        <button class="button">3</button>
+        <button class="button">4</button>
+        <button class="button">5</button>
+      </div>
+      <button class="button button--next">&rarr;</button>
+    </div>
+  </div>
+</div>
 
 {{! ----------------------------------------------------------------- }}
 
 <h2>RequireJS</h2>
+
+<p>Flickity supports <a href="http://requirejs.org/">RequireJS</a>.</p>
+
+<p>You can require <code>flickity.pkgd.js</code>.</p>
+
+``` js
+requirejs( [
+  'path/to/flickity.pkgd.js',
+], function( Flickity ) {
+  var flickity = new Flickity( '.gallery', {...});
+});
+```
+
+<p>To use Flickity as a jQuery plugin with RequireJS and flickity.pkgd.js, you need to run jQuery Bridget.</p>
+
+``` js
+// require the require function
+requirejs( [ 'require', 'jquery', 'path/to/flickity.pkgd.js' ],
+  function( require, $, Flickity ) {
+    // require jquery-bridget, it's included in flickity.pkgd.js
+    require( [ 'jquery-bridget/jquery.bridget' ],
+    function() {
+      // make Flickity a jQuery plugin
+      $.bridget( 'flickity', Flickity );
+      // now you can use $().flickity()
+      $('.gallery').flickity({...});
+    }
+  );
+});
+```
+
+<p>Or, you can manage dependencies with <a href="http://bower.io">Bower</a>. Set <code>baseUrl: <span class="string">"bower_components/"</span></code> and set a config path for all your application code.</p>
+
+``` js
+requirejs.config({
+  baseUrl: 'bower_components/',
+  paths: {
+    app: '../'
+  }
+});
+
+requirejs( [
+  'flickity/js/index',
+  'app/my-component.js'
+], function( Flickity, myComp ) {
+  var iso = new Flickity( '.gallery', {...});
+});
+```
+
+<p>You can require Bower dependencies and use Isotope as a jQuery plugin with jQuery Bridget.</p>
+
+``` js
+requirejs.config({
+  baseUrl: '../bower_components',
+  paths: {
+    jquery: 'jquery/jquery'
+  }
+});
+
+requirejs( [
+    'jquery',
+    'flickity/js/index',
+    'jquery-bridget/jquery.bridget'
+  ],
+  function( $, Flickity ) {
+    // make Flickity a jQuery plugin
+    $.bridget( 'flickity', Flickity );
+    // now you can use $().flickity()
+    $('.gallery').flickity({...});
+});
+```
+
+<p><code>flickity.pkgd.js</code> does not include <code>imagesLoaded</code> and <code>sync</code> code. You can require these packages separately.</p>
+
+``` js
+requirejs( [
+    'flickity-imagesloaded/flickity-imagesloaded',
+    'flickity-sync/flickity-sync'
+  ],
+  function( Flickity ) {
+    // now use imagesLoaded and sync
+    var flkty = new Flickity( '.gallery-a', {
+      imagesLoaded: true,
+      sync: '.gallery-b'
+    });
+});
+```
 
 {{! ----------------------------------------------------------------- }}
 

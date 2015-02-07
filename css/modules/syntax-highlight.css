@@ -8,7 +8,7 @@ code .cp, /* doctype */
 code .literal { color: #07D; } /*boolean*/
 code .keyword { color: #C31; } /* keyword */
 code .kd, /* storage */
-code .attribute { color: #A61; } /* markup attribute */
+code .attribute { color: #D31; } /* markup attribute */
 code .title  { color: #39A; }
 code .params  { color: #98D; }
 code .p  { color: #EDB; } /* punctuation */
@@ -21,9 +21,10 @@ code .comment { color: #999; font-style: italic; }
 code .tag { color: #37B; } /* Markup open tag */
 
 code .id { color: #567; } /* css id */
-code .class { color: #A63; }  /* CSS class */
+code .class { color: #B27; }  /* CSS class */
 code .rules { color: #431; }
-code .m  { color: #DE8E50; } /* CSS value */
-code .nd { color: #9FAD7E; } /* CSS pseudo selector */
+code .value  { color: #555; } /* CSS value */
+code .nd,
+code .pseudo { color: #38D; } /* CSS pseudo selector */
 code .hexcolor { color: #F63; }
 code .at_rule { color: #088; }

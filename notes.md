@@ -14,7 +14,7 @@
 <!-- figure out s3cmd -->
 <!-- tag version 0.1.0, npm publish -->
 
-document how to style prev/next button :focus, when removing outline
+<!-- document how to style prev/next button :focus, when removing outline -->
 
 document :focus
 

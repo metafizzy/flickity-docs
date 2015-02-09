@@ -285,14 +285,21 @@ asNavFor: document.querySelector('.gallery-a')
 <div class="example duo">
   <div class="example__code duo__cell">
     ``` js
-    // 1st gallery
+    // 1st gallery, main
     $('.gallery-a').flickity();
-    // 2nd gallery
+    // 2nd gallery, navigation
     $('.gallery-b').flickity({
       asNavFor: '.gallery-a',
       contain: true,
       pageDots: false
     });
+    ```
+
+    ``` css
+    /* is-nav-selected class added to nav cells */
+    .gallery-cell.is-nav-selected {
+      background: #ED2;
+    }
     ```
   </div>
   <div class="example__demo duo__cell">

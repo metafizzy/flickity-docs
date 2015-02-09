@@ -171,6 +171,12 @@
   background: #ED2;
 }
 
+/* ---- static-click ---- */
+
+.gallery--static-click .gallery-cell { width: 26%; }
+
+.gallery--static-click .gallery-cell.is-clicked { background: #ED2; }
+
 /* ---- large device media query ---- */
 
 @media screen and ( min-width: 768px ) {

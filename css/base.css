@@ -127,6 +127,15 @@ tr:nth-child(2) td {
   margin: 1.4em 0 0.5em;
 }
 
+/* ---- logger ---- */
+
+.logger {
+  padding: 0.25em;
+  font-size: 1.2em;
+  background: #FAFAFA;
+  text-align: center;
+}
+
 
 /* ---- hide-small ---- */
 

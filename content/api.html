@@ -758,12 +758,12 @@ flkty.on( 'dragStart', function( event, pointer ) {...})
 ```
 
 <p class="argument">
-  <code class="argument__code">event</code>
+  <code class="argument__code"><span class="params">event</span></code>
   <span class="argument__type"><i>Event</i></span>
   <span class="argument__description">Original <code>event</code> object, like <code>mousedown</code>, <code>touchstart</code>, or <code>pointerdown</code>.</span>
 </p>
 <p class="argument">
-  <code class="argument__code">pointer</code>
+  <code class="argument__code"><span class="params">pointer</span></code>
   <span class="argument__type"><i>Event</i> or <i>Touch</i></span>
   <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
 </p>
@@ -782,17 +782,17 @@ flkty.on( 'dragMove', function( event, pointer, moveVector ) {...})
 ```
 
 <p class="argument">
-  <code class="argument__code">event</code>
+  <code class="argument__code"><span class="params">event</span></code>
   <span class="argument__type"><i>Event</i></span>
   <span class="argument__description">Original <code>event</code> object, like <code>mousemove</code>, <code>touchmove</code>, or <code>pointermove</code>.</span>
 </p>
 <p class="argument">
-  <code class="argument__code">pointer</code>
+  <code class="argument__code"><span class="params">pointer</span></code>
   <span class="argument__type"><i>Event</i> or <i>Touch</i></span>
   <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
 </p>
 <p class="argument">
-  <code class="argument__code">moveVector</code>
+  <code class="argument__code"><span class="params">moveVector</span></code>
   <span class="argument__type"><i>Object</i></span>
   <span class="argument__description">How far the pointer has moved from its start position <code>{ x: 20, y: -30 }</code>.</span>
 </p>
@@ -811,12 +811,12 @@ flkty.on( 'dragEnd', function( event, pointer ) {...})
 ```
 
 <p class="argument">
-  <code class="argument__code">event</code>
+  <code class="argument__code"><span class="params">event</span></code>
   <span class="argument__type"><i>Event</i></span>
   <span class="argument__description">Original <code>event</code> object, like <code>mouseup</code>, <code>touchend</code>, or <code>pointerup</code>.</span>
 </p>
 <p class="argument">
-  <code class="argument__code">pointer</code>
+  <code class="argument__code"><span class="params">pointer</span></code>
   <span class="argument__type"><i>Event</i> or <i>Touch</i></span>
   <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
 </p>
@@ -835,12 +835,12 @@ flkty.on( 'pointerDown', function( event, pointer ) {...})
 ```
 
 <p class="argument">
-  <code class="argument__code">event</code>
+  <code class="argument__code"><span class="params">event</span></code>
   <span class="argument__type"><i>Event</i></span>
   <span class="argument__description">Original <code>event</code> object, like <code>mousedown</code>, <code>touchstart</code>, or <code>pointerdown</code>.</span>
 </p>
 <p class="argument">
-  <code class="argument__code">pointer</code>
+  <code class="argument__code"><span class="params">pointer</span></code>
   <span class="argument__type"><i>Event</i> or <i>Touch</i></span>
   <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
 </p>
@@ -859,17 +859,17 @@ flkty.on( 'pointerMove', function( event, pointer, moveVector ) {...})
 ```
 
 <p class="argument">
-  <code class="argument__code">event</code>
+  <code class="argument__code"><span class="params">event</span></code>
   <span class="argument__type"><i>Event</i></span>
   <span class="argument__description">Original <code>event</code> object, like <code>mousemove</code>, <code>touchmove</code>, or <code>pointermove</code>.</span>
 </p>
 <p class="argument">
-  <code class="argument__code">pointer</code>
+  <code class="argument__code"><span class="params">pointer</span></code>
   <span class="argument__type"><i>Event</i> or <i>Touch</i></span>
   <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
 </p>
 <p class="argument">
-  <code class="argument__code">moveVector</code>
+  <code class="argument__code"><span class="params">moveVector</span></code>
   <span class="argument__type"><i>Object</i></span>
   <span class="argument__description">How far the pointer has moved from its start position <code>{ x: 20, y: -30 }</code>.</span>
 </p>
@@ -888,12 +888,12 @@ flkty.on( 'pointerUp', function( event, pointer ) {...})
 ```
 
 <p class="argument">
-  <code class="argument__code">event</code>
+  <code class="argument__code"><span class="params">event</span></code>
   <span class="argument__type"><i>Event</i></span>
   <span class="argument__description">Original <code>event</code> object, like <code>mouseup</code>, <code>touchend</code>, or <code>pointerup</code>.</span>
 </p>
 <p class="argument">
-  <code class="argument__code">pointer</code>
+  <code class="argument__code"><span class="params">pointer</span></code>
   <span class="argument__type"><i>Event</i> or <i>Touch</i></span>
   <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
 </p>
@@ -908,20 +908,63 @@ flkty.on( 'pointerUp', function( event, pointer ) {...})
 
 ``` js
 // jQuery
-$gallery.on( 'staticClick', function( event, pointer ) {...})
+$gallery.on( 'staticClick', function( event, pointer, clickedCellIndex, clickedCellElement ) {...})
 // vanilla JS
-flkty.on( 'select', function( event, pointer ) {...})
+flkty.on( 'select', function( event, pointer, clickedCellIndex, clickedCellElement ) {...})
 ```
 
 <p class="argument">
-  <code class="argument__code">event</code>
+  <code class="argument__code"><span class="params">event</span></code>
   <span class="argument__type"><i>Event</i></span>
   <span class="argument__description">Original <code>event</code> object.</span>
 </p>
 <p class="argument">
-  <code class="argument__code">pointer</code>
+  <code class="argument__code"><span class="params">pointer</span></code>
   <span class="argument__type"><i>Event</i> or <i>Touch</i></span>
   <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
 </p>
+<p class="argument">
+  <code class="argument__code"><span class="params">clickedCellIndex</span></code>
+  <span class="argument__type"><i>Integer</i></span>
+  <span class="argument__description">If a cell was clicked, the cell&rsquo;s zero-based index.</span>
+</p>
+<p class="argument">
+  <code class="argument__code"><span class="params">clickedCellElement</span></code>
+  <span class="argument__type"><i>Element</i></span>
+  <span class="argument__description">If a cell was clicked, the element.</span>
+</p>
+
+<p>Use the <code><span class="params">clickedCellIndex</span></code> and <code><span class="params">clickedCellElement</span></code> parameters to detect what cell was clicked.</p>
+
+<div class="example">
+  <div class="example__code">
+    ``` js
+    $gallery.on( 'staticClick', function( event, pointer, clickedCellIndex, clickedCellElement ) {
+      // dismiss if cell was not clicked
+      if ( typeof clickedCellIndex != 'number' ) {
+        return;
+      }
+      // change cell background with .is-clicked
+      $gallery.find('.is-clicked').removeClass('is-clicked');
+      $( clickedCellElement ).addClass('is-clicked');
+      $logger.text( 'Cell ' + ( clickedCellIndex + 1 )  + ' clicked' );
+    });
+    ```
+  </div>
+  <div class="example__demo" data-js-module="static-click">
+    <div class="gallery gallery--static-click">
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+    <p class="logger">&nbsp;</p>
+  </div>
+</div>
 
 {{! ----------------------------------------------------------------- }}

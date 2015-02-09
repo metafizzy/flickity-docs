@@ -155,6 +155,38 @@ gulp.task( 'partials', function() {
     .pipe( addPartial );
 });
 
+// -----  ----- //
+
+var cheerio = require('cheerio');
+
+var first = true;
+
+var pageNav = function() {
+  return through2.obj( function( file, enc, callback ) {
+    var $ = cheerio.load( file.contents.toString() );
+    var pageNavHtml = '';
+    $('.main h2, .main h3, .main h4').each( function( i, header ) {
+      var $header = $( header );
+      // replace non alphanumeric to hyphens
+      var title = $header.text();
+      var slug = title.replace( /[^\w\d]+/gi, '-' )
+        // trim trailing hyphens
+        .replace( /^\-+/, '' ).replace( /\-+$/, '' ).toLowerCase();
+      $header.attr( 'id', slug );
+      pageNavHtml += '<li class="page-nav__item--' + header.name + '">' +
+        '<a href="#' + slug + '">' + title + '</a></li>';
+    });
+
+    $('.page-nav').html( pageNavHtml );
+    // $.html()
+    file.contents = new Buffer( $.html() );
+    this.push( file );
+    callback();
+  });
+};
+
+// -----  ----- //
+
 var pageTemplateSrc = 'templates/page.mustache';
 
 function extend( a, b ) {
@@ -185,6 +217,7 @@ function buildContent( dataOptions ) {
       }) )
       .pipe( build( data, buildOptions ) )
       .pipe( highlightCodeBlock() )
+      .pipe( pageNav() )
       .pipe( gulp.dest('build') );
   };
 }

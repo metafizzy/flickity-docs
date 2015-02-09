@@ -16,7 +16,7 @@
     "imagesloaded": "~3.1.8",
     "flickity": "~0.2.0",
     "flickity-imagesloaded": "~0.1.0",
-    "flickity-sync": "~0.1.0",
+    "flickity-as-nav-for": "~0.1.0",
     "normalize.css": "~3.0.2",
     "fizzy-ui-utils": "~0.1.0",
     "classie": "~1.0.1"

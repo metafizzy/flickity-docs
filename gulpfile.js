@@ -74,8 +74,8 @@ var jsSrc = [
   // flickity-imagesloaded
   'bower_components/imagesloaded/imagesloaded.js',
   'bower_components/flickity-imagesloaded/flickity-imagesloaded.js',
-  // flickity-sync
-  'bower_components/flickity-sync/flickity-sync.js',
+  // flickity-as-nav-for
+  'bower_components/flickity-as-nav-for/as-nav-for.js',
   // docs
   'js/controller.js',
   'js/modules/*.js'

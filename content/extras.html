@@ -140,18 +140,18 @@ requirejs( [
 });
 ```
 
-<p>As a stand-alone package, Flickity does not include <code>imagesLoaded</code> and <code>sync</code> code. You can require these packages separately.</p>
+<p>As a stand-alone package, Flickity does not include <code>imagesLoaded</code> and <code>asNavFor</code> code. You can require these packages separately.</p>
 
 ``` js
 requirejs( [
     'flickity-imagesloaded/flickity-imagesloaded',
-    'flickity-sync/flickity-sync'
+    'flickity-as-nav-for/as-nav-for'
   ],
   function( Flickity ) {
-    // now use imagesLoaded and sync
+    // now use imagesLoaded and asNavFor
     var flkty = new Flickity( '.gallery-a', {
       imagesLoaded: true,
-      sync: '.gallery-b'
+      asNavFor: '.gallery-b'
     });
 });
 ```
@@ -191,21 +191,21 @@ $.bridget( 'flickity', Flickity );
 $('.gallery').flickity({...});
 ```
 
-<p>As a stand-alone package, Flickity does not include <code>imagesLoaded</code> and <code>sync</code> code. You can install and require the <a href="https://www.npmjs.com/package/flickity-imagesloaded"><code>flickity-imagesloaded</code></a> and <a href="https://www.npmjs.com/package/flickity-sync"><code>flickity-sync</code></a> packages separately.</p>
+<p>As a stand-alone package, Flickity does not include <code>imagesLoaded</code> and <code>asNavFor</code> code. You can install and require the <a href="https://www.npmjs.com/package/flickity-imagesloaded"><code>flickity-imagesloaded</code></a> and <a href="https://www.npmjs.com/package/flickity-as-nav-for"><code>flickity-as-nav-for</code></a> packages separately.</p>
 
 ``` bash
 npm install flickity-imagesloaded
-npm install flickity-sync
+npm install flickity-as-nav-for
 ```
 
 ``` js
 var Flickity = require('flickity-imagesloaded');
-require('flickity-sync');
+require('flickity-as-nav-for');
 
-// now use imagesLoaded and sync
+// now use imagesLoaded and asNavFor
 var flkty = new Flickity( '.gallery-a', {
   imagesLoaded: true,
-  sync: '.gallery-b'
+  asNavFor: '.gallery-b'
 });
 ```
 

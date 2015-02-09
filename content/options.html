@@ -265,29 +265,38 @@ cellSelector: '.gallery-cell'
 
 {{! ----------------------------------------------------------------- }}
 
-<h3>sync</h3>
+<h3>asNavFor</h3>
 
-<p>Syncs selecting cells between galleries. <code>sync</code> is useful if you want to use one Flickity gallery as navigation for another.</p>
+<p>Use one Flickity gallery as navigation for another.</p>
+
+<ul>
+  <li>Clicking the nav gallery will select the content gallery.</li>
+  <li>Selecting a cell in the content gallery will sync to the nav gallery.</li>
+</ul>
+
+``` js
+// asNavFor can be set a selector string
+asNavFor: '.gallery-a'
+// or an element
+asNavFor: $('.gallery-a')[0]
+asNavFor: document.querySelector('.gallery-a')
+```
 
 <div class="example duo">
   <div class="example__code duo__cell">
-``` js
-$('.gallery-a').flickity({
-  // set sync as selector string
-  sync: '.gallery-b'
-})
-```
-``` js
-// or
-$('.gallery-a').flickity({
-  // set sync as element
-  sync: $('.gallery-b')[0]
-})
-```
+    ``` js
+    // 1st gallery
+    $('.gallery-a').flickity();
+    // 2nd gallery
+    $('.gallery-b').flickity({
+      asNavFor: '.gallery-a',
+      contain: true,
+      pageDots: false
+    });
+    ```
   </div>
   <div class="example__demo duo__cell">
-    <div class="gallery gallery--sync-opt-a gallery--full-width js-flickity"
-      data-flickity-options='{ "sync": ".gallery--sync-opt-b" }'>
+    <div class="gallery gallery--as-nav-for-a gallery--full-width js-flickity">
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
@@ -296,8 +305,8 @@ $('.gallery-a').flickity({
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
-    <div class="gallery gallery--sync-opt-b gallery--nav js-flickity"
-      data-flickity-options='{ "contain": true }'>
+    <div class="gallery gallery--as-nav-for-b gallery--nav js-flickity"
+      data-flickity-options='{ "asNavFor": ".gallery--as-nav-for-a", "contain": true, "pageDots": false }'>
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
@@ -310,7 +319,7 @@ $('.gallery-a').flickity({
 </div>
 
 <div class="call-out">
-  <p><code>sync</code> requires the <a href="https://github.com/metafizzy/flickity-sync">flickity-sync package</a>. It already <em>is</em> included with <code>flickity.pkgd.js</code>, but not with Flickity as a stand-alone package. If you are using Browserify or RequireJS without <code>flickity.pkgd.js</code>, you need to install and require <code>flickity-sync</code> separately. See details in <a href="extras.html">Extras</a>.</p>
+  <p><code>asNavFor</code> requires the <a href="https://github.com/metafizzy/flickity-as-nav-for">flickity-as-nav-for package</a>. It already <em>is</em> included with <code>flickity.pkgd.js</code>, but not with Flickity as a stand-alone package. If you are using Browserify or RequireJS without <code>flickity.pkgd.js</code>, you need to install and require <code>flickity-as-nav-for</code> separately. See details in <a href="extras.html">Extras</a>.</p>
 </div>
 
 {{! ----------------------------------------------------------------- }}

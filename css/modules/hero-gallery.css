@@ -11,7 +11,7 @@
   width: 100%;
   height: 240px;
   color: white;
-  background: #8C8;
+  background: #ED2;
 }
 
 .hero-gallery__cell__content {
@@ -29,10 +29,11 @@
 .hero-gallery .tagline {
   font-size: 1.4em;
   margin: 0;
+  color: #444;
 }
 
 .hero-gallery__cell--2 {
-  background: #ED2;
+  background: #8C8;
 }
 
 .slogan {

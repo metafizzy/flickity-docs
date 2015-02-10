@@ -16,11 +16,11 @@ two columns for large devices
 
   .duo__cell {
     float: left;
-    width: 48%;
+    width: 48.5%;
   }
 
   .duo__cell:first-child {
-    margin-right: 4%;
+    margin-right: 3%;
   }
 
 }

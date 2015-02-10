@@ -1,11 +1,11 @@
 <nav class="site-nav">
   <div class="content-wrap">
     <ul class="site-nav__list">
-      <li class="site-nav__item site-nav__item--homepage"><a href=".">Flickity</a></li>
-      <li class="site-nav__item site-nav__item--style"><a href="style.html">Style</a></li>
-      <li class="site-nav__item site-nav__item--options"><a href="options.html">Options</a></li>
-      <li class="site-nav__item site-nav__item--api"><a href="api.html">API</a></li>
-      <li class="site-nav__item site-nav__item--extras"><a href="extras.html">Extras</a></li>
+      <li class="site-nav__item site-nav__item--homepage"><a href="{{#if page.is_404}}/{{/if}}.">Flickity</a></li>
+      <li class="site-nav__item site-nav__item--style"><a href="{{#if page.is_404}}/{{/if}}style.html">Style</a></li>
+      <li class="site-nav__item site-nav__item--options"><a href="{{#if page.is_404}}/{{/if}}options.html">Options</a></li>
+      <li class="site-nav__item site-nav__item--api"><a href="{{#if page.is_404}}/{{/if}}api.html">API</a></li>
+      <li class="site-nav__item site-nav__item--extras"><a href="{{#if page.is_404}}/{{/if}}extras.html">Extras</a></li>
       <!-- 
       <li class="site-nav__item site-nav__item--license"><a href="license.html">License</a></li> -->
     </ul>

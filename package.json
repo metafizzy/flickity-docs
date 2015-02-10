@@ -1,6 +1,6 @@
 {
   "name": "flickity-docs",
-  "version": "0.0.0",
+  "version": "0.2.3",
   "description": "Documentation for Flickity",
   "main": "index.js",
   "scripts": {

@@ -41,6 +41,7 @@ module.exports = function(data, config) {
     // add file data, front matter data to data obj
     _.extend( data, {
       page: file.frontMatter,
+      file_path: path.relative( file.cwd, file.path ),
       basename: path.basename( file.path, path.extname( file.path ) )
     });
 

@@ -130,7 +130,10 @@ gulp.task( 'css', function() {
 
 // ----- content ----- //
 
-var contentSrc = [ 'content/*.html' ];
+var contentSrc = [
+  'content/*.html',
+  'content/*.mustache'
+];
 var highlightCodeBlock = require('./tasks/highlight-code-block');
 var build = require('./tasks/build');
 var frontMatter = require('gulp-front-matter');
@@ -159,8 +162,6 @@ gulp.task( 'partials', function() {
 
 var cheerio = require('cheerio');
 
-var first = true;
-
 var pageNav = function() {
   return through2.obj( function( file, enc, callback ) {
     var $ = cheerio.load( file.contents.toString() );
@@ -185,7 +186,9 @@ var pageNav = function() {
   });
 };
 
-// -----  ----- //
+// ----- buildContent ----- //
+
+var rename = require("gulp-rename");
 
 var pageTemplateSrc = 'templates/page.mustache';
 
@@ -218,6 +221,7 @@ function buildContent( dataOptions ) {
       .pipe( build( data, buildOptions ) )
       .pipe( highlightCodeBlock() )
       .pipe( pageNav() )
+      .pipe( rename({ extname: '.html' }) )
       .pipe( gulp.dest('build') );
   };
 }

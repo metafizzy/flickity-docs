@@ -1,0 +1,27 @@
+/* page-nav
+------------------------- */
+
+.page-nav {
+  list-style: none;
+  margin: 0 0 40px;
+  padding: 0 10px 0 0;
+  font-size: 0.9em;
+  line-height: 1.2em;
+}
+
+.page-nav li {
+  margin: 0.2em 0;
+}
+
+.page-nav__item--h3,
+.page-nav__item--h4 {
+  padding-left: 15px;
+}
+
+@media screen and ( min-width: 1200px ) {
+  .page-nav {
+    position: absolute;
+    left: 1000px;
+    top: 0px;
+  }
+}

@@ -96,11 +96,16 @@ tr:nth-child(2) td {
   border-top: 3px double #DDD;
 }
 
+/* ---- main ---- */
+
+.main {
+  position: relative; /* for page-nav */
+}
+
 /* ---- content ---- */
 
 .content-wrap {
-  max-width: 900px;
-  margin: 0 auto;
+  max-width: 1000px;
   padding: 0 10px;
 }
 
@@ -153,6 +158,11 @@ tr:nth-child(2) td {
   }
 
   body.export { font-size: 16px; }
+
+  .content-wrap {
+    padding: 0 30px;
+    /* background: hsla(0, 100%, 50%, 0.1) */
+  }
 
   .page-title {
     font-size: 4.0em;

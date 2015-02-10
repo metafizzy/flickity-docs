@@ -24,12 +24,10 @@ document :focus
     }
 
 <!-- is-selected cell -->
-is-pointer-down when dragging
+<!-- is-pointer-down when dragging -->
 
-title id's
-page nav
-
-getting the clicked cell element
+<!-- title id's -->
+<!-- page nav -->
 
 cdnjs
 
@@ -37,6 +35,20 @@ cdnjs
 <!-- How to use sync with RequireJS / Browserify -->
 
 export footer
+
+<!-- favicon -->
+<!-- 404 page -->
+
+align pageNav right
+sticky pageNav
+
+CodePen all examples
+
+License
+
+Submitting issues
+
+
 
 ## IA
 

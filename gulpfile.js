@@ -29,15 +29,18 @@ function getGlobPaths( src ) {
 
 // ----- prod assets ----- //
 
-var prodAssetsSrc = [
-  'fonts/*.*'
-];
-
-// copy prod assets
-gulp.task( 'prod-assets', function() {
-  gulp.src( prodAssetsSrc, { base: '.' } )
+gulp.task( 'fonts', function() {
+  return gulp.src( 'fonts/*.*', { base: '.' } )
     .pipe( gulp.dest('build') );
 });
+
+gulp.task( 'assets', function() {
+  return gulp.src('assets/*.*')
+    .pipe( gulp.dest('build') );
+});
+
+// copy prod assets
+gulp.task( 'prod-assets', [ 'fonts', 'assets' ] );
 
 // ----- dist ----- //
 

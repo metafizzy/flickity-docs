@@ -130,8 +130,9 @@ gulp.task( 'css', function() {
 
 gulp.task( 'css-export', function() {
   // remove web-fonts.css
-  var exportCssSrc = cssSrc.splice( cssSrc.indexOf('css/web-fonts.css'), 1 );
-  gulp.src( cssSrc )
+  var exportCssSrc = cssSrc.slice(0);
+  exportCssSrc.splice( cssSrc.indexOf('css/web-fonts.css'), 1 );
+  gulp.src( exportCssSrc )
     .pipe( concat('flickity-docs.css') )
     .pipe( gulp.dest('build/css') );
 });

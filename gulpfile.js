@@ -128,6 +128,14 @@ gulp.task( 'css', function() {
     .pipe( gulp.dest('build/css') );
 });
 
+gulp.task( 'css-export', function() {
+  // remove web-fonts.css
+  var exportCssSrc = cssSrc.splice( cssSrc.indexOf('css/web-fonts.css'), 1 );
+  gulp.src( cssSrc )
+    .pipe( concat('flickity-docs.css') )
+    .pipe( gulp.dest('build/css') );
+});
+
 // ----- content ----- //
 
 var contentSrc = [
@@ -260,7 +268,7 @@ gulp.task( 'export', [
   'hint',
   'content-export',
   'js',
-  'css',
+  'css-export',
   'dist'
 ] );
 

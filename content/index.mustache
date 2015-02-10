@@ -13,7 +13,9 @@ is_homepage: true
 
 <div class="duo">
   <div class="duo__cell">
-    <a class="big-link big-link--stroke" href="flickity-docs.zip">Download these <b>docs</b></a>
+    {{#unless is_export}}
+      <a class="big-link big-link--stroke" href="flickity-docs.zip">Download these <b>docs</b></a>
+    {{/unless}}
   </div>
   <div class="duo__cell">
     <a class="big-link big-link--stroke" href="https://github.com/metafizzy/flickity">Flickity on <b>GitHub</b></a>

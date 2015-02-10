@@ -18,7 +18,7 @@
 </head>
 <body class="page--{{basename}} {{#if is_export}}export{{/if}}">
 
-{{> site_header}}
+{{> site_nav}}
 
 {{#if page.is_homepage}}
   {{> hero_gallery}}
@@ -37,6 +37,8 @@ https://github.com/wycats/handlebars.js/issues/858 }}
 {{> body}}
   </div>
 </div>
+
+{{> site_nav}}
 
 {{> site_footer}}
 

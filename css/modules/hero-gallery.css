@@ -12,7 +12,12 @@
   height: 240px;
   color: white;
   background: #8C8;
-  padding: 20px 60px;
+}
+
+.hero-gallery__cell__content {
+  padding: 20px 60px 0;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .hero-gallery h1 {
@@ -87,7 +92,10 @@
 
   .hero-gallery__cell {
     height: 440px;
-    padding: 40px 0 0;
+  }
+
+  .hero-gallery__cell__content {
+    padding-top: 40px;
   }
 
   .hero-gallery h1 {

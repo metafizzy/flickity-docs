@@ -23,7 +23,7 @@
     "underscore": "^1.7.0",
     "handlebars": "^2.0.0",
     "gulp-front-matter": "^1.2.1",
-    "gulp-filter": "^2.0.0",
+    "gulp-filter": "^2.0.1",
     "glob": "^4.3.5",
     "gulp-jshint": "^1.9.0",
     "cheerio": "^0.18.0",

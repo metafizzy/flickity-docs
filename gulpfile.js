@@ -5,6 +5,7 @@ var glob = require('glob');
 var gulp = require('gulp');
 var concat = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var gulpFilter = require('gulp-filter');
 
 // ----- getGlobPaths ----- //
 
@@ -132,10 +133,9 @@ gulp.task( 'css', function() {
 });
 
 gulp.task( 'css-export', function() {
-  // remove web-fonts.css
-  var exportCssSrc = cssSrc.slice(0);
-  exportCssSrc.splice( cssSrc.indexOf('css/web-fonts.css'), 1 );
-  gulp.src( exportCssSrc )
+  gulp.src( cssSrc )
+    // remove web-fonts.css
+    .pipe( gulpFilter([ '*', '!web-fonts.css' ]) )
     .pipe( concat('flickity-docs.css') )
     .pipe( gulp.dest('build/css') );
 });
@@ -174,6 +174,7 @@ gulp.task( 'partials', function() {
 
 var rename = require('gulp-rename');
 var pageNav = require('./tasks/page-nav');
+var gulpFilter = require('gulp-filter');
 
 var pageTemplateSrc = 'templates/page.mustache';
 
@@ -185,10 +186,15 @@ function extend( a, b ) {
 }
 
 function buildContent( dataOptions ) {
+  dataOptions = dataOptions || {};
   var pageTemplate = fs.readFileSync( pageTemplateSrc, 'utf8' );
+  // exclude 404 if export
+  var filterQuery = dataOptions.is_export ? [ '*', '!**/404.*'] : '*';
+  var filter = gulpFilter( filterQuery );
+
   // gulp task
   return function() {
-    var data = extend( dataOptions || {}, {
+    var data = extend( dataOptions, {
       css_paths: getGlobPaths( cssSrc ),
       js_paths: getGlobPaths( jsSrc )
     });
@@ -199,7 +205,8 @@ function buildContent( dataOptions ) {
     };
 
     gulp.src( contentSrc )
-    .pipe( frontMatter({
+      .pipe( filter )
+      .pipe( frontMatter({
         property: 'frontMatter',
         remove: true
       }) )

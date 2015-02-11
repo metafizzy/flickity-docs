@@ -39,8 +39,8 @@ export footer
 <!-- favicon -->
 <!-- 404 page -->
 
-align pageNav right
-sticky pageNav
+<!-- align pageNav right -->
+<!-- sticky pageNav -->
 
 CodePen all examples
 
@@ -159,7 +159,9 @@ pageDots
 
 Instead of ordering content alphabetically, order it by similar groups. Make a story of out it
 
----
+Stickeroo / sticky page nav
+
+## Example duo
 
 <div class="example duo">
   <div class="example__code duo__cell">

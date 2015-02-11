@@ -18,10 +18,23 @@
   padding-left: 15px;
 }
 
-@media screen and ( min-width: 1200px ) {
+@media screen and ( min-width: 1220px ) {
   .page-nav {
     position: absolute;
-    left: 1000px;
+    right: 0px;
     top: 0px;
+    width: 200px;
+    padding-top: 20px;
   }
+
+  /* activate sticky */
+  .page-nav:after {
+    content: 'sticky';
+    display: none;
+  }
+
+  .page-nav.is-fixed {
+    position: fixed;
+  }
+
 }

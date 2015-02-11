@@ -7,7 +7,9 @@
 
 /* bottom nav */
 .main ~ .site-nav {
+  position: relative;
   margin-top: 80px;
+  z-index: 2; /* on top of page-nav */
 }
 
 .site-nav__list {

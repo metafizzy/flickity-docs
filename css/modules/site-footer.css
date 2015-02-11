@@ -2,8 +2,10 @@
 ------------------------- */
 
 .site-footer {
+  position: relative;
   background: #FAFAFA;
-  padding: 40px 0 ;
+  padding: 40px 0;
+  z-index: 2; /* on top of page-nav */
 }
 
 .site-footer p {

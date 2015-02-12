@@ -95,8 +95,25 @@
   "page_dots_disabled": {
     "default": "raJVdN"
   },
+  "select_method": {
+    "default": "yyvYeN",
+    "vanilla_js": "ByYoKM"
+  },
+  "previous": {
+    "default": "emVpdz",
+    "vanilla_js": "PwQPGX"
+  },
+  "next": {
+    "default": "JopYby",
+    "vanilla_js": "gbvaLQ"
+  },
+  "resize_method": {
+    "default": "XJZmMp",
+    "vanilla_js": "NPyGjQ"
+  },
   "demo_name": {
-    "default": "codepen_id"
+    "default": "codepen_id",
+    "vanilla_js": "codepen_id"
   },
   "foo": false
 }

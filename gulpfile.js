@@ -140,6 +140,29 @@ gulp.task( 'css-export', function() {
     .pipe( gulp.dest('build/css') );
 });
 
+// ----- data ----- //
+
+// add all data/*.json to siteData
+// file.json => siteData.file: {json}
+var dataSrc = 'data/*.json';
+var siteData = {
+  css_paths: getGlobPaths( cssSrc ),
+  js_paths: getGlobPaths( jsSrc )
+};
+
+gulp.task( 'data', function() {
+  var addJsonData = through2.obj( function( file, enc, callback ) {
+    var basename = path.basename( file.path, path.extname( file.path ) );
+    siteData[ basename ] = JSON.parse( file.contents.toString() );
+    this.push( file );
+    callback();
+  });
+
+  return gulp.src( dataSrc )
+    .pipe( addJsonData );
+});
+
+
 // ----- content ----- //
 
 var contentSrc = [
@@ -194,10 +217,7 @@ function buildContent( dataOptions ) {
 
   // gulp task
   return function() {
-    var data = extend( dataOptions, {
-      css_paths: getGlobPaths( cssSrc ),
-      js_paths: getGlobPaths( jsSrc )
-    });
+    var data = extend( siteData, dataOptions );
 
     var buildOptions = {
       layout: pageTemplate,
@@ -218,7 +238,7 @@ function buildContent( dataOptions ) {
   };
 }
 
-var dependencyTasks = [ 'partials' ];
+var dependencyTasks = [ 'partials', 'data' ];
 
 gulp.task( 'content', dependencyTasks, buildContent() );
 

@@ -9,7 +9,7 @@ two columns for large devices
 }
 
 .duo__cell {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 @media screen and ( min-width: 768px ) {

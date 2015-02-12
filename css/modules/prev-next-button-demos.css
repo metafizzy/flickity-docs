@@ -31,6 +31,8 @@
   background: #444;
 }
 
+.gallery--prev-next-small-outside .flickity-prev-next-button:hover { background: #F90; }
+
 .gallery--prev-next-small-outside .flickity-prev-next-button .arrow { fill: white; }
 .gallery--prev-next-small-outside .flickity-prev-next-button.no-svg { color: white; }
 

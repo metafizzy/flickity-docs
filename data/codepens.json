@@ -10,5 +10,51 @@
   },
   "free_scroll_wrap_around": {
     "default": "GgQRJX"
-  }
+  },
+  "auto_play": {
+    "default": "RNQwaB"
+  },
+  "auto_play_number": {
+    "default": "NPyWRZ"
+  },
+  "watch_css": {
+    "default": "NPyWbQ"
+  },
+  "images": {
+    "default": "GgQREP"
+  },
+  "imagesloaded": {
+    "default": "MYQWEe"
+  },
+  "full_width_cells": {
+    "default": "dPdyJK"
+  },
+  "half_width_cells": {
+    "default": "gbvOvy"
+  },
+  "various_width_cells": {
+    "default": "raJNdm"
+  },
+  "media_queried": {
+    "default": "azqbGV"
+  },
+  "is_selected": {
+    "default": "YPezvR"
+  },
+  "prev_next_big_arrow": {
+    "default": "EaQxpb"
+  },
+  "prev_next_small_outside": {
+    "default": "zxRYMP"
+  },
+  "o_dots": {
+    "default": "EaQaYL"
+  },
+  "line_dots": {
+    "default": "ByYyao"
+  },
+  "demo_name": {
+    "default": "codepen_id"
+  },
+  "foo": false
 }

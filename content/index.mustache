@@ -186,18 +186,25 @@ var flicky = new Flickity( '#main-gallery', {
 </div>
 ```
 
-<div class="gallery gallery--images-demo js-flickity"
-  data-flickity-options='{ "imagesLoaded": true, "percentPosition": false }'>
-    <!-- images from unsplash.com -->
-    <img src="http://i.imgur.com/bwy74ok.jpg" alt="orange tree" />
-    <img src="http://i.imgur.com/bAZWoqx.jpg" alt="submerged" />
-    <img src="http://i.imgur.com/PgmEBSB.jpg" alt="look-out" />
-    <img src="http://i.imgur.com/aboaFoB.jpg" alt="freedom tower" />
-    <img src="http://i.imgur.com/LkmcILl.jpg" alt="drizzle" />
-    <img src="http://i.imgur.com/q9zO6tw.jpg" alt="cat nose" />
-    <!-- <img src="http://i.imgur.com/r8p3Xgq.jpg" />
-    <img src="http://i.imgur.com/hODreXI.jpg" />
-    <img src="http://i.imgur.com/UORFJ3w.jpg" /> -->
+<div class="example">
+  <div class="example__demo">
+    <div class="gallery gallery--images-demo js-flickity"
+      data-flickity-options='{ "imagesLoaded": true, "percentPosition": false }'>
+      <!-- images from unsplash.com -->
+      <img src="http://i.imgur.com/bwy74ok.jpg" alt="orange tree" />
+      <img src="http://i.imgur.com/bAZWoqx.jpg" alt="submerged" />
+      <img src="http://i.imgur.com/PgmEBSB.jpg" alt="look-out" />
+      <img src="http://i.imgur.com/aboaFoB.jpg" alt="freedom tower" />
+      <img src="http://i.imgur.com/LkmcILl.jpg" alt="drizzle" />
+      <img src="http://i.imgur.com/q9zO6tw.jpg" alt="cat nose" />
+      <!-- <img src="http://i.imgur.com/r8p3Xgq.jpg" />
+      <img src="http://i.imgur.com/hODreXI.jpg" />
+      <img src="http://i.imgur.com/UORFJ3w.jpg" /> -->
+    </div>
+    {{#codepens.images}}
+      {{>example_edit_demo}}
+    {{/codepens.images}}
+  </div>
 </div>
 
 {{> images_loaded}}

@@ -27,6 +27,9 @@ title: Style
       <div class="gallery-cell"></div>
     </div>
   </div>
+  {{#codepens.full_width_cells}}
+    {{>example_edit_demo}}
+  {{/codepens.full_width_cells}}
 </div>
 
 <div class="example duo">
@@ -48,6 +51,9 @@ title: Style
       <div class="gallery-cell"></div>
     </div>
   </div>
+  {{#codepens.half_width_cells}}
+    {{>example_edit_demo}}
+  {{/codepens.half_width_cells}}
 </div>
 
 <p>Cells can be different sizes. You can use any unit you like: percent, pixels, etc.</p>
@@ -73,6 +79,9 @@ title: Style
       <div class="gallery-cell size-large"></div>
     </div>
   </div>
+  {{#codepens.various_width_cells}}
+    {{>example_edit_demo}}
+  {{/codepens.various_width_cells}}
 </div>
 
 <p>You can use media queries to show different number of cells for different breakpoints.</p>
@@ -87,7 +96,7 @@ title: Style
       margin-right: 10px;
     }
 
-    @media screen and ( min-width: 768px; ) {
+    @media screen and ( min-width: 768px ) {
       /* half-width cells for larger devices */
       .gallery-cell { width: 50%; }
     }
@@ -102,6 +111,9 @@ title: Style
       <div class="gallery-cell"></div>
     </div>
   </div>
+  {{#codepens.media_queried}}
+    {{>example_edit_demo}}
+  {{/codepens.media_queried}}
 </div>
 
 <h3>Selected cell</h3>
@@ -127,6 +139,9 @@ title: Style
       <div class="gallery-cell"></div>
     </div>
   </div>
+  {{#codepens.is_selected}}
+    {{>example_edit_demo}}
+  {{/codepens.is_selected}}
 </div>
 
 {{! ---------------------------------------------- }}
@@ -142,6 +157,9 @@ title: Style
     .flickity-prev-next-button {
       width: 100px;
       height: 100px;
+      background: transparent;
+    }
+    .flickity-prev-next-button:hover {
       background: transparent;
     }
     /* arrow color */
@@ -164,6 +182,9 @@ title: Style
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
+    {{#codepens.prev_next_big_arrow}}
+      {{>example_edit_demo}}
+    {{/codepens.prev_next_big_arrow}}
   </div>
 </div>
 
@@ -176,6 +197,9 @@ title: Style
       height: 30px;
       border-radius: 5px;
       background: #333;
+    }
+    .flickity-prev-next-button:hover {
+      background: #F90;
     }
     /* arrow color */
     .flickity-prev-next-button .arrow {
@@ -200,6 +224,9 @@ title: Style
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
+    {{#codepens.prev_next_small_outside}}
+      {{>example_edit_demo}}
+    {{/codepens.prev_next_small_outside}}
   </div>
 </div>
 
@@ -261,6 +288,9 @@ title: Style
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
+    {{#codepens.o_dots}}
+      {{>example_edit_demo}}
+    {{/codepens.o_dots}}
   </div>
 </div>
 
@@ -288,5 +318,8 @@ title: Style
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
+    {{#codepens.line_dots}}
+      {{>example_edit_demo}}
+    {{/codepens.line_dots}}
   </div>
 </div>

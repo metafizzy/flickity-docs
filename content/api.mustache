@@ -658,11 +658,11 @@ function listener(/* parameters */) {
   console.log('eventName happened');
 }
 // bind event listener
-$gallery.on( 'eventName', listener );
+$gallery.on( 'eventName.flickity', listener );
 // unbind event listener
-$gallery.off( 'eventName', listener );
+$gallery.off( 'eventName.flickity', listener );
 // bind event listener to trigger once. note ONE not ON
-$gallery.one( 'eventName', function() { // 
+$gallery.one( 'eventName.flickity', function() { // 
   console.log('eventName happened just once');
 });
 ```
@@ -673,12 +673,11 @@ $gallery.one( 'eventName', function() { //
 $gallery.on( 'select.flickity', function() {
   // Flickity gallery cell select event
 });
-
-$gallery.on( 'select', function() {
-  // may be text select event
-  // or Flickity gallery cell select event
-});
 ```
+
+<div class="call-out">
+  <p>The <code>.flickity</code> jQuery event namespace will be removed in Flickity v0.3.</p>
+</div>
 
 <h3>Vanilla JS event binding</h3>
 
@@ -734,12 +733,16 @@ flkty.once( 'eventName', function() {
 
 ``` js
 // jQuery
-$gallery.on( 'select', function() {
+$gallery.on( 'select.flickity', function() {
   console.log( 'Flickity select ' + flkty.selectedIndex )
 })
 // vanilla JS
 flkty.on( 'select', function() {...})
 ```
+
+<div class="call-out">
+  <p>The <code>select</code> event will be renamed to <code>cellSelect</code> in Flickity v0.3, to avoid conflict with the <a href="https://developer.mozilla.org/en-US/docs/Web/Events/select">native <code>select</code> event</a>.</p>
+</div>
 
 {{! ----------------------------------------------------------------- }}
 
@@ -749,7 +752,7 @@ flkty.on( 'select', function() {...})
 
 ``` js
 // jQuery
-$gallery.on( 'settle', function() {
+$gallery.on( 'settle.flickity', function() {
   console.log( 'Flickity settled at ' + flkty.selectedIndex )
 })
 // vanilla JS
@@ -764,7 +767,7 @@ flkty.on( 'settle', function() {...})
 
 ``` js
 // jQuery
-$gallery.on( 'dragStart', function( event, pointer ) {...})
+$gallery.on( 'dragStart.flickity', function( event, pointer ) {...})
 // vanilla JS
 flkty.on( 'dragStart', function( event, pointer ) {...})
 ```
@@ -788,7 +791,7 @@ flkty.on( 'dragStart', function( event, pointer ) {...})
 
 ``` js
 // jQuery
-$gallery.on( 'dragMove', function( event, pointer, moveVector ) {...})
+$gallery.on( 'dragMove.flickity', function( event, pointer, moveVector ) {...})
 // vanilla JS
 flkty.on( 'dragMove', function( event, pointer, moveVector ) {...})
 ```
@@ -817,7 +820,7 @@ flkty.on( 'dragMove', function( event, pointer, moveVector ) {...})
 
 ``` js
 // jQuery
-$gallery.on( 'dragEnd', function( event, pointer ) {...})
+$gallery.on( 'dragEnd.flickity', function( event, pointer ) {...})
 // vanilla JS
 flkty.on( 'dragEnd', function( event, pointer ) {...})
 ```
@@ -841,7 +844,7 @@ flkty.on( 'dragEnd', function( event, pointer ) {...})
 
 ``` js
 // jQuery
-$gallery.on( 'pointerDown', function( event, pointer ) {...})
+$gallery.on( 'pointerDown.flickity', function( event, pointer ) {...})
 // vanilla JS
 flkty.on( 'pointerDown', function( event, pointer ) {...})
 ```
@@ -865,7 +868,7 @@ flkty.on( 'pointerDown', function( event, pointer ) {...})
 
 ``` js
 // jQuery
-$gallery.on( 'pointerMove', function( event, pointer, moveVector ) {...})
+$gallery.on( 'pointerMove.flickity', function( event, pointer, moveVector ) {...})
 // vanilla JS
 flkty.on( 'pointerMove', function( event, pointer, moveVector ) {...})
 ```
@@ -894,7 +897,7 @@ flkty.on( 'pointerMove', function( event, pointer, moveVector ) {...})
 
 ``` js
 // jQuery
-$gallery.on( 'pointerUp', function( event, pointer ) {...})
+$gallery.on( 'pointerUp.flickity', function( event, pointer ) {...})
 // vanilla JS
 flkty.on( 'pointerUp', function( event, pointer ) {...})
 ```

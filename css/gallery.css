@@ -86,7 +86,7 @@
   margin-right: 10px;
 }
 
-/* ---- cell-seletor-demo ---- */
+/* ---- cell-selector-demo ---- */
 
 .static-banner {
   position: absolute;
@@ -155,7 +155,7 @@
 
 /* ---- as-nav-for / gallery-nav ---- */
 
-.gallery--as-nav-for-a { margin-bottom: 40px; }
+.gallery--as-nav-for-main { margin-bottom: 40px; }
 
 .gallery--nav .gallery-cell {
   height: 80px;

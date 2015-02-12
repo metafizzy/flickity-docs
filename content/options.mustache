@@ -36,6 +36,9 @@ cellSelector: '.gallery-cell'
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
+    {{#codepens.cell_selector}}
+      {{>example_edit_demo}}
+    {{/codepens.cell_selector}}
   </div>
 </div>
 
@@ -61,6 +64,9 @@ cellSelector: '.gallery-cell'
       <div class="gallery-cell"></div>
     </div>
   </div>
+  {{#codepens.initial_index}}
+    {{>example_edit_demo}}
+  {{/codepens.initial_index}}
 </div>
 
 {{! ----------------------------------------------------------------- }}
@@ -86,6 +92,9 @@ cellSelector: '.gallery-cell'
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
+    {{#codepens.accessibility_disabled}}
+      {{>example_edit_demo}}
+    {{/codepens.accessibility_disabled}}
   </div>
 </div>
 
@@ -118,6 +127,9 @@ cellSelector: '.gallery-cell'
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
+    {{#codepens.resize_option_disabled}}
+      {{>example_edit_demo}}
+    {{/codepens.resize_option_disabled}}
   </div>
 </div>
 
@@ -164,6 +176,9 @@ cellSelector: '.gallery-cell'
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
+    {{#codepens.basic}}
+      {{>example_edit_demo}}
+    {{/codepens.basic}}
   </div>
 </div>
 
@@ -190,6 +205,9 @@ cellSelector: '.gallery-cell'
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
+    {{#codepens.percent_position_disabled}}
+      {{>example_edit_demo}}
+    {{/codepens.percent_position_disabled}}
   </div>
 </div>
 
@@ -214,6 +232,9 @@ cellSelector: '.gallery-cell'
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
+    {{#codepens.right_to_left}}
+      {{>example_edit_demo}}
+    {{/codepens.right_to_left}}
   </div>
 </div>
 
@@ -242,6 +263,9 @@ cellSelector: '.gallery-cell'
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
+    {{#codepens.draggable_disabled}}
+      {{>example_edit_demo}}
+    {{/codepens.draggable_disabled}}
   </div>
 </div>
 
@@ -276,20 +300,20 @@ cellSelector: '.gallery-cell'
 
 ``` js
 // asNavFor can be set a selector string
-asNavFor: '.gallery-a'
+asNavFor: '.gallery-main'
 // or an element
-asNavFor: $('.gallery-a')[0]
-asNavFor: document.querySelector('.gallery-a')
+asNavFor: $('.gallery-main')[0]
+asNavFor: document.querySelector('.gallery-main')
 ```
 
 <div class="example duo">
   <div class="example__code duo__cell">
     ``` js
     // 1st gallery, main
-    $('.gallery-a').flickity();
+    $('.gallery-main').flickity();
     // 2nd gallery, navigation
-    $('.gallery-b').flickity({
-      asNavFor: '.gallery-a',
+    $('.gallery-nav').flickity({
+      asNavFor: '.gallery-main',
       contain: true,
       pageDots: false
     });
@@ -297,13 +321,13 @@ asNavFor: document.querySelector('.gallery-a')
 
     ``` css
     /* is-nav-selected class added to nav cells */
-    .gallery-cell.is-nav-selected {
+    .gallery-nav .gallery-cell.is-nav-selected {
       background: #ED2;
     }
     ```
   </div>
   <div class="example__demo duo__cell">
-    <div class="gallery gallery--as-nav-for-a gallery--full-width js-flickity">
+    <div class="gallery gallery--as-nav-for-main gallery--full-width js-flickity">
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
@@ -312,8 +336,8 @@ asNavFor: document.querySelector('.gallery-a')
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
-    <div class="gallery gallery--as-nav-for-b gallery--nav js-flickity"
-      data-flickity-options='{ "asNavFor": ".gallery--as-nav-for-a", "contain": true, "pageDots": false }'>
+    <div class="gallery gallery--as-nav-for-nav gallery--nav js-flickity"
+      data-flickity-options='{ "asNavFor": ".gallery--as-nav-for-main", "contain": true, "pageDots": false }'>
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
@@ -322,6 +346,9 @@ asNavFor: document.querySelector('.gallery-a')
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
+    {{#codepens.as_nav_for}}
+      {{>example_edit_demo}}
+    {{/codepens.as_nav_for}}
   </div>
 </div>
 
@@ -353,6 +380,9 @@ asNavFor: document.querySelector('.gallery-a')
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
+    {{#codepens.prev_next_buttons_disabled}}
+      {{>example_edit_demo}}
+    {{/codepens.prev_next_buttons_disabled}}
   </div>
 </div>
 
@@ -378,6 +408,9 @@ asNavFor: document.querySelector('.gallery-a')
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
+    {{#codepens.page_dots_disabled}}
+      {{>example_edit_demo}}
+    {{/codepens.page_dots_disabled}}
   </div>
 </div>
 

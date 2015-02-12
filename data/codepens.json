@@ -1,4 +1,7 @@
 {
+  "basic": {
+    "default": "azqbop"
+  },
   "wrap_around": {
     "default": "myXdej"
   },
@@ -52,6 +55,45 @@
   },
   "line_dots": {
     "default": "ByYyao"
+  },
+  "cell_selector": {
+    "default": "ZYrYZq"
+  },
+  "initial_index": {
+    "default": "vEdOKg"
+  },
+  "accessibility_disabled": {
+    "default": "NPyqrM"
+  },
+  "resize_option_disabled": {
+    "default": "yyvNaG"
+  },
+  "cell_align_left": {
+    "default": "MYQwbx"
+  },
+  "cell_align_right": {
+    "default": "ogEXBL"
+  },
+  "contain": {
+    "default": "QwQbdV"
+  },
+  "percent_position_disabled": {
+    "default": "dPdoWp"
+  },
+  "right_to_left": {
+    "default": "ZYrGKN"
+  },
+  "draggable_disabled": {
+    "default": "dPdoRO"
+  },
+  "as_nav_for": {
+    "default": "wByaqj"
+  },
+  "prev_next_buttons_disabled": {
+    "default": "QwQbQJ"
+  },
+  "page_dots_disabled": {
+    "default": "raJVdN"
   },
   "demo_name": {
     "default": "codepen_id"

@@ -7,8 +7,8 @@ FlickityDocs.modules['static-click'] = function( elem ) {
   var flkty = new Flickity( gallery );
   var logger = elem.querySelector('.logger');
 
-  flkty.on( 'staticClick', function( event, pointer, clickedCellIndex, clickedCellElement ) {
-    if ( typeof clickedCellIndex != 'number' ) {
+  flkty.on( 'staticClick', function( event, pointer, cellIndex, cellElement ) {
+    if ( !cellElement ) {
       return;
     }
 
@@ -16,9 +16,9 @@ FlickityDocs.modules['static-click'] = function( elem ) {
     if ( prevClickedCell ) {
       classie.remove( prevClickedCell, 'is-clicked' );
     }
-    classie.add( clickedCellElement, 'is-clicked' );
+    classie.add( cellElement, 'is-clicked' );
 
-    utils.setText( logger, 'Cell ' + ( clickedCellIndex + 1 )  + ' clicked' );
+    utils.setText( logger, 'Cell ' + ( cellIndex + 1 )  + ' clicked' );
   });
 
 };

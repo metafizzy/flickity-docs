@@ -251,11 +251,11 @@ flkty.reposition()
 <div class="example">
   <div class="example__code">
     ``` js
-    $gallery.on( 'staticClick.flickity', function( event, pointer, clickedCellIndex, clickedCellElement ) {
-      if ( !clickedCellElement ) {
+    $gallery.on( 'staticClick.flickity', function( event, pointer, cellIndex, cellElement ) {
+      if ( !cellElement ) {
         return;
       }
-      $( clickedCellElement ).toggleClass('is-expanded');
+      $( cellElement ).toggleClass('is-expanded');
       $gallery.flickity('reposition');
     });
     ```
@@ -920,9 +920,9 @@ flkty.on( 'pointerUp', function( event, pointer ) {...})
 
 ``` js
 // jQuery
-$gallery.on( 'staticClick', function( event, pointer, clickedCellIndex, clickedCellElement ) {...})
+$gallery.on( 'staticClick.flickity', function( event, pointer, cellIndex, cellElement ) {...})
 // vanilla JS
-flkty.on( 'select', function( event, pointer, clickedCellIndex, clickedCellElement ) {...})
+flkty.on( 'select', function( event, pointer, cellIndex, cellElement ) {...})
 ```
 
 <p class="argument">
@@ -936,30 +936,30 @@ flkty.on( 'select', function( event, pointer, clickedCellIndex, clickedCellEleme
   <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
 </p>
 <p class="argument">
-  <code class="argument__code"><span class="params">clickedCellIndex</span></code>
+  <code class="argument__code"><span class="params">cellIndex</span></code>
   <span class="argument__type"><i>Integer</i></span>
   <span class="argument__description">If a cell was clicked, the cell&rsquo;s zero-based index.</span>
 </p>
 <p class="argument">
-  <code class="argument__code"><span class="params">clickedCellElement</span></code>
+  <code class="argument__code"><span class="params">cellElement</span></code>
   <span class="argument__type"><i>Element</i></span>
   <span class="argument__description">If a cell was clicked, the element.</span>
 </p>
 
-<p>Use the <code><span class="params">clickedCellIndex</span></code> and <code><span class="params">clickedCellElement</span></code> parameters to detect what cell was clicked.</p>
+<p>Use the <code><span class="params">cellIndex</span></code> and <code><span class="params">cellElement</span></code> parameters to detect what cell was clicked.</p>
 
 <div class="example">
   <div class="example__code">
     ``` js
-    $gallery.on( 'staticClick', function( event, pointer, clickedCellIndex, clickedCellElement ) {
+    $gallery.on( 'staticClick.flickity', function( event, pointer, cellIndex, cellElement ) {
       // dismiss if cell was not clicked
-      if ( typeof clickedCellIndex != 'number' ) {
+      if ( !cellElement ) {
         return;
       }
       // change cell background with .is-clicked
       $gallery.find('.is-clicked').removeClass('is-clicked');
-      $( clickedCellElement ).addClass('is-clicked');
-      $logger.text( 'Cell ' + ( clickedCellIndex + 1 )  + ' clicked' );
+      $( cellElement ).addClass('is-clicked');
+      $logger.text( 'Cell ' + ( cellIndex + 1 )  + ' clicked' );
     });
     ```
   </div>

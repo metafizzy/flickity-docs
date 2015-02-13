@@ -143,7 +143,31 @@
     "default": "yyvXYL",
     "vanilla_js": "myXweK"
   },
-  "demo_name": {
+  "drag_start": {
+    "default": "KwQqWw",
+    "vanilla_js": "RNQgpB"
+  },
+  "drag_move": {
+    "default": "azqwWW",
+    "vanilla_js": "YPeQVL"
+  },
+  "drag_end": {
+    "default": "ByYZRb",
+    "vanilla_js": "jEZwwO"
+  },
+  "pointer_down": {
+    "default": "zxRzzZ",
+    "vanilla_js": "ByYZZE"
+  },
+  "pointer_move": {
+    "default": "KwQqWw",
+    "vanilla_js": "XJZgap"
+  },
+  "pointer_up": {
+    "default": "qExjXV",
+    "vanilla_js": "pvawrj"
+  },
+  "static_click": {
     "default": "codepen_id",
     "vanilla_js": "codepen_id"
   },

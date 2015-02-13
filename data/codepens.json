@@ -111,6 +111,22 @@
     "default": "XJZmMp",
     "vanilla_js": "NPyGjQ"
   },
+  "reposition": {
+    "default": "zxRvdw",
+    "vanilla_js": "vEdgOR"
+  },
+  "prepend": {
+    "default": "XJZpMN",
+    "vanilla_js": "VYQPWx"
+  },
+  "append": {
+    "default": "qExRVp",
+    "vanilla_js": "OPQWOG"
+  },
+  "insert": {
+    "default": "YPeNYj",
+    "vanilla_js": "EaQZQv"
+  },
   "demo_name": {
     "default": "codepen_id",
     "vanilla_js": "codepen_id"

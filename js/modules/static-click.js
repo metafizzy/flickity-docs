@@ -4,7 +4,9 @@ FlickityDocs.modules['static-click'] = function( elem ) {
   var utils = window.fizzyUIUtils;
 
   var gallery = elem.querySelector('.gallery');
-  var flkty = new Flickity( gallery );
+  var flkty = new Flickity( gallery, {
+    initialIndex: 1
+  });
   var logger = elem.querySelector('.logger');
 
   flkty.on( 'staticClick', function( event, pointer, cellIndex, cellElement ) {

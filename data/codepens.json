@@ -135,6 +135,18 @@
     "default": "dPdNQq",
     "vanilla_js": "emVgoR"
   },
+  "select_event": {
+    "default": "emVgqE",
+    "vanilla_js": "ogEwXe"
+  },
+  "settle_event": {
+    "default": "yyvXYL",
+    "vanilla_js": "myXweK"
+  },
+  "demo_name": {
+    "default": "codepen_id",
+    "vanilla_js": "codepen_id"
+  },
   "demo_name": {
     "default": "codepen_id",
     "vanilla_js": "codepen_id"

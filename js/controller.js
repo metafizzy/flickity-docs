@@ -13,7 +13,7 @@ FlickityDocs.modules = {};
 // ----- helpers ----- //
 
 // for prepend, append, insert demos
-Flickity.makeCellElem = function( num ) {
+FlickityDocs.makeCellElem = function( num ) {
   var cellElem = document.createElement('div');
   cellElem.className = 'gallery-cell';
   var number = document.createElement('span');

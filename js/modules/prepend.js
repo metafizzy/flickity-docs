@@ -5,7 +5,7 @@ FlickityDocs.modules.prepend = function( elem ) {
   var flkty = new Flickity( gallery );
 
   var cellNumber = flkty.cells.length + 1;
-  var makeCellElem = Flickity.makeCellElem;
+  var makeCellElem = FlickityDocs.makeCellElem;
 
   var button = elem.querySelector('.button');
   eventie.bind( button, 'click', function() {

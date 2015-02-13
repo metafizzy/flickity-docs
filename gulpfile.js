@@ -213,11 +213,11 @@ function buildContent( dataOptions ) {
   var pageTemplate = fs.readFileSync( pageTemplateSrc, 'utf8' );
   // exclude 404 if export
   var filterQuery = dataOptions.is_export ? [ '*', '!**/404.*'] : '*';
-  var filter = gulpFilter( filterQuery );
 
   // gulp task
   return function() {
     var data = extend( siteData, dataOptions );
+    var filter = gulpFilter( filterQuery );
 
     var buildOptions = {
       layout: pageTemplate,
@@ -282,6 +282,7 @@ gulp.task( 'watch', [ 'default' ], function() {
   gulp.watch( contentSrc, [ 'content' ] );
   gulp.watch( partialsSrc, [ 'content' ] );
   gulp.watch( pageTemplateSrc, [ 'content' ] );
+  gulp.watch( dataSrc, [ 'content' ] );
   gulp.watch( 'css/*.css', [ 'css' ] );
 });
 
@@ -290,4 +291,5 @@ gulp.task( 'watch-dev', [ 'dev' ], function() {
   gulp.watch( contentSrc, [ 'content-dev' ] );
   gulp.watch( partialsSrc, [ 'content-dev' ] );
   gulp.watch( pageTemplateSrc, [ 'content-dev' ] );
+  gulp.watch( dataSrc, [ 'content-dev' ] );
 });

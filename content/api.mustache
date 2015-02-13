@@ -510,7 +510,7 @@ flkty.destroy()
     var $gallery = $('.gallery').flickity();
     var isFlickity = true;
     // toggle Flickity on/off
-    $button.on( 'click', function() {
+    $('.button--toggle').on( 'click', function() {
       if ( isFlickity ) {
         // destroy Flickity
         $gallery.flickity('destroy');
@@ -530,7 +530,12 @@ flkty.destroy()
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
     </div>
+    {{#codepens.destroy}}
+      {{>example_edit_demo}}
+    {{/codepens.destroy}}
   </div>
 </div>
 

@@ -46,7 +46,7 @@ export footer
 
 License
 
-Submitting issues
+<!-- Submitting issues -->
 
 
 

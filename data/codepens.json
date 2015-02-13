@@ -127,6 +127,10 @@
     "default": "YPeNYj",
     "vanilla_js": "EaQZQv"
   },
+  "remove": {
+    "default": "WbMRgv",
+    "vanilla_js": "gbvgdy"
+  },
   "demo_name": {
     "default": "codepen_id",
     "vanilla_js": "codepen_id"

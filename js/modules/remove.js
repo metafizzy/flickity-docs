@@ -2,14 +2,14 @@ FlickityDocs.modules.remove = function( elem ) {
   'use strict';
 
   var gallery = elem.querySelector('.gallery');
-  var flkty = new Flickity( gallery );
+  var flkty = new Flickity( gallery, {
+    initialIndex: 1
+  });
 
-  flkty.on( 'staticClick', function( event ) {
-    if ( !matchesSelector( event.target, '.button' ) ) {
-      return;
+  flkty.on( 'staticClick', function( event, pointer, cellIndex, cellElem ) {
+    if ( cellElem ) {
+      flkty.remove( cellElem );
     }
-    var cellElem = utils.getParent( event.target, '.gallery-cell' );
-    flkty.remove( cellElem );
   });
 
 };

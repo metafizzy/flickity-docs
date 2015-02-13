@@ -449,9 +449,10 @@ flkty.remove( elements )
 <div class="example">
   <div class="example__code">
     ``` js
-    $('.gallery').on( 'click', '.button', function() {
-      var $cellElem = $(this).parents('.gallery-cell');
-      $gallery.flickity( 'remove', $cellElem );
+    $('.gallery').on( 'staticClick', function( event, pointer, cellIndex, cellElement ) {
+      if ( cellElement ) {
+        $gallery.flickity( 'remove', cellElement );
+      }
     });
     ```
   </div>
@@ -459,37 +460,32 @@ flkty.remove( elements )
     <div class="gallery gallery--not-counting gallery--show-several">
       <div class="gallery-cell">
         <span class="gallery-cell__number">1</span>
-        <button class="button">Remove</button>
       </div>
       <div class="gallery-cell">
         <span class="gallery-cell__number">2</span>
-        <button class="button">Remove</button>
       </div>
       <div class="gallery-cell">
         <span class="gallery-cell__number">3</span>
-        <button class="button">Remove</button>
       </div>
       <div class="gallery-cell">
         <span class="gallery-cell__number">4</span>
-        <button class="button">Remove</button>
       </div>
       <div class="gallery-cell">
         <span class="gallery-cell__number">5</span>
-        <button class="button">Remove</button>
       </div>
       <div class="gallery-cell">
         <span class="gallery-cell__number">6</span>
-        <button class="button">Remove</button>
       </div>
       <div class="gallery-cell">
         <span class="gallery-cell__number">7</span>
-        <button class="button">Remove</button>
       </div>
       <div class="gallery-cell">
         <span class="gallery-cell__number">8</span>
-        <button class="button">Remove</button>
       </div>
     </div>
+    {{#codepens.remove}}
+      {{>example_edit_demo}}
+    {{/codepens.remove}}
   </div>
 </div>
 

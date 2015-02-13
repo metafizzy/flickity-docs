@@ -171,6 +171,10 @@
     "default": "XJZgzM",
     "vanilla_js": "RNQgxe"
   },
+  "custom_nav": {
+    "default": "jEZwxb",
+    "vanilla_js": "emVRjv"
+  },
   "demo_name": {
     "default": "codepen_id",
     "vanilla_js": "codepen_id"

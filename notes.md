@@ -42,7 +42,7 @@ export footer
 <!-- align pageNav right -->
 <!-- sticky pageNav -->
 
-CodePen all examples
+<!-- CodePen all examples -->
 
 License
 

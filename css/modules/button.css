@@ -38,6 +38,8 @@
   margin-bottom: 10px;
 }
 
+.button-row--centered { text-align: center; }
+
 /* ---- button-group ---- */
 
 .button-group--inline {

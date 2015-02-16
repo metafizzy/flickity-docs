@@ -16,12 +16,7 @@
 
 <!-- document how to style prev/next button :focus, when removing outline -->
 
-document :focus
-
-    .flickity-enabled:focus .flickity-viewport {
-      outline: thin dotted;
-      outline: 5px auto -webkit-focus-ring-color;
-    }
+<!-- document :focus -->
 
 <!-- is-selected cell -->
 <!-- is-pointer-down when dragging -->

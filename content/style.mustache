@@ -323,3 +323,32 @@ title: Style
     {{/codepens.line_dots}}
   </div>
 </div>
+
+{{! ---------------------------------------------- }}
+
+<h2>Gallery</h2>
+
+<p>Add a gallery <code>:focus</code> style style to aid accessibility. When focused, users can navigate the gallery with their keyboard.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` css
+    .flickity-enabled:focus .flickity-viewport {
+      outline: thin dotted;
+      outline: 5px auto -webkit-focus-ring-color;
+    }
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="gallery gallery--gallery-focus js-flickity">
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+    {{#codepens.gallery_focus}}
+      {{>edit_demo}}
+    {{/codepens.gallery_focus}}
+  </div>
+</div>

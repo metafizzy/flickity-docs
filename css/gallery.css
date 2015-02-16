@@ -53,6 +53,11 @@
 
 .gallery--selected-cell .gallery-cell.is-selected { background: #ED2; }
 
+.gallery--gallery-focus:focus .flickity-viewport {
+  outline: thin dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
 /* ---- show-several ---- */
 
 .gallery--show-several .gallery-cell { width: 28%; }

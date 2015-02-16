@@ -88,6 +88,10 @@
 
 /* ---- cell-selector-demo ---- */
 
+.gallery--cell-selector-demo {
+  position: relative;
+}
+
 .static-banner {
   position: absolute;
   background: hsla(0, 0%, 0%, 0.3);

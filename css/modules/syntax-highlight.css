@@ -2,11 +2,11 @@
 ------------------------- */
 
 code .string,
-code .tag .value { color: #072; }
+code .tag .value { color: #0A2; }
 code .number, /* integer */
 code .cp, /* doctype */
 code .literal { color: #07D; } /*boolean*/
-code .keyword { color: #C31; } /* keyword */
+code .keyword { color: #E31; } /* keyword */
 code .kd, /* storage */
 code .attribute { color: #D31; } /* markup attribute */
 code .title  { color: #39A; }
@@ -28,3 +28,12 @@ code .nd,
 code .pseudo { color: #38D; } /* CSS pseudo selector */
 code .hexcolor { color: #F63; }
 code .at_rule { color: #088; }
+
+code .built_in { color: #E08; }
+
+code .flickity, /* new Flickity() */
+code .flickity_var { color: #D0D; } /* flkty */
+
+code .jquery_var { color: #D70; } /* $gallery */
+
+code .flickity { text-decoration: underline; }

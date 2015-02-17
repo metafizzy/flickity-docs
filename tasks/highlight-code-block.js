@@ -5,6 +5,22 @@ highlightjs.configure({
   classPrefix: ''
 });
 
+var hljsJavascript = highlightjs.getLanguage('javascript');
+// highlight Flickity for flickity
+hljsJavascript.keywords.flickity = 'Flickity';
+// highlight flickity variables
+hljsJavascript.keywords.flickity_var = 'flkty';
+
+hljsJavascript.contains.push({
+  className: 'jquery_var',
+  begin: /\$gallery/
+});
+
+hljsJavascript.contains.push({
+  className: 'flickity',
+  begin: /flickity/
+});
+
 var reFirstLine = /.*\n/;
 
 function replaceCodeBlock( match, leadingWhiteSpace, block ) {

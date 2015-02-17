@@ -7,10 +7,11 @@
 }
 
 .big-link {
-  font-size: 1.2em;
   display: block;
-  padding: 10px;
+  font-size: 1.2em;;
+  padding: 0.9em 0.7em;
   border-radius: 5px;
+  line-height: 1;
 }
 
 .big-link:active {
@@ -46,8 +47,6 @@
 
   .big-link {
     font-size: 1.4em;
-    padding: 20px;
-    
   }
 
 }

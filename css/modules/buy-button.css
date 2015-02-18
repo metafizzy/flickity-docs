@@ -52,58 +52,6 @@
 
 @media screen and (min-width: 768px) {
 
-  .buy-button {
-    transition: transform 0.2s;
-    padding: 20px 0 0;
-  }
-
-  .buy-button > span {
-    display: block;
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-
-  .buy-button__project {
-  }
-
-  .buy-button__project,
-  .buy-button__license {
-    font-size: 1.1em;
-  }
-
-  .buy-button__title {
-    font-size: 1.9em;
-    line-height: 1.2;
-  }
-
-  .buy-button__license {
-    margin-bottom: 15px;
-  }
-
-  .buy-button__for {
-    margin-bottom: 20px;
-    font-size: 1.1em;
-  }
-
-  .buy-button__price {
-    position: relative;
-    width: auto;
-    font-size: 2.4em;
-    line-height: 1.3;
-    padding-top: 15px;
-    padding-bottom: 10px;
-  }
-
-  .buy-button__price__dollar {
-    position: relative;
-    top: 8px;
-  }
-
-
-  .buy-button:hover {
-    transform: translateY(-5px);
-  }
-
   /* ---- buy-button-trio ---- */
 
   .buy-button-trio {
@@ -117,6 +65,8 @@
     clear: both;
   }
 
+  /* ---- buy-button-trio buy-button ---- */
+
   .buy-button-trio .buy-button {
     float: left;
     width: 31.33%;
@@ -126,5 +76,56 @@
   .buy-button-trio .buy-button:nth-child(3) {
     margin-right: 0;
   }
+
+  .buy-button-trio .buy-button {
+    transition: transform 0.2s;
+    padding: 20px 0 0;
+  }
+
+  .buy-button-trio .buy-button > span {
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .buy-button-trio .buy-button__project,
+  .buy-button-trio .buy-button__license {
+    font-size: 1.1em;
+  }
+
+  .buy-button-trio .buy-button__title {
+    font-size: 1.9em;
+    line-height: 1.2;
+  }
+
+  .buy-button-trio .buy-button__license {
+    margin-bottom: 15px;
+  }
+
+  .buy-button-trio .buy-button__for {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+  }
+
+  .buy-button-trio .buy-button__price {
+    position: relative;
+    width: auto;
+    font-size: 2.4em;
+    line-height: 1.3;
+    padding-top: 15px;
+    padding-bottom: 10px;
+  }
+
+  .buy-button-trio .buy-button__price__dollar {
+    position: relative;
+    top: 8px;
+  }
+
+
+  .buy-button-trio .buy-button:hover {
+    transform: translateY(-5px);
+  }
+
+
 
 }

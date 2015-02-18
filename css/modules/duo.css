@@ -49,4 +49,6 @@ two columns for large devices
     margin-right: 3%;
   }
 
+  .duo__cell--license-option p { margin-top: 0; }
+
 }

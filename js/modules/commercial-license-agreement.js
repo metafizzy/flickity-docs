@@ -34,13 +34,17 @@ FlickityDocs.modules['commercial-license-agreement'] = function( elem ) {
 
   // ----- propertyElems ----- //
 
-  var propertyElems = {};
+  var propertyParts = [];
 
   var dataPropertyElems = elem.querySelectorAll('[data-license-property]');
+
   for ( var i=0, len = dataPropertyElems.length; i < len; i++ ) {
     var dataPropertyElem = dataPropertyElems[i];
-    var property = dataPropertyElem.getAttribute('data-license-property');
-    propertyElems[ property ] = dataPropertyElem;
+    var part = {
+      property: dataPropertyElem.getAttribute('data-license-property'),
+      element: dataPropertyElem
+    };
+    propertyParts.push( part );
   }
 
   // ----- button ----- //
@@ -56,8 +60,9 @@ FlickityDocs.modules['commercial-license-agreement'] = function( elem ) {
     var optionKey = button.getAttribute('data-license-option');
     var licenseOption = licenseData[ optionKey ];
     // set elements text accordingly
-    for ( var property in propertyElems ) {
-      utils.setText( propertyElems[ property ], licenseOption[ property ] );
+    for ( var i=0, len = propertyParts.length; i < len; i++ ) {
+      var part = propertyParts[i];
+      utils.setText( part.element, licenseOption[ part.property ] );
     }
   }
 

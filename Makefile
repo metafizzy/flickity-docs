@@ -7,7 +7,7 @@ zip:
 	rm -rf flickity-docs
 
 deploy:
-	s3cmd -c ~/.s3cfg-fizzy sync build/. s3://flickity.metafizzy.co/
+	s3cmd -c ~/.s3cfg-fizzy sync build/. s3://flickity.metafizzy.co/license-staging/
 
 gulp:
 	gulp

@@ -94,6 +94,20 @@ is_homepage: true
 
 <p>Once purchased, you&rsquo;ll receive a commercial license PDF and be all set to use Flickity in your commercial applications.</p>
 
+<div class="buy-button-trio">
+  {{#license_options.developer}}
+    {{> buy_button}}
+  {{/license_options.developer}}
+
+  {{#license_options.team}}
+    {{> buy_button}}
+  {{/license_options.team}}
+
+  {{#license_options.organization}}
+    {{> buy_button}}
+  {{/license_options.organization}}
+</div>
+
 <h3>Open source license</h3>
 
 <p>If you are creating an open source application under a license compatible with the <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU GPL license v3</a>, you may use Flickity under the terms of the GPLv3. The GPLv3 has many terms, but the most important is how <a href="https://www.gnu.org/licenses/gpl-3.0.html#section5">it is <em>sticky</em> when you distribute your work publicly</a>. From the <a href="https://www.gnu.org/licenses/gpl-faq.html#GPLRequireSourcePostedPublic">GPL FAQ</a>:</p>

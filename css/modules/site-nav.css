@@ -67,7 +67,7 @@
 }
 
 /* size at which it can fit */
-@media screen and ( min-width: 840px ) {
+@media screen and ( min-width: 768px ) {
 
   .site-nav__item {
     width: auto;

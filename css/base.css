@@ -142,8 +142,13 @@ tr:nth-child(2) td {
 }
 
 
-/* ---- hide-small ---- */
+/* ---- data-license-property ---- */
 
+*[data-license-property] {
+  color: #09F;
+}
+
+/* ---- hide-small ---- */
 
 @media screen and ( max-width: 640px ) {
   .hidden-small {

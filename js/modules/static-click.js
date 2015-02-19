@@ -9,7 +9,7 @@ FlickityDocs.modules['static-click'] = function( elem ) {
   });
   var logger = elem.querySelector('.logger');
 
-  flkty.on( 'staticClick', function( event, pointer, cellIndex, cellElement ) {
+  flkty.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {
     if ( !cellElement ) {
       return;
     }

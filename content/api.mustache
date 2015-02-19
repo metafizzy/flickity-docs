@@ -965,9 +965,9 @@ flkty.on( 'pointerUp', function( event, pointer ) {...})
 
 ``` js
 // jQuery
-$gallery.on( 'staticClick', function( event, pointer, cellIndex, cellElement ) {...})
+$gallery.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {...})
 // vanilla JS
-flkty.on( 'cellSelect', function( event, pointer, cellIndex, cellElement ) {...})
+flkty.on( 'cellSelect', function( event, pointer, cellElement, cellIndex ) {...})
 ```
 
 <p class="argument">
@@ -981,22 +981,22 @@ flkty.on( 'cellSelect', function( event, pointer, cellIndex, cellElement ) {...}
   <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
 </p>
 <p class="argument">
-  <code class="argument__code"><span class="params">cellIndex</span></code>
-  <span class="argument__type"><i>Integer</i></span>
-  <span class="argument__description">If a cell was clicked, the cell&rsquo;s zero-based index.</span>
-</p>
-<p class="argument">
   <code class="argument__code"><span class="params">cellElement</span></code>
   <span class="argument__type"><i>Element</i></span>
   <span class="argument__description">If a cell was clicked, the element.</span>
 </p>
+<p class="argument">
+  <code class="argument__code"><span class="params">cellIndex</span></code>
+  <span class="argument__type"><i>Integer</i></span>
+  <span class="argument__description">If a cell was clicked, the cell&rsquo;s zero-based index.</span>
+</p>
 
-<p>Use the <code><span class="params">cellIndex</span></code> and <code><span class="params">cellElement</span></code> parameters to detect what cell was clicked.</p>
+<p>Use the <code><span class="params">cellElement</span></code> and <code><span class="params">cellIndex</span></code> parameters to detect what cell was clicked.</p>
 
 <div class="example">
   <div class="example__code">
     ``` js
-    $gallery.on( 'staticClick', function( event, pointer, cellIndex, cellElement ) {
+    $gallery.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {
       // dismiss if cell was not clicked
       if ( !cellElement ) {
         return;

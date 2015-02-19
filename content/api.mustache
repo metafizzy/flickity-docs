@@ -251,7 +251,7 @@ flkty.reposition()
 <div class="example">
   <div class="example__code">
     ``` js
-    $gallery.on( 'staticClick.flickity', function( event, pointer, cellIndex, cellElement ) {
+    $gallery.on( 'staticClick', function( event, pointer, cellIndex, cellElement ) {
       if ( !cellElement ) {
         return;
       }
@@ -672,11 +672,11 @@ function listener(/* parameters */) {
   console.log('eventName happened');
 }
 // bind event listener
-$gallery.on( 'eventName.flickity', listener );
+$gallery.on( 'eventName', listener );
 // unbind event listener
-$gallery.off( 'eventName.flickity', listener );
+$gallery.off( 'eventName', listener );
 // bind event listener to trigger once. note ONE not ON
-$gallery.one( 'eventName.flickity', function() { // 
+$gallery.one( 'eventName', function() {
   console.log('eventName happened just once');
 });
 ```
@@ -684,7 +684,7 @@ $gallery.one( 'eventName.flickity', function() { //
 <p>jQuery events are namespaced with <code>.flickity</code>. Use this namespace to specify Flickity events.</p>
 
 ``` js
-$gallery.on( 'select.flickity', function() {
+$gallery.on( 'select', function() {
   // Flickity gallery cell select event
 });
 ```
@@ -747,7 +747,7 @@ flkty.once( 'eventName', function() {
 
 ``` js
 // jQuery
-$gallery.on( 'select.flickity', function() {
+$gallery.on( 'select', function() {
   console.log( 'Flickity select ' + flkty.selectedIndex )
 })
 // vanilla JS
@@ -770,7 +770,7 @@ flkty.on( 'select', function() {...})
 
 ``` js
 // jQuery
-$gallery.on( 'settle.flickity', function() {
+$gallery.on( 'settle', function() {
   console.log( 'Flickity settled at ' + flkty.selectedIndex )
 })
 // vanilla JS
@@ -789,7 +789,7 @@ flkty.on( 'settle', function() {...})
 
 ``` js
 // jQuery
-$gallery.on( 'dragStart.flickity', function( event, pointer ) {...})
+$gallery.on( 'dragStart', function( event, pointer ) {...})
 // vanilla JS
 flkty.on( 'dragStart', function( event, pointer ) {...})
 ```
@@ -817,7 +817,7 @@ flkty.on( 'dragStart', function( event, pointer ) {...})
 
 ``` js
 // jQuery
-$gallery.on( 'dragMove.flickity', function( event, pointer, moveVector ) {...})
+$gallery.on( 'dragMove', function( event, pointer, moveVector ) {...})
 // vanilla JS
 flkty.on( 'dragMove', function( event, pointer, moveVector ) {...})
 ```
@@ -850,7 +850,7 @@ flkty.on( 'dragMove', function( event, pointer, moveVector ) {...})
 
 ``` js
 // jQuery
-$gallery.on( 'dragEnd.flickity', function( event, pointer ) {...})
+$gallery.on( 'dragEnd', function( event, pointer ) {...})
 // vanilla JS
 flkty.on( 'dragEnd', function( event, pointer ) {...})
 ```
@@ -878,7 +878,7 @@ flkty.on( 'dragEnd', function( event, pointer ) {...})
 
 ``` js
 // jQuery
-$gallery.on( 'pointerDown.flickity', function( event, pointer ) {...})
+$gallery.on( 'pointerDown', function( event, pointer ) {...})
 // vanilla JS
 flkty.on( 'pointerDown', function( event, pointer ) {...})
 ```
@@ -906,7 +906,7 @@ flkty.on( 'pointerDown', function( event, pointer ) {...})
 
 ``` js
 // jQuery
-$gallery.on( 'pointerMove.flickity', function( event, pointer, moveVector ) {...})
+$gallery.on( 'pointerMove', function( event, pointer, moveVector ) {...})
 // vanilla JS
 flkty.on( 'pointerMove', function( event, pointer, moveVector ) {...})
 ```
@@ -939,7 +939,7 @@ flkty.on( 'pointerMove', function( event, pointer, moveVector ) {...})
 
 ``` js
 // jQuery
-$gallery.on( 'pointerUp.flickity', function( event, pointer ) {...})
+$gallery.on( 'pointerUp', function( event, pointer ) {...})
 // vanilla JS
 flkty.on( 'pointerUp', function( event, pointer ) {...})
 ```
@@ -969,7 +969,7 @@ flkty.on( 'pointerUp', function( event, pointer ) {...})
 
 ``` js
 // jQuery
-$gallery.on( 'staticClick.flickity', function( event, pointer, cellIndex, cellElement ) {...})
+$gallery.on( 'staticClick', function( event, pointer, cellIndex, cellElement ) {...})
 // vanilla JS
 flkty.on( 'select', function( event, pointer, cellIndex, cellElement ) {...})
 ```
@@ -1000,7 +1000,7 @@ flkty.on( 'select', function( event, pointer, cellIndex, cellElement ) {...})
 <div class="example">
   <div class="example__code">
     ``` js
-    $gallery.on( 'staticClick.flickity', function( event, pointer, cellIndex, cellElement ) {
+    $gallery.on( 'staticClick', function( event, pointer, cellIndex, cellElement ) {
       // dismiss if cell was not clicked
       if ( !cellElement ) {
         return;

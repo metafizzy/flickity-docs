@@ -1,6 +1,6 @@
 {
   "name": "flickity-docs",
-  "version": "0.2.3",
+  "version": "0.3.0",
   "description": "Documentation for Flickity",
   "main": "content/index.html",
   "license": "BY-CC",

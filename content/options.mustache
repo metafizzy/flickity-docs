@@ -100,6 +100,88 @@ cellSelector: '.gallery-cell'
 
 {{! ----------------------------------------------------------------- }}
 
+<h3>setGallerySize</h3>
+
+<p>Sets the height of the gallery to the height of the tallest cell. Enabled by default <code><span class="comment">setGallerySize: true</span></code>.</p>
+
+<p>Use <code>setGallerySize: <span class="literal">false</span></code> if you prefer to size the gallery with CSS, rather than using the size of cells.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    setGallerySize: false
+    ```
+
+    ``` css
+    /* gallery height */
+    .gallery {
+      height: 160px;
+    }
+
+    /* cell inherit height from gallery */
+    .gallery-cell {
+      height: 100%;
+    }
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="gallery gallery--set-gallery-size-option js-flickity"
+      data-flickity-options='{ "setGallerySize": false }'>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+    {{#codepens.set_gallery_size_option}}
+      {{>edit_demo}}
+    {{/codepens.set_gallery_size_option}}
+  </div>
+</div>
+
+<p>You can size the gallery height as percentage of its width with <code><span class="attribute">padding-bottom</span></code> and <code><span class="class">.flickity-viewport</span></code> CSS.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    setGallerySize: false
+    ```
+
+    ``` css
+    /* gallery height, as percentage of width */
+    .gallery {
+      padding-bottom: 33.3%;
+    }
+
+    /* viewport inherit size from gallery */
+    .gallery .flickity-viewport {
+      position: absolute;
+      width: 100%;
+    }
+
+    /* cell inherit height from gallery */
+    .gallery-cell {
+      height: 100%;
+    }
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="gallery gallery--set-gallery-size-option-percentage js-flickity"
+      data-flickity-options='{ "setGallerySize": false }'>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+    {{#codepens.set_gallery_size_option_percentage}}
+      {{>edit_demo}}
+    {{/codepens.set_gallery_size_option_percentage}}
+  </div>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
 <h3>resize</h3>
 
 <p>Adjusts sizes and positions when window is resized. Enabled by default <code><span class="comment">resize: true</span></code>.</p>

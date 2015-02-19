@@ -120,17 +120,17 @@
 
 .gallery--pixel-position-demo .gallery-cell { width: 300px; }
 
-/* ---- gallery--set-gallery-size-option ---- */
+/* ---- gallery--set-gallery-size-disabled ---- */
 
-.gallery--set-gallery-size-option { height: 160px; }
-.gallery--set-gallery-size-option .gallery-cell { height: 100%; }
+.gallery--set-gallery-size-disabled { height: 160px; }
+.gallery--set-gallery-size-disabled .gallery-cell { height: 100%; }
 
-.gallery--set-gallery-size-option-percentage { padding-bottom: 50%; }
-.gallery--set-gallery-size-option-percentage .flickity-viewport {
+.gallery--set-gallery-size-disabled-percentage { padding-bottom: 50%; }
+.gallery--set-gallery-size-disabled-percentage .flickity-viewport {
   position: absolute;
   width: 100%;
 }
-.gallery--set-gallery-size-option-percentage .gallery-cell { height: 100%; }
+.gallery--set-gallery-size-disabled-percentage .gallery-cell { height: 100%; }
 
 /* ---- resize-option ---- */
 

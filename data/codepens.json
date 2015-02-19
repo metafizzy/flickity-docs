@@ -68,6 +68,12 @@
   "accessibility_disabled": {
     "default": "NPyqrM"
   },
+  "set_gallery_size_disabled": {
+    "default": "jEzKNG"
+  },
+  "set_gallery_size_disabled_percentage": {
+    "default": "dPmKyx"
+  },
   "resize_option_disabled": {
     "default": "yyvNaG"
   },

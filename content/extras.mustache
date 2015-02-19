@@ -21,7 +21,7 @@ title: Extras
     var $cellButtons = $cellButtonGroup.find('.button');
 
     // update selected cellButtons
-    $gallery.on( 'select.flickity', function() {
+    $gallery.on( 'cellSelect', function() {
       $cellButtons.filter('.is-selected')
         .removeClass('is-selected');
       $cellButtons.eq( flkty.selectedIndex )

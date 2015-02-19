@@ -684,7 +684,7 @@ $gallery.one( 'eventName', function() {
 <p>jQuery events are namespaced with <code>.flickity</code>. Use this namespace to specify Flickity events.</p>
 
 ``` js
-$gallery.on( 'select', function() {
+$gallery.on( 'cellSelect', function() {
   // Flickity gallery cell select event
 });
 ```
@@ -741,26 +741,22 @@ flkty.once( 'eventName', function() {
 
 {{! ----------------------------------------------------------------- }}
 
-<h3>select</h3>
+<h3>cellSelect</h3>
 
 <p>Triggered when a cell is selected.</p>
 
 ``` js
 // jQuery
-$gallery.on( 'select', function() {
+$gallery.on( 'cellSelect', function() {
   console.log( 'Flickity select ' + flkty.selectedIndex )
 })
 // vanilla JS
-flkty.on( 'select', function() {...})
+flkty.on( 'cellSelect', function() {...})
 ```
 
-{{#codepens.select_event}}
+{{#codepens.cell_select_event}}
   {{>edit_demo}}
-{{/codepens.select_event}}
-
-<div class="call-out">
-  <p>The <code>select</code> event will be renamed to <code>cellSelect</code> in Flickity v0.3, to avoid conflict with the <a href="https://developer.mozilla.org/en-US/docs/Web/Events/select">native <code>select</code> event</a>.</p>
-</div>
+{{/codepens.cell_select_event}}
 
 {{! ----------------------------------------------------------------- }}
 
@@ -971,7 +967,7 @@ flkty.on( 'pointerUp', function( event, pointer ) {...})
 // jQuery
 $gallery.on( 'staticClick', function( event, pointer, cellIndex, cellElement ) {...})
 // vanilla JS
-flkty.on( 'select', function( event, pointer, cellIndex, cellElement ) {...})
+flkty.on( 'cellSelect', function( event, pointer, cellIndex, cellElement ) {...})
 ```
 
 <p class="argument">

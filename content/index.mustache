@@ -4,19 +4,19 @@ is_homepage: true
 
 <div class="duo">
   <div class="duo__cell">
-    <a class="big-link big-link--fill" href="flickity.pkgd.js">Download <b>flickity.pkgd.min.js</b></a>
+    <a class="big-link big-link--fill" href="{{source_url_path}}flickity.css">Download <b>flickity.&#8203;css</b></a>
   </div>
   <div class="duo__cell">
-    <a class="big-link big-link--fill" href="flickity.css">Download <b>flickity.&#8203;css</b></a>
+    <a class="big-link big-link--fill" href="{{source_url_path}}flickity.pkgd.min.js">Download <b>flickity.pkgd.min.js</b></a>
   </div>
 </div>
 
 <div class="duo">
-  <div class="duo__cell">
-    {{#unless is_export}}
+  {{#unless is_export}}
+    <div class="duo__cell">
       <a class="big-link big-link--stroke" href="flickity-docs.zip">Download these <b>docs</b></a>
-    {{/unless}}
-  </div>
+    </div>
+  {{/unless}}
   <div class="duo__cell">
     <a class="big-link big-link--stroke" href="https://github.com/metafizzy/flickity">Flickity on <b>GitHub</b></a>
   </div>
@@ -43,7 +43,7 @@ is_homepage: true
 
   <ol>
     <li>
-      <p>Download Flickity <a href="flickity.css"><code>flickity.css</code></a> and <a href="flickity.pkgd.min.js"><code>flickity.pkgd.min.js</code></a> files.</p>
+      <p>Download Flickity <a href="{{source_url_path}}flickity.css"><code>flickity.css</code></a> and <a href="{{source_url_path}}flickity.pkgd.min.js"><code>flickity.pkgd.min.js</code></a> files.</p>
     </li>
     <li>
       <p>Add the Flickity <code>.css</code> and <code>.js</code> files to your site.</p>
@@ -75,10 +75,36 @@ is_homepage: true
 
 <ul>
   <li>
-    JavaScript: <a href="flickity.pkgd.js">flickity.pkgd.js</a> uncompressed or <a href="flickity.pkgd.min.js">flickity.pkgd.min.js</a> minified
+    CSS:
+    <ul>
+      <li><a href="{{source_url_path}}flickity.css">flickity.css</a> un-minified, or</li>
+      <li><a href="{{source_url_path}}flickity.min.css">flickity.min.css</a> minified</li>
+    </ul>
   </li>
-  <li>CSS: <a href="flickity.css">flickity.css</a></li>
+  <li>
+    JavaScript:
+    <ul>
+      <li><a href="{{source_url_path}}flickity.pkgd.js">flickity.pkgd.js</a> un-minified, or</li>
+      <li><a href="{{source_url_path}}flickity.pkgd.min.js">flickity.pkgd.min.js</a> minified</li>
+    </ul>
+  </li>
 </ul>
+
+<h3>CDN</h3>
+
+<p>Link directly to <a href="https://cdnjs.com/libraries/flickity">Flickity files on cdnjs</a>.</p>
+
+``` html
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flickity/{{flickity_version}}/flickity.css">
+<!-- or -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/flickity/{{flickity_version}}/flickity.min.css">
+```
+
+``` html
+<script src="//cdnjs.cloudflare.com/ajax/libs/flickity/{{flickity_version}}/flickity.pkgd.js"></script>
+<!-- or -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/flickity/{{flickity_version}}/flickity.pkgd.min.js"></script>
+```
 
 <h3>Package managers</h3>
 

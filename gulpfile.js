@@ -145,7 +145,10 @@ gulp.task( 'css-export', function() {
 // add all data/*.json to siteData
 // file.json => siteData.file: {json}
 var dataSrc = 'data/*.json';
+
 var siteData = {
+  // get flickity version from its bower.json
+  flickity_version: JSON.parse( fs.readFileSync('bower_components/flickity/bower.json') ).version,
   css_paths: getGlobPaths( cssSrc ),
   js_paths: getGlobPaths( jsSrc )
 };
@@ -217,6 +220,8 @@ function buildContent( dataOptions ) {
   // gulp task
   return function() {
     var data = extend( siteData, dataOptions );
+    data.source_url_path = data.is_export ? '' :
+      'http://cdnjs.cloudflare.com/ajax/libs/flickity/' + data.flickity_version + '/';
     var filter = gulpFilter( filterQuery );
 
     var buildOptions = {

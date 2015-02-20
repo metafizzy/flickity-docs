@@ -38,7 +38,7 @@ deploy docs with v0.3.0
 <!-- title id's -->
 <!-- page nav -->
 
-cdnjs
+<!-- cdnjs -->
 
 <!-- how to use imagesLoaded with RequireJS / Browserify -->
 <!-- How to use sync with RequireJS / Browserify -->

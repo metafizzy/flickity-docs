@@ -85,8 +85,6 @@
   color: #444;
 }
 
-.by-line--made b { font-family: 'Texta Heavy', sans-serif; }
-
 /* ---- large device styles ---- */
 
 @media screen and ( min-width: 768px ) {

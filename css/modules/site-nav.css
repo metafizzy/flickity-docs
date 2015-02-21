@@ -37,8 +37,8 @@
 }
 
 .site-nav__item--homepage {
-  font-family: 'Texta Heavy', sans-serif;
   font-size: 21px;
+  font-weight: bold;
 }
 
 .site-nav__item--homepage a {

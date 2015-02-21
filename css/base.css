@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Texta Regular', sans-serif;
+  font-family: 'Texta', sans-serif;
   color: #444;
   line-height: 1.5;
   font-size: 17px;
@@ -25,27 +25,8 @@ a:hover {
   color: #E90;
 }
 
-b, strong {
-  font-family: 'Texta Heavy', sans-serif;
-  font-weight: normal;
-}
-
-em, i {
-  font-family: 'Texta Italic', sans-serif;
-  font-style: normal;
-}
-
 h1, h2, h3 {
   line-height: 1.2;
-  font-weight: normal;
-}
-
-h1 {
-  font-family: 'Texta Heavy', sans-serif;
-}
-
-h3 {
-  font-family: 'Texta Heavy', sans-serif;
 }
 
 /* ---- code ---- */
@@ -120,6 +101,7 @@ tr:nth-child(2) td {
 
 .main h2 {
   font-size: 1.6em;
+  font-weight: normal;
   border-top: 4px double #DDD;
   padding-top: 1.1em;
   margin-top: 1.4em;

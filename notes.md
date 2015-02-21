@@ -1,10 +1,10 @@
-update docs with v0.3.0
+<!-- update docs with v0.3.0 -->
   <!-- select event -> cellSelect -->
   <!-- jQuery remove .flickity -->
   <!-- staticClick arguments -->
   <!-- add setGallerySize documentation -->
-  add CDN links when available
-deploy docs with v0.3.0
+  <!-- add CDN links when available -->
+<!-- deploy docs with v0.3.0 -->
 <!-- update all codpens -->
   <!-- staticClick arguments -->
   <!-- select event -> cellSelect -->

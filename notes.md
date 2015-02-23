@@ -53,14 +53,14 @@ export footer
 
 <!-- CodePen all examples -->
 
-License
+<!-- License -->
 
 <!-- Submitting issues -->
 
 shoot video
 
-Produce PDFs
-Implement SimpleGoods
+<!-- Produce PDFs -->
+<!-- Implement SimpleGoods -->
 
 ## IA
 

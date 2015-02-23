@@ -50,6 +50,13 @@ https://github.com/wycats/handlebars.js/issues/858 }}
   <script src="{{#if page.is_404}}/{{/if}}js/flickity-docs.min.js"></script>
 {{/if}}
 
+{{#unless is_export}}
+  {{#if page.has_buy_button}}
+    <!-- Simple Goods purchasing form -->
+    <script src="https://d3cir4unl8h07a.cloudfront.net/assets/external/embed.js"></script>
+  {{/if}}
+{{/unless}}
+
 {{#unless is_dev}}
   <script>
     // Google Analytics

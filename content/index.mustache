@@ -113,7 +113,7 @@ is_homepage: true
 <p>Flickity works on a container gallery element with a group of cell elements.</p>
 
 ``` html
-<div id="main-gallery">
+<div class="main-gallery">
   <div class="gallery-cell">...</div>
   <div class="gallery-cell">...</div>
   <div class="gallery-cell">...</div>
@@ -128,7 +128,7 @@ is_homepage: true
 <p>You can use Flickity as a jQuery plugin: <code>$(<span class="string">'selector'</span>).flickity()</code>.</p>
 
 ``` js
-$('#main-gallery').flickity({
+$('.main-gallery').flickity({
   // options
   cellAlign: 'left',
   contain: true
@@ -140,7 +140,7 @@ $('#main-gallery').flickity({
 <p>You can use Flickity with vanilla JS: <code><span class="keyword">new</span> Flickity( elem )</code>. The <code>Flickity()</code> constructor accepts two arguments: the gallery element and an options object.</p>
 
 ``` js
-var elem = document.querySelector('#main-gallery');
+var elem = document.querySelector('.main-gallery');
 var flkty = new Flickity( elem, {
   // options
   cellAlign: 'left',
@@ -149,7 +149,7 @@ var flkty = new Flickity( elem, {
 
 // element argument can be a selector string
 //   for an individual element
-var flkty = new Flickity( '#main-gallery', {
+var flkty = new Flickity( '.main-gallery', {
   // options
 });
 ```
@@ -160,7 +160,7 @@ var flkty = new Flickity( '#main-gallery', {
 
 
 ``` html
-<div id="main-gallery" class="js-flickity"
+<div class="main-gallery js-flickity"
   data-flickity-options='{ "cellAlign": "left", "contain": true }'>
 ```
 

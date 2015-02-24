@@ -26,10 +26,10 @@ title: Style
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
+    {{#codepens.full_width_cells}}
+      {{>edit_demo}}
+    {{/codepens.full_width_cells}}
   </div>
-  {{#codepens.full_width_cells}}
-    {{>edit_demo}}
-  {{/codepens.full_width_cells}}
 </div>
 
 <div class="example duo">
@@ -50,10 +50,10 @@ title: Style
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
+    {{#codepens.half_width_cells}}
+      {{>edit_demo}}
+    {{/codepens.half_width_cells}}
   </div>
-  {{#codepens.half_width_cells}}
-    {{>edit_demo}}
-  {{/codepens.half_width_cells}}
 </div>
 
 <p>Cells can be different sizes. You can use any unit you like: percent, pixels, etc.</p>
@@ -78,10 +78,10 @@ title: Style
       <div class="gallery-cell"></div>
       <div class="gallery-cell size-large"></div>
     </div>
+    {{#codepens.various_width_cells}}
+      {{>edit_demo}}
+    {{/codepens.various_width_cells}}
   </div>
-  {{#codepens.various_width_cells}}
-    {{>edit_demo}}
-  {{/codepens.various_width_cells}}
 </div>
 
 <p>You can use media queries to show different number of cells for different breakpoints.</p>
@@ -110,10 +110,10 @@ title: Style
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
+    {{#codepens.media_queried}}
+      {{>edit_demo}}
+    {{/codepens.media_queried}}
   </div>
-  {{#codepens.media_queried}}
-    {{>edit_demo}}
-  {{/codepens.media_queried}}
 </div>
 
 <h3>Selected cell</h3>
@@ -138,10 +138,10 @@ title: Style
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
+    {{#codepens.is_selected}}
+      {{>edit_demo}}
+    {{/codepens.is_selected}}
   </div>
-  {{#codepens.is_selected}}
-    {{>edit_demo}}
-  {{/codepens.is_selected}}
 </div>
 
 {{! ---------------------------------------------- }}

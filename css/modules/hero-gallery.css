@@ -176,6 +176,10 @@
     padding-right: 400px;
   }
 
+  .hero-gallery h1 {
+    font-size: 7.8em;
+  }
+
   .hero-illustration {
     max-width: 400px;
     top: 20px

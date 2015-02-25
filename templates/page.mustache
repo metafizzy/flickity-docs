@@ -30,6 +30,10 @@
       <h1 class="page-title">{{page.title}}</h1>
     {{/if}}
 
+    {{#if page.is_homepage}}
+      {{> big_links}}
+    {{/if}}
+
     <ul class="page-nav js-stickeroo"></ul>
 
 {{! no leading whitespace because handlebars preserves it, messes with code blocks

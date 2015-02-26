@@ -7,7 +7,7 @@
   Just use WOFF2 and WOFF for webfonts
   http://css-tricks.com/snippets/css/using-font-face/ */
 
-/* Texta Bold */
+/* Texta Heavy */
 @font-face {
   font-family: 'Texta';
   font-weight: bold;

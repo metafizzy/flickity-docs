@@ -20,7 +20,7 @@
 
 .buy-button__for {
   display: block;
-  font-family: 'Texta Italic', sans-serif;
+  font-style: italic;
 }
 
 .buy-button__price {

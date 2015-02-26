@@ -3,7 +3,9 @@
     <div class="hero-gallery__cell__content">
       <h1>Flickity</h1>
       <p class="tagline">Touch, responsive, flickable&nbsp;galleries</p>
-      <img class="hero-illustration" src="img/flickity-illustration.png" alt="Flickity illustration" />
+      {{#unless is_export}}
+        <img class="hero-illustration" src="img/flickity-illustration.png" alt="Flickity illustration" />
+      {{/unless}}
     </div>
   </div>
   <div class="hero-gallery__cell hero-gallery__cell--2">

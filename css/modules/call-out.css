@@ -2,9 +2,9 @@
 ------------------------- */
 
 .call-out {
-  border: 2px solid #ED2;
-  padding: 10px 20px 10px 80px;
-  border-radius: 6px;
+  border-top: 2px solid #ED2;
+  border-bottom: 2px solid #ED2;
+  padding-left: 40px;
   position: relative;
   margin: 20px 0;
 }
@@ -13,19 +13,17 @@
 .call-out:before {
   content: 'i';
   display: block;
-  width: 40px;
-  height: 40px;
+  width: 20px;
+  height: 20px;
   position: absolute;
-  left: 20px;
-  top: 30px;
+  left: 5px;
+  top: 20px;
   background: #ED2;
   border-radius: 50%;
   text-align: center;
   color: white;
-  font-size: 1.9em;
   font-family: Consolas, Georgia, serif;
   font-style: italic;
-  line-height: 46px;
 }
 
 .call-out h2 {
@@ -36,3 +34,26 @@
 
 .call-out--chill { border-color: #8C8; }
 .call-out--chill:before { background: #8C8; }
+
+@media screen and (min-width: 768px) {
+
+  .call-out {
+    border: 2px solid #ED2;
+    padding: 10px 20px 10px 80px;
+    border-radius: 6px;
+    position: relative;
+    margin: 20px 0;
+  }
+
+  .call-out--chill { border-color: #8C8; }
+
+  .call-out:before {
+    width: 40px;
+    height: 40px;
+    left: 20px;
+    top: 30px;
+    font-size: 1.9em;
+    line-height: 46px;
+  }
+
+}

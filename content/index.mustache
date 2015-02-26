@@ -1,5 +1,6 @@
 ---
 is_homepage: true
+has_buy_button: true
 ---
 
 <div class="call-out call-out--chill quick-start">
@@ -77,6 +78,32 @@ is_homepage: true
 <p>Install with Bower: <code>bower install flickity --save</code></p>
 
 <p>Install with npm: <code>npm install flickity</code></p>
+
+<h2>License</h2>
+
+<h3>Commerical license</h3>
+
+<p>If you want to use Flickity to develop commercial sites, themes, projects, and applications, the Commercial license is the appropriate license. With this option, your source code is kept proprietary. <a href="license.html">Read more about Flickity commercial licensing</a>.</p>
+
+<p>Once purchased, you&rsquo;ll receive a commercial license PDF and be all set to use Flickity in your commercial applications.</p>
+
+<div class="buy-button-trio">
+  {{#license_options.developer}}
+    {{> buy_button}}
+  {{/license_options.developer}}
+
+  {{#license_options.team}}
+    {{> buy_button}}
+  {{/license_options.team}}
+
+  {{#license_options.organization}}
+    {{> buy_button}}
+  {{/license_options.organization}}
+</div>
+
+<h3>Open source license</h3>
+
+<p>If you are creating an open source application under a license compatible with the <a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU GPL license v3</a>, you may use Flickity under the terms of the GPLv3. <a href="license.html">Read more about Flickity open source licensing</a>.</p>
 
 <h2>Getting started</h2>
 
@@ -200,10 +227,6 @@ var flkty = new Flickity( '.main-gallery', {
 </div>
 
 {{> images_loaded}}
-
-<h2>License</h2>
-
-<p>Flickity is currently in development, v0. It is licensed <a href="http://www.gnu.org/licenses/gpl.html">GPL v3</a>. With v1, Flickity will be dual-licensed: GPL, and a commercial license that exempts GPL.</p>
 
 <h2>Flickity in use</h2>
 

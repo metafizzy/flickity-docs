@@ -449,7 +449,7 @@ flkty.remove( elements )
 <div class="example">
   <div class="example__code">
     ``` js
-    $('.gallery').on( 'staticClick', function( event, pointer, cellIndex, cellElement ) {
+    $('.gallery').on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {
       if ( cellElement ) {
         $gallery.flickity( 'remove', cellElement );
       }

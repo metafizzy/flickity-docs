@@ -6,7 +6,7 @@ FlickityDocs.modules.remove = function( elem ) {
     initialIndex: 1
   });
 
-  flkty.on( 'staticClick', function( event, pointer, cellIndex, cellElem ) {
+  flkty.on( 'staticClick', function( event, pointer, cellElem ) {
     if ( cellElem ) {
       flkty.remove( cellElem );
     }

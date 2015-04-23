@@ -4,7 +4,7 @@ FlickityDocs.modules.reposition = function( elem ) {
   var gallery = elem.querySelector('.gallery');
   var flkty = new Flickity( gallery );
 
-  flkty.on( 'staticClick', function( event, pointer, cellIndex, cellElement ) {
+  flkty.on( 'staticClick', function( event, pointer, cellElement ) {
     if ( !cellElement ) {
       return;
     }

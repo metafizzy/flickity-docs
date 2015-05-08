@@ -1,0 +1,29 @@
+/* in-use-gallery
+------------------------- */
+
+.in-use-gallery {
+}
+
+.in-use-gallery__item {
+  width: 400px;
+  height: 450px;
+  display: block;
+  position: relative;
+  margin-right: 40px;
+  border-radius: 5px;
+}
+
+.in-use-gallery__item__title {
+  position: absolute;
+  bottom: 0px;
+  text-align: center;
+  width: 100%;
+  margin: 0;
+  line-height: 50px;
+}
+
+.in-use-gallery__item__image {
+  display: block;
+  max-width: 100%;
+  border-radius: 5px;
+}

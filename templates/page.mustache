@@ -71,6 +71,18 @@ https://github.com/wycats/handlebars.js/issues/858 }}
     r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
     ga('create','UA-58739927-1','auto');ga('send','pageview');
   </script>
+
+
+  {{! Twitter Ads analytics }}
+  {{#if page.is_homepage}}
+    <script src="//platform.twitter.com/oct.js"></script>
+    <script>
+    twttr.conversion.trackPid('l63wv', { tw_sale_amount: 0, tw_order_quantity: 0 });</script>
+    <noscript>
+    <img height="1" width="1" style="display:none;" alt="" src="https://analytics.twitter.com/i/adsct?txn_id=l63wv&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" />
+    <img height="1" width="1" style="display:none;" alt="" src="//t.co/i/adsct?txn_id=l63wv&p_id=Twitter&tw_sale_amount=0&tw_order_quantity=0" /></noscript>
+  {{/if}}
+
 {{/unless}}
 
 </body>

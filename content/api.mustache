@@ -235,6 +235,35 @@ flkty.resize()
   </div>
 </div>
 
+<p>If Flickity is initialized when hidden, like within a tab, trigger <code>resize</code> after it is shown so cells are properly measured and positioned.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    $('.button').on( 'click', function() {
+      $gallery.show()
+        // resize after un-hiding Flickity
+        .flickity('resize');
+    });
+    ```
+  </div>
+  <div class="duo__cell example__demo" data-js-module="resize-show">
+    <div class="button-row">
+      <button class="button">Show gallery</button>
+    </div>
+    <div class="gallery" style="display: none;">
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+    {{#codepens.resize_show}}
+      {{>edit_demo}}
+    {{/codepens.resize_show}}
+  </div>
+</div>
+
 {{! ----------------------------------------------------------------- }}
 
 <h3>reposition</h3>

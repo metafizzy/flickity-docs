@@ -1059,3 +1059,60 @@ flkty.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {...
 </div>
 
 {{! ----------------------------------------------------------------- }}
+
+<h3>lazyLoad</h3>
+
+<p>Triggered after an image has been loaded with <a href="options.html#lazyload"><code>lazyLoad</code></a>.</p>
+
+``` js
+// jQuery
+$gallery.on( 'lazyLoad', function( event, cellElement ) {...})
+// vanilla JS
+flkty.on( 'lazyLoad', function( event, cellElement ) {...})
+```
+
+<p class="argument">
+  <code class="argument__code"><span class="params">event</span></code>
+  <span class="argument__type"><i>Event</i></span>
+  <span class="argument__description">Original <code>event</code> object.</span>
+</p>
+<p class="argument">
+  <code class="argument__code"><span class="params">cellElement</span></code>
+  <span class="argument__type"><i>Element</i></span>
+  <span class="argument__description">The image's cell element.</span>
+</p>
+
+<p>Use <code>event.target</code> to access the loaded image.</p>
+
+``` js
+$gallery.on( 'lazyLoad', function( event, cellElement ) {
+  var img = event.target;
+  console.log( 'img loaded: ' + img.src );
+});
+```
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>lazyError</h3>
+
+<p>Triggered after a broken image has been loaded with <a href="options.html#lazyload"><code>lazyLoad</code></a>.</p>
+
+``` js
+// jQuery
+$gallery.on( 'lazyError', function( event, cellElement ) {...})
+// vanilla JS
+flkty.on( 'lazyError', function( event, cellElement ) {...})
+```
+
+<p class="argument">
+  <code class="argument__code"><span class="params">event</span></code>
+  <span class="argument__type"><i>Event</i></span>
+  <span class="argument__description">Original <code>event</code> object.</span>
+</p>
+<p class="argument">
+  <code class="argument__code"><span class="params">cellElement</span></code>
+  <span class="argument__type"><i>Element</i></span>
+  <span class="argument__description">The image's cell element.</span>
+</p>
+
+{{! ----------------------------------------------------------------- }}

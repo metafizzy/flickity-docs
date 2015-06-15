@@ -363,6 +363,202 @@ cellSelector: '.gallery-cell'
 
 {{! ----------------------------------------------------------------- }}
 
+<h3>lazyLoad</h3>
+
+<p>Loads cell images when a cell is selected.</p>
+
+<p>Set the image's URL to load with <code>data-flickity-lazyload</code>.</p>
+
+``` html
+<img data-flickity-lazyload="full.jpg" />
+<!-- Set optional placeholder src -->
+<img src="placeholder.jpg" data-flickity-lazyload="full.jpg" />
+```
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    lazyLoad: true
+    // lazyloads image in selected cell
+    ```
+    ``` html
+    <div class="gallery">
+      <div class="gallery-cell">
+        <img class="gallery-cell-image"
+          data-flickity-lazyload="tulip.jpg" />
+      </div>
+      <div class="gallery-cell">
+        <img class="gallery-cell-image"
+          data-flickity-lazyload="grapes.jpg" />
+      </div>
+      ...
+    </div>
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="gallery gallery--lazyload-cells gallery--not-counting js-flickity"
+      data-flickity-options='{ "imagesLoaded": true }'>
+      <div class="gallery-cell">
+        <img class="gallery-cell__lazy-image"
+        src="http://i.imgur.com/9xYjgCk.jpg" alt="tulip" />
+      </div>
+      <div class="gallery-cell">
+        <img class="gallery-cell__lazy-image"
+        src="http://i.imgur.com/8lEJtbg.jpg" alt="grapes" />
+      </div>
+      <div class="gallery-cell">
+        <img class="gallery-cell__lazy-image"
+        src="http://i.imgur.com/ERMbVdn.jpg" alt="raspberries" />
+      </div>
+      <div class="gallery-cell">
+        <img class="gallery-cell__lazy-image"
+        src="http://i.imgur.com/lBKi66i.jpg" alt="wolf" />
+      </div>
+      <div class="gallery-cell">
+        <img class="gallery-cell__lazy-image"
+        src="http://i.imgur.com/4O7U1Ob.jpg" alt="sea" />
+      </div>
+      <div class="gallery-cell">
+        <img class="gallery-cell__lazy-image"
+        src="http://i.imgur.com/4ifgQaR.jpg" alt="green beads" />
+      </div>
+      <div class="gallery-cell">
+        <img class="gallery-cell__lazy-image"
+        src="http://i.imgur.com/qKhkOKC.jpg" alt="gulls" />
+      </div>
+      <div class="gallery-cell">
+        <img class="gallery-cell__lazy-image"
+        src="http://i.imgur.com/LFelADP.jpg" alt="touch" />
+      </div>
+      <div class="gallery-cell">
+        <img class="gallery-cell__lazy-image"
+        src="http://i.imgur.com/OZmQIVL.jpg" alt="van" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<p>Set <code>lazyLoad</code> to a number to load images in adjacent cells.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    lazyLoad: 2
+    // load images in selected cell
+    // and next 2 cells
+    // and previous 2 cells
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="gallery gallery--lazyload-adj-cells gallery--not-counting js-flickity"
+      data-flickity-options='{ "imagesLoaded": true }'>
+      <div class="gallery-cell">
+        <img class="gallery-cell__lazy-image"
+        src="http://i.imgur.com/9xYjgCk.jpg" alt="tulip" />
+      </div>
+      <div class="gallery-cell">
+        <img class="gallery-cell__lazy-image"
+        src="http://i.imgur.com/8lEJtbg.jpg" alt="grapes" />
+      </div>
+      <div class="gallery-cell">
+        <img class="gallery-cell__lazy-image"
+        src="http://i.imgur.com/ERMbVdn.jpg" alt="raspberries" />
+      </div>
+      <div class="gallery-cell">
+        <img class="gallery-cell__lazy-image"
+        src="http://i.imgur.com/lBKi66i.jpg" alt="wolf" />
+      </div>
+      <div class="gallery-cell">
+        <img class="gallery-cell__lazy-image"
+        src="http://i.imgur.com/4O7U1Ob.jpg" alt="sea" />
+      </div>
+      <div class="gallery-cell">
+        <img class="gallery-cell__lazy-image"
+        src="http://i.imgur.com/4ifgQaR.jpg" alt="green beads" />
+      </div>
+      <div class="gallery-cell">
+        <img class="gallery-cell__lazy-image"
+        src="http://i.imgur.com/qKhkOKC.jpg" alt="gulls" />
+      </div>
+      <div class="gallery-cell">
+        <img class="gallery-cell__lazy-image"
+        src="http://i.imgur.com/LFelADP.jpg" alt="touch" />
+      </div>
+      <div class="gallery-cell">
+        <img class="gallery-cell__lazy-image"
+        src="http://i.imgur.com/OZmQIVL.jpg" alt="van" />
+      </div>
+    </div>
+  </div>
+</div>
+
+<p>After loading the image, Flickity will add <code>flickity-lazyloaded</code> class to the image, or <code>flickity-lazyerror</code> to a broken image. You can use this class to add a transition when images are loaded.</p>
+
+
+``` css
+/* fade in image when loaded */
+.gallery-cell-image {
+  transition: opacity 0.4s;
+  opacity: 0;
+}
+
+.gallery-cell-image.flickity-lazyloaded,
+.gallery-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+```
+
+{{! using natural image size }}
+
+<p>If using natural size of images for the size of cells, set a <code>min-width</code> to cells have a size when images are not loaded.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` html
+    <div class="gallery">
+      <img class="gallery-image"
+        data-flickity-lazyload="tulip.jpg" />
+      <img class="gallery-image"
+        data-flickity-lazyload="grapes.jpg" />
+      ...
+    </div>
+    ```
+
+    ``` css
+    .gallery-image {
+      min-width: 150px;
+    }
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="gallery gallery--not-counting js-flickity"
+      data-flickity-options='{ "imagesLoaded": true }'>
+      <img class="gallery__lazy-image"
+      src="http://i.imgur.com/9xYjgCk.jpg" alt="tulip" />
+      <img class="gallery__lazy-image"
+      src="http://i.imgur.com/8lEJtbg.jpg" alt="grapes" />
+      <img class="gallery__lazy-image"
+      src="http://i.imgur.com/ERMbVdn.jpg" alt="raspberries" />
+      <img class="gallery__lazy-image"
+      src="http://i.imgur.com/lBKi66i.jpg" alt="wolf" />
+      <img class="gallery__lazy-image"
+      src="http://i.imgur.com/4O7U1Ob.jpg" alt="sea" />
+      <img class="gallery__lazy-image"
+      src="http://i.imgur.com/4ifgQaR.jpg" alt="green beads" />
+      <img class="gallery__lazy-image"
+      src="http://i.imgur.com/qKhkOKC.jpg" alt="gulls" />
+      <img class="gallery__lazy-image"
+      src="http://i.imgur.com/LFelADP.jpg" alt="touch" />
+      <img class="gallery__lazy-image"
+      src="http://i.imgur.com/OZmQIVL.jpg" alt="van" />
+    </div>
+  </div>
+</div>
+
+
+
+{{! ----------------------------------------------------------------- }}
+
 {{> auto_play}}
 
 {{! ----------------------------------------------------------------- }}

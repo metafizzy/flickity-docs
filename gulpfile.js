@@ -80,6 +80,8 @@ var jsSrc = [
   'bower_components/flickity-imagesloaded/flickity-imagesloaded.js',
   // flickity-as-nav-for
   'bower_components/flickity-as-nav-for/as-nav-for.js',
+  // draggabilly
+  'bower_components/draggabilly/draggabilly.js',
   // docs
   'js/controller.js',
   'js/modules/*.js'

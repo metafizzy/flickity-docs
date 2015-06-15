@@ -1,0 +1,109 @@
+/* arrow-wiz
+------------------------- */
+
+.arrow-wiz-illo {
+  position: relative;
+  width: 250px;
+  height: 250px;
+}
+
+.arrow-wiz-illo__canvas {
+  position: absolute;
+  left: 50px;
+}
+
+.arrow-wiz-illo__graph-label {
+  display: block;
+  position: absolute;
+  font-size: 0.85rem;
+}
+
+.arrow-wiz-illo__graph-label--y {
+  text-align: right;
+  width: 40px;
+}
+
+.arrow-wiz-illo__graph-label--y-pos50 {
+  top: -5px;
+}
+
+
+.arrow-wiz-illo__graph-label--y-0 {
+  top: 92px;
+}
+
+.arrow-wiz-illo__graph-label--y-neg50 {
+  top: 190px;
+}
+
+.arrow-wiz-illo__graph-label--x {
+  top: 200px;
+}
+
+.arrow-wiz-illo__graph-label--x-0 {
+  left: 50px;
+}
+
+.arrow-wiz-illo__graph-label--x-50 {
+  left: 145px;
+}
+
+
+.arrow-wiz-illo__graph-label--x-100 {
+  right: 0;
+}
+
+/* ---- points ---- */
+
+.arrow-wiz-illo__top-well {
+  position: absolute;
+  background: hsla(0, 100%, 50%, 0.1);
+  width: 220px;
+  height: 120px;
+  left: 40px;
+  top: -10px;
+}
+
+.arrow-wiz-illo__center-well {
+  position: absolute;
+  background: hsla(0, 100%, 50%, 0.1);
+  width: 220px;
+  height: 20px;
+  left: 40px;
+  top: 90px;
+}
+
+
+.arrow-wiz-illo__point {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+}
+
+.arrow-wiz-illo__point--0 {
+  left: 20px;
+}
+
+.arrow-wiz-illo__point--1 {
+  left: 120px;
+  top: 0;
+}
+
+.arrow-wiz-illo__point--2 {
+  left: 140px;
+  top: 20px;
+}
+
+.arrow-wiz-illo__point--3 {
+  left: 60px;
+}
+
+
+.arrow-wiz-illo__point__dot {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 10px;
+  opacity: 0.5;
+}

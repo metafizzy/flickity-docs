@@ -20,6 +20,7 @@
     "fizzy-ui-utils": "~1.0.0",
     "classie": "~1.0.1",
     "get-size": "~1.2.2",
-    "doc-ready": "~1.0.4"
+    "doc-ready": "~1.0.4",
+    "draggabilly": "~1.2.4"
   }
 }

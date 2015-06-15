@@ -3,10 +3,11 @@
   "unused": true,
   "undef": true,
   "strict": true,
-  "predef": {
+  "globals": {
     "classie": false,
     "docReady": false,
     "eventie": false,
+    "Draggabilly": false,
     "Flickity": false,
     "FlickityDocs": true,
     "getSize": false,

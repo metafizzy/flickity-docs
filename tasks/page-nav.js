@@ -3,7 +3,9 @@ var through2 = require('through2');
 
 module.exports = function pageNav() {
   return through2.obj( function( file, enc, callback ) {
-    var $ = cheerio.load( file.contents.toString() );
+    var $ = cheerio.load( file.contents.toString(), {
+      decodeEntities: false
+    });
     var pageNavHtml = '\n';
     // query each h2, h3, h4
     $('.main h2, .main h3, .main h4').each( function( i, header ) {
@@ -22,7 +24,10 @@ module.exports = function pageNav() {
     // add pageNavHtml to page
     $('.page-nav').html( pageNavHtml );
 
-    file.contents = new Buffer( $.html() );
+    var html = $.html();
+    // replace double quote for single quote for JSON attributes
+    html = html.replace( /="\{/g, "='{" ).replace( /\}"/g, "}'" );
+    file.contents = new Buffer( html );
     this.push( file );
     callback();
   });

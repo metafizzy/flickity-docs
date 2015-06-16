@@ -182,14 +182,12 @@ var path = require('path');
 var through2 = require('through2');
 
 var partialsSrc = 'templates/partials/*.*';
-var partials = [];
+var partials = {};
 
 gulp.task( 'partials', function() {
   var addPartial = through2.obj( function( file, enc, callback ) {
-    partials.push({
-      name: path.basename( file.path, path.extname( file.path ) ),
-      tpl: file.contents.toString()
-    });
+    var partialName = path.basename( file.path, path.extname( file.path ) );
+    partials[ partialName ] = file.contents.toString();
     this.push( file );
     callback();
   });

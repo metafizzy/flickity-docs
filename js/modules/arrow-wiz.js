@@ -63,13 +63,6 @@ FlickityDocs.modules['arrow-wiz'] = function( elem ) {
       // set control point
       var point = calcDraggiePoint( draggie );
       controlPoints[ index ] = point;
-      // update label
-      var label = draggie.element.querySelector('.arrow-wiz-illo__point__label');
-      var labelText = 'x' + index + ': ' + point.x;
-      if ( index == 1 || index == 2 ) {
-        labelText += ', y' + index + ': ' + point.y;
-      }
-      label.textContent = labelText;
       render();
     };
   }

@@ -136,12 +136,11 @@
   display: block;
   position: absolute;
   font-size: 0.9rem;
-  width: 50px;
+  width: 45px;
   border-radius: 5px;
   background: #333;
   color: white;
-  text-align: left;
-  padding-left: 4px;
+  text-align: center;
   left: 30px;
   opacity: 0;
   transform: translateX(-5px);

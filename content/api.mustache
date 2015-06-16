@@ -72,9 +72,7 @@ flkty.select( index )
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
-    {{#codepens.select_method}}
-      {{>edit_demo}}
-    {{/codepens.select_method}}
+    {{> edit_demo default="yyvYeN" vanilla_js="ByYoKM" }}
   </div>
 </div>
 
@@ -122,9 +120,7 @@ flkty.previous( isWrapped )
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
-    {{#codepens.previous}}
-      {{>edit_demo}}
-    {{/codepens.previous}}
+    {{> edit_demo default="emVpdz" vanilla_js="PwQPGX" }}
   </div>
 </div>
 
@@ -172,9 +168,7 @@ flkty.next( isWrapped )
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
-    {{#codepens.next}}
-      {{>edit_demo}}
-    {{/codepens.next}}
+    {{> edit_demo default="JopYby" vanilla_js="gbvaLQ" }}
   </div>
 </div>
 
@@ -229,9 +223,7 @@ flkty.resize()
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
-    {{#codepens.resize_method}}
-      {{>edit_demo}}
-    {{/codepens.resize_method}}
+    {{> edit_demo default="XJZmMp" vanilla_js="NPyGjQ" }}
   </div>
 </div>
 
@@ -258,9 +250,7 @@ flkty.resize()
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
-    {{#codepens.resize_show}}
-      {{>edit_demo}}
-    {{/codepens.resize_show}}
+    {{> edit_demo default="eNvdoo" vanilla_js="gpmLYG" }}
   </div>
 </div>
 
@@ -298,9 +288,7 @@ flkty.reposition()
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
-    {{#codepens.reposition}}
-      {{>edit_demo}}
-    {{/codepens.reposition}}
+    {{> edit_demo default="zxRvdw" vanilla_js="vEdgOR" }}
   </div>
 </div>
 
@@ -349,9 +337,7 @@ flkty.prepend( elements )
         <span class="gallery-cell__number">3</span>
       </div>
     </div>
-    {{#codepens.prepend}}
-      {{>edit_demo}}
-    {{/codepens.prepend}}
+    {{> edit_demo default="XJZpMN" vanilla_js="VYQPWx" }}
   </div>
 </div>
 
@@ -397,9 +383,7 @@ flkty.append( elements )
         <span class="gallery-cell__number">3</span>
       </div>
     </div>
-    {{#codepens.append}}
-      {{>edit_demo}}
-    {{/codepens.append}}
+    {{> edit_demo default="qExRVp" vanilla_js="OPQWOG" }}
   </div>
 </div>
 
@@ -451,9 +435,7 @@ flkty.insert( elements, index )
         <span class="gallery-cell__number">3</span>
       </div>
     </div>
-    {{#codepens.insert}}
-      {{>edit_demo}}
-    {{/codepens.insert}}
+    {{> edit_demo default="YPeNYj" vanilla_js="EaQZQv" }}
   </div>
 </div>
 
@@ -513,9 +495,7 @@ flkty.remove( elements )
         <span class="gallery-cell__number">8</span>
       </div>
     </div>
-    {{#codepens.remove}}
-      {{>edit_demo}}
-    {{/codepens.remove}}
+    {{> edit_demo default="WbMRgv" vanilla_js="gbvgdy" }}
   </div>
 </div>
 
@@ -563,9 +543,7 @@ flkty.destroy()
       <div class="gallery-cell"></div>
       <div class="gallery-cell"></div>
     </div>
-    {{#codepens.destroy}}
-      {{>edit_demo}}
-    {{/codepens.destroy}}
+    {{> edit_demo default="dPdNQq" vanilla_js="emVgoR" }}
   </div>
 </div>
 
@@ -784,9 +762,7 @@ $gallery.on( 'cellSelect', function() {
 flkty.on( 'cellSelect', function() {...})
 ```
 
-{{#codepens.cell_select_event}}
-  {{>edit_demo}}
-{{/codepens.cell_select_event}}
+{{> edit_demo default="emVgqE" vanilla_js="ogEwXe" }}
 
 {{! ----------------------------------------------------------------- }}
 
@@ -803,9 +779,7 @@ $gallery.on( 'settle', function() {
 flkty.on( 'settle', function() {...})
 ```
 
-{{#codepens.settle_event}}
-  {{>edit_demo}}
-{{/codepens.settle_event}}
+{{> edit_demo default="yyvXYL" vanilla_js="myXweK" }}
 
 {{! ----------------------------------------------------------------- }}
 
@@ -831,9 +805,7 @@ flkty.on( 'dragStart', function( event, pointer ) {...})
   <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
 </p>
 
-{{#codepens.drag_start}}
-  {{>edit_demo}}
-{{/codepens.drag_start}}
+{{> edit_demo default="KwQqWw" vanilla_js="RNQgpB" }}
 
 {{! ----------------------------------------------------------------- }}
 
@@ -864,9 +836,7 @@ flkty.on( 'dragMove', function( event, pointer, moveVector ) {...})
   <span class="argument__description">How far the pointer has moved from its start position <code>{ x: 20, y: -30 }</code>.</span>
 </p>
 
-{{#codepens.drag_move}}
-  {{>edit_demo}}
-{{/codepens.drag_move}}
+{{> edit_demo default="azqwWW" vanilla_js="YPeQVL" }}
 
 {{! ----------------------------------------------------------------- }}
 
@@ -892,9 +862,7 @@ flkty.on( 'dragEnd', function( event, pointer ) {...})
   <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
 </p>
 
-{{#codepens.drag_end}}
-  {{>edit_demo}}
-{{/codepens.drag_end}}
+{{> edit_demo default="ByYZRb" vanilla_js="jEZwwO" }}
 
 {{! ----------------------------------------------------------------- }}
 
@@ -920,9 +888,7 @@ flkty.on( 'pointerDown', function( event, pointer ) {...})
   <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
 </p>
 
-{{#codepens.pointer_down}}
-  {{>edit_demo}}
-{{/codepens.pointer_down}}
+{{> edit_demo default="zxRzzZ" vanilla_js="ByYZZE" }}
 
 {{! ----------------------------------------------------------------- }}
 
@@ -953,9 +919,7 @@ flkty.on( 'pointerMove', function( event, pointer, moveVector ) {...})
   <span class="argument__description">How far the pointer has moved from its start position <code>{ x: 20, y: -30 }</code>.</span>
 </p>
 
-{{#codepens.pointer_move}}
-  {{>edit_demo}}
-{{/codepens.pointer_move}}
+{{> edit_demo default="XJZgap" vanilla_js="JoLZMP" }}
 
 {{! ----------------------------------------------------------------- }}
 
@@ -981,9 +945,7 @@ flkty.on( 'pointerUp', function( event, pointer ) {...})
   <span class="argument__description">The event object that has <code>.pageX</code> and <code>.pageY</code>.</span>
 </p>
 
-{{#codepens.pointer_up}}
-  {{>edit_demo}}
-{{/codepens.pointer_up}}
+{{> edit_demo default="qExjXV" vanilla_js="pvawrj" }}
 
 {{! ----------------------------------------------------------------- }}
 
@@ -1052,9 +1014,7 @@ flkty.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {...
       <div class="gallery-cell"></div>
     </div>
     <p class="logger">&nbsp;</p>
-    {{#codepens.static_click}}
-      {{>edit_demo}}
-    {{/codepens.static_click}}
+    {{> edit_demo default="XJZgzM" vanilla_js="RNQgxe" }}
   </div>
 </div>
 

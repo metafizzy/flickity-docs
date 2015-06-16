@@ -3,13 +3,15 @@
 
 .arrow-wiz-illo {
   position: relative;
-  width: 250px;
-  height: 250px;
+  width: 230px;
+  height: 230px;
+  margin-right: 20px;
+  float: left;
 }
 
 .arrow-wiz-illo__canvas {
   position: absolute;
-  left: 50px;
+  left: 30px;
 }
 
 .arrow-wiz-illo__graph-label {
@@ -20,7 +22,7 @@
 
 .arrow-wiz-illo__graph-label--y {
   text-align: right;
-  width: 40px;
+  width: 20px;
 }
 
 .arrow-wiz-illo__graph-label--y-pos50 {
@@ -41,13 +43,12 @@
 }
 
 .arrow-wiz-illo__graph-label--x-0 {
-  left: 50px;
+  left: 30px;
 }
 
 .arrow-wiz-illo__graph-label--x-50 {
-  left: 145px;
+  left: 125px;
 }
-
 
 .arrow-wiz-illo__graph-label--x-100 {
   right: 0;
@@ -57,19 +58,19 @@
 
 .arrow-wiz-illo__top-well {
   position: absolute;
-  background: hsla(0, 100%, 50%, 0.1);
+/*   background: hsla(0, 100%, 50%, 0.1); */
   width: 220px;
   height: 120px;
-  left: 40px;
+  left: 20px;
   top: -10px;
 }
 
 .arrow-wiz-illo__center-well {
   position: absolute;
-  background: hsla(0, 100%, 50%, 0.1);
+/*   background: hsla(0, 100%, 50%, 0.1); */
   width: 220px;
   height: 20px;
-  left: 40px;
+  left: 20px;
   top: 90px;
 }
 
@@ -78,6 +79,21 @@
   position: absolute;
   width: 20px;
   height: 20px;
+}
+
+.arrow-wiz-illo__point:hover,
+.arrow-wiz-illo__point.is-dragging {
+  z-index: 2; /* above other points */
+}
+
+.arrow-wiz-illo__point--0,
+.arrow-wiz-illo__point--3 {
+  cursor: ew-resize;
+}
+
+.arrow-wiz-illo__point--1,
+.arrow-wiz-illo__point--2 {
+  cursor: move;
 }
 
 .arrow-wiz-illo__point--0 {
@@ -103,7 +119,39 @@
   position: absolute;
   width: 20px;
   height: 20px;
-  background: red;
+  background: #333;
   border-radius: 10px;
-  opacity: 0.5;
+  opacity: 1;
+  transform: scale(0.5);
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.arrow-wiz-illo__point:hover .arrow-wiz-illo__point__dot,
+.arrow-wiz-illo__point.is-dragging .arrow-wiz-illo__point__dot {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.arrow-wiz-illo__point__label {
+  display: block;
+  position: absolute;
+  font-size: 0.9rem;
+  width: 50px;
+  border-radius: 5px;
+  background: #333;
+  color: white;
+  text-align: left;
+  padding-left: 4px;
+  left: 30px;
+  opacity: 0;
+  transform: translateX(-5px);
+  transition: transform 0.2s, opacity 0.2s;
+  transform-origin: left top;
+  pointer-events: none;
+}
+
+.arrow-wiz-illo__point:hover .arrow-wiz-illo__point__label,
+.arrow-wiz-illo__point.is-dragging .arrow-wiz-illo__point__label {
+  opacity: 1;
+  transform: translateX(0px);
 }

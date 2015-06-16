@@ -19,18 +19,24 @@ FlickityDocs.modules['arrow-wiz'] = function( elem ) {
     ctx.closePath();
   }
 
+  var lightLineColor = 'hsla(210, 50%, 50%, 0.25)';
+  var darkLineColor = 'hsla(210, 50%, 50%, 0.5)';
+
   function renderGrid() {
     var i, color;
-    for ( i=1; i < 11; i++ ) {
+    for ( i=0; i < 11; i++ ) {
       var y = i * 20 + 0.5;
-      color = 'hsla(0, 0%, 0%, 0.1)';
+      color = i % 5 ? lightLineColor : darkLineColor;
       line( 0, y, canvasWidth, y, color );
     }
-    for ( i=1; i < 11; i++ ) {
+    for ( i=0; i < 11; i++ ) {
       var x = i * 20 + 0.5;
-      color = 'hsla(0, 0%, 0%, 0.1)';
+      color = i % 5 ? lightLineColor : darkLineColor;
       line( x, 0, x, canvasHeight, color );
     }
+
+    line( 0, canvasHeight - 0.5, canvasWidth, canvasHeight - 0.5, darkLineColor );
+    line( canvasWidth - 0.5, 0, canvasWidth - 0.5, canvasHeight, darkLineColor );
   }
 
   renderGrid();
@@ -54,7 +60,16 @@ FlickityDocs.modules['arrow-wiz'] = function( elem ) {
 
   function getOnDragMove( draggie, index ) {
     return function onDragMove() {
-      controlPoints[ index ] = calcDraggiePoint( draggie );
+      // set control point
+      var point = calcDraggiePoint( draggie );
+      controlPoints[ index ] = point;
+      // update label
+      var label = draggie.element.querySelector('.arrow-wiz-illo__point__label');
+      var labelText = 'x' + index + ': ' + point.x;
+      if ( index == 1 || index == 2 ) {
+        labelText += ', y' + index + ': ' + point.y;
+      }
+      label.textContent = labelText;
       render();
     };
   }
@@ -67,8 +82,8 @@ FlickityDocs.modules['arrow-wiz'] = function( elem ) {
   }
 
   function renderArrow() {
-    ctx.strokeStyle = '#222';
-    ctx.fillStyle = 'hsla(0, 0%, 0%, 0.5)';
+    ctx.strokeStyle = '#333';
+    ctx.fillStyle = 'hsla(0, 0%, 0%, 0.4)';
     ctx.beginPath();
     ctx.moveTo( controlPoints[0].x * 2, 100 );
     ctx.lineTo( controlPoints[1].x * 2, 100 - controlPoints[1].y * 2 );
@@ -100,7 +115,7 @@ FlickityDocs.modules['arrow-wiz'] = function( elem ) {
       '  x3: ' + controlPoints[3].x + '\n' +
       '}';
   }
-  
+
   // -----  ----- //
 
   var flkty = new Flickity( wiz.querySelector('.gallery') );

@@ -16,13 +16,9 @@ module.exports = function( data, options ) {
     var template;
     if ( typeof options.layout == 'string' ) {
       hbs.registerPartial( 'body', fileContents );
-      template = hbs.compile( options.layout, {
-        noEscape: true
-      });
+      template = hbs.compile( options.layout );
     } else {
-      template = hbs.compile( fileContents, {
-        noEscape: true
-      });
+      template = hbs.compile( fileContents );
     }
 
     // add file data, front matter data to data obj

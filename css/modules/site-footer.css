@@ -21,10 +21,10 @@
 .other-products__cell a {
   display: block;
   position: relative;
-  padding: 10px 10px 10px 135px;
+  padding: 10px 10px 10px 145px;
   border-radius: 6px;
   margin-bottom: 20px;
-  min-height: 120px;
+  min-height: 140px;
   background: #EEE;
 }
 
@@ -36,11 +36,11 @@
 .other-products__cell img {
   display: block;
   position: absolute;
-  left: 0;
-  top: 0;
+  left: 10px;
+  top: 10px;
   width: 100%;
   max-width: 120px;
-  border-radius: 5px 0 0 5px;
+  border-radius: 5px;
 }
 
 .other-products__cell h3 {

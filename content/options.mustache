@@ -304,7 +304,7 @@ cellSelector: '.gallery-cell'
 
 {{! ----------------------------------------------------------------- }}
 
-<h2>Dragging</h2>
+<h2>Behavior</h2>
 
 {{! ----------------------------------------------------------------- }}
 
@@ -336,8 +336,6 @@ cellSelector: '.gallery-cell'
 {{> free_scroll}}
 
 {{! ----------------------------------------------------------------- }}
-
-<h2>Behavior</h2>
 
 {{> wrap_around}}
 
@@ -488,8 +486,6 @@ cellSelector: '.gallery-cell'
 }
 ```
 
-{{! using natural image size }}
-
 <p>If using natural size of images for the size of cells, set a <code>min-width</code> to cells have a size when images are not loaded.</p>
 
 <div class="example duo">
@@ -534,8 +530,6 @@ cellSelector: '.gallery-cell'
     </div>
   </div>
 </div>
-
-
 
 {{! ----------------------------------------------------------------- }}
 
@@ -614,6 +608,88 @@ asNavFor: document.querySelector('.gallery-main')
 
 {{! ----------------------------------------------------------------- }}
 
+<h3>selectedAttraction &amp; friction</h3>
+
+<p><code>selectedAttraction</code> and <code>friction</code> are the two options that control the speed and motion of the slider.</p>
+
+<p><code>selectedAttraction</code> attracts the position of the slider to the selected cell. Higher attraction makes the slider move faster. Lower makes it move slower. Default <code><span class="comment">selectedAttraction: 0.025</span></code>.</p>
+
+<p><code>friction</code> slows the movement of slider. Higher friction makes the slider feel stickier and less bouncy. Lower friction makes the slider feel looser and more wobbly. Default <code><span class="comment">friction: 0.28</span></code>.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    selectedAttraction: 0.2,
+    friction: 0.8
+    // higher attraction and higher friction
+    // faster transitions
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="gallery js-flickity"
+      data-flickity-options='{ "selectedAttraction": 0.2, "friction": 0.8 }'>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+    {{> edit_demo default="aOyMam" }}
+  </div>
+</div>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    selectedAttraction: 0.01,
+    friction: 0.15
+    // lower attraction and lower friction
+    // slower transitions
+    // easier to flick past cells
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="gallery js-flickity"
+      data-flickity-options='{ "selectedAttraction": 0.01, "friction": 0.15 }'>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+    {{> edit_demo default="BNdbOq" }}
+  </div>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>freeScrollFriction</h3>
+
+<p>Slows movement of slider when <a href="#freescroll"><code>freeScroll: <span class="literal">true</span></code></a>. Higher friction makes the slider feel stickier. Lower friction makes the slider feel looser. Default <code><span class="comment">freeScrollFriction: 0.075</span></code>.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    freeScroll: true,
+    freeScrollFriction: 0.03
+    // lower friction, slides easier
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="gallery js-flickity"
+      data-flickity-options='{ "freeScroll": true, "freeScrollFriction": 0.03 }'>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+    {{> edit_demo default="jPLJvo" }}
+  </div>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
 <h2>UI</h2>
 
 <h3>prevNextButtons</h3
@@ -672,8 +748,28 @@ asNavFor: document.querySelector('.gallery-main')
 
 <p>Draws the shape of the arrows in the previous &amp; next buttons.</p>
 
-<p>The arrow is drawn on a 100 &times; 100 grid with four points (<i>p0, p1, p2, p3</i>) made up of six coordinates <code>x0, x1, y1, x2, y2, x3</code>. The four points draw the top half on the left arrow.</p>
+<p>The arrow is drawn on a 100 &times; 100 viewbox with four points (<i>p0, p1, p2, p3</i>) made up of six coordinates <code>x0, x1, y1, x2, y2, x3</code>. The four points draw the top half on the left arrow.</p>
 
 {{> arrow_wiz}}
+
+<p>Set a custom shape by setting <code>arrowShape</code> to a <a href="https://developer.mozilla.org/en-US/docs/Web/SVG/Attribute/d">SVG path string</a>. The path is for the left arrow drawn in a 100 &times; 100 viewbox.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    arrowShape: 'M 0,50 L 60,00 L 50,30 L 80,30 L 80,70 L 50,70 L 60,100 Z'
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="gallery js-flickity"
+      data-flickity-options='{ "arrowShape": "M 0,50 L 60,00 L 50,30 L 80,30 L 80,70 L 50,70 L 60,100 Z" }'>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+  </div>
+</div>
 
 {{! ----------------------------------------------------------------- }}

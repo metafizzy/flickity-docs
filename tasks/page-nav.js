@@ -10,9 +10,11 @@ module.exports = function pageNav() {
     // query each h2, h3, h4
     $('.main h2, .main h3, .main h4').each( function( i, header ) {
       var $header = $( header );
-      // replace non alphanumeric to hyphens
       var title = $header.text();
-      var slug = title.replace( /[^\w\d]+/gi, '-' )
+      // remove HTML entities
+      var slug = title.replace( /&[\w\d]+;/gi, '' )
+        // replace non alphanumeric to hyphens
+        .replace( /[^\w\d]+/gi, '-' )
         // trim trailing hyphens
         .replace( /^\-+/, '' ).replace( /\-+$/, '' ).toLowerCase();
       // set id slug

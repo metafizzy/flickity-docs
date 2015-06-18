@@ -1,6 +1,6 @@
 {
   "name": "flickity-docs",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Documentation for Flickity",
   "main": "content/index.html",
   "license": "BY-CC",
@@ -13,9 +13,9 @@
     "tests"
   ],
   "dependencies": {
-    "flickity": "~1.0.0",
-    "flickity-imagesloaded": "~1.0.0",
-    "flickity-as-nav-for": "~1.0.0",
+    "flickity": "latest",
+    "flickity-imagesloaded": "latest",
+    "flickity-as-nav-for": "latest",
     "normalize.css": "~3.0.2",
     "fizzy-ui-utils": "~1.0.0",
     "classie": "~1.0.1",

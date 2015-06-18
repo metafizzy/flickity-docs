@@ -182,8 +182,8 @@
 }
 
 .gallery--lazyload-adj-cells .gallery-cell {
-  width: 30%;
-  height: 120px;
+  width: 25%;
+  height: 160px;
   margin-right: 2px;
   background: #222;
 }
@@ -199,14 +199,24 @@
 }
 
 /* fade in lazy loaded image */
-.gallery-cell__lazy-image {
+.gallery-cell__lazy-image.flickity-lazyloaded,
+.gallery-cell__lazy-image.flickity-lazyerror {
   opacity: 1;
 }
 
 .gallery__lazy-image {
   height: 200px;
   min-width: 150px;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
 }
+/* fade in lazy loaded image */
+.gallery__lazy-image.flickity-lazyloaded,
+.gallery__lazy-image.flickity-lazyerror {
+  opacity: 1;
+}
+
 
 /* ---- as-nav-for / gallery-nav ---- */
 

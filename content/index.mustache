@@ -36,7 +36,11 @@ has_buy_button: true
   <p>That&rsquo;s it! You&rsquo;re all set to start using and customizing Flickity.</p>
 </div>
 
+{{! ----------------------------------------------------------------- }}
+
 <h2>Install</h2>
+
+{{! ----------------------------------------------------------------- }}
 
 <h3>Download</h3>
 
@@ -57,6 +61,8 @@ has_buy_button: true
   </li>
 </ul>
 
+{{! ----------------------------------------------------------------- }}
+
 <h3>CDN</h3>
 
 <p>Link directly to <a href="https://cdnjs.com/libraries/flickity">Flickity files on cdnjs</a>.</p>
@@ -73,13 +79,19 @@ has_buy_button: true
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flickity/{{flickity_version}}/flickity.pkgd.min.js"></script>
 ```
 
+{{! ----------------------------------------------------------------- }}
+
 <h3>Package managers</h3>
 
 <p>Install with Bower: <code>bower install flickity --save</code></p>
 
 <p>Install with npm: <code>npm install flickity</code></p>
 
+{{! ----------------------------------------------------------------- }}
+
 <h2>License</h2>
+
+{{! ----------------------------------------------------------------- }}
 
 <h3>Commercial license</h3>
 
@@ -100,6 +112,8 @@ has_buy_button: true
     {{> buy_button}}
   {{/license_options.organization}}
 </div>
+
+{{! ----------------------------------------------------------------- }}
 
 <h3>Open source license</h3>
 
@@ -130,6 +144,8 @@ has_buy_button: true
 
 <p>There are several ways to initialize Flickity.</p>
 
+{{! ----------------------------------------------------------------- }}
+
 <h3>Initialize with jQuery</h3>
 
 <p>You can use Flickity as a jQuery plugin: <code>$(<span class="string">'selector'</span>).flickity()</code>.</p>
@@ -141,6 +157,8 @@ $('.main-gallery').flickity({
   contain: true
 });
 ```
+
+{{! ----------------------------------------------------------------- }}
 
 <h3>Initialize with Vanilla JavaScript</h3>
 
@@ -161,6 +179,8 @@ var flkty = new Flickity( '.main-gallery', {
 });
 ```
 
+{{! ----------------------------------------------------------------- }}
+
 <h3>Initialize with HTML</h3>
 
 <p>You can initialize Flickity in HTML, without writing any JavaScript. Add <code>js-flickity</code> to the class of the gallery element. Options can be set with a <code>data-flickity-options</code> attribute.</p>
@@ -175,21 +195,37 @@ var flkty = new Flickity( '.main-gallery', {
   <p>Options set in HTML must be valid JSON. Keys need to be quoted, for example <code>"cellAlign":</code>. Note that the attribute value uses single quotes <code>'</code>, but the JSON entities use double-quotes <code>"</code>.</p>
 </div>
 
+{{! ----------------------------------------------------------------- }}
+
 <h3>Customize</h3>
 
 <p>Make Flickity to your vision. <a href="options.html">Set options</a> to customize Flickity's behavior. <a href="style.html#cells">Style cells</a>, <a href="style.html#previous-next-buttons">previous &amp; next buttons</a>, and <a href="style.html#page-dots">page dots</a> with CSS. Utilize <a href="api.html">Flickity's API</a> with <a href="api.html#methods">methods</a> and <a href="api.html#events">events</a>.</p>
 
+{{! ----------------------------------------------------------------- }}
+
 <h2>Featured options</h2>
+
+{{! ----------------------------------------------------------------- }}
 
 {{> wrap_around}}
 
+{{! ----------------------------------------------------------------- }}
+
 {{> free_scroll}}
+
+{{! ----------------------------------------------------------------- }}
 
 {{> auto_play}}
 
+{{! ----------------------------------------------------------------- }}
+
 {{> watch_css}}
 
+{{! ----------------------------------------------------------------- }}
+
 <h3><a href="options.html">View all options</a></h3>
+
+{{! ----------------------------------------------------------------- }}
 
 <h2>Images</h2>
 
@@ -224,7 +260,15 @@ var flkty = new Flickity( '.main-gallery', {
   </div>
 </div>
 
+{{! ----------------------------------------------------------------- }}
+
 {{> images_loaded}}
+
+{{! ----------------------------------------------------------------- }}
+
+{{> lazyload}}
+
+{{! ----------------------------------------------------------------- }}
 
 <h2>Flickity in use</h2>
 

@@ -75,6 +75,7 @@ var jsSrc = [
   'bower_components/flickity/js/page-dots.js',
   'bower_components/flickity/js/player.js',
   'bower_components/flickity/js/add-remove-cell.js',
+  'bower_components/flickity/js/lazyload.js',
   // flickity-imagesloaded
   'bower_components/imagesloaded/imagesloaded.js',
   'bower_components/flickity-imagesloaded/flickity-imagesloaded.js',

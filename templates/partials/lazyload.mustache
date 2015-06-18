@@ -1,0 +1,75 @@
+<h3>lazyLoad</h3>
+
+<p>Loads cell images when a cell is selected.</p>
+
+<p>Set the image's URL to load with <code>data-flickity-lazyload</code>.</p>
+
+``` html
+<img data-flickity-lazyload="full.jpg" />
+<!-- Set optional placeholder src -->
+<img src="placeholder.jpg" data-flickity-lazyload="full.jpg" />
+```
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    lazyLoad: true
+    // lazyloads image in selected cell
+    ```
+    ``` html
+    <div class="gallery">
+      <div class="gallery-cell">
+        <img class="gallery-cell-image"
+          data-flickity-lazyload="tulip.jpg" />
+      </div>
+      <div class="gallery-cell">
+        <img class="gallery-cell-image"
+          data-flickity-lazyload="grapes.jpg" />
+      </div>
+      ...
+    </div>
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="gallery gallery--lazyload-cells gallery--not-counting js-flickity"
+      data-flickity-options='{ "lazyLoad": true }'>
+      {{> lazy_gallery_cell_images}}
+    </div>
+    {{> edit_demo default="vOeGzL" }}
+  </div>
+</div>
+
+<p>Set <code>lazyLoad</code> to a number to load images in adjacent cells.</p>
+
+<div class="example">
+  <div class="example__code">
+    ``` js
+    lazyLoad: 2
+    // load images in selected cell
+    // and next 2 cells
+    // and previous 2 cells
+    ```
+  </div>
+  <div class="example__demo">
+    <div class="gallery gallery--lazyload-adj-cells gallery--not-counting js-flickity"
+      data-flickity-options='{ "lazyLoad": 2, "initialIndex": 2 }'>
+      {{> lazy_gallery_cell_images}}
+    </div>
+  </div>
+</div>
+
+<p>After loading the image, Flickity will add <code>flickity-lazyloaded</code> class to the image, or <code>flickity-lazyerror</code> to a broken image. You can use this class to add a transition when images are loaded.</p>
+
+
+``` css
+/* fade in image when loaded */
+.gallery-cell-image {
+  transition: opacity 0.4s;
+  opacity: 0;
+}
+
+.gallery-cell-image.flickity-lazyloaded,
+.gallery-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+```

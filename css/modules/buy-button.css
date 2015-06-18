@@ -116,6 +116,11 @@
     padding-bottom: 10px;
   }
 
+  .buy-button-trio .buy-button__was-price {
+    display: block;
+    padding-bottom: 10px;
+  }
+
   .buy-button-trio .buy-button__price__dollar {
     position: relative;
     top: 8px;
@@ -125,7 +130,5 @@
   .buy-button-trio .buy-button:hover {
     transform: translateY(-5px);
   }
-
-
 
 }

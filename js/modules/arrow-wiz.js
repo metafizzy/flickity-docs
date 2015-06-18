@@ -111,7 +111,9 @@ FlickityDocs.modules['arrow-wiz'] = function( elem ) {
 
   // -----  ----- //
 
-  var flkty = new Flickity( wiz.querySelector('.gallery') );
+  var flkty = new Flickity( wiz.querySelector('.gallery'), {
+    initialIndex: 2
+  });
   var prevPath = flkty.prevButton.element.querySelector('path');
   var nextPath = flkty.nextButton.element.querySelector('path');
 

@@ -221,9 +221,9 @@ function buildContent( dataOptions ) {
   // gulp task
   return function() {
     var data = extend( siteData, dataOptions );
-    data.source_url_path = '';
-    // data.source_url_path = data.is_export ? '' :
-    //   'http://cdnjs.cloudflare.com/ajax/libs/flickity/' + data.flickity_version + '/';
+    // data.source_url_path = '';
+    data.source_url_path = data.is_export ? '' :
+      'https://cdnjs.cloudflare.com/ajax/libs/flickity/' + data.flickity_version + '/';
     var filter = gulpFilter( filterQuery );
 
     var buildOptions = {

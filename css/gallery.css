@@ -119,6 +119,15 @@
 
 .gallery--pixel-position-demo .gallery-cell { width: 300px; }
 
+/* ---- gallery--100-width-height ---- */
+
+.gallery--full-bleed { height: 100%; }
+
+.gallery--full-bleed .gallery-cell { height: 100%; }
+
+/* move page dots into gallery*/
+.gallery--full-bleed .flickity-page-dots { bottom: 10px; }
+
 /* ---- gallery--set-gallery-size-disabled ---- */
 
 .gallery--set-gallery-size-disabled { height: 160px; }

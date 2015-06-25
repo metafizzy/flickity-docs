@@ -131,6 +131,36 @@ cellSelector: '.gallery-cell'
   </div>
 </div>
 
+<p>With <code>setGallerySize: <span class="literal">false</span></code>, you can set the size of the gallery to 100% width and height, for a "full-bleed" gallery.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    setGallerySize: false
+    ```
+
+    ``` css
+    /* inherit height from parent */
+    .gallery { height: 100%; }
+
+    .gallery-cell { height: 100% }
+
+    /* move page dots into gallery */
+    .flickity-page-dots { bottom: 10px; }
+    ```
+  </div>
+  <div class="example__demo duo__cell example__demo--full-bleed">
+    <div class="gallery gallery--full-bleed js-flickity">
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+    {{> edit_demo default="VLrReY" }}
+  </div>
+</div>
+
 <p>You can size the gallery height as percentage of its width with <code><span class="attribute">padding-bottom</span></code> and <code><span class="class">.flickity-viewport</span></code> CSS.</p>
 
 <div class="duo example">

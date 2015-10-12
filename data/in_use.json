@@ -5,11 +5,6 @@
     "image": "http://i.imgur.com/yKhaKAp.jpg"
   },
   {
-    "title": "Fabletics",
-    "url": "http://www.fabletics.com/",
-    "image": "http://i.imgur.com/42TbHl5.jpg"
-  },
-  {
     "title": "Codrops Photography Website Concept",
     "url": "http://tympanus.net/Development/PhotographyWebsiteConcept/",
     "image": "http://i.imgur.com/KwkBANB.jpg"
@@ -35,9 +30,9 @@
     "image": "http://i.imgur.com/y7SDvBy.jpg"
   },
   {
-    "title": "EdFuel",
-    "url": "http://edfuel.org/",
-    "image": "http://i.imgur.com/WeJNMva.jpg"
+    "title": "Architectenbureau Sven Taeymans",
+    "url": "http://www.sventaeymans.be/projecten/",
+    "image": "http://i.imgur.com/sJpwbYE.jpg"
   },
   {
     "title": "Lovin Dublin",
@@ -48,5 +43,10 @@
     "title": "INAUTONEWS",
     "url": "http://www.inautonews.com/",
     "image": "http://i.imgur.com/a5Ak7PE.jpg"
+  },
+  {
+    "title": "EdFuel",
+    "url": "http://edfuel.org/",
+    "image": "http://i.imgur.com/WeJNMva.jpg"
   }
 ]

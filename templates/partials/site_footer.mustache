@@ -1,24 +1,34 @@
 <div class="site-footer">
   <div class="content-wrap">
-    <p class="site-footer__made-by">Metafizzy makes delightful web UI. Also made by Metafizzy:</p>
+    {{#unless is_export}}
+      <p class="site-footer__made-by">Metafizzy makes delightful web UI. Also made by Metafizzy:</p>
 
-    <div class="duo other-products">
-      <div class="duo__cell other-products__cell other-products__cell--isotope">
-        <a href="http://isotope.metafizzy.co/">
-          <img src="http://i.imgur.com/xfGupRf.png" alt="Isotope" />
-          <h3>Isotope</h3>
-          <p class="description">Filter &amp; sort magical layouts</p>
-        </a>
+      <div class="duo other-products">
+        <div class="duo__cell other-products__cell other-products__cell--isotope">
+          <a href="http://isotope.metafizzy.co/">
+            <img src="http://i.imgur.com/xfGupRf.png" alt="Isotope" />
+            <h3>Isotope</h3>
+            <p class="description">Filter &amp; sort magical layouts</p>
+          </a>
+        </div>
+
+        <div class="duo__cell other-products__cell other-products__cell--packery">
+          <a href="http://packery.metafizzy.co/">
+            <img src="http://i.imgur.com/uRXPQfm.png" alt="Packery" />
+            <h3>Packery</h3>
+            <p class="description">Gap-less, draggable, bin-packing layout library</p>
+          </a>
+        </div>
       </div>
 
-      <div class="duo__cell other-products__cell other-products__cell--packery">
-        <a href="http://packery.metafizzy.co/">
-          <img src="http://i.imgur.com/uRXPQfm.png" alt="Packery" />
-          <h3>Packery</h3>
-          <p class="description">Gap-less, draggable, bin-packing layout library</p>
+      <div class="refactor-shirt">
+        <a href="https://cottonbureau.com/products/refactor">
+          <h3>Refactor shirts</h3>
+          <img src="http://i.imgur.com/zLv36oi.jpg" alt="Refactor shirt" />
         </a>
+        <p>Printed on super-soft Next Level t-shirts. Tri-blend Vintage Black or Poly-Cotton Indigo. Available in women's sizes. Makes a legit holiday gift.</p>
       </div>
-    </div>
+    {{/unless}}
 
     <p class="site-footer__follow">Follow <a href="https://twitter.com/metafizzyco">@metafizzyco on Twitter for Flickity updates</a>.</p>
 

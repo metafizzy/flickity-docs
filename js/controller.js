@@ -36,6 +36,12 @@ docReady( function() {
       module( elem );
     }
   }
+
+  // refactor shirt
+  var refactorTitle = document.querySelector('.refactor-shirt h3');
+  var endDate = new Date( 2015, 9, 28 );
+  var days = Math.round( ( endDate - new Date() ) / ( 1000 * 60 * 60 * 24 ) );
+  refactorTitle.textContent = 'Refactor shirts. Only on sale for ' + days + ' more days.';
 });
 
 })( window );

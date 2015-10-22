@@ -286,3 +286,14 @@ var flkty = new Flickity( '.main-gallery', {
     </a>
   {{/each}}
 </div>
+
+{{! ----------------------------------------------------------------- }}
+
+{{#unless is_export}}
+
+  <h2>People like Flickity</h2>
+
+  <a class="twitter-timeline" href="https://twitter.com/metafizzyco/timelines/657278156794109953" data-widget-id="657284386929418241">People like Flickity</a>
+  <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+
+{{/unless}}

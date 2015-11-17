@@ -250,7 +250,6 @@ npm install flickity
 npm install imports-loader
 ```
 
-
 <p>In your config file, <code>webpack.config.js</code>, use the imports loader to disable <code>define</code> and set window for <code>flickity</code> modules.</p>
 
 ``` js
@@ -268,7 +267,7 @@ module.exports = {
 
 <p>(This hack is required because of an issue with how Webpack loads dependencies. <a href="https://github.com/webpack/webpack/issues/883">+1 this issue on GitHub</a> to help get this issue addressed.)</p>
 
-You can then <code>require('flickity')</code>.
+<p>You can then <code>require('flickity')</code>.</p>
 
 ``` js
 // main.js
@@ -279,7 +278,7 @@ var flkty = new Flickity( '.gallery', {
 });
 ```
 
-Run webpack.
+<p>Run webpack.</p>
 
 ``` bash
 webpack main.js bundle.js

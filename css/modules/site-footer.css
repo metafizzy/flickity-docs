@@ -53,3 +53,45 @@
   line-height: 1.2;
   margin: 0;
 }
+
+.site-footer__metafizzy-logo {
+  height: 50px;
+}
+
+.site-footer__metafizzy-wordmark {
+  width: 140px;
+  height: auto;
+  fill: #6A6;
+}
+
+.metafizzy-logo__body {
+  fill: #6A6;
+}
+
+.metafizzy-logo__stripe1 { fill: transparent; }
+.metafizzy-logo__stripe2 { fill: transparent; }
+.metafizzy-logo__stripe3 { fill: transparent; }
+.metafizzy-logo__stripe4 { fill: transparent; }
+
+a:hover .site-footer__metafizzy-wordmark {
+  fill: #EA0;
+}
+
+a:hover .metafizzy-logo__body { fill: transparent; }
+
+a:hover .metafizzy-logo__stripe1 { fill: #C25; }
+a:hover .metafizzy-logo__stripe2 { fill: #E62; }
+a:hover .metafizzy-logo__stripe3 { fill: #EA0; }
+a:hover .metafizzy-logo__stripe4 { fill: #19F; }
+
+@media screen and ( min-width: 768px ) {
+
+  .site-footer__metafizzy-logo {
+    height: 65px;
+  }
+
+  .site-footer__metafizzy-wordmark {
+    width: 180px;
+  }
+
+}

@@ -423,6 +423,29 @@ cellSelector: '.gallery-cell'
 
 {{> auto_play}}
 
+<p>Auto-playing will pause when the user hovers over the gallery. Set <code>pauseAutoPlayOnHover: <span class="literal">false</span></code> to disable this behavior.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    autoPlay: 1500,
+    pauseAutoPlayOnHover: false
+    // auto play continues when user hovers over gallery
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="gallery js-flickity"
+      data-flickity-options='{ "autoPlay": 1500, "pauseAutoPlayOnHover": false }'>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+    {{> edit_demo default="yeeQJK" }}
+  </div>
+</div>
+
 {{! ----------------------------------------------------------------- }}
 
 {{> watch_css}}

@@ -37,15 +37,25 @@ flkty.select( 3 );
 
 ``` js
 // jQuery
-$gallery.flickity( 'select', index )
+$gallery.flickity( 'select', index, isWrapped, isInstant )
 // vanilla JS
-flkty.select( index )
+flkty.select( index, isWrapped, isInstant )
 ```
 
 <p class="argument">
   <code class="argument__code">index</code>
   <span class="argument__type"><i>Integer</i></span>
   <span class="argument__description">Zero-based index of the cell to select.</span>
+</p>
+<p class="argument">
+  <code class="argument__code">isWrapped</code>
+  <span class="argument__type"><i>Boolean</i></span>
+  <span class="argument__description">Optional. If <code><span class="literal">true</span></code>, the last cell will be selected if at the first cell.</span>
+</p>
+<p class="argument">
+  <code class="argument__code">isInstant</code>
+  <span class="argument__type"><i>Boolean</i></span>
+  <span class="argument__description">If <code><span class="literal">true</span></code>, immediately view the selected cell without animation.</span>
 </p>
 
 <div class="example duo">
@@ -73,6 +83,35 @@ flkty.select( index )
       <div class="gallery-cell"></div>
     </div>
     {{> edit_demo default="yyvYeN" vanilla_js="ByYoKM" }}
+  </div>
+</div>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    // select cell instantly, without animation
+    $('.button-group').on( 'click', '.button', function() {
+      var index = $(this).index();
+      $gallery.flickity( 'select', index, false, true );
+    });
+    ```
+  </div>
+  <div class="example__demo duo__cell" data-js-module="select-instant">
+    <div class="button-row button-group">
+      <button class="button">1</button>
+      <button class="button">2</button>
+      <button class="button">3</button>
+      <button class="button">4</button>
+      <button class="button">5</button>
+    </div>
+    <div class="gallery">
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+      <div class="gallery-cell"></div>
+    </div>
+    {{> edit_demo default="pggQeL" vanilla_js="OMMamp" }}
   </div>
 </div>
 

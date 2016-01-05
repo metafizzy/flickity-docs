@@ -278,11 +278,11 @@ var flkty = new Flickity( '.main-gallery', {
 
 <p>We&rsquo;d love to see how you use Flickity! Tweet <a href="https://twitter.com/metafizzyco">@metafizzyco</a> or email <a href="mailto:yo@metafizzy.co">yo@metafizzy.co</a> to share your work and possibly get it featured here.</p>
 
-<div class="in-use-gallery js-flickity" data-flickity-options='{ "imagesLoaded": true, "wrapAround": true }'>
+<div class="in-use-gallery js-flickity" data-flickity-options='{ "lazyLoad": 1, "wrapAround": true }'>
   {{#each in_use}}
     <a class="in-use-gallery__item" href="{{url}}">
       <p class="in-use-gallery__item__title">{{title}}</p>
-      <img class="in-use-gallery__item__image" src="{{image}}" alt="{{title}}" />
+      <img class="in-use-gallery__item__image" data-flickity-lazyload="{{image}}" alt="{{title}}" />
     </a>
   {{/each}}
 </div>

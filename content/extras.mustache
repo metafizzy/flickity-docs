@@ -249,24 +249,23 @@ var flkty = new Flickity( '.gallery-a', {
 
 <h2>Webpack</h2>
 
-<p>Install Flickity and <a href="https://github.com/webpack/imports-loader">imports-loader</a> with npm.</p>
+<p>Install Flickity with npm.</p>
 
 ``` bash
 npm install flickity
-npm install imports-loader
 ```
 
-<p>In your config file, <code>webpack.config.js</code>, use the imports loader to disable <code>define</code> and set window for <code>flickity</code> modules.</p>
+<p>In your config file, <code>webpack.config.js</code>, add these resolve aliases.</p>
 
 ``` js
 module.exports = {
-  module: {
-    loaders: [
-      {
-        test: /flickity/,
-        loader: 'imports?define=>false&this=>window'
-      }
-    ]
+  resolve: {
+    alias: {
+      'eventEmitter/EventEmitter': 'wolfy87-eventemitter/EventEmitter',
+      'get-style-property/get-style-property': 'desandro-get-style-property/get-style-property',
+      'matches-selector/matches-selector': 'desandro-matches-selector/matches-selector',
+      'classie/classie': 'desandro-classie/classie'
+    }
   }
 };
 ```

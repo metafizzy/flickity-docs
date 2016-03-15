@@ -1,40 +1,40 @@
 /* prev/next button demos
 ------------------------- */
 
-/* ---- gallery--prev-next-big-arrow ---- */
+/* ---- carousel--prev-next-big-arrow ---- */
 
-.gallery--prev-next-big-arrow .flickity-prev-next-button {
+.carousel--prev-next-big-arrow .flickity-prev-next-button {
   width: 100px;
   height: 100px;
   background: transparent;
 }
 
-.gallery--prev-next-big-arrow .flickity-prev-next-button .arrow { fill: white; }
-.gallery--prev-next-big-arrow .flickity-prev-next-button.no-svg { color: white; }
+.carousel--prev-next-big-arrow .flickity-prev-next-button .arrow { fill: white; }
+.carousel--prev-next-big-arrow .flickity-prev-next-button.no-svg { color: white; }
 
-/*.gallery--prev-next-big-arrow .flickity-prev-next-button.previous { left: -10px; }
-.gallery--prev-next-big-arrow .flickity-prev-next-button.next { right: -10px; }*/
+/*.carousel--prev-next-big-arrow .flickity-prev-next-button.previous { left: -10px; }
+.carousel--prev-next-big-arrow .flickity-prev-next-button.next { right: -10px; }*/
 
-.gallery--prev-next-big-arrow .flickity-prev-next-button:disabled { display: none; }
+.carousel--prev-next-big-arrow .flickity-prev-next-button:disabled { display: none; }
 
-/* ---- gallery--prev-next-small-outside ---- */
+/* ---- carousel--prev-next-small-outside ---- */
 
-.gallery--prev-next-small-outside {
+.carousel--prev-next-small-outside {
   margin-left: 40px;
   margin-right: 40px;
 }
 
-.gallery--prev-next-small-outside .flickity-prev-next-button {
+.carousel--prev-next-small-outside .flickity-prev-next-button {
   width: 30px;
   height: 30px;
   border-radius: 5px;
   background: #444;
 }
 
-.gallery--prev-next-small-outside .flickity-prev-next-button:hover { background: #F90; }
+.carousel--prev-next-small-outside .flickity-prev-next-button:hover { background: #F90; }
 
-.gallery--prev-next-small-outside .flickity-prev-next-button .arrow { fill: white; }
-.gallery--prev-next-small-outside .flickity-prev-next-button.no-svg { color: white; }
+.carousel--prev-next-small-outside .flickity-prev-next-button .arrow { fill: white; }
+.carousel--prev-next-small-outside .flickity-prev-next-button.no-svg { color: white; }
 
-.gallery--prev-next-small-outside .flickity-prev-next-button.previous { left: -40px; }
-.gallery--prev-next-small-outside .flickity-prev-next-button.next { right: -40px; }
+.carousel--prev-next-small-outside .flickity-prev-next-button.previous { left: -40px; }
+.carousel--prev-next-small-outside .flickity-prev-next-button.next { right: -40px; }

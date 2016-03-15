@@ -1,8 +1,8 @@
 FlickityDocs.modules['custom-nav'] = function( elem ) {
   'use strict';
 
-  var gallery = elem.querySelector('.gallery');
-  var flkty = new Flickity( gallery, {
+  var carousel = elem.querySelector('.carousel');
+  var flkty = new Flickity( carousel, {
     prevNextButtons: false,
     pageDots: false
   });

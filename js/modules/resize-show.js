@@ -1,12 +1,12 @@
 FlickityDocs.modules['resize-show'] = function( elem ) {
   'use strict';
 
-  var gallery = elem.querySelector('.gallery');
-  var flkty = new Flickity( gallery );
+  var carousel = elem.querySelector('.carousel');
+  var flkty = new Flickity( carousel );
   var button = elem.querySelector('.button');
 
   eventie.bind( button, 'click', function() {
-    gallery.style.display = 'block';
+    carousel.style.display = 'block';
     flkty.resize();
   });
 

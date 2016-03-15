@@ -1,8 +1,8 @@
 FlickityDocs.modules.events = function( elem ) {
   'use strict';
 
-  var gallery = elem.querySelector('.gallery');
-  var flkty = new Flickity( gallery );
+  var carousel = elem.querySelector('.carousel');
+  var flkty = new Flickity( carousel );
 
   var table = elem.querySelector('.event-table');
   var tbody = table.querySelector('tbody');
@@ -47,7 +47,7 @@ FlickityDocs.modules.events = function( elem ) {
 
   flkty.on( 'staticClick', function( event ) {
     var message = '';
-    if ( matchesSelector( event.target, '.gallery-cell' ) ) {
+    if ( matchesSelector( event.target, '.carousel-cell' ) ) {
       var cell = flkty.getCell( event.target );
       var cellIndex = utils.indexOf( flkty.cells, cell ) + 1;
       message = 'clicked cell ' + cellIndex;

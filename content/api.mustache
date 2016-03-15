@@ -7,10 +7,10 @@ title: API
 <p>Methods are actions done by Flickity instances.</p>
 
 <p>With jQuery, methods follow the jQuery UI pattern
-  <code>$gallery.flickity( <span class="string">'methodName'</span> <span class="comment">/*, arguments */</span> )</code>.</p>
+  <code>$carousel.flickity( <span class="string">'methodName'</span> <span class="comment">/*, arguments */</span> )</code>.</p>
 
 ``` js
-var $gallery = $('.gallery').flickity()
+var $carousel = $('.carousel').flickity()
   .flickity('next')
   .flickity( 'select', 4 );
 ```
@@ -24,7 +24,7 @@ var $gallery = $('.gallery').flickity()
 
 ``` js
 // vanilla JS
-var flkty = new Flickity('.gallery');
+var flkty = new Flickity('.carousel');
 flkty.next();
 flkty.select( 3 );
 ```
@@ -37,7 +37,7 @@ flkty.select( 3 );
 
 ``` js
 // jQuery
-$gallery.flickity( 'select', index, isWrapped, isInstant )
+$carousel.flickity( 'select', index, isWrapped, isInstant )
 // vanilla JS
 flkty.select( index, isWrapped, isInstant )
 ```
@@ -63,7 +63,7 @@ flkty.select( index, isWrapped, isInstant )
     ``` js
     $('.button-group').on( 'click', '.button', function() {
       var index = $(this).index();
-      $gallery.flickity( 'select', index );
+      $carousel.flickity( 'select', index );
     });
     ```
   </div>
@@ -75,12 +75,12 @@ flkty.select( index, isWrapped, isInstant )
       <button class="button">4</button>
       <button class="button">5</button>
     </div>
-    <div class="gallery">
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+    <div class="carousel">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     {{> edit_demo default="yyvYeN" vanilla_js="ByYoKM" }}
   </div>
@@ -92,7 +92,7 @@ flkty.select( index, isWrapped, isInstant )
     // select cell instantly, without animation
     $('.button-group').on( 'click', '.button', function() {
       var index = $(this).index();
-      $gallery.flickity( 'select', index, false, true );
+      $carousel.flickity( 'select', index, false, true );
     });
     ```
   </div>
@@ -104,12 +104,12 @@ flkty.select( index, isWrapped, isInstant )
       <button class="button">4</button>
       <button class="button">5</button>
     </div>
-    <div class="gallery">
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+    <div class="carousel">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     {{> edit_demo default="pggQeL" vanilla_js="OMMamp" }}
   </div>
@@ -123,7 +123,7 @@ flkty.select( index, isWrapped, isInstant )
 
 ``` js
 // jQuery
-$gallery.flickity( 'previous', isWrapped )
+$carousel.flickity( 'previous', isWrapped )
 // vanilla JS
 flkty.previous( isWrapped )
 ```
@@ -139,11 +139,11 @@ flkty.previous( isWrapped )
     ``` js
     // previous
     $('.button--previous').on( 'click', function() {
-      $gallery.flickity('previous');
+      $carousel.flickity('previous');
     });
     // previous wrapped
     $('.button--previous-wrapped').on( 'click', function() {
-      $gallery.flickity( 'previous', true );
+      $carousel.flickity( 'previous', true );
     });
     ```
   </div>
@@ -152,12 +152,12 @@ flkty.previous( isWrapped )
       <button class="button button--previous">Previous</button>
       <button class="button button--previous-wrapped">Previous wrapped</button>
     </div>
-    <div class="gallery">
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+    <div class="carousel">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     {{> edit_demo default="emVpdz" vanilla_js="PwQPGX" }}
   </div>
@@ -171,7 +171,7 @@ flkty.previous( isWrapped )
 
 ``` js
 // jQuery
-$gallery.flickity( 'next', isWrapped )
+$carousel.flickity( 'next', isWrapped )
 // vanilla JS
 flkty.next( isWrapped )
 ```
@@ -187,11 +187,11 @@ flkty.next( isWrapped )
     ``` js
     // next
     $('.button--next').on( 'click', function() {
-      $gallery.flickity('next');
+      $carousel.flickity('next');
     });
     // next wrapped
     $('.button--next-wrapped').on( 'click', function() {
-      $gallery.flickity( 'next', true );
+      $carousel.flickity( 'next', true );
     });
     ```
   </div>
@@ -200,12 +200,12 @@ flkty.next( isWrapped )
       <button class="button button--next">Next</button>
       <button class="button button--next-wrapped">Next wrapped</button>
     </div>
-    <div class="gallery">
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+    <div class="carousel">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     {{> edit_demo default="JopYby" vanilla_js="gbvaLQ" }}
   </div>
@@ -217,11 +217,11 @@ flkty.next( isWrapped )
 
 <h3>resize</h3>
 
-<p>Resize the gallery and re-position cells.</p>
+<p>Resize the carousel and re-position cells.</p>
 
 ``` js
 // jQuery
-$gallery.flickity('resize')
+$carousel.flickity('resize')
 // vanilla JS
 flkty.resize()
 ```
@@ -232,18 +232,18 @@ flkty.resize()
       <div class="duo__cell">
         ``` js
         $('.button--resize').on( 'click', function() {
-          // expand gallery by toggling class
-          $gallery.toggleClass('is-expanded')
+          // expand carousel by toggling class
+          $carousel.toggleClass('is-expanded')
             .flickity('resize');
         });
         ```
       </div>
       <div class="duo__cell">
         ``` css
-        .gallery { width: 50%; }
-        .gallery.is-expanded { width: 100%; }
+        .carousel { width: 50%; }
+        .carousel.is-expanded { width: 100%; }
 
-        .gallery.is-expanded .gallery-cell {
+        .carousel.is-expanded .carousel-cell {
           height: 320px;
         }
         ```
@@ -255,12 +255,12 @@ flkty.resize()
     <div class="button-row">
       <button class="button button--resize">Resize</button>
     </div>
-    <div class="gallery gallery--resize">
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+    <div class="carousel carousel--resize">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     {{> edit_demo default="XJZmMp" vanilla_js="NPyGjQ" }}
   </div>
@@ -272,7 +272,7 @@ flkty.resize()
   <div class="duo__cell example__code">
     ``` js
     $('.button').on( 'click', function() {
-      $gallery.show()
+      $carousel.show()
         // resize after un-hiding Flickity
         .flickity('resize');
     });
@@ -280,14 +280,14 @@ flkty.resize()
   </div>
   <div class="duo__cell example__demo" data-js-module="resize-show">
     <div class="button-row">
-      <button class="button">Show gallery</button>
+      <button class="button">Show carousel</button>
     </div>
-    <div class="gallery" style="display: none;">
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+    <div class="carousel" style="display: none;">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     {{> edit_demo default="eNvdoo" vanilla_js="gpmLYG" }}
   </div>
@@ -301,7 +301,7 @@ flkty.resize()
 
 ``` js
 // jQuery
-$gallery.flickity('reposition')
+$carousel.flickity('reposition')
 // vanilla JS
 flkty.reposition()
 ```
@@ -309,23 +309,23 @@ flkty.reposition()
 <div class="example">
   <div class="example__code">
     ``` js
-    $gallery.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {
+    $carousel.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {
       if ( !cellElement ) {
         return;
       }
       $( cellElement ).toggleClass('is-expanded');
-      $gallery.flickity('reposition');
+      $carousel.flickity('reposition');
     });
     ```
   </div>
   <div class="example__demo" data-js-module="reposition">
     <p class="example__demo__instruction">Click cells to toggle size</p>
-    <div class="gallery gallery--position-cells">
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+    <div class="carousel carousel--position-cells">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     {{> edit_demo default="zxRvdw" vanilla_js="vEdgOR" }}
   </div>
@@ -338,11 +338,11 @@ flkty.reposition()
 
 <h3>prepend</h3>
 
-<p>Prepend elements and create cells to the beginning of the gallery.</p>
+<p>Prepend elements and create cells to the beginning of the carousel.</p>
 
 ``` js
 // jQuery
-$gallery.flickity( 'prepend', elements )
+$carousel.flickity( 'prepend', elements )
 // vanilla JS
 flkty.prepend( elements )
 ```
@@ -356,8 +356,8 @@ flkty.prepend( elements )
   <div class="duo__cell example__code">
     ``` js
     $('.button').on( 'click', function() {
-      var $cellElems = $('<div class="gallery-cell">...</div>');
-      $gallery.flickity( 'prepend', $cellElems );
+      var $cellElems = $('<div class="carousel-cell">...</div>');
+      $carousel.flickity( 'prepend', $cellElems );
     });
     ```
   </div>
@@ -365,15 +365,15 @@ flkty.prepend( elements )
     <div class="button-row">
       <button class="button">Prepend cells</button>
     </div>
-    <div class="gallery gallery--not-counting gallery--show-several">
-      <div class="gallery-cell">
-        <span class="gallery-cell__number">1</span>
+    <div class="carousel carousel--not-counting carousel--show-several">
+      <div class="carousel-cell">
+        <span class="carousel-cell__number">1</span>
       </div>
-      <div class="gallery-cell">
-        <span class="gallery-cell__number">2</span>
+      <div class="carousel-cell">
+        <span class="carousel-cell__number">2</span>
       </div>
-      <div class="gallery-cell">
-        <span class="gallery-cell__number">3</span>
+      <div class="carousel-cell">
+        <span class="carousel-cell__number">3</span>
       </div>
     </div>
     {{> edit_demo default="XJZpMN" vanilla_js="VYQPWx" }}
@@ -384,11 +384,11 @@ flkty.prepend( elements )
 
 <h3>append</h3>
 
-<p>Append elements and create cells to the end of the gallery.</p>
+<p>Append elements and create cells to the end of the carousel.</p>
 
 ``` js
 // jQuery
-$gallery.flickity( 'append', elements )
+$carousel.flickity( 'append', elements )
 // vanilla JS
 flkty.append( elements )
 ```
@@ -402,8 +402,8 @@ flkty.append( elements )
   <div class="duo__cell example__code">
     ``` js
     $('.button').on( 'click', function() {
-      var $cellElems = $('<div class="gallery-cell">...</div>');
-      $gallery.flickity( 'append', $cellElems );
+      var $cellElems = $('<div class="carousel-cell">...</div>');
+      $carousel.flickity( 'append', $cellElems );
     });
     ```
   </div>
@@ -411,15 +411,15 @@ flkty.append( elements )
     <div class="button-row">
       <button class="button">Append cells</button>
     </div>
-    <div class="gallery gallery--not-counting gallery--show-several">
-      <div class="gallery-cell">
-        <span class="gallery-cell__number">1</span>
+    <div class="carousel carousel--not-counting carousel--show-several">
+      <div class="carousel-cell">
+        <span class="carousel-cell__number">1</span>
       </div>
-      <div class="gallery-cell">
-        <span class="gallery-cell__number">2</span>
+      <div class="carousel-cell">
+        <span class="carousel-cell__number">2</span>
       </div>
-      <div class="gallery-cell">
-        <span class="gallery-cell__number">3</span>
+      <div class="carousel-cell">
+        <span class="carousel-cell__number">3</span>
       </div>
     </div>
     {{> edit_demo default="qExRVp" vanilla_js="OPQWOG" }}
@@ -430,11 +430,11 @@ flkty.append( elements )
 
 <h3>insert</h3>
 
-<p>Insert elements into the gallery and create cells.</p>
+<p>Insert elements into the carousel and create cells.</p>
 
 ``` js
 // jQuery
-$gallery.flickity( 'insert', elements, index )
+$carousel.flickity( 'insert', elements, index )
 // vanilla JS
 flkty.insert( elements, index )
 ```
@@ -454,8 +454,8 @@ flkty.insert( elements, index )
   <div class="duo__cell example__code">
     ``` js
     $('.button').on( 'click', function() {
-      var $cellElems = $('<div class="gallery-cell">...</div>');
-      $gallery.flickity( 'insert', $cellElems, 1 );
+      var $cellElems = $('<div class="carousel-cell">...</div>');
+      $carousel.flickity( 'insert', $cellElems, 1 );
     });
     ```
   </div>
@@ -463,15 +463,15 @@ flkty.insert( elements, index )
     <div class="button-row">
       <button class="button">Insert cells after 2nd</button>
     </div>
-    <div class="gallery gallery--not-counting gallery--show-several">
-      <div class="gallery-cell">
-        <span class="gallery-cell__number">1</span>
+    <div class="carousel carousel--not-counting carousel--show-several">
+      <div class="carousel-cell">
+        <span class="carousel-cell__number">1</span>
       </div>
-      <div class="gallery-cell">
-        <span class="gallery-cell__number">2</span>
+      <div class="carousel-cell">
+        <span class="carousel-cell__number">2</span>
       </div>
-      <div class="gallery-cell">
-        <span class="gallery-cell__number">3</span>
+      <div class="carousel-cell">
+        <span class="carousel-cell__number">3</span>
       </div>
     </div>
     {{> edit_demo default="YPeNYj" vanilla_js="EaQZQv" }}
@@ -482,11 +482,11 @@ flkty.insert( elements, index )
 
 <h3>remove</h3>
 
-<p>Remove cells from gallery and remove elements from DOM.</p>
+<p>Remove cells from carousel and remove elements from DOM.</p>
 
 ``` js
 // jQuery
-$gallery.flickity( 'remove', elements )
+$carousel.flickity( 'remove', elements )
 // vanilla JS
 flkty.remove( elements )
 ```
@@ -499,39 +499,39 @@ flkty.remove( elements )
 <div class="example">
   <div class="example__code">
     ``` js
-    $('.gallery').on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {
+    $('.carousel').on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {
       if ( cellElement ) {
-        $gallery.flickity( 'remove', cellElement );
+        $carousel.flickity( 'remove', cellElement );
       }
     });
     ```
   </div>
   <div class="example__demo" data-js-module="remove">
     <p class="example__demo__instruction">Click cells to remove</p>
-    <div class="gallery gallery--not-counting gallery--show-several">
-      <div class="gallery-cell">
-        <span class="gallery-cell__number">1</span>
+    <div class="carousel carousel--not-counting carousel--show-several">
+      <div class="carousel-cell">
+        <span class="carousel-cell__number">1</span>
       </div>
-      <div class="gallery-cell">
-        <span class="gallery-cell__number">2</span>
+      <div class="carousel-cell">
+        <span class="carousel-cell__number">2</span>
       </div>
-      <div class="gallery-cell">
-        <span class="gallery-cell__number">3</span>
+      <div class="carousel-cell">
+        <span class="carousel-cell__number">3</span>
       </div>
-      <div class="gallery-cell">
-        <span class="gallery-cell__number">4</span>
+      <div class="carousel-cell">
+        <span class="carousel-cell__number">4</span>
       </div>
-      <div class="gallery-cell">
-        <span class="gallery-cell__number">5</span>
+      <div class="carousel-cell">
+        <span class="carousel-cell__number">5</span>
       </div>
-      <div class="gallery-cell">
-        <span class="gallery-cell__number">6</span>
+      <div class="carousel-cell">
+        <span class="carousel-cell__number">6</span>
       </div>
-      <div class="gallery-cell">
-        <span class="gallery-cell__number">7</span>
+      <div class="carousel-cell">
+        <span class="carousel-cell__number">7</span>
       </div>
-      <div class="gallery-cell">
-        <span class="gallery-cell__number">8</span>
+      <div class="carousel-cell">
+        <span class="carousel-cell__number">8</span>
       </div>
     </div>
     {{> edit_demo default="WbMRgv" vanilla_js="gbvgdy" }}
@@ -548,7 +548,7 @@ flkty.remove( elements )
 
 ``` js
 // jQuery
-$gallery.flickity('destroy')
+$carousel.flickity('destroy')
 // vanilla JS
 flkty.destroy()
 ```
@@ -556,16 +556,16 @@ flkty.destroy()
 <div class="example duo">
   <div class="example__code duo__cell">
     ``` js
-    var $gallery = $('.gallery').flickity();
+    var $carousel = $('.carousel').flickity();
     var isFlickity = true;
     // toggle Flickity on/off
     $('.button--toggle').on( 'click', function() {
       if ( isFlickity ) {
         // destroy Flickity
-        $gallery.flickity('destroy');
+        $carousel.flickity('destroy');
       } else {
         // init new Flickity
-        $gallery.flickity();
+        $carousel.flickity();
       }
       isFlickity = !isFlickity;
     });
@@ -575,12 +575,12 @@ flkty.destroy()
     <div class="button-row">
       <button class="button">Toggle Flickity</button>
     </div>
-    <div class="gallery">
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+    <div class="carousel">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     {{> edit_demo default="dPdNQq" vanilla_js="emVgoR" }}
   </div>
@@ -595,7 +595,7 @@ flkty.destroy()
 
 ``` js
 // jQuery
-$gallery.flickity('reloadCells')
+$carousel.flickity('reloadCells')
 // vanilla JS
 flkty.reloadCells()
 ```
@@ -608,7 +608,7 @@ flkty.reloadCells()
 
 ``` js
 // jQuery
-var cellElements = $gallery.flickity('getCellElements')
+var cellElements = $carousel.flickity('getCellElements')
 // vanilla JS
 var cellElements = flkty.getCellElements()
 ```
@@ -625,9 +625,9 @@ var cellElements = flkty.getCellElements()
 <p>Get the Flickity instance from a jQuery object. Flickity instances are useful to access Flickity properties.</p>
 
 ``` js
-var flkty = $('.gallery').data('flickity')
+var flkty = $('.carousel').data('flickity')
 // access Flickity properties
-console.log( 'gallery at ' + flkty.selectedIndex )
+console.log( 'carousel at ' + flkty.selectedIndex )
 ```
 
 {{! ----------------------------------------------------------------- }}
@@ -653,18 +653,18 @@ var flkty = Flickity.data( element )
   <div class="example__code">
 ``` html
 <!-- init Flickity in HTML -->
-<div class="main-gallery js-flickity">...</div>
+<div class="main-carousel js-flickity">...</div>
 ```
 
 ``` js
 // jQuery
 // pass in the element, $element[0], not the jQuery object
-var flkty = Flickity.data( $('.main-gallery')[0] )
+var flkty = Flickity.data( $('.main-carousel')[0] )
 // vanilla JS
-var gallery = document.querySelector('.main-gallery')
-var flkty = Flickity.data( gallery )
+var carousel = document.querySelector('.main-carousel')
+var flkty = Flickity.data( carousel )
 // using a selector string
-var flkty = Flickity.data('.main-gallery')
+var flkty = Flickity.data('.main-carousel')
 ```
   </div>
 </div>
@@ -678,9 +678,9 @@ var flkty = Flickity.data('.main-gallery')
 
 ``` js
 // init Flickity with jQuery
-var $gallery = $('.gallery').flickity();
+var $carousel = $('.carousel').flickity();
 // get instance
-var flkty = $gallery.data('flickity');
+var flkty = $carousel.data('flickity');
 // access properties
 console.log( flkty.selectedIndex, flkty.selectedElement );
 ```
@@ -731,11 +731,11 @@ function listener(/* parameters */) {
   console.log('eventName happened');
 }
 // bind event listener
-$gallery.on( 'eventName', listener );
+$carousel.on( 'eventName', listener );
 // unbind event listener
-$gallery.off( 'eventName', listener );
+$carousel.off( 'eventName', listener );
 // bind event listener to trigger once. note ONE not ON
-$gallery.one( 'eventName', function() {
+$carousel.one( 'eventName', function() {
   console.log('eventName happened just once');
 });
 ```
@@ -763,16 +763,16 @@ flkty.once( 'eventName', function() {
 
 <h3>Events demo</h3>
 
-<p>Play around with this gallery to see how events are triggered.</p>
+<p>Play around with this carousel to see how events are triggered.</p>
 
 <div class="example duo" data-js-module="events">
   <div class="example__demo duo__cell">
-    <div class="gallery">
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+    <div class="carousel">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
   </div>
   <div class="duo__cell">
@@ -794,7 +794,7 @@ flkty.once( 'eventName', function() {
 
 ``` js
 // jQuery
-$gallery.on( 'cellSelect', function() {
+$carousel.on( 'cellSelect', function() {
   console.log( 'Flickity select ' + flkty.selectedIndex )
 })
 // vanilla JS
@@ -811,7 +811,7 @@ flkty.on( 'cellSelect', function() {...})
 
 ``` js
 // jQuery
-$gallery.on( 'settle', function() {
+$carousel.on( 'settle', function() {
   console.log( 'Flickity settled at ' + flkty.selectedIndex )
 })
 // vanilla JS
@@ -828,7 +828,7 @@ flkty.on( 'settle', function() {...})
 
 ``` js
 // jQuery
-$gallery.on( 'dragStart', function( event, pointer ) {...})
+$carousel.on( 'dragStart', function( event, pointer ) {...})
 // vanilla JS
 flkty.on( 'dragStart', function( event, pointer ) {...})
 ```
@@ -854,7 +854,7 @@ flkty.on( 'dragStart', function( event, pointer ) {...})
 
 ``` js
 // jQuery
-$gallery.on( 'dragMove', function( event, pointer, moveVector ) {...})
+$carousel.on( 'dragMove', function( event, pointer, moveVector ) {...})
 // vanilla JS
 flkty.on( 'dragMove', function( event, pointer, moveVector ) {...})
 ```
@@ -885,7 +885,7 @@ flkty.on( 'dragMove', function( event, pointer, moveVector ) {...})
 
 ``` js
 // jQuery
-$gallery.on( 'dragEnd', function( event, pointer ) {...})
+$carousel.on( 'dragEnd', function( event, pointer ) {...})
 // vanilla JS
 flkty.on( 'dragEnd', function( event, pointer ) {...})
 ```
@@ -911,7 +911,7 @@ flkty.on( 'dragEnd', function( event, pointer ) {...})
 
 ``` js
 // jQuery
-$gallery.on( 'pointerDown', function( event, pointer ) {...})
+$carousel.on( 'pointerDown', function( event, pointer ) {...})
 // vanilla JS
 flkty.on( 'pointerDown', function( event, pointer ) {...})
 ```
@@ -937,7 +937,7 @@ flkty.on( 'pointerDown', function( event, pointer ) {...})
 
 ``` js
 // jQuery
-$gallery.on( 'pointerMove', function( event, pointer, moveVector ) {...})
+$carousel.on( 'pointerMove', function( event, pointer, moveVector ) {...})
 // vanilla JS
 flkty.on( 'pointerMove', function( event, pointer, moveVector ) {...})
 ```
@@ -968,7 +968,7 @@ flkty.on( 'pointerMove', function( event, pointer, moveVector ) {...})
 
 ``` js
 // jQuery
-$gallery.on( 'pointerUp', function( event, pointer ) {...})
+$carousel.on( 'pointerUp', function( event, pointer ) {...})
 // vanilla JS
 flkty.on( 'pointerUp', function( event, pointer ) {...})
 ```
@@ -996,7 +996,7 @@ flkty.on( 'pointerUp', function( event, pointer ) {...})
 
 ``` js
 // jQuery
-$gallery.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {...})
+$carousel.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {...})
 // vanilla JS
 flkty.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {...})
 ```
@@ -1027,13 +1027,13 @@ flkty.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {...
 <div class="example">
   <div class="example__code">
     ``` js
-    $gallery.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {
+    $carousel.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {
       // dismiss if cell was not clicked
       if ( !cellElement ) {
         return;
       }
       // change cell background with .is-clicked
-      $gallery.find('.is-clicked').removeClass('is-clicked');
+      $carousel.find('.is-clicked').removeClass('is-clicked');
       $( cellElement ).addClass('is-clicked');
       $logger.text( 'Cell ' + ( cellIndex + 1 )  + ' clicked' );
     });
@@ -1041,16 +1041,16 @@ flkty.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {...
   </div>
   <div class="example__demo" data-js-module="static-click">
     <p class="example__demo__instruction">Click cells</p>
-    <div class="gallery gallery--static-click">
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+    <div class="carousel carousel--static-click">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     <p class="logger">&nbsp;</p>
     {{> edit_demo default="XJZgzM" vanilla_js="RNQgxe" }}
@@ -1065,7 +1065,7 @@ flkty.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {...
 
 ``` js
 // jQuery
-$gallery.on( 'lazyLoad', function( event, cellElement ) {...})
+$carousel.on( 'lazyLoad', function( event, cellElement ) {...})
 // vanilla JS
 flkty.on( 'lazyLoad', function( event, cellElement ) {...})
 ```
@@ -1085,7 +1085,7 @@ flkty.on( 'lazyLoad', function( event, cellElement ) {...})
 
 ``` js
 // jQuery
-$gallery.on( 'lazyLoad', function( event, cellElement ) {
+$carousel.on( 'lazyLoad', function( event, cellElement ) {
   var img = event.originalEvent.target;
   console.log( event.originalEvent.type, img.src );
   // load or error on src

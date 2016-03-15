@@ -15,9 +15,9 @@ FlickityDocs.modules = {};
 // for prepend, append, insert demos
 FlickityDocs.makeCellElem = function( num ) {
   var cellElem = document.createElement('div');
-  cellElem.className = 'gallery-cell';
+  cellElem.className = 'carousel-cell';
   var number = document.createElement('span');
-  number.className = 'gallery-cell__number';
+  number.className = 'carousel-cell__number';
   utils.setText( number, num );
   cellElem.appendChild( number );
   return cellElem;

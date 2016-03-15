@@ -34,6 +34,6 @@ code .built_in { color: #E08; }
 code .flickity, /* new Flickity() */
 code .flickity_var { color: #D0D; } /* flkty */
 
-code .jquery_var { color: #D70; } /* $gallery */
+code .jquery_var { color: #D70; } /* $carousel */
 
 code .flickity { text-decoration: underline; }

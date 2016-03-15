@@ -1,7 +1,7 @@
-FlickityDocs.modules['hero-gallery'] = function( elem ) {
+FlickityDocs.modules['hero-carousel'] = function( elem ) {
   'use strict';
 
-  var firstCell = elem.querySelector('.hero-gallery__cell--1');
+  var firstCell = elem.querySelector('.hero-carousel__cell--1');
   var illoImg = firstCell.querySelector('.hero-illustration');
 
   if ( illoImg ) {

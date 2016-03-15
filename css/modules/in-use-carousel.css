@@ -1,10 +1,10 @@
-/* in-use-gallery
+/* in-use-carousel
 ------------------------- */
 
-.in-use-gallery {
+.in-use-carousel {
 }
 
-.in-use-gallery__item {
+.in-use-carousel__item {
   width: 400px;
   height: 450px;
   display: block;
@@ -13,7 +13,7 @@
   border-radius: 5px;
 }
 
-.in-use-gallery__item__title {
+.in-use-carousel__item__title {
   position: absolute;
   bottom: 0px;
   text-align: center;
@@ -22,7 +22,7 @@
   line-height: 50px;
 }
 
-.in-use-gallery__item__image {
+.in-use-carousel__item__image {
   display: block;
   max-width: 100%;
   border-radius: 5px;
@@ -31,7 +31,7 @@
 }
 
 /* fade in image when loaded */
-.in-use-gallery__item__image.flickity-lazyloaded,
-.in-use-gallery__item__image.flickity-lazyerror {
+.in-use-carousel__item__image.flickity-lazyloaded,
+.in-use-carousel__item__image.flickity-lazyerror {
   opacity: 1;
 }

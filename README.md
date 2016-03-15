@@ -1,6 +1,6 @@
 # Flickity docs
 
-Documentation for Flickity, the web UI library for touch, responsive, flickable galleries.
+Documentation for Flickity, the web UI library for touch, responsive, flickable carousels.
 
 [flickity.metafizzy.co](http://flickity.metafizzy.co) or [flickityjs.com](http://flickityjs.com)
 

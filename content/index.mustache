@@ -22,11 +22,11 @@ has_buy_button: true
       ```
     </li>
     <li>
-      <p>Add <code>js-flickity</code> class to gallery elements.</p>
+      <p>Add <code>js-flickity</code> class to carousel elements.</p>
       ``` html
-      <div class="gallery js-flickity">
-        <div class="gallery-cell"></div>
-        <div class="gallery-cell"></div>
+      <div class="carousel js-flickity">
+        <div class="carousel-cell"></div>
+        <div class="carousel-cell"></div>
         ...
       </div>
       ```
@@ -131,13 +131,13 @@ has_buy_button: true
 <script src="/path/to/flickity.pkgd.min.js"></script>
 ```
 
-<p>Flickity works on a container gallery element with a group of cell elements.</p>
+<p>Flickity works on a container carousel element with a group of cell elements.</p>
 
 ``` html
-<div class="main-gallery">
-  <div class="gallery-cell">...</div>
-  <div class="gallery-cell">...</div>
-  <div class="gallery-cell">...</div>
+<div class="main-carousel">
+  <div class="carousel-cell">...</div>
+  <div class="carousel-cell">...</div>
+  <div class="carousel-cell">...</div>
   ...
 </div>
 ```
@@ -151,7 +151,7 @@ has_buy_button: true
 <p>You can use Flickity as a jQuery plugin: <code>$(<span class="string">'selector'</span>).flickity()</code>.</p>
 
 ``` js
-$('.main-gallery').flickity({
+$('.main-carousel').flickity({
   // options
   cellAlign: 'left',
   contain: true
@@ -162,10 +162,10 @@ $('.main-gallery').flickity({
 
 <h3>Initialize with Vanilla JavaScript</h3>
 
-<p>You can use Flickity with vanilla JS: <code><span class="keyword">new</span> Flickity( elem )</code>. The <code>Flickity()</code> constructor accepts two arguments: the gallery element and an options object.</p>
+<p>You can use Flickity with vanilla JS: <code><span class="keyword">new</span> Flickity( elem )</code>. The <code>Flickity()</code> constructor accepts two arguments: the carousel element and an options object.</p>
 
 ``` js
-var elem = document.querySelector('.main-gallery');
+var elem = document.querySelector('.main-carousel');
 var flkty = new Flickity( elem, {
   // options
   cellAlign: 'left',
@@ -174,7 +174,7 @@ var flkty = new Flickity( elem, {
 
 // element argument can be a selector string
 //   for an individual element
-var flkty = new Flickity( '.main-gallery', {
+var flkty = new Flickity( '.main-carousel', {
   // options
 });
 ```
@@ -183,11 +183,11 @@ var flkty = new Flickity( '.main-gallery', {
 
 <h3>Initialize with HTML</h3>
 
-<p>You can initialize Flickity in HTML, without writing any JavaScript. Add <code>js-flickity</code> to the class of the gallery element. Options can be set with a <code>data-flickity-options</code> attribute.</p>
+<p>You can initialize Flickity in HTML, without writing any JavaScript. Add <code>js-flickity</code> to the class of the carousel element. Options can be set with a <code>data-flickity-options</code> attribute.</p>
 
 
 ``` html
-<div class="main-gallery js-flickity"
+<div class="main-carousel js-flickity"
   data-flickity-options='{ "cellAlign": "left", "contain": true }'>
 ```
 
@@ -236,7 +236,7 @@ var flkty = new Flickity( '.main-gallery', {
 <p>Flickity makes beautiful image galleries.</p>
 
 ``` html
-<div class="gallery js-flickity"
+<div class="carousel js-flickity"
   data-flickity-options='{ "imagesLoaded": true, "percentPosition": false }'>
   <img src="orange-tree.jpg" alt="orange tree" />
   <img src="submerged.jpg" alt="submerged" />
@@ -247,7 +247,7 @@ var flkty = new Flickity( '.main-gallery', {
 
 <div class="example">
   <div class="example__demo">
-    <div class="gallery gallery--images-demo js-flickity"
+    <div class="carousel carousel--images-demo js-flickity"
       data-flickity-options='{ "imagesLoaded": true, "percentPosition": false }'>
       <!-- images from unsplash.com -->
       <img src="http://i.imgur.com/bwy74ok.jpg" alt="orange tree" />
@@ -278,11 +278,11 @@ var flkty = new Flickity( '.main-gallery', {
 
 <p>We&rsquo;d love to see how you use Flickity! Tweet <a href="https://twitter.com/metafizzyco">@metafizzyco</a> or email <a href="mailto:yo@metafizzy.co">yo@metafizzy.co</a> to share your work and possibly get it featured here.</p>
 
-<div class="in-use-gallery js-flickity" data-flickity-options='{ "lazyLoad": 1, "wrapAround": true }'>
+<div class="in-use-carousel js-flickity" data-flickity-options='{ "lazyLoad": 1, "wrapAround": true }'>
   {{#each in_use}}
-    <a class="in-use-gallery__item" href="{{url}}">
-      <p class="in-use-gallery__item__title">{{title}}</p>
-      <img class="in-use-gallery__item__image" data-flickity-lazyload="{{image}}" alt="{{title}}" />
+    <a class="in-use-carousel__item" href="{{url}}">
+      <p class="in-use-carousel__item__title">{{title}}</p>
+      <img class="in-use-carousel__item__image" data-flickity-lazyload="{{image}}" alt="{{title}}" />
     </a>
   {{/each}}
 </div>

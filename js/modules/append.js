@@ -1,8 +1,8 @@
 FlickityDocs.modules.append = function( elem ) {
   'use strict';
 
-  var gallery = elem.querySelector('.gallery');
-  var flkty = new Flickity( gallery, {
+  var carousel = elem.querySelector('.carousel');
+  var flkty = new Flickity( carousel, {
     initialIndex: 2
   });
 

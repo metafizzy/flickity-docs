@@ -1,8 +1,8 @@
 FlickityDocs.modules.previous = function( elem ) {
   'use strict';
 
-  var gallery = elem.querySelector('.gallery');
-  var flkty = new Flickity( gallery );
+  var carousel = elem.querySelector('.carousel');
+  var flkty = new Flickity( carousel );
 
   var previousButton = elem.querySelector('.button--previous');
   eventie.bind( previousButton, 'click', function() {

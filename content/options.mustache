@@ -6,35 +6,35 @@ title: Options
 
 <h3>cellSelector</h3>
 
-<p>Specify selector for cell elements. <code>cellSelector</code> is useful if you have other elements in your gallery elements that are not cells.</p>
+<p>Specify selector for cell elements. <code>cellSelector</code> is useful if you have other elements in your carousel elements that are not cells.</p>
 
 <div class="duo example">
   <div class="duo__cell example__code">
 ``` js
-cellSelector: '.gallery-cell'
+cellSelector: '.carousel-cell'
 ```
 
 ``` html
-<div class="gallery">
+<div class="carousel">
   <div class="static-banner">Static banner 1</div>
   <div class="static-banner">Static banner 2</div>
-  <div class="gallery-cell"></div>
-  <div class="gallery-cell"></div>
-  <div class="gallery-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
   ...
 </div>
 ```
   </div>
   <div class="duo__cell example__demo">
-    <div class="gallery gallery--cell-selector-demo js-flickity"
-      data-flickity-options='{ "cellSelector": ".gallery-cell" }'>
+    <div class="carousel carousel--cell-selector-demo js-flickity"
+      data-flickity-options='{ "cellSelector": ".carousel-cell" }'>
       <div class="static-banner static-banner1">Static banner 1</div>
       <div class="static-banner static-banner2">Static banner 2</div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     {{> edit_demo default="yyvNaG" }}
   </div>
@@ -53,13 +53,13 @@ cellSelector: '.gallery-cell'
     ```
   </div>
   <div class="duo__cell example__demo">
-    <div class="gallery js-flickity"
+    <div class="carousel js-flickity"
       data-flickity-options='{ "initialIndex": 2 }'>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     {{> edit_demo default="vEdOKg" }}
   </div>
@@ -69,7 +69,7 @@ cellSelector: '.gallery-cell'
 
 <h3>accessibility</h3>
 
-<p>Enable keyboard navigation. Users can tab to a Flickity gallery, and pressing left &amp; right keys to change cells. Enabled by default <code><span class="comment">accessibility: true</span></code>.</p>
+<p>Enable keyboard navigation. Users can tab to a Flickity carousel, and pressing left &amp; right keys to change cells. Enabled by default <code><span class="comment">accessibility: true</span></code>.</p>
 
 <div class="duo example">
   <div class="duo__cell example__code">
@@ -80,13 +80,13 @@ cellSelector: '.gallery-cell'
     ```
   </div>
   <div class="duo__cell example__demo">
-    <div class="gallery js-flickity"
+    <div class="carousel js-flickity"
       data-flickity-options='{ "accessibility": false }'>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     {{> edit_demo default="NPyqrM" }}
   </div>
@@ -96,9 +96,9 @@ cellSelector: '.gallery-cell'
 
 <h3>setGallerySize</h3>
 
-<p>Sets the height of the gallery to the height of the tallest cell. Enabled by default <code><span class="comment">setGallerySize: true</span></code>.</p>
+<p>Sets the height of the carousel to the height of the tallest cell. Enabled by default <code><span class="comment">setGallerySize: true</span></code>.</p>
 
-<p>Use <code>setGallerySize: <span class="literal">false</span></code> if you prefer to size the gallery with CSS, rather than using the size of cells.</p>
+<p>Use <code>setGallerySize: <span class="literal">false</span></code> if you prefer to size the carousel with CSS, rather than using the size of cells.</p>
 
 <div class="duo example">
   <div class="duo__cell example__code">
@@ -107,31 +107,31 @@ cellSelector: '.gallery-cell'
     ```
 
     ``` css
-    /* gallery height */
-    .gallery {
+    /* carousel height */
+    .carousel {
       height: 160px;
     }
 
-    /* cell inherit height from gallery */
-    .gallery-cell {
+    /* cell inherit height from carousel */
+    .carousel-cell {
       height: 100%;
     }
     ```
   </div>
   <div class="duo__cell example__demo">
-    <div class="gallery gallery--set-gallery-size-disabled js-flickity"
+    <div class="carousel carousel--set-carousel-size-disabled js-flickity"
       data-flickity-options='{ "setGallerySize": false }'>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     {{> edit_demo default="jEzKNG" }}
   </div>
 </div>
 
-<p>With <code>setGallerySize: <span class="literal">false</span></code>, you can set the size of the gallery to 100% width and height, for a "full-bleed" gallery.</p>
+<p>With <code>setGallerySize: <span class="literal">false</span></code>, you can set the size of the carousel to 100% width and height, for a "full-bleed" carousel.</p>
 
 <div class="example duo">
   <div class="example__code duo__cell">
@@ -141,27 +141,27 @@ cellSelector: '.gallery-cell'
 
     ``` css
     /* inherit height from parent */
-    .gallery { height: 100%; }
+    .carousel { height: 100%; }
 
-    .gallery-cell { height: 100% }
+    .carousel-cell { height: 100% }
 
-    /* move page dots into gallery */
+    /* move page dots into carousel */
     .flickity-page-dots { bottom: 10px; }
     ```
   </div>
   <div class="example__demo duo__cell example__demo--full-bleed">
-    <div class="gallery gallery--full-bleed js-flickity">
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+    <div class="carousel carousel--full-bleed js-flickity">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     {{> edit_demo default="VLrReY" }}
   </div>
 </div>
 
-<p>You can size the gallery height as percentage of its width with <code><span class="attribute">padding-bottom</span></code> and <code><span class="class">.flickity-viewport</span></code> CSS.</p>
+<p>You can size the carousel height as percentage of its width with <code><span class="attribute">padding-bottom</span></code> and <code><span class="class">.flickity-viewport</span></code> CSS.</p>
 
 <div class="duo example">
   <div class="duo__cell example__code">
@@ -170,31 +170,31 @@ cellSelector: '.gallery-cell'
     ```
 
     ``` css
-    /* gallery height, as percentage of width */
-    .gallery {
+    /* carousel height, as percentage of width */
+    .carousel {
       padding-bottom: 33.3%;
     }
 
-    /* viewport inherit size from gallery */
-    .gallery .flickity-viewport {
+    /* viewport inherit size from carousel */
+    .carousel .flickity-viewport {
       position: absolute;
       width: 100%;
     }
 
-    /* cell inherit height from gallery */
-    .gallery-cell {
+    /* cell inherit height from carousel */
+    .carousel-cell {
       height: 100%;
     }
     ```
   </div>
   <div class="duo__cell example__demo">
-    <div class="gallery gallery--set-gallery-size-disabled-percentage js-flickity"
+    <div class="carousel carousel--set-carousel-size-disabled-percentage js-flickity"
       data-flickity-options='{ "setGallerySize": false }'>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     {{> edit_demo default="dPmKyx" }}
   </div>
@@ -214,20 +214,20 @@ cellSelector: '.gallery-cell'
     ```
 
     ``` css
-    /* gallery has fixed width */
-    .gallery {
+    /* carousel has fixed width */
+    .carousel {
       width: 300px;
     }
     ```
   </div>
   <div class="duo__cell example__demo">
-    <div class="gallery gallery--resize-option js-flickity"
+    <div class="carousel carousel--resize-option js-flickity"
       data-flickity-options='{ "resize": false }'>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     {{> edit_demo default="yyvNaG" }}
   </div>
@@ -262,19 +262,19 @@ cellSelector: '.gallery-cell'
 
     ``` css
     /* cell width in percent */
-    .gallery-cell {
+    .carousel-cell {
       width: 66%;
     }
     ```
   </div>
   <div class="duo__cell example__demo">
-    <div class="gallery js-flickity"
+    <div class="carousel js-flickity"
       data-flickity-options='{ "percentPosition": false }'>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     {{> edit_demo default="azqbop" }}
   </div>
@@ -289,19 +289,19 @@ cellSelector: '.gallery-cell'
 
     ``` css
     /* cell width in pixels */
-    .gallery-cell {
+    .carousel-cell {
       width: 300px;
     }
     ```
   </div>
   <div class="duo__cell example__demo">
-    <div class="gallery gallery--pixel-position-demo js-flickity"
+    <div class="carousel carousel--pixel-position-demo js-flickity"
       data-flickity-options='{ "percentPosition": false }'>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     {{> edit_demo default="dPdoWp" }}
   </div>
@@ -320,13 +320,13 @@ cellSelector: '.gallery-cell'
     ```
   </div>
   <div class="duo__cell example__demo">
-    <div class="gallery js-flickity"
+    <div class="carousel js-flickity"
       data-flickity-options='{ "rightToLeft": true }'>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
       {{> edit_demo default="ZYrGKN" }}
   </div>
@@ -349,13 +349,13 @@ cellSelector: '.gallery-cell'
     ```
   </div>
   <div class="duo__cell example__demo">
-    <div class="gallery js-flickity"
+    <div class="carousel js-flickity"
       data-flickity-options='{ "draggable": false }'>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     {{> edit_demo default="dPdoRO" }}
   </div>
@@ -378,41 +378,41 @@ cellSelector: '.gallery-cell'
 <div class="example duo">
   <div class="example__code duo__cell">
     ``` html
-    <div class="gallery">
-      <img class="gallery-image"
+    <div class="carousel">
+      <img class="carousel-image"
         data-flickity-lazyload="tulip.jpg" />
-      <img class="gallery-image"
+      <img class="carousel-image"
         data-flickity-lazyload="grapes.jpg" />
       ...
     </div>
     ```
 
     ``` css
-    .gallery-image {
+    .carousel-image {
       min-width: 150px;
     }
     ```
   </div>
   <div class="example__demo duo__cell">
-    <div class="gallery gallery--not-counting js-flickity"
+    <div class="carousel carousel--not-counting js-flickity"
       data-flickity-options='{ "lazyLoad": true }'>
-      <img class="gallery__lazy-image"
+      <img class="carousel__lazy-image"
       data-flickity-lazyload="http://i.imgur.com/9xYjgCk.jpg" alt="tulip" />
-      <img class="gallery__lazy-image"
+      <img class="carousel__lazy-image"
       data-flickity-lazyload="http://i.imgur.com/8lEJtbg.jpg" alt="grapes" />
-      <img class="gallery__lazy-image"
+      <img class="carousel__lazy-image"
       data-flickity-lazyload="http://i.imgur.com/ERMbVdn.jpg" alt="raspberries" />
-      <img class="gallery__lazy-image"
+      <img class="carousel__lazy-image"
       data-flickity-lazyload="http://i.imgur.com/lBKi66i.jpg" alt="wolf" />
-      <img class="gallery__lazy-image"
+      <img class="carousel__lazy-image"
       data-flickity-lazyload="http://i.imgur.com/4O7U1Ob.jpg" alt="sea" />
-      <img class="gallery__lazy-image"
+      <img class="carousel__lazy-image"
       data-flickity-lazyload="http://i.imgur.com/4ifgQaR.jpg" alt="green beads" />
-      <img class="gallery__lazy-image"
+      <img class="carousel__lazy-image"
       data-flickity-lazyload="http://i.imgur.com/qKhkOKC.jpg" alt="gulls" />
-      <img class="gallery__lazy-image"
+      <img class="carousel__lazy-image"
       data-flickity-lazyload="http://i.imgur.com/LFelADP.jpg" alt="touch" />
-      <img class="gallery__lazy-image"
+      <img class="carousel__lazy-image"
       data-flickity-lazyload="http://i.imgur.com/OZmQIVL.jpg" alt="van" />
     </div>
     {{> edit_demo default="RPLRLZ" }}
@@ -423,24 +423,24 @@ cellSelector: '.gallery-cell'
 
 {{> auto_play}}
 
-<p>Auto-playing will pause when the user hovers over the gallery. Set <code>pauseAutoPlayOnHover: <span class="literal">false</span></code> to disable this behavior.</p>
+<p>Auto-playing will pause when the user hovers over the carousel. Set <code>pauseAutoPlayOnHover: <span class="literal">false</span></code> to disable this behavior.</p>
 
 <div class="example duo">
   <div class="example__code duo__cell">
     ``` js
     autoPlay: 1500,
     pauseAutoPlayOnHover: false
-    // auto play continues when user hovers over gallery
+    // auto play continues when user hovers over carousel
     ```
   </div>
   <div class="example__demo duo__cell">
-    <div class="gallery js-flickity"
+    <div class="carousel js-flickity"
       data-flickity-options='{ "autoPlay": 1500, "pauseAutoPlayOnHover": false }'>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     {{> edit_demo default="yeeQJK" }}
   </div>
@@ -454,29 +454,29 @@ cellSelector: '.gallery-cell'
 
 <h3>asNavFor</h3>
 
-<p>Use one Flickity gallery as navigation for another.</p>
+<p>Use one Flickity carousel as navigation for another.</p>
 
 <ul>
-  <li>Clicking the nav gallery will select the content gallery.</li>
-  <li>Selecting a cell in the content gallery will sync to the nav gallery.</li>
+  <li>Clicking the nav carousel will select the content carousel.</li>
+  <li>Selecting a cell in the content carousel will sync to the nav carousel.</li>
 </ul>
 
 ``` js
 // asNavFor can be set a selector string
-asNavFor: '.gallery-main'
+asNavFor: '.carousel-main'
 // or an element
-asNavFor: $('.gallery-main')[0]
-asNavFor: document.querySelector('.gallery-main')
+asNavFor: $('.carousel-main')[0]
+asNavFor: document.querySelector('.carousel-main')
 ```
 
 <div class="example duo">
   <div class="example__code duo__cell">
     ``` js
-    // 1st gallery, main
-    $('.gallery-main').flickity();
-    // 2nd gallery, navigation
-    $('.gallery-nav').flickity({
-      asNavFor: '.gallery-main',
+    // 1st carousel, main
+    $('.carousel-main').flickity();
+    // 2nd carousel, navigation
+    $('.carousel-nav').flickity({
+      asNavFor: '.carousel-main',
       contain: true,
       pageDots: false
     });
@@ -484,30 +484,30 @@ asNavFor: document.querySelector('.gallery-main')
 
     ``` css
     /* is-nav-selected class added to nav cells */
-    .gallery-nav .gallery-cell.is-nav-selected {
+    .carousel-nav .carousel-cell.is-nav-selected {
       background: #ED2;
     }
     ```
   </div>
   <div class="example__demo duo__cell">
-    <div class="gallery gallery--as-nav-for-main gallery--full-width js-flickity">
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+    <div class="carousel carousel--as-nav-for-main carousel--full-width js-flickity">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
-    <div class="gallery gallery--as-nav-for-nav gallery--nav js-flickity"
-      data-flickity-options='{ "asNavFor": ".gallery--as-nav-for-main", "contain": true, "pageDots": false }'>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+    <div class="carousel carousel--as-nav-for-nav carousel--nav js-flickity"
+      data-flickity-options='{ "asNavFor": ".carousel--as-nav-for-main", "contain": true, "pageDots": false }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     {{> edit_demo default="wByaqj" }}
   </div>
@@ -537,13 +537,13 @@ asNavFor: document.querySelector('.gallery-main')
     ```
   </div>
   <div class="example__demo duo__cell">
-    <div class="gallery js-flickity"
+    <div class="carousel js-flickity"
       data-flickity-options='{ "selectedAttraction": 0.2, "friction": 0.8 }'>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     {{> edit_demo default="aOyMam" }}
   </div>
@@ -560,13 +560,13 @@ asNavFor: document.querySelector('.gallery-main')
     ```
   </div>
   <div class="example__demo duo__cell">
-    <div class="gallery js-flickity"
+    <div class="carousel js-flickity"
       data-flickity-options='{ "selectedAttraction": 0.01, "friction": 0.15 }'>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     {{> edit_demo default="BNdbOq" }}
   </div>
@@ -587,13 +587,13 @@ asNavFor: document.querySelector('.gallery-main')
     ```
   </div>
   <div class="example__demo duo__cell">
-    <div class="gallery js-flickity"
+    <div class="carousel js-flickity"
       data-flickity-options='{ "freeScroll": true, "freeScrollFriction": 0.03 }'>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     {{> edit_demo default="jPLJvo" }}
   </div>
@@ -615,13 +615,13 @@ asNavFor: document.querySelector('.gallery-main')
     ```
   </div>
   <div class="duo__cell example__demo">
-    <div class="gallery js-flickity"
+    <div class="carousel js-flickity"
       data-flickity-options='{ "prevNextButtons": false }'>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     {{> edit_demo default="QwQbQJ" }}
   </div>
@@ -641,13 +641,13 @@ asNavFor: document.querySelector('.gallery-main')
     ```
   </div>
   <div class="duo__cell example__demo">
-    <div class="gallery js-flickity"
+    <div class="carousel js-flickity"
       data-flickity-options='{ "pageDots": false }'>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     {{> edit_demo default="raJVdN" }}
   </div>
@@ -672,13 +672,13 @@ asNavFor: document.querySelector('.gallery-main')
     ```
   </div>
   <div class="example__demo duo__cell">
-    <div class="gallery js-flickity"
+    <div class="carousel js-flickity"
       data-flickity-options='{ "arrowShape": "M 0,50 L 60,00 L 50,30 L 80,30 L 80,70 L 50,70 L 60,100 Z", "initialIndex": 2 }'>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
     {{> edit_demo default="vOeKdJ" }}
   </div>

@@ -17,13 +17,13 @@
     // lazyloads image in selected cell
     ```
     ``` html
-    <div class="gallery">
-      <div class="gallery-cell">
-        <img class="gallery-cell-image"
+    <div class="carousel">
+      <div class="carousel-cell">
+        <img class="carousel-cell-image"
           data-flickity-lazyload="tulip.jpg" />
       </div>
-      <div class="gallery-cell">
-        <img class="gallery-cell-image"
+      <div class="carousel-cell">
+        <img class="carousel-cell-image"
           data-flickity-lazyload="grapes.jpg" />
       </div>
       ...
@@ -31,9 +31,9 @@
     ```
   </div>
   <div class="example__demo duo__cell">
-    <div class="gallery gallery--lazyload-cells gallery--not-counting js-flickity"
+    <div class="carousel carousel--lazyload-cells carousel--not-counting js-flickity"
       data-flickity-options='{ "lazyLoad": true }'>
-      {{> lazy_gallery_cell_images}}
+      {{> lazy_cell_images}}
     </div>
     {{> edit_demo default="vOeGzL" }}
   </div>
@@ -51,9 +51,9 @@
     ```
   </div>
   <div class="example__demo">
-    <div class="gallery gallery--lazyload-adj-cells gallery--not-counting js-flickity"
+    <div class="carousel carousel--lazyload-adj-cells carousel--not-counting js-flickity"
       data-flickity-options='{ "lazyLoad": 2, "initialIndex": 2 }'>
-      {{> lazy_gallery_cell_images}}
+      {{> lazy_cell_images}}
     </div>
   </div>
   {{> edit_demo default="rVGLGB" }}
@@ -64,13 +64,13 @@
 
 ``` css
 /* fade in image when loaded */
-.gallery-cell-image {
+.carousel-cell-image {
   transition: opacity 0.4s;
   opacity: 0;
 }
 
-.gallery-cell-image.flickity-lazyloaded,
-.gallery-cell-image.flickity-lazyerror {
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
   opacity: 1;
 }
 ```

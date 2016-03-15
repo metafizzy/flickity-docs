@@ -1,8 +1,8 @@
 FlickityDocs.modules.next = function( elem ) {
   'use strict';
 
-  var gallery = elem.querySelector('.gallery');
-  var flkty = new Flickity( gallery );
+  var carousel = elem.querySelector('.carousel');
+  var flkty = new Flickity( carousel );
 
   var nextButton = elem.querySelector('.button--next');
   eventie.bind( nextButton, 'click', function() {

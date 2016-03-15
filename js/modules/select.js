@@ -3,7 +3,7 @@ FlickityDocs.modules.select = function( elem ) {
 
   var utils = window.fizzyUIUtils;
 
-  var flkty = new Flickity( elem.querySelector('.gallery') );
+  var flkty = new Flickity( elem.querySelector('.carousel') );
 
   var buttonGroup = elem.querySelector('.button-group');
   var buttons = utils.makeArray( buttonGroup.querySelectorAll('.button') );

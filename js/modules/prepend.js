@@ -1,8 +1,8 @@
 FlickityDocs.modules.prepend = function( elem ) {
   'use strict';
 
-  var gallery = elem.querySelector('.gallery');
-  var flkty = new Flickity( gallery );
+  var carousel = elem.querySelector('.carousel');
+  var flkty = new Flickity( carousel );
 
   var cellNumber = flkty.cells.length + 1;
   var makeCellElem = FlickityDocs.makeCellElem;

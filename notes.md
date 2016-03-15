@@ -18,7 +18,7 @@
 <!-- re-direct flickityjs.com -->
 <!-- Texta font -->
 <!-- font-sizes in em -->
-<!-- mobile hero gallery -->
+<!-- mobile hero carousel -->
 <!-- GitHub link -->
 <!-- copy assets to build/ -->
 <!-- copy flickity files to build/ -->
@@ -177,12 +177,12 @@ Stickeroo / sticky page nav
   <div class="example__code duo__cell">
   </div>
   <div class="example__demo duo__cell">
-    <div class="gallery">
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
-      <div class="gallery-cell"></div>
+    <div class="carousel">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
     </div>
   </div>
 </div>

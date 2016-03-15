@@ -125,7 +125,7 @@ var cssSrc = [
   // docs
   'css/web-fonts.css',
   'css/base.css',
-  'css/gallery.css',
+  'css/carousel.css',
   'css/modules/*.css'
 ];
 

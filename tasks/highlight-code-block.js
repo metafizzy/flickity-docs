@@ -13,7 +13,7 @@ hljsJavascript.keywords.flickity_var = 'flkty';
 
 hljsJavascript.contains.push({
   className: 'jquery_var',
-  begin: /\$gallery/
+  begin: /\$carousel/
 });
 
 hljsJavascript.contains.push({

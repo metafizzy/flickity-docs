@@ -1,8 +1,8 @@
 FlickityDocs.modules.reposition = function( elem ) {
   'use strict';
 
-  var gallery = elem.querySelector('.gallery');
-  var flkty = new Flickity( gallery );
+  var carousel = elem.querySelector('.carousel');
+  var flkty = new Flickity( carousel );
 
   flkty.on( 'staticClick', function( event, pointer, cellElement ) {
     if ( !cellElement ) {

@@ -1,13 +1,13 @@
-/* hero-gallery
+/* hero-carousel
 ------------------------- */
 
-.hero-gallery {
+.hero-carousel {
   margin-bottom: 80px;
   background: #FAFAFA url('http://i.imgur.com/R60qKwS.jpg');
   background-size: cover;
 }
 
-.hero-gallery__cell {
+.hero-carousel__cell {
   width: 100%;
   height: 240px;
   color: white;
@@ -15,21 +15,21 @@
   background: #EFCE36; /* match gif */
 }
 
-.hero-gallery__cell__content {
+.hero-carousel__cell__content {
   padding: 20px 60px 0;
   max-width: 1000px;
   margin: 0 auto;
   position: relative;
 }
 
-.hero-gallery h1 {
+.hero-carousel h1 {
   font-size: 3.2em;
   line-height: 1.0;
   margin: 0;
   padding-top: 40px;
 }
 
-.hero-gallery .tagline {
+.hero-carousel .tagline {
   font-size: 1.4em;
   line-height: 1.0;
   margin: 0;
@@ -43,7 +43,7 @@
   margin: 0 auto;
 }
 
-.hero-gallery__cell--2 {
+.hero-carousel__cell--2 {
   background: #8C8;
 }
 
@@ -76,11 +76,11 @@
   margin-bottom: 10px;
 }
 
-.hero-gallery__cell--3 {
+.hero-carousel__cell--3 {
   background: #E90;
 }
 
-.hero-gallery__cell--4 {
+.hero-carousel__cell--4 {
   background: #E5A;
 }
 
@@ -98,15 +98,15 @@
 
 @media screen and ( max-width: 500px ) {
   /* hide first cell content on small devices */
-  .hero-gallery h1,
-  .hero-gallery .tagline {
+  .hero-carousel h1,
+  .hero-carousel .tagline {
     display: none;
   }
 
 }
 
 @media screen and ( min-width: 500px ) {
-  .hero-gallery__cell--1  .hero-gallery__cell__content {
+  .hero-carousel__cell--1  .hero-carousel__cell__content {
     padding-right: 260px;
   }
 
@@ -121,19 +121,19 @@
 
 @media screen and ( min-width: 768px ) {
 
-  .hero-gallery__cell {
+  .hero-carousel__cell {
     height: 440px;
   }
 
-  .hero-gallery__cell__content {
+  .hero-carousel__cell__content {
     padding-top: 40px;
   }
 
-  .hero-gallery h1 {
+  .hero-carousel h1 {
     font-size: 5.8em;
   }
 
-  .hero-gallery .tagline {
+  .hero-carousel .tagline {
     font-size: 2.1em;
   }
 
@@ -172,11 +172,11 @@
 
 @media screen and ( min-width: 960px ) {
 
-  .hero-gallery__cell--1  .hero-gallery__cell__content {
+  .hero-carousel__cell--1  .hero-carousel__cell__content {
     padding-right: 400px;
   }
 
-  .hero-gallery h1 {
+  .hero-carousel h1 {
     font-size: 7.8em;
   }
 

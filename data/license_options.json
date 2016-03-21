@@ -3,18 +3,21 @@
     "title": "Developer",
     "for": "1 developer",
     "price": "25",
-    "simplegoods_id": "KCMEODAK"
+    "simplegoods_id": "KCMEODAK",
+    "gumroad_slug": "flickity-dev"
   },
   "team": {
     "title": "Team",
     "for": "up to 8 developers",
     "price": "110",
-    "simplegoods_id": "UHJUXJCA"
+    "simplegoods_id": "UHJUXJCA",
+    "gumroad_slug": "flickity-team"
   },
   "organization": {
     "title": "Organization",
     "for": "Unlimited developers",
     "price": "290",
-    "simplegoods_id": "ELMYEWJQ"
+    "simplegoods_id": "ELMYEWJQ",
+    "gumroad_slug": "flickity-org"
   }
 }

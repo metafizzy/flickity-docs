@@ -540,7 +540,95 @@ flkty.remove( elements )
 
 {{! ----------------------------------------------------------------- }}
 
+<h2>Player</h2>
+
+<p>Control <a href="options.html#autoplay"><code>autoPlay</code></a> behavior.</p>
+
+<div class="example" data-js-module="player">
+  <div class="example__demo">
+    <div class="button-row">
+      <div class="button-group button-group--inline">
+        <button class="button button--play">Play</button>
+        <button class="button button--stop">Stop</button>
+      </div>
+      <div class="button-group button-group--inline">
+        <button class="button button--pause">Pause</button>
+        <button class="button button--unpause">Unpause</button>
+      </div>
+    </div>
+
+    <p class="player-status" style="font-weight: bold; font-size: 1.1em;">Playing</p>
+
+    <div class="carousel">
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+
+  </div>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>playPlayer</h3>
+
+<p>Starts auto-play.</p>
+
+<p>Setting <a href="options.html#autoplay"><code>autoPlay</code></a> will automatically start auto-play on initialization. You do not need to start auto-play with <code>playPlayer</code>.</p>
+
+``` js
+// jQuery
+$carousel.flickity('playPlayer')
+// vanilla JS
+flkty.playPlayer()
+```
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>stopPlayer</h3>
+
+<p>Stops auto-play and cancels pause.</p>
+
+``` js
+// jQuery
+$carousel.flickity('stopPlayer')
+// vanilla JS
+flkty.stopPlayer()
+```
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>pausePlayer</h3>
+
+<p>Pauses auto-play.</p>
+
+``` js
+// jQuery
+$carousel.flickity('pausePlayer')
+// vanilla JS
+flkty.pausePlayer()
+```
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>unpausePlayer</h3>
+
+<p>Resumes auto-play if paused.</p>
+
+``` js
+// jQuery
+$carousel.flickity('unpausePlayer')
+// vanilla JS
+flkty.unpausePlayer()
+```
+
+{{! ----------------------------------------------------------------- }}
+
 <h2>Utilities</h2>
+
+{{! ----------------------------------------------------------------- }}
 
 <h3>destroy</h3>
 

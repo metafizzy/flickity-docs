@@ -1,0 +1,16 @@
+/* fizzy-bear-shirt
+------------------------- */
+
+.fizzy-bear-shirt {
+  margin: 40px 0;
+}
+
+.fizzy-bear-shirt__title {
+  font-size: 1.6rem;
+}
+
+.fizzy-bear-shirt__image {
+  display: block;
+  max-width: 100%;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,18 @@
+/* ---- resize ---- */
+
+.carousel--resize {
+  width: 50%;
+  min-width: 240px;
+}
+
+.carousel--resize.is-expanded {
+  width: 100%;
+}
+
+.carousel--resize.is-expanded .carousel-cell {
+  height: 320px;
+}
+
+.carousel--resize.is-expanded .carousel-cell:before {
+  line-height: 320px;
+}

@@ -25,19 +25,7 @@ cellSelector: '.carousel-cell'
 </div>
 ```
   </div>
-  <div class="duo__cell example__demo">
-    <div class="carousel carousel--cell-selector-demo js-flickity"
-      data-flickity-options='{ "cellSelector": ".carousel-cell" }'>
-      <div class="static-banner static-banner1">Static banner 1</div>
-      <div class="static-banner static-banner2">Static banner 2</div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-    </div>
-    {{> edit-demo default="yyvNaG" }}
-  </div>
+  {{> cell-selector }}
 </div>
 
 {{! ----------------------------------------------------------------- }}
@@ -489,28 +477,7 @@ asNavFor: document.querySelector('.carousel-main')
     }
     ```
   </div>
-  <div class="example__demo duo__cell">
-    <div class="carousel carousel--as-nav-for-main carousel--full-width js-flickity">
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-    </div>
-    <div class="carousel carousel--as-nav-for-nav carousel--nav js-flickity"
-      data-flickity-options='{ "asNavFor": ".carousel--as-nav-for-main", "contain": true, "pageDots": false }'>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-    </div>
-    {{> edit-demo default="wByaqj" }}
-  </div>
+  {{> as-nav-for }}
 </div>
 
 <div class="call-out">

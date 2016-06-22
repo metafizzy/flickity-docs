@@ -42,6 +42,7 @@ pre, code, kbd {
 pre {
   padding: 10px;
   border-radius: 6px;
+  overflow: auto;
 }
 
 code, kbd {

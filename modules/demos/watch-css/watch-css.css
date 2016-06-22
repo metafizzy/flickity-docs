@@ -1,0 +1,15 @@
+/* ---- watch-css ---- */
+
+.carousel--watch-css:after {
+  content: 'flickity';
+  display: none;
+}
+
+
+@media screen and ( min-width: 768px ) {
+
+  .carousel--watch-css:after {
+    content: '';
+  }
+
+}

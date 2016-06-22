@@ -1,0 +1,16 @@
+/* ---- reposition ---- */
+
+.carousel--reposition .carousel-cell {
+  position: relative;
+  width: 33%;
+}
+
+.carousel--reposition .carousel-cell.is-expanded {
+  width: 80%;
+}
+
+.carousel--reposition .carousel-cell .button {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}

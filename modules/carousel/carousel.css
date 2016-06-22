@@ -79,42 +79,6 @@
   height: 160px;
 }
 
-/* ---- watch-demo ---- */
-
-.carousel--watch-demo:after {
-  content: 'flickity';
-  display: none;
-}
-
-.carousel--watch-demo .carousel-cell {
-  margin-right: 10px;
-}
-
-/* ---- cell-selector-demo ---- */
-
-.carousel--cell-selector-demo {
-  position: relative;
-}
-
-.static-banner {
-  position: absolute;
-  background: hsla(0, 0%, 0%, 0.3);
-  z-index: 1;
-  padding: 2px 20px;
-  color: white;
-  pointer-events: none;
-}
-
-.static-banner1 {
-  left: 10px;
-  top: 10px;
-}
-
-.static-banner2 {
-  right: 10px;
-  bottom: 10px;
-}
-
 /* ---- carousel--pixel-position-demo ---- */
 
 .carousel--pixel-position-demo .carousel-cell { width: 300px; }
@@ -146,120 +110,11 @@
   width: 300px;
 }
 
-/* ---- resize ---- */
-
-.carousel--resize {
-  width: 50%;
-  min-width: 240px;
-}
-
-.carousel--resize.is-expanded {
-  width: 100%;
-}
-
-.carousel--resize.is-expanded .carousel-cell {
-  height: 320px;
-}
-
-.carousel--resize.is-expanded .carousel-cell:before {
-  line-height: 320px;
-}
-
-/* ---- position-cells ---- */
-
-.carousel--position-cells .carousel-cell {
-  position: relative;
-  width: 33%;
-}
-
-.carousel--position-cells .carousel-cell.is-expanded {
-  width: 80%;
-}
-
-.carousel-cell .button {
-  position: absolute;
-  left: 10px;
-  top: 10px;
-}
-
-/* ---- lazyload ---- */
-
-.carousel--lazyload-cells .carousel-cell {
-  height: 200px;
-  margin-right: 2px;
-  background: #222;
-}
-
-.carousel--lazyload-adj-cells .carousel-cell {
-  width: 25%;
-  height: 160px;
-  margin-right: 2px;
-  background: #222;
-}
-
-.carousel-cell__lazy-image {
-  display: block;
-  max-height: 100%;
-  margin: 0 auto;
-  max-width: 100%;
-  opacity: 0;
-  -webkit-transition: opacity 0.4s;
-          transition: opacity 0.4s;
-}
-
-/* fade in lazy loaded image */
-.carousel-cell__lazy-image.flickity-lazyloaded,
-.carousel-cell__lazy-image.flickity-lazyerror {
-  opacity: 1;
-}
-
-.carousel__lazy-image {
-  height: 200px;
-  min-width: 150px;
-  opacity: 0;
-  -webkit-transition: opacity 0.4s;
-          transition: opacity 0.4s;
-}
-/* fade in lazy loaded image */
-.carousel__lazy-image.flickity-lazyloaded,
-.carousel__lazy-image.flickity-lazyerror {
-  opacity: 1;
-}
-
-
-/* ---- as-nav-for / carousel-nav ---- */
-
-.carousel--as-nav-for-main { margin-bottom: 40px; }
-
-.carousel--nav .carousel-cell {
-  height: 80px;
-  width: 100px;
-}
-
-.carousel--nav .carousel-cell:before {
-  font-size: 50px;
-  line-height: 80px;
-}
-
-.carousel--nav .carousel-cell.is-nav-selected {
-  background: #ED2;
-}
-
-/* ---- static-click ---- */
-
-.carousel--static-click .carousel-cell { width: 26%; }
-
-.carousel--static-click .carousel-cell.is-clicked { background: #ED2; }
-
 /* ---- large device media query ---- */
 
 @media screen and ( min-width: 768px ) {
 
   .carousel--media-queried .carousel-cell { width: 50%; }
-
-  .carousel--watch-demo:after {
-    content: '';
-  }
 
   .carousel--images-demo img {
     height: 400px;

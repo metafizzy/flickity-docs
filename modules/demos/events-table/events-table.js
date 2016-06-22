@@ -1,4 +1,4 @@
-FlickityDocs.modules.events = function( elem ) {
+FlickityDocs.modules['events-table'] = function( elem ) {
   'use strict';
 
   var carousel = elem.querySelector('.carousel');

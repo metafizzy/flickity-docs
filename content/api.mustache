@@ -67,23 +67,7 @@ flkty.select( index, isWrapped, isInstant )
     });
     ```
   </div>
-  <div class="example__demo duo__cell" data-js-module="select">
-    <div class="button-row button-group">
-      <button class="button">1</button>
-      <button class="button">2</button>
-      <button class="button">3</button>
-      <button class="button">4</button>
-      <button class="button">5</button>
-    </div>
-    <div class="carousel">
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-    </div>
-    {{> edit-demo default="yyvYeN" vanilla_js="ByYoKM" }}
-  </div>
+  {{> select }}
 </div>
 
 <div class="example duo">
@@ -96,23 +80,7 @@ flkty.select( index, isWrapped, isInstant )
     });
     ```
   </div>
-  <div class="example__demo duo__cell" data-js-module="select-instant">
-    <div class="button-row button-group">
-      <button class="button">1</button>
-      <button class="button">2</button>
-      <button class="button">3</button>
-      <button class="button">4</button>
-      <button class="button">5</button>
-    </div>
-    <div class="carousel">
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-    </div>
-    {{> edit-demo default="pggQeL" vanilla_js="OMMamp" }}
-  </div>
+  {{> select-instant }}
 </div>
 
 {{! ----------------------------------------------------------------- }}
@@ -147,20 +115,7 @@ flkty.previous( isWrapped )
     });
     ```
   </div>
-  <div class="example__demo duo__cell" data-js-module="previous">
-    <div class="button-row">
-      <button class="button button--previous">Previous</button>
-      <button class="button button--previous-wrapped">Previous wrapped</button>
-    </div>
-    <div class="carousel">
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-    </div>
-    {{> edit-demo default="emVpdz" vanilla_js="PwQPGX" }}
-  </div>
+  {{> previous }}
 </div>
 
 {{! ----------------------------------------------------------------- }}
@@ -195,20 +150,7 @@ flkty.next( isWrapped )
     });
     ```
   </div>
-  <div class="example__demo duo__cell" data-js-module="next">
-    <div class="button-row">
-      <button class="button button--next">Next</button>
-      <button class="button button--next-wrapped">Next wrapped</button>
-    </div>
-    <div class="carousel">
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-    </div>
-    {{> edit-demo default="JopYby" vanilla_js="gbvaLQ" }}
-  </div>
+  {{> next }}
 </div>
 
 {{! ----------------------------------------------------------------- }}
@@ -251,19 +193,7 @@ flkty.resize()
     </div>
 
   </div>
-  <div class="example__demo" data-js-module="resize">
-    <div class="button-row">
-      <button class="button button--resize">Resize</button>
-    </div>
-    <div class="carousel carousel--resize">
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-    </div>
-    {{> edit-demo default="XJZmMp" vanilla_js="NPyGjQ" }}
-  </div>
+  {{> resize }}
 </div>
 
 <p>If Flickity is initialized when hidden, like within a tab, trigger <code>resize</code> after it is shown so cells are properly measured and positioned.</p>
@@ -278,19 +208,7 @@ flkty.resize()
     });
     ```
   </div>
-  <div class="duo__cell example__demo" data-js-module="resize-show">
-    <div class="button-row">
-      <button class="button">Show carousel</button>
-    </div>
-    <div class="carousel" style="display: none;">
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-    </div>
-    {{> edit-demo default="eNvdoo" vanilla_js="gpmLYG" }}
-  </div>
+  {{> resize-show }}
 </div>
 
 {{! ----------------------------------------------------------------- }}
@@ -318,17 +236,7 @@ flkty.reposition()
     });
     ```
   </div>
-  <div class="example__demo" data-js-module="reposition">
-    <p class="example__demo__instruction">Click cells to toggle size</p>
-    <div class="carousel carousel--position-cells">
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-    </div>
-    {{> edit-demo default="zxRvdw" vanilla_js="vEdgOR" }}
-  </div>
+  {{> reposition }}
 </div>
 
 
@@ -361,23 +269,7 @@ flkty.prepend( elements )
     });
     ```
   </div>
-  <div class="duo__cell example__demo" data-js-module="prepend">
-    <div class="button-row">
-      <button class="button">Prepend cells</button>
-    </div>
-    <div class="carousel carousel--not-counting carousel--show-several">
-      <div class="carousel-cell">
-        <span class="carousel-cell__number">1</span>
-      </div>
-      <div class="carousel-cell">
-        <span class="carousel-cell__number">2</span>
-      </div>
-      <div class="carousel-cell">
-        <span class="carousel-cell__number">3</span>
-      </div>
-    </div>
-    {{> edit-demo default="XJZpMN" vanilla_js="VYQPWx" }}
-  </div>
+  {{> prepend }}
 </div>
 
 {{! ----------------------------------------------------------------- }}
@@ -407,23 +299,7 @@ flkty.append( elements )
     });
     ```
   </div>
-  <div class="duo__cell example__demo" data-js-module="append">
-    <div class="button-row">
-      <button class="button">Append cells</button>
-    </div>
-    <div class="carousel carousel--not-counting carousel--show-several">
-      <div class="carousel-cell">
-        <span class="carousel-cell__number">1</span>
-      </div>
-      <div class="carousel-cell">
-        <span class="carousel-cell__number">2</span>
-      </div>
-      <div class="carousel-cell">
-        <span class="carousel-cell__number">3</span>
-      </div>
-    </div>
-    {{> edit-demo default="qExRVp" vanilla_js="OPQWOG" }}
-  </div>
+  {{> append }}
 </div>
 
 {{! ----------------------------------------------------------------- }}
@@ -506,36 +382,7 @@ flkty.remove( elements )
     });
     ```
   </div>
-  <div class="example__demo" data-js-module="remove">
-    <p class="example__demo__instruction">Click cells to remove</p>
-    <div class="carousel carousel--not-counting carousel--show-several">
-      <div class="carousel-cell">
-        <span class="carousel-cell__number">1</span>
-      </div>
-      <div class="carousel-cell">
-        <span class="carousel-cell__number">2</span>
-      </div>
-      <div class="carousel-cell">
-        <span class="carousel-cell__number">3</span>
-      </div>
-      <div class="carousel-cell">
-        <span class="carousel-cell__number">4</span>
-      </div>
-      <div class="carousel-cell">
-        <span class="carousel-cell__number">5</span>
-      </div>
-      <div class="carousel-cell">
-        <span class="carousel-cell__number">6</span>
-      </div>
-      <div class="carousel-cell">
-        <span class="carousel-cell__number">7</span>
-      </div>
-      <div class="carousel-cell">
-        <span class="carousel-cell__number">8</span>
-      </div>
-    </div>
-    {{> edit-demo default="WbMRgv" vanilla_js="gbvgdy" }}
-  </div>
+  {{> remove }}
 </div>
 
 {{! ----------------------------------------------------------------- }}
@@ -544,31 +391,7 @@ flkty.remove( elements )
 
 <p>Control <a href="options.html#autoplay"><code>autoPlay</code></a> behavior.</p>
 
-<div class="example" data-js-module="player">
-  <div class="example__demo">
-    <div class="button-row">
-      <div class="button-group button-group--inline">
-        <button class="button button--play">Play</button>
-        <button class="button button--stop">Stop</button>
-      </div>
-      <div class="button-group button-group--inline">
-        <button class="button button--pause">Pause</button>
-        <button class="button button--unpause">Unpause</button>
-      </div>
-    </div>
-
-    <p class="player-status" style="font-weight: bold; font-size: 1.1em;">Playing</p>
-
-    <div class="carousel">
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-    </div>
-
-  </div>
-</div>
+{{> player }}
 
 {{! ----------------------------------------------------------------- }}
 
@@ -659,19 +482,7 @@ flkty.destroy()
     });
     ```
   </div>
-  <div class="example__demo duo__cell" data-js-module="destroy">
-    <div class="button-row">
-      <button class="button">Toggle Flickity</button>
-    </div>
-    <div class="carousel">
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-    </div>
-    {{> edit-demo default="dPdNQq" vanilla_js="emVgoR" }}
-  </div>
+  {{> destroy }}
 </div>
 
 
@@ -853,26 +664,7 @@ flkty.once( 'eventName', function() {
 
 <p>Play around with this carousel to see how events are triggered.</p>
 
-<div class="example duo" data-js-module="events">
-  <div class="example__demo duo__cell">
-    <div class="carousel">
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-    </div>
-  </div>
-  <div class="duo__cell">
-    <table class="event-table">
-      <tr>
-        <th class="event-table__time">Time</th>
-        <th class="event-table__event">Event</th>
-        <th class="event-table__message"></th>
-      </tr>
-    </table>
-  </div>
-</div>
+{{> events-table }}
 
 {{! ----------------------------------------------------------------- }}
 
@@ -1127,22 +919,7 @@ flkty.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {...
     });
     ```
   </div>
-  <div class="example__demo" data-js-module="static-click">
-    <p class="example__demo__instruction">Click cells</p>
-    <div class="carousel carousel--static-click">
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-    </div>
-    <p class="logger">&nbsp;</p>
-    {{> edit-demo default="XJZgzM" vanilla_js="RNQgxe" }}
-  </div>
+  {{> static-click }}
 </div>
 
 {{! ----------------------------------------------------------------- }}

@@ -1,0 +1,17 @@
+/* ---- as-nav-for / carousel-nav ---- */
+
+.carousel--as-nav-for-main { margin-bottom: 40px; }
+
+.carousel--nav .carousel-cell {
+  height: 80px;
+  width: 100px;
+}
+
+.carousel--nav .carousel-cell:before {
+  font-size: 50px;
+  line-height: 80px;
+}
+
+.carousel--nav .carousel-cell.is-nav-selected {
+  background: #ED2;
+}

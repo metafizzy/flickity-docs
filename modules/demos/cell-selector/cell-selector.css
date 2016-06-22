@@ -1,0 +1,24 @@
+/* ---- cell-selector-demo ---- */
+
+.carousel--cell-selector-demo {
+  position: relative;
+}
+
+.static-banner {
+  position: absolute;
+  background: hsla(0, 0%, 0%, 0.3);
+  z-index: 1;
+  padding: 2px 20px;
+  color: white;
+  pointer-events: none;
+}
+
+.static-banner1 {
+  left: 10px;
+  top: 10px;
+}
+
+.static-banner2 {
+  right: 10px;
+  bottom: 10px;
+}

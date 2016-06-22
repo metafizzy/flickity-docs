@@ -1,0 +1,5 @@
+/* ---- static-click ---- */
+
+.carousel--static-click .carousel-cell { width: 26%; }
+
+.carousel--static-click .carousel-cell.is-clicked { background: #ED2; }

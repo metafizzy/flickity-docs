@@ -22,9 +22,9 @@ has_buy_button: true
       ```
     </li>
     <li>
-      <p>Add <code>js-flickity</code> class to carousel elements.</p>
+      <p>Add <code>data-flickity</code> attribute to carousel elements.</p>
       ``` html
-      <div class="carousel js-flickity">
+      <div class="carousel" data-flickity>
         <div class="carousel-cell"></div>
         <div class="carousel-cell"></div>
         ...
@@ -183,12 +183,11 @@ var flkty = new Flickity( '.main-carousel', {
 
 <h3>Initialize with HTML</h3>
 
-<p>You can initialize Flickity in HTML, without writing any JavaScript. Add <code>js-flickity</code> to the class of the carousel element. Options can be set with a <code>data-flickity-options</code> attribute.</p>
+<p>You can initialize Flickity in HTML, without writing any JavaScript. Add <code>data-flickity</code> attribute to the carousel element. <a href="options.html">Options</a> can be set in its value.</p>
 
 
 ``` html
-<div class="main-carousel js-flickity"
-  data-flickity-options='{ "cellAlign": "left", "contain": true }'>
+<div class="main-carousel" data-flickity='{ "cellAlign": "left", "contain": true }'>
 ```
 
 <div class="call-out">
@@ -236,8 +235,7 @@ var flkty = new Flickity( '.main-carousel', {
 <p>Flickity makes beautiful image galleries.</p>
 
 ``` html
-<div class="carousel js-flickity"
-  data-flickity-options='{ "imagesLoaded": true, "percentPosition": false }'>
+<div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false }'>
   <img src="orange-tree.jpg" alt="orange tree" />
   <img src="submerged.jpg" alt="submerged" />
   <img src="look-out.jpg" alt="look-out" />
@@ -247,8 +245,8 @@ var flkty = new Flickity( '.main-carousel', {
 
 <div class="example">
   <div class="example__demo">
-    <div class="carousel carousel--images-demo js-flickity"
-      data-flickity-options='{ "imagesLoaded": true, "percentPosition": false }'>
+    <div class="carousel carousel--images-demo"
+      data-flickity='{ "imagesLoaded": true, "percentPosition": false }'>
       <!-- images from unsplash.com -->
       <img src="http://i.imgur.com/bwy74ok.jpg" alt="orange tree" />
       <img src="http://i.imgur.com/bAZWoqx.jpg" alt="submerged" />
@@ -278,7 +276,7 @@ var flkty = new Flickity( '.main-carousel', {
 
 <p>We&rsquo;d love to see how you use Flickity! Tweet <a href="https://twitter.com/metafizzyco">@metafizzyco</a> or email <a href="mailto:yo@metafizzy.co">yo@metafizzy.co</a> to share your work and possibly get it featured here.</p>
 
-<div class="in-use-carousel js-flickity" data-flickity-options='{ "lazyLoad": 1, "wrapAround": true }'>
+<div class="in-use-carousel" data-flickity='{ "lazyLoad": 1, "wrapAround": true }'>
   {{#each in_use}}
     <a class="in-use-carousel__item" href="{{url}}">
       <p class="in-use-carousel__item__title">{{title}}</p>

@@ -2,16 +2,8 @@
   "browser": true,
   "unused": true,
   "undef": true,
-  "strict": true,
   "globals": {
-    "classie": false,
-    "docReady": false,
-    "eventie": false,
-    "Draggabilly": false,
-    "Flickity": false,
-    "FlickityDocs": true,
-    "getSize": false,
-    "matchesSelector": false,
-    "utils": true
+    "fizzyUIUtils": false,
+    "FlickityDocs": true
   }
 }

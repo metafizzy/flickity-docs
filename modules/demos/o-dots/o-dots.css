@@ -1,0 +1,17 @@
+/* ---- o dots ---- */
+
+.carousel--o-dots .flickity-page-dots {
+  bottom: 0px;
+}
+
+.carousel--o-dots .flickity-page-dots .dot {
+  width: 12px;
+  height: 12px;
+  opacity: 1;
+  background: transparent;
+  border: 2px solid white;
+}
+
+.carousel--o-dots .flickity-page-dots .dot.is-selected {
+  background: white;
+}

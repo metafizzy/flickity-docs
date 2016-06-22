@@ -1,6 +1,6 @@
 {
   "name": "flickity-docs",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Documentation for Flickity",
   "main": "content/index.html",
   "license": "BY-CC",
@@ -13,14 +13,11 @@
     "tests"
   ],
   "dependencies": {
-    "flickity": "latest",
-    "flickity-imagesloaded": "latest",
-    "flickity-as-nav-for": "latest",
-    "normalize.css": "~3.0.2",
-    "fizzy-ui-utils": "~1.0.0",
-    "classie": "~1.0.1",
-    "get-size": "~1.2.2",
-    "doc-ready": "~1.0.4",
-    "draggabilly": "~1.2.4"
+    "flickity": "v2",
+    "flickity-imagesloaded": "v2",
+    "flickity-as-nav-for": "v2",
+    "normalize.css": "^4.1.1",
+    "fizzy-ui-utils": "^2.0.0",
+    "draggabilly": "^2.1.1"
   }
 }

@@ -1,0 +1,69 @@
+<h3>freeScroll</h3>
+
+<p>Enables content to be freely scrolled and flicked without aligning cells to an end position.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    freeScroll: true
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel js-flickity"
+      data-flickity-options='{ "freeScroll": true }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    {{> edit-demo default="bNLGNZ" }}
+  </div>
+</div>
+
+<p>Enable <code>freeScroll</code> and <code>contain</code> for a simple horizontal scroller.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    freeScroll: true,
+    contain: true,
+    // disable previous & next buttons and dots
+    prevNextButtons: false,
+    pageDots: false
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel js-flickity"
+      data-flickity-options='{ "freeScroll": true, "contain": true, "prevNextButtons": false, "pageDots": false }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    {{> edit-demo default="zxRYGo" }}
+  </div>
+</div>
+
+<p>Enable <code>freeScroll</code> and <code>wrapAround</code> and you can flick forever, man.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    freeScroll: true,
+    wrapAround: true
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel js-flickity"
+      data-flickity-options='{ "freeScroll": true, "wrapAround": true }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    {{> edit-demo default="GgQRJX" }}
+  </div>
+</div>

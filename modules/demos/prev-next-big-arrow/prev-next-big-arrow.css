@@ -1,0 +1,15 @@
+/* ---- carousel--prev-next-big-arrow ---- */
+
+.carousel--prev-next-big-arrow .flickity-prev-next-button {
+  width: 100px;
+  height: 100px;
+  background: transparent;
+}
+
+.carousel--prev-next-big-arrow .flickity-prev-next-button .arrow { fill: white; }
+.carousel--prev-next-big-arrow .flickity-prev-next-button.no-svg { color: white; }
+
+/*.carousel--prev-next-big-arrow .flickity-prev-next-button.previous { left: -10px; }
+.carousel--prev-next-big-arrow .flickity-prev-next-button.next { right: -10px; }*/
+
+.carousel--prev-next-big-arrow .flickity-prev-next-button:disabled { display: none; }

@@ -101,15 +101,15 @@ has_buy_button: true
 
 <div class="buy-button-trio">
   {{#license_options.developer}}
-    {{> buy_button}}
+    {{> buy-button}}
   {{/license_options.developer}}
 
   {{#license_options.team}}
-    {{> buy_button}}
+    {{> buy-button}}
   {{/license_options.team}}
 
   {{#license_options.organization}}
-    {{> buy_button}}
+    {{> buy-button}}
   {{/license_options.organization}}
 </div>
 
@@ -211,19 +211,19 @@ var flkty = new Flickity( '.main-carousel', {
 
 {{! ----------------------------------------------------------------- }}
 
-{{> wrap_around}}
+{{> wrap-around}}
 
 {{! ----------------------------------------------------------------- }}
 
-{{> free_scroll}}
+{{> free-scroll}}
 
 {{! ----------------------------------------------------------------- }}
 
-{{> auto_play}}
+{{> auto-play}}
 
 {{! ----------------------------------------------------------------- }}
 
-{{> watch_css}}
+{{> watch-css}}
 
 {{! ----------------------------------------------------------------- }}
 
@@ -260,17 +260,17 @@ var flkty = new Flickity( '.main-carousel', {
       <img src="http://i.imgur.com/hODreXI.jpg" />
       <img src="http://i.imgur.com/UORFJ3w.jpg" /> }}
     </div>
-    {{> edit_demo default="GgQREP" }}
+    {{> edit-demo default="GgQREP" }}
   </div>
 </div>
 
 {{! ----------------------------------------------------------------- }}
 
-{{> images_loaded}}
+{{> imagesloaded}}
 
 {{! ----------------------------------------------------------------- }}
 
-{{> lazyload}}
+{{> lazy-load}}
 
 {{! ----------------------------------------------------------------- }}
 
@@ -289,7 +289,7 @@ var flkty = new Flickity( '.main-carousel', {
 
 {{! ----------------------------------------------------------------- }}
 
-{{#unless is_export}}
+{{#unless isExport}}
 
   <h2>People like Flickity</h2>
 

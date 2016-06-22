@@ -1,0 +1,76 @@
+<h3>lazyLoad</h3>
+
+<p>Loads cell images when a cell is selected.</p>
+
+<p>Set the image's URL to load with <code>data-flickity-lazyload</code>.</p>
+
+``` html
+<img data-flickity-lazyload="full.jpg" />
+<!-- Set optional placeholder src -->
+<img src="placeholder.jpg" data-flickity-lazyload="full.jpg" />
+```
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    lazyLoad: true
+    // lazyloads image in selected cell
+    ```
+    ``` html
+    <div class="carousel">
+      <div class="carousel-cell">
+        <img class="carousel-cell-image"
+          data-flickity-lazyload="tulip.jpg" />
+      </div>
+      <div class="carousel-cell">
+        <img class="carousel-cell-image"
+          data-flickity-lazyload="grapes.jpg" />
+      </div>
+      ...
+    </div>
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--lazyload-cells carousel--not-counting js-flickity"
+      data-flickity-options='{ "lazyLoad": true }'>
+      {{> lazy-cell-images}}
+    </div>
+    {{> edit-demo default="vOeGzL" }}
+  </div>
+</div>
+
+<p>Set <code>lazyLoad</code> to a number to load images in adjacent cells.</p>
+
+<div class="example">
+  <div class="example__code">
+    ``` js
+    lazyLoad: 2
+    // load images in selected cell
+    // and next 2 cells
+    // and previous 2 cells
+    ```
+  </div>
+  <div class="example__demo">
+    <div class="carousel carousel--lazyload-adj-cells carousel--not-counting js-flickity"
+      data-flickity-options='{ "lazyLoad": 2, "initialIndex": 2 }'>
+      {{> lazy-cell-images}}
+    </div>
+  </div>
+  {{> edit-demo default="rVGLGB" }}
+</div>
+
+<p>After loading the image, Flickity will add <code>flickity-lazyloaded</code> class to the image, or <code>flickity-lazyerror</code> to a broken image. You can use this class to add a transition when images are loaded.</p>
+
+
+``` css
+/* fade in image when loaded */
+.carousel-cell-image {
+  transition: opacity 0.4s;
+  opacity: 0;
+}
+
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+```

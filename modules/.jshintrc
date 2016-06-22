@@ -1,0 +1,12 @@
+{
+  "browser": true,
+  "strict": true,
+  "unused": true,
+  "undef": true,
+  "globals": {
+    "Flickity": false,
+    "FlickityDocs": true,
+    "utils": true,
+    "getSize": false,
+  }
+}

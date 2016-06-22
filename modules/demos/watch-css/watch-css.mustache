@@ -1,0 +1,40 @@
+<h3>watchCSS</h3>
+
+<p>You can enable and disable Flickity with CSS. <code>watchCSS</code> option watches the content of <code>:after</code> of the carousel element. Flickity is enabled if <code>:after</code> <code>content</code> is <code>'flickity'</code>.</p>
+
+<p>IE8 and Android 2.3 do not support watching <code>:after</code>. Flickity will be disabled when <code>watchCSS: true</code>. Set <code>watchCSS: <span class="string">'fallbackOn'</span></code> to enable Flickity for these browsers.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    watchCSS: true
+    // enable Flickity in CSS when
+    // element:after { content: 'flickity' }
+    // Flickity is disabled for IE8 and Android 2.3
+    ```
+
+    ``` css
+    /* enable Flickity by default */
+    .carousel:after {
+      content: 'flickity';
+      display: none; /* hide :after */
+    }
+
+    @media screen and ( min-width: 768px ) {
+      /* disable Flickity for large devices */
+      .carousel:after {
+        content: '';
+      }
+    }
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--watch-demo js-flickity"
+      data-flickity-options='{ "watchCSS": true }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    {{> edit-demo default="NPyWbQ" }}
+  </div>
+</div>

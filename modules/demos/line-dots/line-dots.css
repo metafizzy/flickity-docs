@@ -1,0 +1,12 @@
+/* ---- line-dots ---- */
+
+.carousel--line-dots .flickity-page-dots {
+  bottom: -22px;
+}
+
+.carousel--line-dots .flickity-page-dots .dot {
+  height: 4px;
+  width: 40px;
+  margin: 0;
+  border-radius: 0;
+}

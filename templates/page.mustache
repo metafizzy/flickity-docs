@@ -7,7 +7,7 @@
 
   <title>Flickity{{#unless page.is_homepage}} &middot; {{page.title}}{{/unless}}</title>
 
-  {{#if is_dev}}
+  {{#if isDev}}
     {{#each css_paths}}
       <link rel="stylesheet" href="../{{this}}" />
     {{/each}}
@@ -16,12 +16,12 @@
   {{/if}}
 
 </head>
-<body class="page--{{basename}} {{#if is_export}}export{{/if}}">
+<body class="page--{{basename}} {{#if isExport}}export{{/if}}">
 
-{{> site_nav}}
+{{> site-nav}}
 
 {{#if page.is_homepage}}
-  {{> hero_carousel}}
+  {{> hero-carousel}}
 {{/if}}
 
 <div class="main">
@@ -31,7 +31,7 @@
     {{/if}}
 
     {{#if page.is_homepage}}
-      {{> big_links}}
+      {{> big-links}}
     {{/if}}
 
     <ul class="page-nav js-stickeroo"></ul>
@@ -42,11 +42,11 @@ https://github.com/wycats/handlebars.js/issues/858 }}
   </div>
 </div>
 
-{{> site_nav}}
+{{> site-nav}}
 
-{{> site_footer}}
+{{> site-footer}}
 
-{{#if is_dev}}
+{{#if isDev}}
   {{#each js_paths}}
     <script src="../{{this}}"></script>
   {{/each}}
@@ -54,7 +54,7 @@ https://github.com/wycats/handlebars.js/issues/858 }}
   <script src="{{#if page.is_404}}/{{/if}}js/flickity-docs.min.js"></script>
 {{/if}}
 
-{{#unless is_export}}
+{{#unless isExport}}
 
   <script>
     // Google Analytics

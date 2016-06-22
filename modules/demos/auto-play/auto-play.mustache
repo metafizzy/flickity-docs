@@ -1,0 +1,46 @@
+<h3>autoPlay</h3>
+
+<p>Automatically advances to the next cell.</p>
+
+<p>Auto-playing will pause when mouse is hovered over, and resume when mouse is hovered off. Auto-playing will stop when the carousel is clicked or a cell is selected.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    autoPlay: true
+    // advance cells every 3 seconds
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel js-flickity"
+      data-flickity-options='{ "autoPlay": true }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    {{> edit-demo default="RNQwaB" }}
+  </div>
+</div>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    autoPlay: 1500 // {Number}
+    // advance cells ever {Number} milliseconds
+    // 1500 will advance cells every 1.5 seconds
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel js-flickity"
+      data-flickity-options='{ "autoPlay": 1500 }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    {{> edit-demo default="NPyWRZ" }}
+  </div>
+</div>

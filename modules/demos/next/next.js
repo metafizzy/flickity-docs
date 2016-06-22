@@ -5,12 +5,12 @@ FlickityDocs.modules.next = function( elem ) {
   var flkty = new Flickity( carousel );
 
   var nextButton = elem.querySelector('.button--next');
-  eventie.bind( nextButton, 'click', function() {
+  nextButton.addEventListener( 'click', function() {
     flkty.next();
   });
 
   var nextWrappedButton = elem.querySelector('.button--next-wrapped');
-  eventie.bind( nextWrappedButton, 'click', function() {
+  nextWrappedButton.addEventListener( 'click', function() {
     flkty.next( true );
   });
 

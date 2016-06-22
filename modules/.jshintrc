@@ -4,9 +4,12 @@
   "unused": true,
   "undef": true,
   "globals": {
+    "Draggabilly": false,
+    "filterBind": false,
     "Flickity": false,
     "FlickityDocs": true,
-    "utils": true,
     "getSize": false,
+    "matchesSelector": false,
+    "utils": true
   }
 }

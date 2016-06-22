@@ -7,9 +7,9 @@ FlickityDocs.modules['hero-carousel'] = function( elem ) {
   if ( illoImg ) {
     // switch out PNG for GIF
     var proxyGif = document.createElement('img');
-    eventie.bind( proxyGif, 'load', function() {
+    proxyGif.onload = function() {
       illoImg.src = proxyGif.src;
-    });
+    };
     proxyGif.src = 'img/flickity-illustration.gif';
   }
 

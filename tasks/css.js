@@ -5,6 +5,8 @@ var getGlobPaths = require('./utils/get-glob-paths');
 var cssSrc = [
   // dependencies
   'bower_components/normalize.css/normalize.css',
+  // flickity
+  'bower_components/flickity/css/flickity.css',
   // base
   'css/*.css',
   // modules

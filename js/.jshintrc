@@ -4,6 +4,7 @@
   "undef": true,
   "globals": {
     "fizzyUIUtils": false,
-    "FlickityDocs": true
+    "FlickityDocs": true,
+    "matchesSelector": false
   }
 }

@@ -6,7 +6,7 @@ module.exports = function pageNav() {
     var $ = cheerio.load( file.contents.toString() );
     var pageNavHtml = '\n';
     // query each h2, h3, h4
-    $('#content h2, #content h3, #content h4').each( function( i, header ) {
+    $('.main h2, .main h3, .main h4').each( function( i, header ) {
       var $header = $( header );
       // replace non alphanumeric to hyphens
       var title = $header.text();

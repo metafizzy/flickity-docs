@@ -10,7 +10,7 @@ FlickityDocs.modules.insert = function( elem ) {
   var makeCellElem = FlickityDocs.makeCellElem;
 
   var button = elem.querySelector('.button');
-  eventie.bind( button, 'click', function() {
+  button.addEventListener( 'click', function() {
     var cellElems = [ makeCellElem( cellNumber++ ), makeCellElem( cellNumber++ ) ];
     flkty.insert( cellElems, 2 );
   });

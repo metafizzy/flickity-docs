@@ -8,7 +8,7 @@ FlickityDocs.modules.reposition = function( elem ) {
     if ( !cellElement ) {
       return;
     }
-    classie.toggle( cellElement, 'is-expanded' );
+    cellElement.classList.toggle('is-expanded');
     flkty.reposition();
   });
 

@@ -5,8 +5,8 @@ FlickityDocs.modules.resize = function( elem ) {
   var flkty = new Flickity( carousel );
   var button = elem.querySelector('.button');
 
-  eventie.bind( button, 'click', function() {
-    classie.toggle( carousel, 'is-expanded' );
+  button.addEventListener( 'click', function() {
+    carousel.classList.toggle('is-expanded');
     flkty.resize();
   });
 

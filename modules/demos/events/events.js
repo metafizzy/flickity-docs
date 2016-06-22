@@ -18,9 +18,9 @@ FlickityDocs.modules.events = function( elem ) {
     var now = new Date();
     var timestamp = now.getHours() + ':' + now.getMinutes() + ':' +
       now.getSeconds() + '.' + now.getMilliseconds();
-    utils.setText( timeCell, timestamp );
-    utils.setText( eventCell, type );
-    utils.setText( messageCell, message || '' );
+    timeCell.textContent = timestamp;
+    eventCell.textContent = type;
+    messageCell.textContent = message || '';
     row.appendChild( timeCell );
     row.appendChild( eventCell );
     row.appendChild( messageCell );
@@ -49,7 +49,7 @@ FlickityDocs.modules.events = function( elem ) {
     var message = '';
     if ( matchesSelector( event.target, '.carousel-cell' ) ) {
       var cell = flkty.getCell( event.target );
-      var cellIndex = utils.indexOf( flkty.cells, cell ) + 1;
+      var cellIndex = flkty.cells.indexOf( cell ) + 1;
       message = 'clicked cell ' + cellIndex;
     }
     logEvent( 'staticClick', message );

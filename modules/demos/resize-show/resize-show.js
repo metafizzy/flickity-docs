@@ -5,7 +5,7 @@ FlickityDocs.modules['resize-show'] = function( elem ) {
   var flkty = new Flickity( carousel );
   var button = elem.querySelector('.button');
 
-  eventie.bind( button, 'click', function() {
+  button.addEventListener( 'click', function() {
     carousel.style.display = 'block';
     flkty.resize();
   });

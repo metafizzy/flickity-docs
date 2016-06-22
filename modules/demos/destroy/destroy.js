@@ -6,7 +6,7 @@ FlickityDocs.modules.destroy = function( elem ) {
   var isFlickity = true;
 
   var button = elem.querySelector('.button');
-  eventie.bind( button, 'click', function() {
+  button.addEventListener( 'click', function() {
     if ( isFlickity ) {
       flkty.destroy();
     } else {

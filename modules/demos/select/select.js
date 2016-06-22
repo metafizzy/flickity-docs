@@ -8,13 +8,8 @@ FlickityDocs.modules.select = function( elem ) {
   var buttonGroup = elem.querySelector('.button-group');
   var buttons = utils.makeArray( buttonGroup.querySelectorAll('.button') );
 
-  eventie.bind( buttonGroup, 'click', function( event ) {
-    // filter for button clicks
-    if ( !matchesSelector( event.target, '.button' ) ) {
-      return;
-    }
-
-    var index = utils.indexOf( buttons, event.target );
+  filterBind( buttonGroup, 'click', '.button', function( event ) {
+    var index = buttons.indexOf( event.target );
     flkty.select( index );
   });
 

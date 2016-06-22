@@ -1,8 +1,6 @@
 FlickityDocs.modules['static-click'] = function( elem ) {
   'use strict';
 
-  var utils = window.fizzyUIUtils;
-
   var carousel = elem.querySelector('.carousel');
   var flkty = new Flickity( carousel, {
     initialIndex: 1
@@ -16,11 +14,11 @@ FlickityDocs.modules['static-click'] = function( elem ) {
 
     var prevClickedCell = carousel.querySelector('.is-clicked');
     if ( prevClickedCell ) {
-      classie.remove( prevClickedCell, 'is-clicked' );
+      prevClickedCell.classList.remove('is-clicked');
     }
-    classie.add( cellElement, 'is-clicked' );
+    cellElement.classList.add('is-clicked');
 
-    utils.setText( logger, 'Cell ' + ( cellIndex + 1 )  + ' clicked' );
+    logger.textContent = 'Cell ' + ( cellIndex + 1 )  + ' clicked';
   });
 
 };

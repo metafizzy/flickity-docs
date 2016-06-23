@@ -10,7 +10,7 @@ FlickityDocs.modules['custom-nav'] = function( elem ) {
   var cellsButtonGroup = elem.querySelector('.button-group--cells');
   var cellsButtons = utils.makeArray( cellsButtonGroup.children );
 
-  flkty.on( 'cellSelect', function() {
+  flkty.on( 'select', function() {
     var previousSelectedButton = cellsButtonGroup.querySelector('.is-selected');
     var selectedButton = cellsButtonGroup.children[ flkty.selectedIndex ];
     previousSelectedButton.classList.remove('is-selected');

@@ -37,8 +37,8 @@ FlickityDocs.modules['events-table'] = function( elem ) {
     }
   }
 
-  flkty.on( 'cellSelect', function() {
-    logEvent( 'cellSelect', 'select cell ' + ( flkty.selectedIndex + 1 ) );
+  flkty.on( 'select', function() {
+    logEvent( 'select', 'selected cell ' + ( flkty.selectedIndex + 1 ) );
   });
 
   flkty.on( 'settle', function() {

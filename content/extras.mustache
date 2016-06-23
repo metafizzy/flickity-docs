@@ -21,7 +21,7 @@ title: Extras
     var $cellButtons = $cellButtonGroup.find('.button');
 
     // update selected cellButtons
-    $carousel.on( 'cellSelect', function() {
+    $carousel.on( 'select.flickity', function() {
       $cellButtons.filter('.is-selected')
         .removeClass('is-selected');
       $cellButtons.eq( flkty.selectedIndex )

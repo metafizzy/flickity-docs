@@ -110,6 +110,16 @@
   width: 300px;
 }
 
+/* ---- adaptive-height ---- */
+
+.carousel-cell--adapt-height2 { height: 240px; }
+.carousel-cell--adapt-height3 { height: 320px; }
+
+.carousel--transition-adaptive-height .flickity-viewport {
+  -webkit-transition: height 0.2s;
+          transition: height 0.2s;
+}
+
 /* ---- large device media query ---- */
 
 @media screen and ( min-width: 768px ) {

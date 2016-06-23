@@ -352,6 +352,96 @@ cellSelector: '.carousel-cell'
 
 {{! ----------------------------------------------------------------- }}
 
+<h3>groupCells</h3>
+
+<p>Groups cells together in slides. Flicking, page dots, and previous/next buttons are mapped to group slides, not individual cells. <code>is-selected</code> class is added to the multiple cells in the selected slide.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    groupCells: true
+    // if set to true,
+    // group cells that fit in carousel viewport
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--show-several carousel--selected-cell" data-flickity='{ "groupCells": true }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+  </div>
+</div>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    groupCells: 2
+    // if set to a number, group cells by that number
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--show-several carousel--selected-cell" data-flickity='{ "groupCells": 2 }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+  </div>
+</div>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    groupCells: '80%'
+    // if set to a percent string,
+    // group cells that fit in the percent of
+    // the width of the carousel viewport
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--show-several carousel--selected-cell" data-flickity='{ "groupCells": "80%" }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+  </div>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
 {{> lazy-load}}
 
 <p>If using natural size of images for the size of cells, set a <code>min-width</code> to cells have a size when images are not loaded.</p>
@@ -427,6 +517,54 @@ cellSelector: '.carousel-cell'
 
 {{! ----------------------------------------------------------------- }}
 
+<h3>adaptiveHeight</h3>
+
+<p>Changes height of carousel to fit height of selected slide.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    adaptiveHeight: true
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel" data-flickity='{ "adaptiveHeight": true }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell carousel-cell--adapt-height2"></div>
+      <div class="carousel-cell carousel-cell--adapt-height3"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell carousel-cell--adapt-height2"></div>
+    </div>
+  </div>
+</div>
+
+<p>Use CSS transitions to transition height changes. But heads up: transitioning height triggers reflow and may cause poor performance.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    adaptiveHeight: true
+    ```
+    ``` css
+    .flickity-viewport {
+      transition: height 0.2s;
+    }
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--transition-adaptive-height" data-flickity='{ "adaptiveHeight": true }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell carousel-cell--adapt-height2"></div>
+      <div class="carousel-cell carousel-cell--adapt-height3"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell carousel-cell--adapt-height2"></div>
+    </div>
+  </div>
+</div>
+
+
+{{! ----------------------------------------------------------------- }}
+
 {{> watch-css}}
 
 {{! ----------------------------------------------------------------- }}
@@ -473,6 +611,32 @@ asNavFor: document.querySelector('.carousel-main')
 
 <div class="call-out">
   <p><code>asNavFor</code> requires the <a href="https://github.com/metafizzy/flickity-as-nav-for">flickity-as-nav-for package</a>. It already <em>is</em> included with <code>flickity.pkgd.js</code>, but not with Flickity as a stand-alone package. If you are using Browserify or RequireJS without <code>flickity.pkgd.js</code>, you need to install and require <code>flickity-as-nav-for</code> separately. See details in <a href="extras.html">Extras</a>.</p>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>dragThreshold</h3>
+
+<p>The number of pixels a mouse or touch has to move before dragging begins. Increase <code>dragThreshold</code> to allow for more wiggle room for vertical page scrolling on touch devices. Default <code><span class="comment">dragThreshold: 3</span></code>.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    dragThreshold: 10
+    // dragging doesn't start until 10px moved
+    // more room for vertical scrolling
+    // on touch devices
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel" data-flickity=' { "dragThreshold": 10 }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+  </div>
 </div>
 
 {{! ----------------------------------------------------------------- }}

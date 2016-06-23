@@ -46,11 +46,15 @@ flkty.once( 'eventName', function() {
 
 {{! ----------------------------------------------------------------- }}
 
-<h3>Events demo</h3>
+<h2>Events demo</h2>
 
 <p>Play around with this carousel to see how events are triggered.</p>
 
 {{> events-table }}
+
+{{! ----------------------------------------------------------------- }}
+
+<h2>Flickity events</h2>
 
 {{! ----------------------------------------------------------------- }}
 
@@ -85,6 +89,86 @@ flkty.on( 'settle', function() {...})
 ```
 
 {{> edit-demo default="yyvXYL" vanilla_js="myXweK" }}
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>scroll</h3>
+
+<p>Triggered when the slider moves.</p>
+
+``` js
+// jQuery
+$carousel.on( 'scroll.flickity', function( event, progress ) {
+  console.log( 'Flickity scrolled ' + progress * 100 + '%' )
+})
+// vanilla JS
+flkty.on( 'scroll', function( progress ) {...})
+```
+
+<p class="argument">
+  <code class="argument__code"><span class="params">progress</span></code>
+  <span class="argument__type"><i>Number</i></span>
+  <span class="argument__description">How far slider has moved, from <code>0</code> at the first slide to <code>1</code> at the end</span>
+</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    $carousel.on( 'scroll.flickity', function( event, progress ) {
+      progress = Math.max( 0, Math.min( 1, progress ) );
+      $progressBar.width( progress * 100 + '%' );
+    });
+    ```
+  </div>
+  {{> progress-bar}}
+</div>
+
+<p>Use <code>scroll</code> to create parallax effects.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    var flkty = $carousel.data('flickity');
+    var $imgs = $('.carousel-cell img');
+
+    $carousel.on( 'scroll.flickity', function( event, progress ) {
+      flkty.slides.forEach( function( slide, i ) {
+        var img = $imgs[i];
+        var x = ( slide.target + flkty.x ) * -1/3;
+        img.style.transform = 'translateX( ' + x  + 'px)';
+      });
+    });
+    ```
+  </div>
+  {{> keyhole }}
+</div>
+
+<div class="example">
+  <div class="example__code">
+    ``` js
+    var cellRatio = 0.6; // outerWidth of cell / width of carousel
+    var bgRatio = 0.8; // width of background layer / width of carousel
+    var fgRatio = 1.25; // width of foreground layer / width of carousel
+    
+    $carousel.on( 'scroll.flickity', function( event, progress ) {
+      moveParallaxLayer( $background, bgRatio, progress );
+      moveParallaxLayer( $foreground, fgRatio, progress );
+    });
+    // trigger initial scroll
+    $carousel.flickity('reposition');
+    
+    function moveParallaxLayer( $layer, layerRatio, progress ) {
+      var ratio = cellRatio * layerRatio;
+      $layer.css({
+        left: ( 0.5 - ( 0.5 + progress * flkty.slides.length ) * ratio ) * 100 + '%';
+      });
+    }
+    ```
+  </div>
+  <div class="example__demo">
+    {{> parallax }}
+  </div>
+</div>
 
 {{! ----------------------------------------------------------------- }}
 

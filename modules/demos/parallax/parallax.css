@@ -1,0 +1,57 @@
+/* parallax
+------------------------- */
+
+.parallax {
+  position: relative;
+  overflow-x: hidden;
+}
+
+.carousel--parallax {
+  background: transparent;
+}
+
+.carousel--parallax .carousel-cell {
+  opacity: 0.6;
+  height: 220px;
+  width: 50%;
+  margin: 40px 5%;
+}
+
+.parallax__layer {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.parallax__layer--bg {
+  top: 70px;
+  width: 80%;
+  height: 160px;
+}
+
+.parallax__layer--fg {
+  pointer-events: none;
+  width: 125%;
+  height: 300px;
+}
+
+.parallax__layer__cell {
+  position: absolute;
+  width: 50%;
+  margin: 0 5%;
+  height: 100%;
+}
+
+.parallax__layer__cell:nth-child(1) { left: 0%; }
+.parallax__layer__cell:nth-child(2) { left: 60%; }
+.parallax__layer__cell:nth-child(3) { left: 120%; }
+.parallax__layer__cell:nth-child(4) { left: 180%; }
+.parallax__layer__cell:nth-child(5) { left: 240%; }
+
+.parallax__layer__cell--bg {
+  background: hsla(210, 100%, 50%, 0.4);
+}
+
+.parallax__layer__cell--fg {
+  background: hsla(60, 100%, 50%, 0.4);
+}

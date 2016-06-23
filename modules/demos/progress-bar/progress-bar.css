@@ -1,0 +1,17 @@
+/* progress-bar
+------------------------- */
+
+.carousel--progress-bar {
+  margin-bottom: 0;
+}
+
+.carousel--progress-bar .flickity-page-dots {
+  bottom: -40px;
+}
+
+.progress-bar__bar {
+  height: 20px;
+  width: 0;
+  background: #333;
+  margin-bottom: 30px;
+}

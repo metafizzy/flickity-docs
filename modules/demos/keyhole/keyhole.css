@@ -1,0 +1,11 @@
+/* ---- keyhole ---- */
+
+.keyhole-cell {
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+.keyhole-cell img {
+  display: block;
+  height: 260px;
+}

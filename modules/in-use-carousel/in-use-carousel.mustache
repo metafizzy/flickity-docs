@@ -1,0 +1,9 @@
+<div class="in-use-carousel"
+  data-flickity='{ "lazyLoad": 1, "wrapAround": true, "groupCells": true }'>
+  {{#each in_use}}
+    <a class="in-use-carousel__item" href="{{url}}">
+      <p class="in-use-carousel__item__title">{{title}}</p>
+      <img class="in-use-carousel__item__image" data-flickity-lazyload="{{image}}" alt="{{title}}" />
+    </a>
+  {{/each}}
+</div>

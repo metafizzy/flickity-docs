@@ -206,42 +206,94 @@ var flkty = new Flickity( '.main-carousel', {
 
 {{! ----------------------------------------------------------------- }}
 
-<h2>Featured options</h2>
+<h2>Feature showcase</h2>
 
 {{! ----------------------------------------------------------------- }}
 
-{{> wrap-around}}
+<div class="duo">
+  <div class="duo__cell">
+    <h3><a href="options.html#wraparound">wrapAround</a></h3>
+    <div class="carousel" data-flickity='{ "wrapAround": true }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    {{> edit-demo default="myXdej" }}
+    <p>Wrap-around the end back to the beginning for infinite scrolling.</p>
+  </div>
+  <div class="duo__cell">
+    <h3><a href="options.html#freescroll">freeScroll</a></h3>
+    <div class="carousel" data-flickity='{ "freeScroll": true }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    {{> edit-demo default="bNLGNZ" }}
+    <p>Freely flick and scroll content without alignment.</p>
+  </div>
+</div>
 
-{{! ----------------------------------------------------------------- }}
+<div class="duo">
+  <div class="duo__cell">
+    <h3><a href="options.html#groupcells">groupCells</a></h3>
+    <div class="carousel carousel--show-several carousel--selected-cell"
+      data-flickity='{ "groupCells": true }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
 
-{{> free-scroll}}
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
 
-{{! ----------------------------------------------------------------- }}
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
 
-{{> auto-play}}
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    {{> edit-demo default="myXdej" }}
+    <p>Groups cells together to act as individual slides.</p>
+  </div>
+  <div class="duo__cell">
+    <h3><a href="options.html#autoplay">autoPlay</a></h3>
+    <div class="carousel" data-flickity='{ "autoPlay": true }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    {{> edit-demo default="RNQwaB" }}
+    <p>Automatically advance to the next cell.</p>
+  </div>
+</div>
 
-{{! ----------------------------------------------------------------- }}
+<div class="duo">
+  <div class="duo__cell">
+    <h3><a href="options.html#lazyload">lazyLoad</a></h3>
+    <div class="carousel carousel--lazyload-cells carousel--not-counting"
+      data-flickity='{ "lazyLoad": true }'>
+      {{> lazy-cell-images}}
+    </div>
+    {{> edit-demo default="vOeGzL" }}
+    <p>Load cell images when selected.</p>
+  </div>
+  <div class="example__demo duo__cell" data-js-module="keyhole">
+    <h3><a href="events.html#scroll">Parallax</a></h3>
+    {{> keyhole-content }}
+    <p>Parallax effects on scroll event.</p>
+  </div>
+</div>
 
-{{> watch-css}}
-
-{{! ----------------------------------------------------------------- }}
-
-<h3><a href="options.html">View all options</a></h3>
-
-{{! ----------------------------------------------------------------- }}
-
-<h2>Images</h2>
+<h3>Images</h3>
 
 <p>Flickity makes beautiful image galleries.</p>
-
-``` html
-<div class="carousel" data-flickity='{ "imagesLoaded": true, "percentPosition": false }'>
-  <img src="orange-tree.jpg" alt="orange tree" />
-  <img src="submerged.jpg" alt="submerged" />
-  <img src="look-out.jpg" alt="look-out" />
-  ...
-</div>
-```
 
 <div class="example">
   <div class="example__demo">
@@ -254,21 +306,16 @@ var flkty = new Flickity( '.main-carousel', {
       <img src="http://i.imgur.com/aboaFoB.jpg" alt="freedom tower" />
       <img src="http://i.imgur.com/LkmcILl.jpg" alt="drizzle" />
       <img src="http://i.imgur.com/q9zO6tw.jpg" alt="cat nose" />
-      {{! <img src="http://i.imgur.com/r8p3Xgq.jpg" />
-      <img src="http://i.imgur.com/hODreXI.jpg" />
-      <img src="http://i.imgur.com/UORFJ3w.jpg" /> }}
+      <img src="http://i.imgur.com/r8p3Xgq.jpg" alt="contrail" />
+      <img src="http://i.imgur.com/hODreXI.jpg" alt="sunset" />
+      <img src="http://i.imgur.com/UORFJ3w.jpg" alt="formation" />
     </div>
     {{> edit-demo default="GgQREP" }}
   </div>
 </div>
 
-{{! ----------------------------------------------------------------- }}
 
-{{> imagesloaded}}
-
-{{! ----------------------------------------------------------------- }}
-
-{{> lazy-load}}
+<h3><a href="options.html">View all options</a></h3>
 
 {{! ----------------------------------------------------------------- }}
 
@@ -276,14 +323,7 @@ var flkty = new Flickity( '.main-carousel', {
 
 <p>We&rsquo;d love to see how you use Flickity! Tweet <a href="https://twitter.com/metafizzyco">@metafizzyco</a> or email <a href="mailto:yo@metafizzy.co">yo@metafizzy.co</a> to share your work and possibly get it featured here.</p>
 
-<div class="in-use-carousel" data-flickity='{ "lazyLoad": 1, "wrapAround": true }'>
-  {{#each in_use}}
-    <a class="in-use-carousel__item" href="{{url}}">
-      <p class="in-use-carousel__item__title">{{title}}</p>
-      <img class="in-use-carousel__item__image" data-flickity-lazyload="{{image}}" alt="{{title}}" />
-    </a>
-  {{/each}}
-</div>
+{{> in-use-carousel }}
 
 {{! ----------------------------------------------------------------- }}
 

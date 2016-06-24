@@ -491,6 +491,79 @@ cellSelector: '.carousel-cell'
 
 {{! ----------------------------------------------------------------- }}
 
+<h3>bgLazyLoad</h3>
+
+<p>Loads cell background image when a cell is selected.</p>
+
+<p>Set the background image's URL to load with <code>data-flickity-bg-lazyload</code>.</p>
+
+``` html
+<div class="carousel-cell" data-flickity-bg-lazyload="image.jpg"></div>
+```
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    lazyLoad: true
+    // lazyloads background image in selected cell
+    ```
+    ``` html
+    <div class="carousel">
+      <div class="carousel-cell"
+        data-flickity-bg-lazyload="tulip.jpg"></div>
+      <div class="carousel-cell"
+        data-flickity-bg-lazyload="breakfast.jpg"></div>
+        ...
+    </div>
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--not-counting carousel--bg-lazyload"
+      data-flickity='{ "bgLazyLoad": true }'>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/300/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/301/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/302/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/303/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/304/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/305/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/306/?random"></div>
+    </div>
+  </div>
+</div>
+
+<p>Set <code>bgLazyLoad</code> to a number to load images in adjacent cells.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    lazyLoad: 1
+    // lazyloads background image in selected cell
+    // and next 1 cell
+    // and previous 1 cell
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--not-counting carousel--show-several carousel--bg-lazyload"
+      data-flickity='{ "bgLazyLoad": 1 }'>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/420/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/421/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/422/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/423/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/424/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/425/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/426/?random"></div>
+    </div>
+  </div>
+</div>
+
+<p>After loading the background image, Flickity will add <code>flickity-bg-lazyloaded</code> class to the element, or <code>flickity-lazyerror</code> if the image was broken.</p>
+
+<div class="call-out">
+  <p><code>bgLazyLoad</code> requires the <a href="https://github.com/metafizzy/flickity-bg-lazyload">flickity-bg-lazyload package</a>. This package is not included and <a href="https://github.com/metafizzy/flickity-bg-lazyload#install">must be installed separately</a>.</p>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
 {{> auto-play}}
 
 <p>Auto-playing will pause when the user hovers over the carousel. Set <code>pauseAutoPlayOnHover: <span class="literal">false</span></code> to disable this behavior.</p>

@@ -23,11 +23,11 @@ var jsSrc = [
   'bower_components/flickity/js/player.js',
   'bower_components/flickity/js/add-remove-cell.js',
   'bower_components/flickity/js/lazyload.js',
-  // flickity-imagesloaded
+  // flickity add-ons
   'bower_components/imagesloaded/imagesloaded.js',
   'bower_components/flickity-imagesloaded/flickity-imagesloaded.js',
-  // flickity-as-nav-for
   'bower_components/flickity-as-nav-for/as-nav-for.js',
+  'bower_components/flickity-bg-lazyload/bg-lazyload.js',
   // draggabilly
   'bower_components/draggabilly/draggabilly.js',
   // docs

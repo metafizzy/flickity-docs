@@ -16,6 +16,7 @@
     "flickity": "v2",
     "flickity-imagesloaded": "v2",
     "flickity-as-nav-for": "v2",
+    "flickity-bg-lazyload": "master",
     "normalize.css": "^4.1.1",
     "fizzy-ui-utils": "^2.0.0",
     "draggabilly": "^2.1.1"

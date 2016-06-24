@@ -120,6 +120,13 @@
           transition: height 0.2s;
 }
 
+/* ---- bg-lazyload ---- */
+
+.carousel--bg-lazyload .carousel-cell {
+  background-size: cover;
+  height: 220px;
+}
+
 /* ---- large device media query ---- */
 
 @media screen and ( min-width: 768px ) {

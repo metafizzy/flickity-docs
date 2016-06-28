@@ -21,8 +21,8 @@ module.exports = function( site ) {
         // var json = JSON.parse( file.contents.toString() );
         // site.data.flickityVersion = json.version;
         // site.data.flickityMinorVersion = json.version.match(/^\d\.\d+/)[0];
-        site.data.flickityVersion = '3.0.0';
-        site.data.flickityMinorVersion = '3.0';
+        site.data.flickityVersion = '2.0.0';
+        site.data.flickityMinorVersion = '2.0';
         next( null, file );
       }));
   });

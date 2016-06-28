@@ -6,19 +6,16 @@ has_buy_button: true
 <div class="call-out call-out--chill quick-start">
   <h2>Quick start</h2>
 
-  <p>Start using Flickity in three steps.</p>
+  <p>Start using Flickity in two steps.</p>
 
   <ol>
     <li>
-      <p>Download Flickity <a href="{{source_url_path}}flickity.css"><code>flickity.css</code></a> and <a href="{{source_url_path}}flickity.pkgd.min.js"><code>flickity.pkgd.min.js</code></a> files.</p>
-    </li>
-    <li>
       <p>Add the Flickity <code>.css</code> and <code>.js</code> files to your site.</p>
       ``` html
-      <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+      <link rel="stylesheet" href="https://npmcdn.com/flickity@{{flickityMinorVersion}}/dist/flickity.css" media="screen">
       ```
       ``` html
-      <script src="/path/to/flickity.pkgd.min.js"></script>
+      <script src="https://npmcdn.com/flickity@{{flickityMinorVersion}}/dist/flickity.pkgd.min.js"></script>
       ```
     </li>
     <li>
@@ -48,15 +45,15 @@ has_buy_button: true
   <li>
     CSS:
     <ul>
-      <li><a href="{{source_url_path}}flickity.css">flickity.css</a> un-minified, or</li>
-      <li><a href="{{source_url_path}}flickity.min.css">flickity.min.css</a> minified</li>
+      <li><a href="{{sourceUrlPath}}flickity.min.css">flickity.min.css</a> minified, or</li>
+      <li><a href="{{sourceUrlPath}}flickity.css">flickity.css</a> un-minified</li>
     </ul>
   </li>
   <li>
     JavaScript:
     <ul>
-      <li><a href="{{source_url_path}}flickity.pkgd.js">flickity.pkgd.js</a> un-minified, or</li>
-      <li><a href="{{source_url_path}}flickity.pkgd.min.js">flickity.pkgd.min.js</a> minified</li>
+      <li><a href="{{sourceUrlPath}}flickity.pkgd.min.js">flickity.pkgd.min.js</a> minified, or</li>
+      <li><a href="{{sourceUrlPath}}flickity.pkgd.js">flickity.pkgd.js</a> un-minified</li>
     </ul>
   </li>
 </ul>
@@ -68,15 +65,15 @@ has_buy_button: true
 <p>Link directly to Flickity files on <a href="https://npmcdn.com/">npmcdn</a>.</p>
 
 ``` html
-<link rel="stylesheet" href="https://npmcdn.com/flickity@{{flickity_minor_version}}/dist/flickity.css">
-<!-- or -->
 <link rel="stylesheet" href="https://npmcdn.com/flickity@{{flickity_minor_version}}/dist/flickity.min.css">
+<!-- or -->
+<link rel="stylesheet" href="https://npmcdn.com/flickity@{{flickity_minor_version}}/dist/flickity.css">
 ```
 
 ``` html
-<script src="https://npmcdn.com/flickity@{{flickity_minor_version}}/dist/flickity.pkgd.js"></script>
-<!-- or -->
 <script src="https://npmcdn.com/flickity@{{flickity_minor_version}}/dist/flickity.pkgd.min.js"></script>
+<!-- or -->
+<script src="https://npmcdn.com/flickity@{{flickity_minor_version}}/dist/flickity.pkgd.js"></script>
 ```
 
 {{! ----------------------------------------------------------------- }}

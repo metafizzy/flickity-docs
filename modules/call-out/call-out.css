@@ -35,6 +35,38 @@
 .call-out--chill { border-color: #8C8; }
 .call-out--chill:before { background: #8C8; }
 
+/* ---- call-out--big-copy ---- */
+
+.call-out--big-copy p,
+.call-out--big-copy li,
+.call-out--big-copy li:before {
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+/* ---- quick-start-list ---- */
+
+.call-out--big-copy ol {
+  list-style: none;
+}
+
+.quick-start-list li {
+  position: relative;
+  counter-increment: call-out-big-copy-item;
+}
+
+.quick-start-list li:before {
+  content: counter(call-out-big-copy-item) ".";
+  position: absolute;
+  left: -1.2rem;
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.quick-start-list {
+  list-style: none;
+}
+
 @media screen and (min-width: 768px) {
 
   .call-out {
@@ -52,7 +84,7 @@
     height: 40px;
     left: 20px;
     top: 30px;
-    font-size: 1.9em;
+    font-size: 1.9rem;
     line-height: 46px;
   }
 

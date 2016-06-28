@@ -23,14 +23,14 @@
 }
 
 .hero-carousel h1 {
-  font-size: 3.2em;
+  font-size: 3.2rem;
   line-height: 1.0;
   margin: 0;
   padding-top: 40px;
 }
 
 .hero-carousel .tagline {
-  font-size: 1.4em;
+  font-size: 1.4rem;
   line-height: 1.0;
   margin: 0;
   color: #444;
@@ -54,18 +54,18 @@
 
 .slogan--easy,
 .slogan--fun {
-  font-size: 2.2em;
+  font-size: 2.2rem;
   line-height: 1.1;
 }
 
 .slogan--tagline {
   margin-top: 10px;
-  font-size: 1.2em;
+  font-size: 1.2rem;
   color: #444;
 }
 
 .feature-list {
-  font-size: 1.8em;
+  font-size: 1.8rem;
   list-style: none;
   line-height: 1.2;
   margin: 0;
@@ -87,7 +87,7 @@
 .by-line {
   line-height: 1.2;
   margin: 0;
-  font-size: 1.8em;
+  font-size: 1.8rem;
 }
 
 .by-line--made {
@@ -130,11 +130,11 @@
   }
 
   .hero-carousel h1 {
-    font-size: 5.8em;
+    font-size: 5.8rem;
   }
 
   .hero-carousel .tagline {
-    font-size: 2.1em;
+    font-size: 2.1rem;
   }
 
   .hero-illustration {
@@ -143,16 +143,16 @@
 
   .slogan--easy,
   .slogan--fun {
-    font-size: 4.8em;
+    font-size: 4.8rem;
   }
 
   .slogan--tagline {
     margin-top: 20px;
-    font-size: 2.4em;
+    font-size: 2.4rem;
   }
 
   .feature-list {
-    font-size: 3.1em;
+    font-size: 3.1rem;
   }
 
   .feature-list li {
@@ -160,7 +160,7 @@
   }
 
   .by-line {
-    font-size: 3.1em;
+    font-size: 3.1rem;
   }
 
   .by-line--made {
@@ -177,7 +177,7 @@
   }
 
   .hero-carousel h1 {
-    font-size: 7.8em;
+    font-size: 7.8rem;
   }
 
   .hero-illustration {

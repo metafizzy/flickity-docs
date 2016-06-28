@@ -8,7 +8,7 @@
 
 .commercial-license-agreement h3:before {
   content: counter(cla-h3) '.';
-  margin-right: 0.25em;
+  margin-right: 0.25rem;
   color: #888;
   font-family: 'Texta Regular', sans-serif;
 }
@@ -21,17 +21,17 @@
 .cla__definitions-list li:before {
   content: counter(cla-h3) '.' counter(cla-part) '.';
   color: #888;
-  margin-right: 0.25em;
+  margin-right: 0.25rem;
 }
 
 .cla__definitions-list {
   list-style: none;
-  padding-left: 2.6em;
+  padding-left: 2.6rem;
 }
 
 .cla__definitions-list li {
-  text-indent: -1.5em;
-  margin-bottom: 0.5em;
+  text-indent: -1.5rem;
+  margin-bottom: 0.5rem;
   counter-increment: cla-definitions-item;
 }
 

@@ -16,7 +16,7 @@ two columns for large devices
 
 
 .duo--legal__plain {
-  padding: 0 0.8em;
+  padding: 0 0.8rem;
   background: #FAFAFA;
   color: #888;
 }
@@ -24,8 +24,8 @@ two columns for large devices
 .duo--legal--first .duo--legal__official:before,
 .duo--legal--first .duo--legal__plain:before {
   display: block;
-  padding-top: 0.5em;
-  font-size: 0.88em;
+  padding-top: 0.5rem;
+  font-size: 0.88rem;
   color: #888;
 }
 

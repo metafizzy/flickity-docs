@@ -9,7 +9,7 @@
 }
 
 .site-footer p {
-  font-size: 1.2em;
+  font-size: 1.2rem;
 }
 
 .other-products:after {
@@ -44,12 +44,12 @@
 }
 
 .other-products__cell h3 {
-  font-size: 1.6em;
+  font-size: 1.6rem;
   margin: 0 0 0px;
 }
 
 .other-products__cell .description {
-  font-size: 1.1em;
+  font-size: 1.1rem;
   line-height: 1.2;
   margin: 0;
 }

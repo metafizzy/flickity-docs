@@ -10,11 +10,11 @@
 }
 
 .event-table td {
-  font-size: 0.9em;
+  font-size: 0.9rem;
 }
 
 td.event-table__time {
-  font-size: 0.9em;
+  font-size: 0.9rem;
 }
 
 .event-table__message {

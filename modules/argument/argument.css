@@ -3,8 +3,8 @@
 ------------------------- */
 
 .argument {
-  margin: 0.5em 0;
-  padding-left: 1.5em;
+  margin: 0.5rem 0;
+  padding-left: 1.5rem;
 }
 
 .argument__type {
@@ -13,12 +13,12 @@
 
 .argument__type,
 .argument__description {
-  margin-left: 0.4em;
+  margin-left: 0.4rem;
 }
 
 .argument__type:before,
 .argument__description:before {
   content: '·';
-  padding-right: 0.4em;
+  padding-right: 0.4rem;
   display: inline-block;
 }

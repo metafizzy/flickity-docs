@@ -4,7 +4,7 @@
 .buy-button {
   display: block;
   margin-bottom: 10px;
-  line-height: 1.3em;
+  line-height: 1.3rem;
   border: 2px solid;
   border-radius: 8px;
   border-color: #8C8;
@@ -24,7 +24,7 @@
 }
 
 .buy-button__price {
-  font-size: 1.6em;
+  font-size: 1.6rem;
   background: #8C8;
   color: white;
   position: absolute;
@@ -37,7 +37,7 @@
 }
 
 .buy-button__price__dollar {
-  font-size: 0.6em;
+  font-size: 0.6rem;
   margin-right: 3px;
   vertical-align: top;
 }
@@ -90,11 +90,11 @@
 
   .buy-button-trio .buy-button__project,
   .buy-button-trio .buy-button__license {
-    font-size: 1.1em;
+    font-size: 1.1rem;
   }
 
   .buy-button-trio .buy-button__title {
-    font-size: 1.9em;
+    font-size: 1.9rem;
     line-height: 1.2;
   }
 
@@ -104,13 +104,13 @@
 
   .buy-button-trio .buy-button__for {
     margin-bottom: 20px;
-    font-size: 1.1em;
+    font-size: 1.1rem;
   }
 
   .buy-button-trio .buy-button__price {
     position: relative;
     width: auto;
-    font-size: 2.4em;
+    font-size: 2.4rem;
     line-height: 1.3;
     padding-top: 15px;
     padding-bottom: 10px;

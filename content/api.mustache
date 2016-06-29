@@ -29,11 +29,11 @@ flkty.next();
 flkty.select( 3 );
 ```
 
-<h2>Selecting cells</h2>
+<h2>Selecting slides</h2>
 
 <h3>select</h3>
 
-<p>Select a cell.</p>
+<p>Select a slide.</p>
 
 ``` js
 // jQuery
@@ -45,17 +45,17 @@ flkty.select( index, isWrapped, isInstant )
 <p class="argument">
   <code class="argument__code">index</code>
   <span class="argument__type"><i>Integer</i></span>
-  <span class="argument__description">Zero-based index of the cell to select.</span>
+  <span class="argument__description">Zero-based index of the slide to select.</span>
 </p>
 <p class="argument">
   <code class="argument__code">isWrapped</code>
   <span class="argument__type"><i>Boolean</i></span>
-  <span class="argument__description">Optional. If <code><span class="literal">true</span></code>, the last cell will be selected if at the first cell.</span>
+  <span class="argument__description">Optional. If <code><span class="literal">true</span></code>, the last slide will be selected if at the first slide.</span>
 </p>
 <p class="argument">
   <code class="argument__code">isInstant</code>
   <span class="argument__type"><i>Boolean</i></span>
-  <span class="argument__description">If <code><span class="literal">true</span></code>, immediately view the selected cell without animation.</span>
+  <span class="argument__description">If <code><span class="literal">true</span></code>, immediately view the selected slide without animation.</span>
 </p>
 
 <div class="example duo">
@@ -87,7 +87,7 @@ flkty.select( index, isWrapped, isInstant )
 
 <h3>previous</h3>
 
-<p>Select the previous cell.</p>
+<p>Select the previous slide.</p>
 
 ``` js
 // jQuery
@@ -99,7 +99,7 @@ flkty.previous( isWrapped )
 <p class="argument">
   <code class="argument__code">isWrapped</code>
   <span class="argument__type"><i>Boolean</i></span>
-  <span class="argument__description">Optional. If <code><span class="literal">true</span></code>, the last cell will be selected if at the first cell.</span>
+  <span class="argument__description">Optional. If <code><span class="literal">true</span></code>, the last slide will be selected if at the first slide.</span>
 </p>
 
 <div class="example duo">
@@ -122,7 +122,7 @@ flkty.previous( isWrapped )
 
 <h3>next</h3>
 
-<p>Select the next cell.</p>
+<p>Select the next slide.</p>
 
 ``` js
 // jQuery
@@ -134,7 +134,7 @@ flkty.next( isWrapped )
 <p class="argument">
   <code class="argument__code">isWrapped</code>
   <span class="argument__type"><i>Boolean</i></span>
-  <span class="argument__description">Optional. If <code><span class="literal">true</span></code>, the first cell will be selected if at the last cell.</span>
+  <span class="argument__description">Optional. If <code><span class="literal">true</span></code>, the first slide will be selected if at the last slide.</span>
 </p>
 
 <div class="example duo">
@@ -155,7 +155,70 @@ flkty.next( isWrapped )
 
 {{! ----------------------------------------------------------------- }}
 
+<h3>selectCell</h3>
+
+<p>Select a slide of a cell. Useful for <a href="options.html#groupcells">groupCells</a>.</p>
+
+``` js
+// jQuery
+$carousel.flickity( 'selectCell', value, isWrapped, isInstant )
+// vanilla JS
+flkty.selectCell( value, isWrapped, isInstant )
+```
+
+<p class="argument">
+  <code class="argument__code">value</code>
+  <span class="argument__type"><i>Integer</i> or selector <i>String</i></span>
+  <span class="argument__description">Zero-based index OR selector string of the cell to select.</span>
+</p>
+<p class="argument">
+  <code class="argument__code">isWrapped</code>
+  <span class="argument__type"><i>Boolean</i></span>
+  <span class="argument__description">Optional. If <code><span class="literal">true</span></code>, the last slide will be selected if at the first slide.</span>
+</p>
+<p class="argument">
+  <code class="argument__code">isInstant</code>
+  <span class="argument__type"><i>Boolean</i></span>
+  <span class="argument__description">If <code><span class="literal">true</span></code>, immediately view the selected slide without animation.</span>
+</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    $('.button-group').on( 'click', '.button', function() {
+      var index = $(this).index();
+      $carousel.flickity( 'selectCell', index );
+    });
+    ```
+  </div>
+  {{> select-cell }}
+</div>
+
+<p>You can select a cell with a selector string.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` html
+    <div class="carousel">
+      <div class="cell1"></div>
+      <div class="cell2"></div>
+      <div class="cell3"></div>
+      ...
+    </div>
+    ```
+
+    ``` js
+    $carousel.flickity( 'selectCell', '.cell2' );
+    ```
+  </div>
+  {{> select-cell-selector }}
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
 <h2>Sizing and positioning</h2>
+
+{{! ----------------------------------------------------------------- }}
 
 <h3>resize</h3>
 

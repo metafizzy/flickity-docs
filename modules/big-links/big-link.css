@@ -9,7 +9,7 @@
 .big-link {
   display: block;
   font-size: 1.2rem;
-  padding: 0.9rem 0.7rem;
+  padding: 0.7rem 0.7rem;
   border-radius: 5px;
   line-height: 1;
 }
@@ -40,6 +40,24 @@
 .big-link--stroke:hover { border-color: #EC5; }
 .big-link--stroke:active { background-color: #F8F8F8; }
 
+.big-link__icon {
+  vertical-align: bottom;
+  width: 30px;
+  height: 30px;
+  margin-right: 6px;
+}
+
+.big-link--fill .big-link__icon path {
+  fill: white;
+}
+
+.big-link--stroke .big-link__icon path {
+  fill: #6A6;
+}
+
+.big-link--stroke:hover .big-link__icon path {
+  fill: #E90;
+}
 
 /* ---- large device ---- */
 
@@ -48,6 +66,11 @@
   .big-link {
     font-size: 1.4rem;
     margin-bottom: 10px;
+  }
+
+  .big-link__icon {
+    width: 40px;
+    height: 40px;
   }
 
 }

@@ -16,7 +16,7 @@ var $carousel = $('.carousel').flickity()
 ```
 
 <div class="call-out">
-  <p>jQuery chaining is broken by methods that return values: <code>getCellElements</code>, <code>on</code>, <code>off</code>.</p>
+  <p>jQuery chaining is broken by methods that return values like <a href="#getcellelements"><code>getCellElements</code></a>.</p>
 </div>
 
 <p>Vanilla JavaScript methods look like
@@ -677,4 +677,28 @@ flkty.cells
 // -> array of cells
 flkty.cells.length
 // -> total number of cells
+```
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>slides</h3>
+
+<p>The array of slides. Useful for <a href="options.html#groupcells"><code>groupCells</code></a>. A slide contains multiple cells. If <code>groupCells</code> is disabled, then each slide is a cell, so they are one in the same.</p>
+
+``` js
+flkty.slides
+// -> array of slides
+flkty.slides.length
+// -> total number of slides
+```
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>selectedElements</h3>
+
+<p>An array of elements in the selected slide. Useful for <a href="options.html#groupcells"><code>groupCells</code></a>.</p>
+
+``` js
+flkty.selectedElements
+// -> array of elements
 ```

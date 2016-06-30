@@ -2,6 +2,39 @@
 title: Extras
 ---
 
+{{! ----------------------------------------------------------------- }}
+
+<h2>Extra demos</h2>
+
+<ul>
+  <li><a href="http://codepen.io/desandro/full/jEpxqJ/">Image carousel with fancy selected style</a></li>
+  <li>
+    <a href="http://codepen.io/desandro/pen/dPdVNM">Setting image caption</a> or
+    <a href="http://codepen.io/desandro/pen/OPQxpO">with vanilla JS</a>
+  </li>
+  <li>
+    <a href="http://codepen.io/desandro/pen/pvxONO">Select cell on staticClick</a> or
+    <a href="http://codepen.io/desandro/pen/OPBoWx">with vanilla JS</a>
+  </li>
+  <li><a href="http://codepen.io/desandro/pen/dMjbjR">Vertical scrollable navigation on the side</a></li>
+  <li>
+    <a href="http://codepen.io/desandro/pen/VYVEbM">Set initial focus on Flickity carousel</a> or
+    <a href="http://codepen.io/desandro/pen/JoemRR">with vanilla JS</a>,
+    so that carousel can be keyboard navigated on initial page load
+  </li>
+  <li><a href="http://codepen.io/desandro/pen/LVVqBR">Previous &amp; next buttons in top right corner</a></li>
+  <li><a href="http://codepen.io/desandro/pen/MagWrN">Adding <code>is-previous</code> and <code>is-next</code> cell classes</a></li>
+  <li><a href="http://codepen.io/desandro/pen/KVwVqa/">Fade in carousel for no Flash Of Unstyled Content (FOUC)</a> or
+    <a href="http://codepen.io/desandro/pen/JGoGpm">with vanilla JS</a>
+  </li>
+  <li><a href="http://codepen.io/desandro/pen/xZWqWM/">Disabling &amp; enabling dragging</a>
+    or <a href="http://codepen.io/desandro/pen/adYJEQ/">with vanilla JS</a></li>
+  <li><a href="http://codepen.io/desandro/pen/xVBpqG">Set options at media queries</a></li>
+  <li><a href="http://codepen.io/desandro/pen/obpVGa/">Slide progress bar</a></li>
+</ul>
+
+{{! ----------------------------------------------------------------- }}
+
 <h2>Custom navigation UI</h2>
 
 <p>With the <a href="api.html">Flickity API</a>, you can build custom carousel navigation UI.</p>
@@ -48,40 +81,11 @@ title: Extras
 
 {{! ----------------------------------------------------------------- }}
 
-<h2>Extra demos</h2>
-
-<ul>
-  <li><a href="http://codepen.io/desandro/full/jEpxqJ/">Image carousel with fancy selected style</a></li>
-  <li>
-    <a href="http://codepen.io/desandro/pen/dPdVNM">Setting image caption</a> or
-    <a href="http://codepen.io/desandro/pen/OPQxpO">with vanilla JS</a>
-  </li>
-  <li>
-    <a href="http://codepen.io/desandro/pen/pvxONO">Select cell on staticClick</a> or
-    <a href="http://codepen.io/desandro/pen/OPBoWx">with vanilla JS</a>
-  </li>
-  <li><a href="http://codepen.io/desandro/pen/dMjbjR">Vertical scrollable navigation on the side</a></li>
-  <li>
-    <a href="http://codepen.io/desandro/pen/VYVEbM">Set initial focus on Flickity carousel</a> or
-    <a href="http://codepen.io/desandro/pen/JoemRR">with vanilla JS</a>,
-    so that carousel can be keyboard navigated on initial page load
-  </li>
-  <li><a href="http://codepen.io/desandro/pen/LVVqBR">Previous &amp; next buttons in top right corner</a></li>
-  <li><a href="http://codepen.io/desandro/pen/MagWrN">Adding <code>is-previous</code> and <code>is-next</code> cell classes</a></li>
-  <li><a href="http://codepen.io/desandro/pen/KVwVqa/">Fade in carousel for no Flash Of Unstyled Content (FOUC)</a> or
-    <a href="http://codepen.io/desandro/pen/JGoGpm">with vanilla JS</a>
-  </li>
-  <li><a href="http://codepen.io/desandro/pen/xZWqWM/">Disabling &amp; enabling dragging</a>
-    or <a href="http://codepen.io/desandro/pen/adYJEQ/">with vanilla JS</a></li>
-  <li><a href="http://codepen.io/desandro/pen/xVBpqG">Set options at media queries</a></li>
-  <li><a href="http://codepen.io/desandro/pen/obpVGa/">Slide progress bar</a></li>
-</ul>
-
-{{! ----------------------------------------------------------------- }}
-
 <h2>Browser support</h2>
 
-<p>Flickity supports IE8+, Android 2.3+, iOS Safari 5+, and all modern browsers.</p>
+<p>Flickity v2 supports IE10+, Android 4+, Safari for iOS 5+, Firefox 16+, and Chrome 12+.</p>
+
+<p>For IE8+ and Android 2.3+ support, try <a href="http://flickity.metafizzy.co/v1/">Isotope v1</a>.</p>
 
 {{! ----------------------------------------------------------------- }}
 
@@ -275,6 +279,45 @@ webpack main.js bundle.js
 
 {{! ----------------------------------------------------------------- }}
 
+<h2>Upgrading from v1</h2>
+
+<p>Flickity v2 dropped browser support for IE8, IE9, and Android 2.3. Nearly all options, methods, and code for Flickity v1 is backwards compatibile with Flickity v2.</p>
+
+<h3>Breaking changes</h3>
+
+<ul>
+  <li>
+    <p><a href="events.html">jQuery events</a> are namespaced with <code>.flickity</code>.</p>
+    ``` js
+    // v1, will not work with v2
+    $carousel.on( 'staticClick', function() {...})
+    // v2, add .flickity namespace
+    $carousel.on( 'staticClick.flickity', function() {...})
+    ```
+  </li>
+  <li><code>jquery-bridget/jquery.bridget</code> path renamed to <code>jquery-bridget/jquery-bridget</code></li>
+</ul>
+
+<h3>Compatible changes</h3>
+
+<ul>
+  <li><a href="events.html#select"><code>select</code> event</a> added in place of <code>cellSelect</code>. <code>cellSelect</code> event will continue to work.</li>
+  <li><a href="index.html#initialize-with-html">HTML initialization</a> can be done with <code>data-flickity</code>. Flickity v2 is backwards compatible with previous code: <code>js-flickity</code> class and <code>data-flickity-options</code> attribute.</li>
+  <li>IE8 helper dependencies removed: eventie, get-style-property, doc-ready</li>
+</ul>
+
+<h3>New features</h3>
+
+<ul>
+  <li><a href="options.html#groupcells">groupCells</a> - group cells together as individual slides</li>
+  <li><a href="options.html#adaptiveheight">adaptiveHeight</a> - change carousel height to selected cell</li>
+  <li><a href="options.html#bglazyload">bgLazyLoad</a> - lazyload background images</li>
+  <li><a href="events.html#scroll">scroll event</a> - do cool stuff like progress bars and parallax effects</li>
+  <li><a href="options.html#dragthreshold">dragThreshold</a> - add more wiggle room for touch vertical scrolling</li>
+</ul>
+
+{{! ----------------------------------------------------------------- }}
+
 <h2>Issues</h2>
 
 <h3>Reduced test cases</h3>
@@ -301,6 +344,6 @@ webpack main.js bundle.js
 
 <h3>Feature requests</h3>
 
-<p>Help us select new features by looking over <a href="https://github.com/metafizzy/flickity/labels/feature%20request">requested features on the GitHub issue tracker</a> and adding your <strong>+1</strong> or subscribing to features you&rsquo;d like to see added.</p>
+<p>Help us select new features by looking over <a href="https://github.com/metafizzy/flickity/labels/feature%20request">requested features on the GitHub issue tracker</a> and adding your <strong>+1 reaction</strong> to features you&rsquo;d like to see added.</p>
 
 {{! ----------------------------------------------------------------- }}

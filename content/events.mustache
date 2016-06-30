@@ -442,3 +442,27 @@ flkty.on( 'lazyLoad', function( event, cellElement ) {
 {{> edit-demo default="RPqMra" vanilla_js="VLVXjv" }}
 
 {{! ----------------------------------------------------------------- }}
+
+
+<h3>bgLazyLoad</h3>
+
+<p>Triggered after a background image has been loaded with <a href="options.html#bglazyload"><code>bgLazyLoad</code></a>.</p>
+
+``` js
+// jQuery
+$carousel.on( 'bgLazyLoad.flickity', function( event, element ) {...})
+// vanilla JS
+flkty.on( 'bgLazyLoad', function( event, element ) {...})
+```
+
+<p class="argument">
+  <code class="argument__code"><span class="params">event</span></code>
+  <span class="argument__type"><i>Event</i></span>
+  <span class="argument__description">Original <code>event</code> object.</span>
+</p>
+<p class="argument">
+  <code class="argument__code"><span class="params">element</span></code>
+  <span class="argument__type"><i>Element</i></span>
+  <span class="argument__description">The element of the background image.</span>
+</p>
+

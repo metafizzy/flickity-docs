@@ -81,15 +81,11 @@ title: Extras
 
 {{! ----------------------------------------------------------------- }}
 
-<h2>Browser support</h2>
-
-<p>Flickity v2 supports IE10+, Android 4+, Safari for iOS 5+, Firefox 16+, and Chrome 12+.</p>
-
-<p>For IE8+ and Android 2.3+ support, try <a href="http://flickity.metafizzy.co/v1/">Isotope v1</a>.</p>
+<h2>Module loaders</h2>
 
 {{! ----------------------------------------------------------------- }}
 
-<h2>RequireJS</h2>
+<h3>RequireJS</h3>
 
 <p>Flickity supports <a href="http://requirejs.org/">RequireJS</a>.</p>
 
@@ -110,7 +106,7 @@ requirejs( [
 requirejs( [ 'require', 'jquery', 'path/to/flickity.pkgd.js' ],
   function( require, $, Flickity ) {
     // require jquery-bridget, it's included in flickity.pkgd.js
-    require( [ 'jquery-bridget/jquery.bridget' ],
+    require( [ 'jquery-bridget/jquery-bridget' ],
     function() {
       // make Flickity a jQuery plugin
       $.bridget( 'flickity', Flickity );
@@ -152,17 +148,17 @@ requirejs.config({
 requirejs( [
     'jquery',
     'flickity/js/index',
-    'jquery-bridget/jquery.bridget'
+    'jquery-bridget/jquery-bridget'
   ],
   function( $, Flickity ) {
     // make Flickity a jQuery plugin
-    $.bridget( 'flickity', Flickity );
+    $.bridget( 'flickity', Flickity, $ );
     // now you can use $().flickity()
     $('.carousel').flickity({...});
 });
 ```
 
-<p>As a stand-alone package, Flickity does not include <code>imagesLoaded</code> and <code>asNavFor</code> code. You can require these packages separately.</p>
+<p>As a stand-alone package, Flickity does not include <code>imagesLoaded</code>, <code>asNavFor</code>, and <code>bgLazyLoad</code> code. You can require these packages separately.</p>
 
 ``` js
 requirejs( [
@@ -180,7 +176,7 @@ requirejs( [
 
 {{! ----------------------------------------------------------------- }}
 
-<h2>Browserify</h2>
+<h3>Browserify</h3>
 
 <p>Flickity works with <a href="http://browserify.org/">Browserify</a>. Install <a href="https://www.npmjs.com/package/flickity">Flickity with npm</a>.</p>
 
@@ -213,11 +209,16 @@ $.bridget( 'flickity', Flickity );
 $('.carousel').flickity({...});
 ```
 
-<p>As a stand-alone package, Flickity does not include <code>imagesLoaded</code> and <code>asNavFor</code> code. You can install and require the <a href="https://www.npmjs.com/package/flickity-imagesloaded"><code>flickity-imagesloaded</code></a> and <a href="https://www.npmjs.com/package/flickity-as-nav-for"><code>flickity-as-nav-for</code></a> packages separately.</p>
+<p>As a stand-alone package, Flickity does not include <code>imagesLoaded</code>, <code>asNavFor</code>, and <code>bgLazyLoad</code> code. You can install and require the
+  <a href="https://www.npmjs.com/package/flickity-imagesloaded"><code>flickity-imagesloaded</code></a>,
+  <a href="https://www.npmjs.com/package/flickity-as-nav-for"><code>flickity-as-nav-for</code></a>, and
+  <a href="https://www.npmjs.com/package/flickity-bg-lazyload"><code>flickity-bg-lazyload</code></a>
+  packages separately.</p>
 
 ``` bash
 npm install flickity-imagesloaded
 npm install flickity-as-nav-for
+npm install flickity-bg-lazyload
 ```
 
 ``` js
@@ -233,30 +234,13 @@ var flkty = new Flickity( '.carousel-a', {
 
 {{! ----------------------------------------------------------------- }}
 
-<h2>Webpack</h2>
+<h3>Webpack</h3>
 
 <p>Install Flickity with npm.</p>
 
 ``` bash
 npm install flickity
 ```
-
-<p>In your config file, <code>webpack.config.js</code>, add these resolve aliases.</p>
-
-``` js
-module.exports = {
-  resolve: {
-    alias: {
-      'eventEmitter/EventEmitter': 'wolfy87-eventemitter/EventEmitter',
-      'get-style-property': 'desandro-get-style-property',
-      'matches-selector': 'desandro-matches-selector',
-      'classie': 'desandro-classie'
-    }
-  }
-};
-```
-
-<p>(This hack is required because of an issue with how Webpack loads dependencies. <a href="https://github.com/webpack/webpack/issues/883">+1 this issue on GitHub</a> to help get this issue addressed.)</p>
 
 <p>You can then <code>require('flickity')</code>.</p>
 
@@ -275,7 +259,15 @@ var flkty = new Flickity( '.carousel', {
 webpack main.js bundle.js
 ```
 
-<p><code>imagesLoaded</code>, <code>asNavFor</code> and jQuery plugin functionality need to be installed separately, <a href="#browserify">similar to using Browserify</a>.</p>
+<p><code>imagesLoaded</code>, <code>asNavFor</code>, <code>bgLazyLoad</code> and jQuery plugin functionality need to be installed separately, <a href="#browserify">similar to using Browserify</a>.</p>
+
+{{! ----------------------------------------------------------------- }}
+
+<h2>Browser support</h2>
+
+<p>Flickity v2 supports IE10+, Android 4+, Safari for iOS 5+, Firefox 16+, and Chrome 12+.</p>
+
+<p>For IE8+ and Android 2.3+ support, try <a href="http://flickity.metafizzy.co/v1/">Flickity v1</a>.</p>
 
 {{! ----------------------------------------------------------------- }}
 

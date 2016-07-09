@@ -18,11 +18,11 @@ module.exports = function( site ) {
   gulp.task( 'flickity-version', function() {
     return gulp.src('bower_components/flickity/.bower.json')
       .pipe( getTransform( function( file, enc, next ) {
-        // var json = JSON.parse( file.contents.toString() );
-        // site.data.flickityVersion = json.version;
-        // site.data.flickityMinorVersion = json.version.match(/^\d\.\d+/)[0];
-        site.data.flickityVersion = '2.0.0';
-        site.data.flickityMinorVersion = '2.0';
+        var json = JSON.parse( file.contents.toString() );
+        site.data.flickityVersion = json.version;
+        site.data.flickityMinorVersion = json.version.match(/^\d\.\d+/)[0];
+        // site.data.flickityVersion = '2.0.0';
+        // site.data.flickityMinorVersion = '2.0';
         next( null, file );
       }));
   });

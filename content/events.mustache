@@ -163,10 +163,13 @@ flkty.on( 'scroll', function( progress ) {...})
     // trigger initial scroll
     $carousel.flickity('reposition');
     
+    var flkty = $carousel.data('flickity');
+    var count = flkty.slides.length - 1;
+    
     function moveParallaxLayer( $layer, layerRatio, progress ) {
       var ratio = cellRatio * layerRatio;
       $layer.css({
-        left: ( 0.5 - ( 0.5 + progress * flkty.slides.length ) * ratio ) * 100 + '%';
+        left: ( 0.5 - ( 0.5 + progress * count ) * ratio ) * 100 + '%'
       });
     }
     ```

@@ -13,6 +13,7 @@
   margin-right: 10px;
   margin-bottom: 10px;
   background: #8C8;
+  border-radius: 5px;
   counter-increment: carousel-cell;
 }
 
@@ -124,6 +125,7 @@
 
 .carousel--bg-lazyload .carousel-cell {
   background-size: cover;
+  background-position: center center;
   height: 220px;
 }
 

@@ -4,6 +4,7 @@
   height: 200px;
   margin-right: 2px;
   background: #222;
+  border-radius: 0;
 }
 
 .carousel--lazyload-adj-cells .carousel-cell {
@@ -11,6 +12,7 @@
   height: 160px;
   margin-right: 2px;
   background: #222;
+  border-radius: 0;
 }
 
 .carousel-cell__lazy-image {

@@ -24,9 +24,7 @@
     "gulp-replace": "^0.5.1",
     "gulp-uglify": "^1.1.0",
     "handlebars": "^3.0.0",
-    "highlight.js": "^8.4.0",
-    "through2": "^0.6.3",
-    "underscore": "^1.7.0"
+    "highlight.js": "^8.4.0"
   },
   "devDependencies": {},
   "repository": {

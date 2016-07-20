@@ -1,5 +1,5 @@
 var highlightjs = require('highlight.js');
-var through2 = require('through2');
+var getTransform = require('./get-transform');
 
 highlightjs.configure({
   classPrefix: ''
@@ -41,11 +41,10 @@ function replaceCodeBlock( match, leadingWhiteSpace, block ) {
 }
 
 module.exports = function() {
-  return through2.obj( function( file, enc, callback ) {
+  return getTransform( function( file, enc, next ) {
     var contents = file.contents.toString();
     contents = contents.replace( /\n( *)```([^```]+)```/gi, replaceCodeBlock );
     file.contents = new Buffer( contents );
-    this.push( file );
-    callback();
+    next( null, file );
   });
 };

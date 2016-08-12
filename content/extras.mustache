@@ -101,7 +101,7 @@ requirejs( [
 });
 ```
 
-<p>To use Flickity as a jQuery plugin with RequireJS and flickity.pkgd.js, you need to call jQuery Bridget.</p>
+<p>To use Flickity as a jQuery plugin with RequireJS and flickity.pkgd.js, you need to call <a href="https://www.npmjs.com/package/jquery-bridget">jQuery Bridget</a>.</p>
 
 ``` js
 // require the require function
@@ -109,9 +109,9 @@ requirejs( [ 'require', 'jquery', 'path/to/flickity.pkgd.js' ],
   function( require, $, Flickity ) {
     // require jquery-bridget, it's included in flickity.pkgd.js
     require( [ 'jquery-bridget/jquery-bridget' ],
-    function() {
+    function( jQueryBridget ) {
       // make Flickity a jQuery plugin
-      $.bridget( 'flickity', Flickity );
+      jQueryBridget( 'flickity', Flickity, $ );
       // now you can use $().flickity()
       $('.carousel').flickity({...});
     }
@@ -202,11 +202,11 @@ npm install jquery-bridget
 
 ``` js
 var $ = require('jquery');
-require('jquery-bridget');
+var jQueryBridget = require('jquery-bridget');
 var Flickity = require('flickity');
 
 // make Flickity a jQuery plugin
-$.bridget( 'flickity', Flickity );
+jQueryBridget( 'flickity', Flickity, $ );
 // now you can use $().flickity()
 $('.carousel').flickity({...});
 ```

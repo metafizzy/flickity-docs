@@ -91,15 +91,20 @@ flkty.select( index, isWrapped, isInstant )
 
 ``` js
 // jQuery
-$carousel.flickity( 'previous', isWrapped )
+$carousel.flickity( 'previous', isWrapped, isInstant )
 // vanilla JS
-flkty.previous( isWrapped )
+flkty.previous( isWrapped, isInstant )
 ```
 
 <p class="argument">
   <code class="argument__code">isWrapped</code>
   <span class="argument__type"><i>Boolean</i></span>
   <span class="argument__description">Optional. If <code><span class="literal">true</span></code>, the last slide will be selected if at the first slide.</span>
+</p>
+<p class="argument">
+  <code class="argument__code">isInstant</code>
+  <span class="argument__type"><i>Boolean</i></span>
+  <span class="argument__description">If <code><span class="literal">true</span></code>, immediately view the selected slide without animation.</span>
 </p>
 
 <div class="example duo">
@@ -126,15 +131,20 @@ flkty.previous( isWrapped )
 
 ``` js
 // jQuery
-$carousel.flickity( 'next', isWrapped )
+$carousel.flickity( 'next', isWrapped, isInstant )
 // vanilla JS
-flkty.next( isWrapped )
+flkty.next( isWrapped, isInstant )
 ```
 
 <p class="argument">
   <code class="argument__code">isWrapped</code>
   <span class="argument__type"><i>Boolean</i></span>
   <span class="argument__description">Optional. If <code><span class="literal">true</span></code>, the first slide will be selected if at the last slide.</span>
+</p>
+<p class="argument">
+  <code class="argument__code">isInstant</code>
+  <span class="argument__type"><i>Boolean</i></span>
+  <span class="argument__description">If <code><span class="literal">true</span></code>, immediately view the selected slide without animation.</span>
 </p>
 
 <div class="example duo">

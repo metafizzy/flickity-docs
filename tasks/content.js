@@ -44,7 +44,7 @@ module.exports = function( site ) {
     var filterQuery = site.data.isExport ? [ '**', '!**/404.*'] : '**';
 
     site.data.sourceUrlPath = site.data.isExport ? '' :
-      'https://npmcdn.com/flickity@' + site.data.flickityMinorVersion + '/dist/';
+      'https://unpkg.com/flickity@' + site.data.flickityMinorVersion + '/dist/';
 
     var buildOptions = {
       layout: pageTemplate,

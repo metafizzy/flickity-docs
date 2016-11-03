@@ -2,14 +2,16 @@ var gulp = require('gulp');
 var rename = require('gulp-rename');
 var filter = require('gulp-filter');
 var frontMatter = require('gulp-front-matter');
+var path = require('path');
 
 var getTransform = require('./utils/get-transform');
 var pageNav = require('./utils/page-nav');
 var highlightCodeBlock = require('./utils/highlight-code-block');
 var build = require('./utils/build');
+var hb = require('gulp-hb');
 
 var contentSrc = [
-  'content/**/*.mustache'
+  'content/**/*.hbs'
 ];
 
 // ----- page template ----- //
@@ -39,19 +41,20 @@ var helpers = {
 
 module.exports = function( site ) {
 
-  gulp.task( 'content', [ 'partials', 'data', 'page-template' ], function() {
+  gulp.task( 'content', [  ], function() {
     // exclude 404 if export
     var filterQuery = site.data.isExport ? [ '**', '!**/404.*'] : '**';
 
     site.data.sourceUrlPath = site.data.isExport ? '' :
       'https://unpkg.com/flickity@' + site.data.flickityMinorVersion + '/dist/';
 
-    var buildOptions = {
-      layout: pageTemplate,
-      partials: site.partials,
-      helpers: helpers,
-      rootPathBase: '/content/'
-    };
+    // var buildOptions = {
+    //   layout: pageTemplate,
+    //   partials: site.partials,
+    //   helpers: helpers,
+    //   rootPathBase: '/content/'
+    // };
+
 
     return gulp.src( contentSrc )
       .pipe( filter( filterQuery ) )
@@ -59,7 +62,17 @@ module.exports = function( site ) {
         property: 'frontMatter',
         remove: true
       }) )
-      .pipe( build( site.data, buildOptions ) )
+      // .pipe( build( site.data, buildOptions ) )
+      .pipe( hb({
+          data: 'data/*.json',
+          // partials: 'modules/*/**/*.hbs'
+        })
+        .partials( 'modules/*/**/*.hbs', {
+          parsePartialName: function( options, file ) {
+            return path.basename( file.path, '.hbs' );
+          }
+        } )
+      )
       .pipe( highlightCodeBlock() )
       .pipe( pageNav() )
       .pipe( rename({ extname: '.html' }) )

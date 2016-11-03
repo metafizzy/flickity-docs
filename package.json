@@ -19,6 +19,7 @@
     "gulp-concat": "^2.4.3",
     "gulp-filter": "^2.0.1",
     "gulp-front-matter": "^1.2.1",
+    "gulp-hb": "^5.1.4",
     "gulp-jshint": "^1.9.0",
     "gulp-rename": "^1.2.0",
     "gulp-replace": "^0.5.1",

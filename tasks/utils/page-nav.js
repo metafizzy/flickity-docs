@@ -1,8 +1,8 @@
 var cheerio = require('cheerio');
-var getTransform = require('./get-transform');
+var transfob = require('transfob');
 
 module.exports = function pageNav() {
-  return getTransform( function( file, enc, next ) {
+  return transfob( function( file, enc, next ) {
     var $ = cheerio.load( file.contents.toString() );
     var pageNavHtml = '\n';
     // query each h2, h3, h4

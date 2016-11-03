@@ -4,11 +4,10 @@ var filter = require('gulp-filter');
 var frontMatter = require('gulp-front-matter');
 var path = require('path');
 
-var getTransform = require('./utils/get-transform');
 var pageNav = require('./utils/page-nav');
 var highlightCodeBlock = require('./utils/highlight-code-block');
-var build = require('./utils/build');
 var hb = require('gulp-hb');
+var hbLayouts = require('handlebars-layouts');
 
 var contentSrc = [
   'content/**/*.hbs'
@@ -17,15 +16,6 @@ var contentSrc = [
 // ----- page template ----- //
 
 var pageTemplateSrc = 'templates/page.mustache';
-var pageTemplate;
-
-gulp.task( 'page-template', function() {
-  return gulp.src( pageTemplateSrc )
-    .pipe( getTransform( function( file, enc, next ) {
-      pageTemplate = file.contents.toString();
-      next( null, file );
-    }));
-});
 
 var helpers = {
   firstValue: function( ary ) {
@@ -55,7 +45,6 @@ module.exports = function( site ) {
     //   rootPathBase: '/content/'
     // };
 
-
     return gulp.src( contentSrc )
       .pipe( filter( filterQuery ) )
       .pipe( frontMatter({
@@ -65,13 +54,14 @@ module.exports = function( site ) {
       // .pipe( build( site.data, buildOptions ) )
       .pipe( hb({
           data: 'data/*.json',
-          // partials: 'modules/*/**/*.hbs'
         })
+        .partials('templates/*.hbs')
         .partials( 'modules/*/**/*.hbs', {
           parsePartialName: function( options, file ) {
             return path.basename( file.path, '.hbs' );
           }
         } )
+        .helpers( hbLayouts )
       )
       .pipe( highlightCodeBlock() )
       .pipe( pageNav() )

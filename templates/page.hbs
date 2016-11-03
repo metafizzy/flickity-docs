@@ -38,7 +38,7 @@
 
 {{! no leading whitespace because handlebars preserves it, messes with code blocks
 https://github.com/wycats/handlebars.js/issues/858 }}
-{{> body}}
+{{#block "main"}}{{/block}}
   </div>
 </div>
 

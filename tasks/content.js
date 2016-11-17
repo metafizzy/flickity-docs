@@ -8,6 +8,7 @@ var pageNav = require('./utils/page-nav');
 var highlightCodeBlock = require('./utils/highlight-code-block');
 var hb = require('gulp-hb');
 var hbLayouts = require('handlebars-layouts');
+var extendPageLayout = require('./utils/extend-page-layout');
 
 // sources
 var contentSrc = 'content/**/*.hbs';
@@ -44,6 +45,7 @@ module.exports = function( site ) {
         property: 'data.page',
         remove: true
       }) )
+      .pipe( extendPageLayout() )
       // add basename
       .pipe( transfob( function( file, enc, next ) {
         file.basename = path.basename( file.path, '.hbs' );

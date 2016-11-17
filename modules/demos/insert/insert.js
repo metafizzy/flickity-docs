@@ -1,4 +1,4 @@
-FlickityDocs.modules.insert = function( elem ) {
+FlickityDocs.insert = function( elem ) {
   'use strict';
 
   var carousel = elem.querySelector('.carousel');

@@ -3,6 +3,7 @@
   "unused": true,
   "undef": true,
   "globals": {
+    "FizzyDocs": false,
     "fizzyUIUtils": false,
     "FlickityDocs": true,
     "matchesSelector": false

@@ -1,4 +1,4 @@
-FlickityDocs.modules['select-instant'] = function( elem ) {
+FlickityDocs['select-instant'] = function( elem ) {
   'use strict';
 
   var utils = window.fizzyUIUtils;

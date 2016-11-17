@@ -1,4 +1,4 @@
-FlickityDocs.modules.select = function( elem ) {
+FlickityDocs.select = function( elem ) {
   'use strict';
 
   var utils = window.fizzyUIUtils;

@@ -1,4 +1,4 @@
-FlickityDocs.modules['arrow-wiz'] = function( elem ) {
+FlickityDocs['arrow-wiz'] = function( elem ) {
   'use strict';
 
   var wiz = elem;

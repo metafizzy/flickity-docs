@@ -1,4 +1,4 @@
-FlickityDocs.modules['fizzy-bear-shirt'] = function( elem ) {
+FlickityDocs['fizzy-bear-shirt'] = function( elem ) {
   'use strict';
 
   var endDate = new Date( 2016, 5, 9 );

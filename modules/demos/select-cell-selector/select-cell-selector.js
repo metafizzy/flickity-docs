@@ -1,4 +1,4 @@
-FlickityDocs.modules['select-cell-selector'] = function( elem ) {
+FlickityDocs['select-cell-selector'] = function( elem ) {
   'use strict';
 
   var flkty = new Flickity( elem.querySelector('.carousel'), {

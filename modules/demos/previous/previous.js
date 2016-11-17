@@ -1,4 +1,4 @@
-FlickityDocs.modules.previous = function( elem ) {
+FlickityDocs.previous = function( elem ) {
   'use strict';
 
   var carousel = elem.querySelector('.carousel');

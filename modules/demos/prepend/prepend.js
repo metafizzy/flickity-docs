@@ -1,4 +1,4 @@
-FlickityDocs.modules.prepend = function( elem ) {
+FlickityDocs.prepend = function( elem ) {
   'use strict';
 
   var carousel = elem.querySelector('.carousel');

@@ -1,4 +1,4 @@
-FlickityDocs.modules.parallax = function( elem ) {
+FlickityDocs.parallax = function( elem ) {
   'use strict';
 
   var carousel = elem.querySelector('.carousel');

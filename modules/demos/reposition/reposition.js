@@ -1,4 +1,4 @@
-FlickityDocs.modules.reposition = function( elem ) {
+FlickityDocs.reposition = function( elem ) {
   'use strict';
 
   var carousel = elem.querySelector('.carousel');

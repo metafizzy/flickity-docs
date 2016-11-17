@@ -1,4 +1,4 @@
-FlickityDocs.modules.resize = function( elem ) {
+FlickityDocs.resize = function( elem ) {
   'use strict';
 
   var carousel = elem.querySelector('.carousel');

@@ -1,4 +1,4 @@
-FlickityDocs.modules.remove = function( elem ) {
+FlickityDocs.remove = function( elem ) {
   'use strict';
 
   var carousel = elem.querySelector('.carousel');

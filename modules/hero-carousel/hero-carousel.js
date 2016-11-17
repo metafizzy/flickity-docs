@@ -1,4 +1,4 @@
-FlickityDocs.modules['hero-carousel'] = function( elem ) {
+FlickityDocs['hero-carousel'] = function( elem ) {
   'use strict';
 
   var firstCell = elem.querySelector('.hero-carousel__cell--1');

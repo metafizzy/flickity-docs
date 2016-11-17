@@ -1,4 +1,4 @@
-FlickityDocs.modules.player = function( elem ) {
+FlickityDocs.player = function( elem ) {
   'use strict';
 
   var carousel = elem.querySelector('.carousel');

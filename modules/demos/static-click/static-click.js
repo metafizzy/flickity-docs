@@ -1,4 +1,4 @@
-FlickityDocs.modules['static-click'] = function( elem ) {
+FlickityDocs['static-click'] = function( elem ) {
   'use strict';
 
   var carousel = elem.querySelector('.carousel');

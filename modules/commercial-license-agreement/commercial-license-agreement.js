@@ -1,4 +1,4 @@
-FlickityDocs.modules['commercial-license-agreement'] = function( elem ) {
+FlickityDocs['commercial-license-agreement'] = function( elem ) {
   'use strict';
 
   var licenseData = {

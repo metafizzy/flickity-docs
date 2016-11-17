@@ -1,4 +1,4 @@
-FlickityDocs.modules.keyhole = function( elem ) {
+FlickityDocs.keyhole = function( elem ) {
   'use strict';
 
   var transformProp = typeof elem.style.transform == 'string' ?

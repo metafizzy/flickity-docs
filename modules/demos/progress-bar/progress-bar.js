@@ -1,4 +1,4 @@
-FlickityDocs.modules['progress-bar'] = function( elem ) {
+FlickityDocs['progress-bar'] = function( elem ) {
   'use strict';
 
   var carousel = elem.querySelector('.carousel');

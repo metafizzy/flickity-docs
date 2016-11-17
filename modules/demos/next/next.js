@@ -1,4 +1,4 @@
-FlickityDocs.modules.next = function( elem ) {
+FlickityDocs.next = function( elem ) {
   'use strict';
 
   var carousel = elem.querySelector('.carousel');

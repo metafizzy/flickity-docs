@@ -4,8 +4,6 @@
 
 // global namespace
 var FlickityDocs = window.FlickityDocs = {};
-// modules
-FlickityDocs.modules = {};
 
 // ----- utils ----- //
 

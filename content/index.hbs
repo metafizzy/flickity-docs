@@ -4,51 +4,6 @@ is_homepage: true
 {{#extend "page"}}
 {{#content "main"}}
 
-<div class="call-out call-out--chill call-out--big-copy">
-  <h2>New! Flickity v2</h2>
-
-  <p>IE8 &amp; 9 dropped. 15% smaller. New features include:</p>
-
-  <ul>
-    <li><a href="options.html#groupcells">groupCells</a> - group cells together as individual slides</li>
-    <li><a href="options.html#adaptiveheight">adaptiveHeight</a> - change carousel height to selected cell</li>
-    <li><a href="options.html#bglazyload">bgLazyLoad</a> - lazyload background images</li>
-    <li><a href="events.html#scroll">scroll event</a> - do cool stuff like progress bars and parallax effects</li>
-    <li><a href="options.html#dragthreshold">dragThreshold</a> - add more wiggle room for touch vertical scrolling</li>
-  </ul>
-
-</div>
-
-<div class="call-out call-out--chill call-out--big-copy">
-  <h2>Quick start</h2>
-
-  <p>Start using Flickity in two steps.</p>
-
-  <ol class="quick-start-list">
-    <li>
-      <p>Add the Flickity <code>.css</code> and <code>.js</code> files to your site.</p>
-      ``` html
-      <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.css" media="screen">
-      ```
-      ``` html
-      <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
-      ```
-    </li>
-    <li>
-      <p>Add <code>data-flickity</code> attribute to carousel elements.</p>
-      ``` html
-      <div class="carousel" data-flickity>
-        <div class="carousel-cell"></div>
-        <div class="carousel-cell"></div>
-        ...
-      </div>
-      ```
-    </li>
-  </ol>
-
-  <p>That&rsquo;s it! You&rsquo;re all set to start using and customizing Flickity.</p>
-</div>
-
 {{! ----------------------------------------------------------------- }}
 
 <h2>Install</h2>
@@ -173,7 +128,7 @@ $('.main-carousel').flickity({
 
 {{! ----------------------------------------------------------------- }}
 
-<h3>Initialize with Vanilla JavaScript</h3>
+<h3>Initialize with vanilla JavaScript</h3>
 
 <p>You can use Flickity with vanilla JS: <code><span class="keyword">new</span> Flickity( elem )</code>. The <code>Flickity()</code> constructor accepts two arguments: the carousel element and an options object.</p>
 

@@ -1,0 +1,11 @@
+/* buy button overwrites
+------------------------- */
+
+.buy-button {
+  border: 2px solid;
+  color: #8C8;
+}
+
+.buy-button__price { background: #8C8; }
+
+.buy-button:hover .buy-button__price { background: #E90; }

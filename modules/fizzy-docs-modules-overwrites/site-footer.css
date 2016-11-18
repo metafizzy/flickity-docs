@@ -1,0 +1,69 @@
+/* fizzy-docs-modules-overwrites
+------------------------- */
+
+/* ---- site-footer ---- */
+
+.site-footer {
+  background: #FAFAFA;
+  margin-top: 0;
+  position: relative;
+}
+
+.site-footer .twitter-logo { fill: #8C8; }
+.site-footer a:hover .twitter-logo { fill: #E90; }
+
+
+/* ---- showcase-item ---- */
+
+.showcase-item__link {
+  background: #EEE;
+}
+
+.showcase-item__link:hover {
+  background: #8C8;
+  color: white;
+}
+
+/* ---- fizzy-bear-shirt ---- */
+
+.fizzy-bear-shirt__link {
+  display: block;
+  padding: 10px;
+  border-radius: 8px;
+  background: #eee;
+}
+
+.fizzy-bear-shirt__title {
+  margin-top: 0;
+}
+
+.fizzy-bear-shirt__image {
+  border-radius: 5px;
+}
+
+.fizzy-bear-shirt__link:hover {
+  background: #8C8;
+  color: white;
+}
+
+/* ---- metafizzy-logo ---- */
+
+.site-footer .metafizzy-logo {
+  width: 55px;
+  margin-right: 5px;
+}
+
+.metafizzy-logo__stripe1,
+.metafizzy-logo__stripe2,
+.metafizzy-logo__stripe3,
+.metafizzy-logo__stripe4 { fill: #8C8; }
+
+.metafizzy-brand__link:hover .metafizzy-logo__stripe1 { fill: #C25; }
+.metafizzy-brand__link:hover .metafizzy-logo__stripe2 { fill: #E62; }
+.metafizzy-brand__link:hover .metafizzy-logo__stripe3 { fill: #EA0; }
+.metafizzy-brand__link:hover .metafizzy-logo__stripe4 { fill: #19F; }
+
+/* ---- metafizzy-wordmark ---- */
+
+.metafizzy-wordmark { fill: #8C8; }
+.metafizzy-brand__link:hover .metafizzy-wordmark { fill: #333; }

@@ -12,13 +12,19 @@ var extendPageLayout = require('./utils/extend-page-layout');
 
 // sources
 var contentSrc = 'content/**/*.hbs';
-var partialsSrc = 'modules/*/**/*.hbs';
+var partialsSrc = [
+  'bower_components/fizzy-docs-modules/*/*.hbs',
+  'modules/*/**/*.hbs',
+];
 var dataSrc = 'data/*.json';
 var pageTemplateSrc = 'templates/*.hbs';
 
 // ----- page template ----- //
 
 var helpers = {
+  lowercase: function( str ) {
+    return str.toLowerCase();
+  },
   firstValue: function( ary ) {
     return ary[0];
   },

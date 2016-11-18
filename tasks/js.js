@@ -30,6 +30,8 @@ var jsSrc = [
   'bower_components/flickity-bg-lazyload/bg-lazyload.js',
   // draggabilly
   'bower_components/draggabilly/draggabilly.js',
+  // fizzy docs modules
+  'bower_components/fizzy-docs-modules/*/*.js',
   // docs
   'js/boilerplate.js',
   // modules

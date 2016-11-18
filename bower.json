@@ -19,6 +19,7 @@
     "flickity-bg-lazyload": "^1.0.0",
     "normalize.css": "^4.1.1",
     "fizzy-ui-utils": "^2.0.0",
-    "draggabilly": "^2.1.1"
+    "draggabilly": "^2.1.1",
+    "fizzy-docs-modules": "metafizzy/fizzy-docs-modules"
   }
 }

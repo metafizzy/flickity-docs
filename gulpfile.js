@@ -7,6 +7,7 @@ var site = {
   // templating data
   data: {
     productName: 'Flickity',
+    majorVersion: 2,
     isDev: process.argv[2] == 'dev',
     isExport: process.argv[2] == 'export',
   },

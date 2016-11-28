@@ -65,5 +65,28 @@
 
 /* ---- metafizzy-wordmark ---- */
 
-.metafizzy-wordmark { fill: #8C8; }
-.metafizzy-brand__link:hover .metafizzy-wordmark { fill: #333; }
+.metafizzy-wordmark path { fill: #8C8; }
+.metafizzy-brand__link:hover .metafizzy-wordmark path { fill: #333; }
+
+@media screen and ( min-width: 1220px ) {
+
+  .site-footer .metafizzy-brand {
+    position: absolute;
+    left: 1000px;
+    top: 70px;
+    width: 180px;
+  }
+
+  .site-footer .metafizzy-logo {
+    display: block;
+    width: 90px;
+    margin: 0 auto 10px;
+  }
+
+  .site-footer .metafizzy-wordmark {
+    width: 140px;
+    margin: 0 auto;
+    display: block;
+  }
+
+}

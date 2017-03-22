@@ -1,0 +1,7 @@
+/* button overwrites
+------------------------- */
+
+.button-group--inline {
+  display: inline-block;
+  vertical-align: bottom;
+}

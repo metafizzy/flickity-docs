@@ -32,7 +32,7 @@
 .hero-carousel .tagline {
   font-size: 1.4rem;
   line-height: 1.0;
-  margin: 0;
+  margin: 0 0 0.5rem;
   color: #444;
 }
 
@@ -99,7 +99,8 @@
 @media screen and ( max-width: 500px ) {
   /* hide first cell content on small devices */
   .hero-carousel h1,
-  .hero-carousel .tagline {
+  .hero-carousel .tagline,
+  .hero-carousel .gh-button {
     display: none;
   }
 
@@ -178,6 +179,10 @@
 
   .hero-carousel h1 {
     font-size: 7.8rem;
+  }
+
+  .hero-carousel .tagline {
+    margin-bottom: 1.0rem;
   }
 
   .hero-illustration {

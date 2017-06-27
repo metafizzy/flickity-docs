@@ -1,0 +1,24 @@
+/* chunky-button overwrites
+------------------------- */
+
+.chunky-button--fill {
+  background-color: #6C6;
+  color: white;
+}
+
+.chunky-button--fill svg path {
+  fill: white;
+}
+
+.chunky-button--fill:hover {
+  background-color: #EC5;
+  color: white;
+}
+
+.chunky-button--outline svg path {
+  fill: #6A6;
+}
+
+.chunky-button--outline:hover svg path {
+  fill: #E90;
+}

@@ -16,7 +16,7 @@
     "cheerio": "^0.19.0",
     "glob": "^4.3.5",
     "gulp": "^3.8.10",
-    "gulp-concat": "^2.4.3",
+    "gulp-concat": "^2.6.1",
     "gulp-filter": "^2.0.1",
     "gulp-front-matter": "^1.2.1",
     "gulp-hb": "^5.1.4",

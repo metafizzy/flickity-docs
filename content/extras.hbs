@@ -134,7 +134,7 @@ requirejs( [
   'flickity/js/index',
   'app/my-component.js'
 ], function( Flickity, myComp ) {
-  var iso = new Flickity( '.carousel', {...});
+  var flkty = new Flickity( '.carousel', {...});
 });
 ```
 
@@ -202,6 +202,7 @@ npm install jquery-bridget
 ```
 
 ``` js
+// main.js
 var $ = require('jquery');
 var jQueryBridget = require('jquery-bridget');
 var Flickity = require('flickity');

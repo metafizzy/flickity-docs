@@ -40,7 +40,7 @@ gulp.task( 'default', [
 
 // ----- export ----- //
 
-// version of site used in packery-docs.zip
+// version of site used in flickity-docs.zip
 
 gulp.task( 'export', [ 'default' ] );
 

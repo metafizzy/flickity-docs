@@ -46,47 +46,37 @@
   color: white;
 }
 
-/* ---- metafizzy-logo ---- */
+/* ---- mfzy-logo ---- */
 
-.site-footer .metafizzy-logo {
-  width: 55px;
-  margin-right: 5px;
-}
+.site-footer .mfzy-logo__body-fill { fill: #6A6; }
+.site-footer .mfzy-logo__stripes { display: none; }
 
-.metafizzy-logo__stripe1,
-.metafizzy-logo__stripe2,
-.metafizzy-logo__stripe3,
-.metafizzy-logo__stripe4 { fill: #8C8; }
+.site-footer a:hover .mfzy-logo__stripes { display: inline; }
 
-.metafizzy-brand__link:hover .metafizzy-logo__stripe1 { fill: #C25; }
-.metafizzy-brand__link:hover .metafizzy-logo__stripe2 { fill: #E62; }
-.metafizzy-brand__link:hover .metafizzy-logo__stripe3 { fill: #EA0; }
-.metafizzy-brand__link:hover .metafizzy-logo__stripe4 { fill: #19F; }
+/* ---- mfzy-wordmark ---- */
 
-/* ---- metafizzy-wordmark ---- */
-
-.metafizzy-wordmark path { fill: #8C8; }
-.metafizzy-brand__link:hover .metafizzy-wordmark path { fill: #333; }
+.mfzy-wordmark { stroke: #6A6; }
+.mfzy-brand__link:hover .mfzy-wordmark { stroke: #333; }
 
 @media screen and ( min-width: 1220px ) {
 
-  .site-footer .metafizzy-brand {
+  .site-footer .mfzy-brand {
     position: absolute;
     left: 1000px;
     top: 70px;
     width: 180px;
   }
 
-  .site-footer .metafizzy-logo {
+  .site-footer .mfzy-logo {
     display: block;
-    width: 90px;
-    margin: 0 auto 10px;
+    width: 108px;
+    height: 108px;
+    margin: 0 auto 5px;
   }
 
-  .site-footer .metafizzy-wordmark {
-    width: 140px;
-    margin: 0 auto;
+  .site-footer .mfzy-wordmark {
     display: block;
+    margin: 0 auto;
   }
 
 }

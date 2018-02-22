@@ -660,7 +660,7 @@ console.log( flkty.selectedIndex, flkty.selectedElement );
 
 <h3>selectedIndex</h3>
 
-<p>The selected index.</p>
+<p>Zero-based index of the selected slide.</p>
 
 ``` js
 flkty.selectedIndex
@@ -670,10 +670,21 @@ flkty.selectedIndex
 
 <h3>selectedElement</h3>
 
-<p>The selected cell element.</p>
+<p>The selected cell element. For <a href="options.html#groupcells"><code>groupCells</code></a>, the first cell element in the selected slide.</p>
 
 ``` js
 flkty.selectedElement
+```
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>selectedElements</h3>
+
+<p>An array of elements in the selected slide. Useful for <a href="options.html#groupcells"><code>groupCells</code></a>.</p>
+
+``` js
+flkty.selectedElements
+// -> array of elements
 ```
 
 {{! ----------------------------------------------------------------- }}
@@ -700,15 +711,4 @@ flkty.slides
 // -> array of slides
 flkty.slides.length
 // -> total number of slides
-```
-
-{{! ----------------------------------------------------------------- }}
-
-<h3>selectedElements</h3>
-
-<p>An array of elements in the selected slide. Useful for <a href="options.html#groupcells"><code>groupCells</code></a>.</p>
-
-``` js
-flkty.selectedElements
-// -> array of elements
 ```

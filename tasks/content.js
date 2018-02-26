@@ -52,8 +52,10 @@ module.exports = function( site ) {
         remove: true
       }) )
       .pipe( extendPageLayout() )
-      // add basename
+      // add file path data
       .pipe( transfob( function( file, enc, next ) {
+        file.rootPath = path.relative( file.path, file.cwd + '/content/' )
+          .replace( /\.\.$/, '' );
         file.basename = path.basename( file.path, '.hbs' );
         next( null, file );
       }))

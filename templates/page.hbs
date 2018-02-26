@@ -2,10 +2,10 @@
 <html lang="en" class="{{#if isExport}}export{{/if}}">
 <head>
   <meta charset="utf-8">
-  <meta name="description" content="Touch, responsive, flickable carousels" />
+  <meta name="description" content="{{description}}" />
   <meta name="viewport" content="width=device-width" />
 
-  <title>Flickity{{#unless page.is_homepage}} &middot; {{page.title}}{{/unless}}</title>
+  <title>{{productName}} &middot; {{#if page.is_homepage}}{{description}}{{else}}{{page.title}}{{/if}}</title>
 
   {{#if isDev}}
     {{#each css_paths}}
@@ -14,6 +14,13 @@
   {{else}}
     <link rel="stylesheet" href="{{#if page.is_404}}/{{/if}}css/flickity-docs.css?4" media="screen" />
   {{/if}}
+
+  {{! Twitter Cards }}
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:site" content="@metafizzyco" />
+  <meta name="twitter:url" content="https://flickity.metafizzy.co/{{@file.basename}}.html" />
+  <meta name="twitter:title" content="{{productName}}{{#unless page.is_homepage}} {{page.title}}{{/unless}}" />
+  <meta name="twitter:description" content="{{description}}" />
 
 </head>
 <body class="page--{{@file.basename}}">

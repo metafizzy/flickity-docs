@@ -1,11 +1,17 @@
 FlickityDocs['events-table'] = function( elem ) {
   'use strict';
 
-  var carousel = elem.querySelector('.carousel');
-  var flkty = new Flickity( carousel );
-
   var table = elem.querySelector('.event-table');
   var tbody = table.querySelector('tbody');
+
+  var carousel = elem.querySelector('.carousel');
+  var flkty = new Flickity( carousel, {
+    on: {
+      ready: function() {
+        logEvent('ready');
+      },
+    },
+  });
 
   function logEvent( type, message ) {
     var row = document.createElement('tr');
@@ -37,32 +43,23 @@ FlickityDocs['events-table'] = function( elem ) {
     }
   }
 
-  flkty.on( 'select', function() {
-    logEvent( 'select', 'selected cell ' + ( flkty.selectedIndex + 1 ) );
+  flkty.on( 'change', function( index ) {
+    logEvent( 'change', 'changed to cell ' + ( index + 1 ) );
   });
 
-  flkty.on( 'settle', function() {
+  flkty.on( 'select', function( index ) {
+    logEvent( 'select', 'selected cell ' + ( index + 1 ) );
+  });
+
+  flkty.on( 'settle', function( index ) {
+    // TODO use index argument
     logEvent( 'settle', 'settled at cell ' + ( flkty.selectedIndex + 1 ) );
   });
 
-  flkty.on( 'staticClick', function( event ) {
-    var message = '';
-    if ( matchesSelector( event.target, '.carousel-cell' ) ) {
-      var cell = flkty.getCell( event.target );
-      var cellIndex = flkty.cells.indexOf( cell ) + 1;
-      message = 'clicked cell ' + cellIndex;
-    }
+  flkty.on( 'staticClick', function( event, pointer, cellElem, cellIndex ) {
+    var  message = cellElem ? 'clicked cell ' + cellIndex : '';
     logEvent( 'staticClick', message );
   });
-
-  var eventTypes = [
-    'dragStart',
-    'dragMove',
-    'dragEnd',
-    'pointerDown',
-    'pointerMove',
-    'pointerUp'
-  ];
 
   function getListener( eventType ) {
     return function() {
@@ -70,10 +67,17 @@ FlickityDocs['events-table'] = function( elem ) {
     };
   }
 
-  for ( var i=0, len = eventTypes.length; i < len; i++ ) {
-    var eventType = eventTypes[i];
+  // add generic listeners for these event types
+  [
+    'dragStart',
+    'dragMove',
+    'dragEnd',
+    'pointerDown',
+    'pointerMove',
+    'pointerUp'
+  ].forEach( function ( eventType ) {
     var listener = getListener( eventType );
     flkty.on( eventType, listener );
-  }
+  });
 
 };

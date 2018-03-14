@@ -220,113 +220,37 @@ cellSelector: '.carousel-cell'
 
 {{! ----------------------------------------------------------------- }}
 
-<h2>Cell position</h2>
-
-{{> cell-align}}
-
-{{! ----------------------------------------------------------------- }}
-
-{{> contain}}
-
-{{! ----------------------------------------------------------------- }}
-
-{{> imagesloaded}}
-
-{{! ----------------------------------------------------------------- }}
-
-<h3>percentPosition</h3>
-
-<p>Sets positioning in percent values, rather than pixel values. If your cells do not have percent widths, we recommended <code>percentPosition: <span class="literal">false</span></code>.</p>
-
-<div class="duo example">
-  <div class="duo__cell example__code">
-    ``` js
-    // default percentPosition: true
-    // sets cell position in percentages
-    ```
-
-    ``` css
-    /* cell width in percent */
-    .carousel-cell {
-      width: 66%;
-    }
-    ```
-  </div>
-  <div class="duo__cell example__demo">
-    <div class="carousel" data-flickity='{ "percentPosition": false }'>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-    </div>
-    {{> edit-demo default="azqbop" }}
-  </div>
-</div>
-
-<div class="duo example">
-  <div class="duo__cell example__code">
-    ``` js
-    percentPosition: false
-    // sets cell position in pixels
-    ```
-
-    ``` css
-    /* cell width in pixels */
-    .carousel-cell {
-      width: 300px;
-    }
-    ```
-  </div>
-  <div class="duo__cell example__demo">
-    <div class="carousel carousel--pixel-position-demo" data-flickity='{ "percentPosition": false }'>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-    </div>
-    {{> edit-demo default="dPdoWp" }}
-  </div>
-</div>
-
-{{! ----------------------------------------------------------------- }}
-
-<h3>rightToLeft</h3>
-
-<p>Enables right-to-left layout.</p>
-
-<div class="duo example">
-  <div class="duo__cell example__code">
-    ``` js
-    rightToLeft: true
-    ```
-  </div>
-  <div class="duo__cell example__demo">
-    <div class="carousel" data-flickity='{ "rightToLeft": true }'>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-    </div>
-      {{> edit-demo default="ZYrGKN" }}
-  </div>
-</div>
-
-{{! ----------------------------------------------------------------- }}
-
 <h2>Behavior</h2>
 
 {{! ----------------------------------------------------------------- }}
 
 <h3>draggable</h3>
 
-<p>Enables dragging and flicking. Enabled by default <code><span class="comment">draggable: true</span></code>.</p>
+<p>Enables dragging and flicking. Enabled by default when carousel has 2 or more slides <code><span class="comment">draggable: '>1'</span></code>.</p>
 
 <div class="duo example">
   <div class="duo__cell example__code">
     ``` js
+    // Enable dragging with at least 2 slides
+    // set by default
+    // draggable: '>1'
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel" data-flickity>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+  </div>
+</div>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    // Disable dragging
     draggable: false
     ```
   </div>
@@ -339,6 +263,35 @@ cellSelector: '.carousel-cell'
       <div class="carousel-cell"></div>
     </div>
     {{> edit-demo default="dPdoRO" }}
+  </div>
+</div>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    // Disable dragging when only 1 slide
+    // set by default
+    // draggable: '>1'
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel" data-flickity>
+      <div class="carousel-cell"></div>
+    </div>
+  </div>
+</div>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    // enable dragging, even with only 1 slide
+    draggable: true
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel" data-flickity='{ "draggable": true }'>
+      <div class="carousel-cell"></div>
+    </div>
   </div>
 </div>
 
@@ -441,130 +394,6 @@ cellSelector: '.carousel-cell'
     </div>
     {{> edit-demo default="mEBPQG" }}
   </div>
-</div>
-
-{{! ----------------------------------------------------------------- }}
-
-{{> lazy-load}}
-
-<p>If using natural size of images for the size of cells, set a <code>min-width</code> to cells have a size when images are not loaded.</p>
-
-<div class="example duo">
-  <div class="example__code duo__cell">
-    ``` html
-    <div class="carousel">
-      <img class="carousel-image"
-        data-flickity-lazyload="tulip.jpg" />
-      <img class="carousel-image"
-        data-flickity-lazyload="grapes.jpg" />
-      ...
-    </div>
-    ```
-
-    ``` css
-    .carousel-image {
-      min-width: 150px;
-    }
-    ```
-  </div>
-  <div class="example__demo duo__cell">
-    <div class="carousel carousel--not-counting" data-flickity='{ "lazyLoad": true }'>
-      <img class="carousel__lazy-image"
-      data-flickity-lazyload="https://i.imgur.com/9xYjgCk.jpg" alt="tulip" />
-      <img class="carousel__lazy-image"
-      data-flickity-lazyload="https://i.imgur.com/8lEJtbg.jpg" alt="grapes" />
-      <img class="carousel__lazy-image"
-      data-flickity-lazyload="https://i.imgur.com/ERMbVdn.jpg" alt="raspberries" />
-      <img class="carousel__lazy-image"
-      data-flickity-lazyload="https://i.imgur.com/lBKi66i.jpg" alt="wolf" />
-      <img class="carousel__lazy-image"
-      data-flickity-lazyload="https://i.imgur.com/4O7U1Ob.jpg" alt="sea" />
-      <img class="carousel__lazy-image"
-      data-flickity-lazyload="https://i.imgur.com/4ifgQaR.jpg" alt="green beads" />
-      <img class="carousel__lazy-image"
-      data-flickity-lazyload="https://i.imgur.com/qKhkOKC.jpg" alt="gulls" />
-      <img class="carousel__lazy-image"
-      data-flickity-lazyload="https://i.imgur.com/LFelADP.jpg" alt="touch" />
-      <img class="carousel__lazy-image"
-      data-flickity-lazyload="https://i.imgur.com/OZmQIVL.jpg" alt="van" />
-    </div>
-    {{> edit-demo default="RPLRLZ" }}
-  </div>
-</div>
-
-{{! ----------------------------------------------------------------- }}
-
-<h3>bgLazyLoad</h3>
-
-<p>Loads cell background image when a cell is selected.</p>
-
-<p>Set the background image's URL to load with <code>data-flickity-bg-lazyload</code>.</p>
-
-``` html
-<div class="carousel-cell" data-flickity-bg-lazyload="image.jpg"></div>
-```
-
-<div class="example duo">
-  <div class="example__code duo__cell">
-    ``` js
-    bgLazyLoad: true
-    // lazyloads background image in selected slide
-    ```
-    ``` html
-    <div class="carousel">
-      <div class="carousel-cell"
-        data-flickity-bg-lazyload="tulip.jpg"></div>
-      <div class="carousel-cell"
-        data-flickity-bg-lazyload="breakfast.jpg"></div>
-        ...
-    </div>
-    ```
-  </div>
-  <div class="example__demo duo__cell">
-    <div class="carousel carousel--not-counting carousel--bg-lazyload"
-      data-flickity='{ "bgLazyLoad": true }'>
-      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/300/?random"></div>
-      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/301/?random"></div>
-      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/302/?random"></div>
-      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/303/?random"></div>
-      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/304/?random"></div>
-      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/305/?random"></div>
-      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/306/?random"></div>
-    </div>
-    {{> edit-demo default="jAGAEb" }}
-  </div>
-</div>
-
-<p>Set <code>bgLazyLoad</code> to a number to load images in adjacent cells.</p>
-
-<div class="example duo">
-  <div class="example__code duo__cell">
-    ``` js
-    bgLazyLoad: 1
-    // lazyloads background image in selected slide
-    // and next 1 slide
-    // and previous 1 slide
-    ```
-  </div>
-  <div class="example__demo duo__cell">
-    <div class="carousel carousel--not-counting carousel--show-several carousel--bg-lazyload"
-      data-flickity='{ "bgLazyLoad": 1 }'>
-      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/420/?random"></div>
-      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/421/?random"></div>
-      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/422/?random"></div>
-      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/423/?random"></div>
-      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/424/?random"></div>
-      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/425/?random"></div>
-      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/426/?random"></div>
-    </div>
-    {{> edit-demo default="bZoZdG" }}
-  </div>
-</div>
-
-<p>After loading the background image, Flickity will add <code>flickity-bg-lazyloaded</code> class to the element, or <code>flickity-lazyerror</code> if the image was broken.</p>
-
-<div class="call-out">
-  <p><code>bgLazyLoad</code> requires the <a href="https://github.com/metafizzy/flickity-bg-lazyload">flickity-bg-lazyload package</a>. This package is not included and <a href="https://github.com/metafizzy/flickity-bg-lazyload#install">must be installed separately</a>.</p>
 </div>
 
 {{! ----------------------------------------------------------------- }}
@@ -803,7 +632,341 @@ asNavFor: document.querySelector('.carousel-main')
 
 {{! ----------------------------------------------------------------- }}
 
+<h2>Images</h2>
+
+{{! ----------------------------------------------------------------- }}
+
+{{> imagesloaded}}
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>lazyLoad</h3>
+
+<p>Loads cell images when a cell is selected.</p>
+
+<p>Set the image's <code>src</code> URL to load with <code>data-flickity-lazyload</code> or <code>data-flickity-lazyload-src</code>.</p>
+
+``` html
+<img data-flickity-lazyload="full.jpg" />
+<!-- Set optional placeholder src -->
+<img src="placeholder.jpg" data-flickity-lazyload="full.jpg" />
+```
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    lazyLoad: true
+    // lazyloads image in selected slide
+    ```
+    ``` html
+    <div class="carousel">
+      <div class="carousel-cell">
+        <img class="carousel-cell-image"
+          data-flickity-lazyload="tulip.jpg" />
+      </div>
+      <div class="carousel-cell">
+        <img class="carousel-cell-image"
+          data-flickity-lazyload="grapes.jpg" />
+      </div>
+      ...
+    </div>
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--lazyload-cells carousel--not-counting"
+      data-flickity='{ "lazyLoad": true }'>
+      {{> lazy-cell-images}}
+    </div>
+    {{> edit-demo default="vOeGzL" }}
+  </div>
+</div>
+
+<p>Set the image's <code>srcset</code> with <code>data-flickity-lazyload-srcset</code>. You can also set <code>data-flickity-lazyload-src</code> as well to set <code>src</code> for <a href="https://caniuse.com/#feat=srcset">browsers that do not support <code>srcset</code></a>.</p>
+
+
+
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    lazyLoad: true
+    ```
+    ``` html
+    <img class="carousel-cell-image"
+      data-flickity-lazyload-srcset="
+        walrus-large.jpg 720w,
+        walrus-med.jpg 360w"
+      sizes="(min-width: 1024px) 720px, 360px"
+      data-flickity-lazyload-src="walrus-large.jpg"
+      />
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--lazyload-cells carousel--not-counting"
+      data-flickity='{ "lazyLoad": true }'>
+      {{> lazy-srcset-images}}
+    </div>
+    {{> edit-demo default="vOeGzL" }}
+  </div>
+</div>
+
+<p>Set <code>lazyLoad</code> to a number to load images in adjacent cells.</p>
+
+<div class="example">
+  <div class="example__code">
+    ``` js
+    lazyLoad: 2
+    // load images in selected slide
+    // and next 2 slides
+    // and previous 2 slides
+    ```
+  </div>
+  <div class="example__demo">
+    <div class="carousel carousel--lazyload-adj-cells carousel--not-counting"
+      data-flickity='{ "lazyLoad": 2, "initialIndex": 2 }'>
+      {{> lazy-cell-images}}
+    </div>
+  </div>
+  {{> edit-demo default="rVGLGB" }}
+</div>
+
+<p>After loading the image, Flickity will add <code>flickity-lazyloaded</code> class to the image, or <code>flickity-lazyerror</code> to a broken image. You can use this class to add a transition when images are loaded.</p>
+
+
+``` css
+/* fade in image when loaded */
+.carousel-cell-image {
+  transition: opacity 0.4s;
+  opacity: 0;
+}
+
+.carousel-cell-image.flickity-lazyloaded,
+.carousel-cell-image.flickity-lazyerror {
+  opacity: 1;
+}
+```
+
+<p>If using natural size of images for the size of cells, set a <code>min-width</code> to cells have a size when images are not loaded.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` html
+    <div class="carousel">
+      <img class="carousel-image"
+        data-flickity-lazyload="tulip.jpg" />
+      <img class="carousel-image"
+        data-flickity-lazyload="grapes.jpg" />
+      ...
+    </div>
+    ```
+
+    ``` css
+    .carousel-image {
+      min-width: 150px;
+    }
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--not-counting" data-flickity='{ "lazyLoad": true }'>
+      <img class="carousel__lazy-image"
+      data-flickity-lazyload="https://i.imgur.com/9xYjgCk.jpg" alt="tulip" />
+      <img class="carousel__lazy-image"
+      data-flickity-lazyload="https://i.imgur.com/8lEJtbg.jpg" alt="grapes" />
+      <img class="carousel__lazy-image"
+      data-flickity-lazyload="https://i.imgur.com/ERMbVdn.jpg" alt="raspberries" />
+      <img class="carousel__lazy-image"
+      data-flickity-lazyload="https://i.imgur.com/lBKi66i.jpg" alt="wolf" />
+      <img class="carousel__lazy-image"
+      data-flickity-lazyload="https://i.imgur.com/4O7U1Ob.jpg" alt="sea" />
+      <img class="carousel__lazy-image"
+      data-flickity-lazyload="https://i.imgur.com/4ifgQaR.jpg" alt="green beads" />
+      <img class="carousel__lazy-image"
+      data-flickity-lazyload="https://i.imgur.com/qKhkOKC.jpg" alt="gulls" />
+      <img class="carousel__lazy-image"
+      data-flickity-lazyload="https://i.imgur.com/LFelADP.jpg" alt="touch" />
+      <img class="carousel__lazy-image"
+      data-flickity-lazyload="https://i.imgur.com/OZmQIVL.jpg" alt="van" />
+    </div>
+    {{> edit-demo default="RPLRLZ" }}
+  </div>
+</div>
+
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>bgLazyLoad</h3>
+
+<p>Loads cell background image when a cell is selected.</p>
+
+<p>Set the background image's URL to load with <code>data-flickity-bg-lazyload</code>.</p>
+
+``` html
+<div class="carousel-cell" data-flickity-bg-lazyload="image.jpg"></div>
+```
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    bgLazyLoad: true
+    // lazyloads background image in selected slide
+    ```
+    ``` html
+    <div class="carousel">
+      <div class="carousel-cell"
+        data-flickity-bg-lazyload="tulip.jpg"></div>
+      <div class="carousel-cell"
+        data-flickity-bg-lazyload="breakfast.jpg"></div>
+        ...
+    </div>
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--not-counting carousel--bg-lazyload"
+      data-flickity='{ "bgLazyLoad": true }'>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/300/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/301/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/302/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/303/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/304/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/305/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/400/306/?random"></div>
+    </div>
+    {{> edit-demo default="jAGAEb" }}
+  </div>
+</div>
+
+<p>Set <code>bgLazyLoad</code> to a number to load images in adjacent cells.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    bgLazyLoad: 1
+    // lazyloads background image in selected slide
+    // and next 1 slide
+    // and previous 1 slide
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--not-counting carousel--show-several carousel--bg-lazyload"
+      data-flickity='{ "bgLazyLoad": 1 }'>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/420/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/421/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/422/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/423/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/424/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/425/?random"></div>
+      <div class="carousel-cell" data-flickity-bg-lazyload="https://unsplash.it/300/426/?random"></div>
+    </div>
+    {{> edit-demo default="bZoZdG" }}
+  </div>
+</div>
+
+<p>After loading the background image, Flickity will add <code>flickity-bg-lazyloaded</code> class to the element, or <code>flickity-lazyerror</code> if the image was broken.</p>
+
+<div class="call-out">
+  <p><code>bgLazyLoad</code> requires the <a href="https://github.com/metafizzy/flickity-bg-lazyload">flickity-bg-lazyload package</a>. This package is not included and <a href="https://github.com/metafizzy/flickity-bg-lazyload#install">must be installed separately</a>.</p>
+</div>
+
+
+{{! ----------------------------------------------------------------- }}
+
+<h2>Cell position</h2>
+
+{{! ----------------------------------------------------------------- }}
+
+{{> cell-align}}
+
+{{! ----------------------------------------------------------------- }}
+
+{{> contain}}
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>percentPosition</h3>
+
+<p>Sets positioning in percent values, rather than pixel values. If your cells do not have percent widths, we recommended <code>percentPosition: <span class="literal">false</span></code>.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    // default percentPosition: true
+    // sets cell position in percentages
+    ```
+
+    ``` css
+    /* cell width in percent */
+    .carousel-cell {
+      width: 66%;
+    }
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel" data-flickity='{ "percentPosition": false }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    {{> edit-demo default="azqbop" }}
+  </div>
+</div>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    percentPosition: false
+    // sets cell position in pixels
+    ```
+
+    ``` css
+    /* cell width in pixels */
+    .carousel-cell {
+      width: 300px;
+    }
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel carousel--pixel-position-demo" data-flickity='{ "percentPosition": false }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    {{> edit-demo default="dPdoWp" }}
+  </div>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>rightToLeft</h3>
+
+<p>Enables right-to-left layout.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    rightToLeft: true
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel" data-flickity='{ "rightToLeft": true }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+      {{> edit-demo default="ZYrGKN" }}
+  </div>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
 <h2>UI</h2>
+
+{{! ----------------------------------------------------------------- }}
 
 <h3>prevNextButtons</h3
 

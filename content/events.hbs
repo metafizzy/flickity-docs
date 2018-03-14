@@ -50,6 +50,48 @@ flkty.once( 'eventName', function() {
 
 {{! ----------------------------------------------------------------- }}
 
+<h3>on option</h3>
+
+<p>Bind events within Flickity's options by setting <code>on</code> to an <i>Object</i>. The object's keys should match the event names. <code>on</code> is useful for capturing events as Flickity is initialized, like <a href="#ready"><code>ready</code></a></p> 
+
+<div class="duo">
+  <div class="duo__cell">
+    ``` js
+    // jQuery
+    var $carousel = $('.carousel').flickity({
+      on: {
+        ready: function() {
+          console.log('Flickity is ready');
+        },
+        change: function( index ) {
+          console.log( 'Slide changed to' + index );
+        }
+      }
+    });
+    ```
+    <p>When using <code>on</code> with jQuery, event listener functions will use their vanilla JS form, and not include the jQuery <code>event</code> argument.</p>
+  </div>
+  <div class="duo__cell">
+    ``` js
+    // vanilla JS
+    var flkty = new Flickity( '.carousel', {
+      on: {
+        ready: function() {
+          console.log('Flickity is ready');
+        },
+        change: function( index ) {
+          console.log( 'Slide changed to' + index );
+        }
+      }
+    });
+    ```
+  </div>
+</div>
+
+
+
+{{! ----------------------------------------------------------------- }}
+
 <h2>Events demo</h2>
 
 <p>Play around with this carousel to see how events are triggered.</p>
@@ -62,20 +104,88 @@ flkty.once( 'eventName', function() {
 
 {{! ----------------------------------------------------------------- }}
 
+<h3>ready</h3>
+
+<p>Triggered after Flickity has been activated. Because <code>ready</code> may be triggered immediately, we recommend you bind listeners with the <a href="#on-option"><code>on</code> option</a>.</p>
+
+<div class="duo">
+  <div class="duo__cell">
+    ``` js
+    // jQuery
+    var $carousel = $('.carousel').flickity({
+      on: {
+        ready: function() {
+          console.log('Flickity is ready');
+        }
+      }
+    });
+    ```
+  </div>
+  <div class="duo__cell">
+    ```js
+    // vanilla JS
+    var flkty = new Flickity( '.carousel', {
+      on: {
+        ready: function() {
+          console.log('Flickity is ready');
+        }
+      }
+    });
+    ```
+  </div>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>change</h3>
+
+<p>Triggered when the selected slide is changed.</p>
+
+``` js
+// jQuery
+$carousel.on( 'change.flickity', function( event, index ) {
+  console.log( 'Slide changed to ' + index )
+});
+```
+```js
+// vanilla JS
+flkty.on( 'change', function( index ) {...});
+```
+
+<p class="argument">
+  <code class="argument__code"><span class="params">index</span></code>
+  <span class="argument__type"><i>Number</i></span>
+  <span class="argument__description">Zero-based number of the selected slide.</span>
+</p>
+
+{{> edit-demo default="emVgqE" vanillaJS="ogEwXe" }}
+
+{{! ----------------------------------------------------------------- }}
+
 <h3>select</h3>
 
 <p>Triggered when a slide is selected.</p>
+
+<p><code>select</code> is triggered any time a slide is selected, even on the same slide. <code>change</code> is triggered only when a different slide is selected.</p>
 
 <p>This event was previously <code>cellSelect</code> in Flickity v1. <code>cellSelect</code> will continue to work in Flickity v2.</p>
 
 ``` js
 // jQuery
-$carousel.on( 'select.flickity', function() {
-  console.log( 'Flickity select ' + flkty.selectedIndex )
-})
-// vanilla JS
-flkty.on( 'select', function() {...})
+$carousel.on( 'select.flickity', function( event, index ) {
+  console.log( 'Flickity select ' + index )
+});
 ```
+```js
+// vanilla JS
+flkty.on( 'select', function( index ) {...});
+```
+
+<p class="argument">
+  <code class="argument__code"><span class="params">index</span></code>
+  <span class="argument__type"><i>Number</i></span>
+  <span class="argument__description">Zero-based number of the selected slide.</span>
+</p>
 
 {{> edit-demo default="emVgqE" vanillaJS="ogEwXe" }}
 
@@ -87,12 +197,20 @@ flkty.on( 'select', function() {...})
 
 ``` js
 // jQuery
-$carousel.on( 'settle.flickity', function() {
+$carousel.on( 'settle.flickity', function( event, index ) {
   console.log( 'Flickity settled at ' + flkty.selectedIndex )
-})
-// vanilla JS
-flkty.on( 'settle', function() {...})
+});
 ```
+```js
+// vanilla JS
+flkty.on( 'settle', function( index ) {...});
+```
+
+<p class="argument">
+  <code class="argument__code"><span class="params">index</span></code>
+  <span class="argument__type"><i>Number</i></span>
+  <span class="argument__description">Zero-based number of the selected slide.</span>
+</p>
 
 {{> edit-demo default="yyvXYL" vanillaJS="myXweK" }}
 
@@ -106,9 +224,11 @@ flkty.on( 'settle', function() {...})
 // jQuery
 $carousel.on( 'scroll.flickity', function( event, progress ) {
   console.log( 'Flickity scrolled ' + progress * 100 + '%' )
-})
+});
+```
+```js
 // vanilla JS
-flkty.on( 'scroll', function( progress ) {...})
+flkty.on( 'scroll', function( progress ) {...});
 ```
 
 <p class="argument">
@@ -187,9 +307,11 @@ flkty.on( 'scroll', function( progress ) {...})
 
 ``` js
 // jQuery
-$carousel.on( 'dragStart.flickity', function( event, pointer ) {...})
+$carousel.on( 'dragStart.flickity', function( event, pointer ) {...});
+```
+```js
 // vanilla JS
-flkty.on( 'dragStart', function( event, pointer ) {...})
+flkty.on( 'dragStart', function( event, pointer ) {...});
 ```
 
 <p class="argument">
@@ -213,9 +335,11 @@ flkty.on( 'dragStart', function( event, pointer ) {...})
 
 ``` js
 // jQuery
-$carousel.on( 'dragMove.flickity', function( event, pointer, moveVector ) {...})
+$carousel.on( 'dragMove.flickity', function( event, pointer, moveVector ) {...});
+```
+```js
 // vanilla JS
-flkty.on( 'dragMove', function( event, pointer, moveVector ) {...})
+flkty.on( 'dragMove', function( event, pointer, moveVector ) {...});
 ```
 
 <p class="argument">
@@ -244,9 +368,11 @@ flkty.on( 'dragMove', function( event, pointer, moveVector ) {...})
 
 ``` js
 // jQuery
-$carousel.on( 'dragEnd.flickity', function( event, pointer ) {...})
+$carousel.on( 'dragEnd.flickity', function( event, pointer ) {...});
+```
+```js
 // vanilla JS
-flkty.on( 'dragEnd', function( event, pointer ) {...})
+flkty.on( 'dragEnd', function( event, pointer ) {...});
 ```
 
 <p class="argument">
@@ -270,9 +396,11 @@ flkty.on( 'dragEnd', function( event, pointer ) {...})
 
 ``` js
 // jQuery
-$carousel.on( 'pointerDown.flickity', function( event, pointer ) {...})
+$carousel.on( 'pointerDown.flickity', function( event, pointer ) {...});
+```
+```js
 // vanilla JS
-flkty.on( 'pointerDown', function( event, pointer ) {...})
+flkty.on( 'pointerDown', function( event, pointer ) {...});
 ```
 
 <p class="argument">
@@ -296,9 +424,11 @@ flkty.on( 'pointerDown', function( event, pointer ) {...})
 
 ``` js
 // jQuery
-$carousel.on( 'pointerMove.flickity', function( event, pointer, moveVector ) {...})
+$carousel.on( 'pointerMove.flickity', function( event, pointer, moveVector ) {...});
+```
+```js
 // vanilla JS
-flkty.on( 'pointerMove', function( event, pointer, moveVector ) {...})
+flkty.on( 'pointerMove', function( event, pointer, moveVector ) {...});
 ```
 
 <p class="argument">
@@ -327,9 +457,11 @@ flkty.on( 'pointerMove', function( event, pointer, moveVector ) {...})
 
 ``` js
 // jQuery
-$carousel.on( 'pointerUp.flickity', function( event, pointer ) {...})
+$carousel.on( 'pointerUp.flickity', function( event, pointer ) {...});
+```
+```js
 // vanilla JS
-flkty.on( 'pointerUp', function( event, pointer ) {...})
+flkty.on( 'pointerUp', function( event, pointer ) {...});
 ```
 
 <p class="argument">
@@ -355,9 +487,11 @@ flkty.on( 'pointerUp', function( event, pointer ) {...})
 
 ``` js
 // jQuery
-$carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {...})
+$carousel.on( 'staticClick.flickity', function( event, pointer, cellElement, cellIndex ) {...});
+```
+```js
 // vanilla JS
-flkty.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {...})
+flkty.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {...});
 ```
 
 <p class="argument">
@@ -378,7 +512,7 @@ flkty.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {...
 <p class="argument">
   <code class="argument__code"><span class="params">cellIndex</span></code>
   <span class="argument__type"><i>Integer</i></span>
-  <span class="argument__description">If a cell was clicked, the cell&rsquo;s zero-based index.</span>
+  <span class="argument__description">If a cell was clicked, the cell&rsquo;s zero-based number.</span>
 </p>
 
 <p>Use the <code><span class="params">cellElement</span></code> and <code><span class="params">cellIndex</span></code> parameters to detect what cell was clicked.</p>
@@ -409,9 +543,11 @@ flkty.on( 'staticClick', function( event, pointer, cellElement, cellIndex ) {...
 
 ``` js
 // jQuery
-$carousel.on( 'lazyLoad.flickity', function( event, cellElement ) {...})
+$carousel.on( 'lazyLoad.flickity', function( event, cellElement ) {...});
+```
+```js
 // vanilla JS
-flkty.on( 'lazyLoad', function( event, cellElement ) {...})
+flkty.on( 'lazyLoad', function( event, cellElement ) {...});
 ```
 
 <p class="argument">
@@ -434,7 +570,8 @@ $carousel.on( 'lazyLoad.flickity', function( event, cellElement ) {
   console.log( event.originalEvent.type, img.src );
   // load or error on src
 });
-
+```
+```js
 // vanilla JS
 flkty.on( 'lazyLoad', function( event, cellElement ) {
   var img = event.target;
@@ -453,9 +590,11 @@ flkty.on( 'lazyLoad', function( event, cellElement ) {
 
 ``` js
 // jQuery
-$carousel.on( 'bgLazyLoad.flickity', function( event, element ) {...})
+$carousel.on( 'bgLazyLoad.flickity', function( event, element ) {...});
+```
+```js
 // vanilla JS
-flkty.on( 'bgLazyLoad', function( event, element ) {...})
+flkty.on( 'bgLazyLoad', function( event, element ) {...});
 ```
 
 <p class="argument">

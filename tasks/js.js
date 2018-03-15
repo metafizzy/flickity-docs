@@ -28,6 +28,7 @@ var jsSrc = [
   'bower_components/flickity-imagesloaded/flickity-imagesloaded.js',
   'bower_components/flickity-as-nav-for/as-nav-for.js',
   'bower_components/flickity-bg-lazyload/bg-lazyload.js',
+  'bower_components/flickity-fullscreen/fullscreen.js',
   // draggabilly
   'bower_components/draggabilly/draggabilly.js',
   // fizzy docs modules

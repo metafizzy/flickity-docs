@@ -1,0 +1,45 @@
+/* fullscreen
+------------------------- */
+
+.carousel.is-fullscreen {
+  z-index: 3; /* above site-footer */
+}
+
+.carousel.is-fullscreen .carousel-cell {
+  height: 100%;
+}
+
+/* ---- carousel-cell--fullscreen-image ---- */
+
+.carousel-cell--fullscreen-image {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 0;
+  background: #222;
+}
+
+.carousel-cell--fullscreen-image-fit {
+  min-width: 100px;
+  width: auto;
+  background: transparent;
+}
+
+/* ---- .carousel-cell--fullscreen-image img ---- */
+
+.carousel-cell--fullscreen-image img {
+  display: block;
+  max-height: 100%;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s;
+          transition: opacity 0.4s;
+}
+
+/* fade in lazy loaded image */
+.carousel-cell--fullscreen-image img.flickity-lazyloaded,
+.carousel-cell--fullscreen-image img.flickity-lazyerror {
+  opacity: 1;
+}

@@ -5,17 +5,27 @@
   margin-right: 40px;
 }
 
+.carousel--prev-next-small-outside .flickity-button {
+  background: #333;
+}
+
 .carousel--prev-next-small-outside .flickity-prev-next-button {
   width: 30px;
   height: 30px;
   border-radius: 5px;
-  background: #444;
 }
 
-.carousel--prev-next-small-outside .flickity-prev-next-button:hover { background: #F90; }
+.carousel--prev-next-small-outside .flickity-button:hover {
+  background: #F90;
+}
 
-.carousel--prev-next-small-outside .flickity-prev-next-button .arrow { fill: white; }
-.carousel--prev-next-small-outside .flickity-prev-next-button.no-svg { color: white; }
+.carousel--prev-next-small-outside .flickity-button-icon {
+  fill: white;
+}
 
-.carousel--prev-next-small-outside .flickity-prev-next-button.previous { left: -40px; }
-.carousel--prev-next-small-outside .flickity-prev-next-button.next { right: -40px; }
+.carousel--prev-next-small-outside .flickity-prev-next-button.previous {
+  left: -40px;
+}
+.carousel--prev-next-small-outside .flickity-prev-next-button.next {
+  right: -40px;
+}

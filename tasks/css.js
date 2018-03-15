@@ -7,6 +7,8 @@ var cssSrc = [
   'bower_components/normalize.css/normalize.css',
   // flickity
   'bower_components/flickity/css/flickity.css',
+  // flickity add-ons
+  'bower_components/flickity-fullscreen/fullscreen.css',
   // fizzy docs modules
   'bower_components/fizzy-docs-modules/*/*.css',
   // base

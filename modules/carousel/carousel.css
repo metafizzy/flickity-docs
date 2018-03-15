@@ -62,7 +62,9 @@
 
 .carousel--show-several .carousel-cell { width: 28%; }
 
-/* ---- auto-play ---- */
+/* ---- cell-selector ---- */
+
+.carousel--cell-selector { position: relative; }
 
 /* ---- images-loaded ---- */
 

@@ -424,6 +424,136 @@ cellSelector: '.carousel-cell'
 
 {{! ----------------------------------------------------------------- }}
 
+<h3>fullscreen</h3>
+
+<p>Enables fullscreen view of carousel. Adds button to view fullscreen.</p>
+
+{{> fullscreen-call-out}}
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    fullscreen: true
+    ```
+    ``` css
+    /* .is-fullscreen added to carousel when fullscreen
+       size cells to full height when fullscreen */
+    .carousel.is-fullscreen .carousel-cell {
+      height: 100%;
+    }
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--fullscreen" data-flickity='{ "fullscreen": true }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+  </div>
+</div>
+
+<p>For fullscreen image carousels, use CSS flexbox to center images in cells. This demo shows one cell each in the viewport.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    fullscreen: true,
+    lazyLoad: 1
+    ```
+
+    ``` html
+    <div class="carousel">
+      <div class="carousel-cell">
+        <img data-flickity-lazyload="orange-tree.jpg" />
+      </div>
+      <div class="carousel-cell">
+        <img data-flickity-lazyload="tulip.jpg" />
+      </div>
+      ...
+    </div>
+    ```
+
+    ``` css
+    .carousel-cell {
+      width: 100%; /* full width */
+      height: 200px;
+      background: #222;
+      /* center images in cells with flexbox */
+      display: flex; 
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel.is-fullscreen .carousel-cell {
+      height: 100%;
+    }
+
+    .carousel-cell img {
+      display: block;
+      max-height: 100%;
+    }
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--not-counting"
+      data-flickity='{ "fullscreen": true, "lazyLoad": 1 }'>
+      {{#each fullscreen_images}}
+        <div class="carousel-cell carousel-cell--fullscreen-image">
+          <img data-flickity-lazyload="{{this}}" />
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>
+
+
+<p>This demo shows multiple cells in the viewport.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    fullscreen: true,
+    lazyLoad: 2
+    ```
+
+    ``` css
+    .carousel-cell {
+      /* only set min-width,
+         allow images to set width */
+      min-width: 100px;
+      height: 200px;
+      /* center images in cells with flexbox */
+      display: flex; 
+      align-items: center;
+      justify-content: center;
+    }
+
+    .carousel.is-fullscreen .carousel-cell {
+      height: 100%;
+    }
+
+    .carousel-cell img {
+      display: block;
+      max-height: 100%;
+    }
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--not-counting"
+      data-flickity='{ "fullscreen": true, "lazyLoad": 2 }'>
+      {{#each fullscreen_images}}
+        <div class="carousel-cell carousel-cell--fullscreen-image carousel-cell--fullscreen-image-fit">
+          <img data-flickity-lazyload="{{this}}" />
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
 <h3>adaptiveHeight</h3>
 
 <p>Changes height of carousel to fit height of selected slide.</p>

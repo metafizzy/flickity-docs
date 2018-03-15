@@ -143,24 +143,21 @@ title: Style
 <div class="example duo">
   <div class="example__code duo__cell">
     ``` css
-    /* big buttons, no circle */
+    /* no circle */
+    .flickity-button {
+      background: transparent;
+    }
+    /* big previous & next buttons */
     .flickity-prev-next-button {
       width: 100px;
       height: 100px;
-      background: transparent;
     }
-    .flickity-prev-next-button:hover {
-      background: transparent;
-    }
-    /* arrow color */
-    .flickity-prev-next-button .arrow {
+    /* icon color */
+    .flickity-button-icon {
       fill: white;
     }
-    .flickity-prev-next-button.no-svg {
-      color: white;
-    }
     /* hide disabled button */
-    .flickity-prev-next-button:disabled {
+    .flickity-button:disabled {
       display: none;
     }
     ```
@@ -172,21 +169,21 @@ title: Style
   <div class="example__code duo__cell">
     ``` css
     /* smaller, dark, rounded square */
+    .flickity-button {
+      background: #333;
+    }
+    .flickity-button:hover {
+      background: #F90;
+    }
+
     .flickity-prev-next-button {
       width: 30px;
       height: 30px;
       border-radius: 5px;
-      background: #333;
     }
-    .flickity-prev-next-button:hover {
-      background: #F90;
-    }
-    /* arrow color */
-    .flickity-prev-next-button .arrow {
+    /* icon color */
+    .flickity-button-icon {
       fill: white;
-    }
-    .flickity-prev-next-button.no-svg {
-      color: white;
     }
     /* position outside */
     .flickity-prev-next-button.previous {
@@ -206,9 +203,9 @@ title: Style
   <div class="example__code duo__cell">
     ``` css
     /* already included in flickity.css */
-    .flickity-prev-next-button:focus {
+    .flickity-button:focus {
       outline: none;
-      box-shadow: 0 0 0 5px #09F;
+      box-shadow: 0 0 0 5px #19F;
     }
     ```
   </div>
@@ -298,3 +295,4 @@ title: Style
     {{> edit-demo default="RNQOGm" }}
   </div>
 </div>
+

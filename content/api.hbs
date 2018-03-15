@@ -38,6 +38,8 @@ flkty.select( 3 );
 ``` js
 // jQuery
 $carousel.flickity( 'select', index, isWrapped, isInstant )
+```
+``` js
 // vanilla JS
 flkty.select( index, isWrapped, isInstant )
 ```
@@ -92,6 +94,8 @@ flkty.select( index, isWrapped, isInstant )
 ``` js
 // jQuery
 $carousel.flickity( 'previous', isWrapped, isInstant )
+```
+``` js
 // vanilla JS
 flkty.previous( isWrapped, isInstant )
 ```
@@ -132,6 +136,8 @@ flkty.previous( isWrapped, isInstant )
 ``` js
 // jQuery
 $carousel.flickity( 'next', isWrapped, isInstant )
+```
+``` js
 // vanilla JS
 flkty.next( isWrapped, isInstant )
 ```
@@ -172,6 +178,8 @@ flkty.next( isWrapped, isInstant )
 ``` js
 // jQuery
 $carousel.flickity( 'selectCell', value, isWrapped, isInstant )
+```
+``` js
 // vanilla JS
 flkty.selectCell( value, isWrapped, isInstant )
 ```
@@ -237,6 +245,8 @@ flkty.selectCell( value, isWrapped, isInstant )
 ``` js
 // jQuery
 $carousel.flickity('resize')
+```
+``` js
 // vanilla JS
 flkty.resize()
 ```
@@ -293,6 +303,8 @@ flkty.resize()
 ``` js
 // jQuery
 $carousel.flickity('reposition')
+```
+``` js
 // vanilla JS
 flkty.reposition()
 ```
@@ -324,6 +336,8 @@ flkty.reposition()
 ``` js
 // jQuery
 $carousel.flickity( 'prepend', elements )
+```
+``` js
 // vanilla JS
 flkty.prepend( elements )
 ```
@@ -354,6 +368,8 @@ flkty.prepend( elements )
 ``` js
 // jQuery
 $carousel.flickity( 'append', elements )
+```
+``` js
 // vanilla JS
 flkty.append( elements )
 ```
@@ -384,6 +400,8 @@ flkty.append( elements )
 ``` js
 // jQuery
 $carousel.flickity( 'insert', elements, index )
+```
+``` js
 // vanilla JS
 flkty.insert( elements, index )
 ```
@@ -436,6 +454,8 @@ flkty.insert( elements, index )
 ``` js
 // jQuery
 $carousel.flickity( 'remove', elements )
+```
+``` js
 // vanilla JS
 flkty.remove( elements )
 ```
@@ -477,6 +497,8 @@ flkty.remove( elements )
 ``` js
 // jQuery
 $carousel.flickity('playPlayer')
+```
+``` js
 // vanilla JS
 flkty.playPlayer()
 ```
@@ -490,6 +512,8 @@ flkty.playPlayer()
 ``` js
 // jQuery
 $carousel.flickity('stopPlayer')
+```
+``` js
 // vanilla JS
 flkty.stopPlayer()
 ```
@@ -503,6 +527,8 @@ flkty.stopPlayer()
 ``` js
 // jQuery
 $carousel.flickity('pausePlayer')
+```
+``` js
 // vanilla JS
 flkty.pausePlayer()
 ```
@@ -516,8 +542,73 @@ flkty.pausePlayer()
 ``` js
 // jQuery
 $carousel.flickity('unpausePlayer')
+```
+``` js
 // vanilla JS
 flkty.unpausePlayer()
+```
+
+{{! ----------------------------------------------------------------- }}
+
+<h2>Fullscreen</h2>
+
+{{> fullscreen-call-out }}
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>viewFullscreen</h3>
+
+<p>Expand carousel to fullscreen.</p>
+
+``` js
+// jQuery
+$carousel.flickity('viewFullscreen')
+```
+``` js
+// vanilla JS
+flkty.viewFullscreen();
+```
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    $('.button').on( 'click', function() {
+      $carousel.flickity('viewFullscreen');
+    });
+    ```
+  </div>
+  {{> view-fullscreen-demo }}
+</div>
+
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>exitFullscreen</h3>
+
+<p>Collapse carousel from fullscreen back to normal size & position.</p>
+
+``` js
+// jQuery
+$carousel.flickity('exitFullscreen')
+```
+``` js
+// vanilla JS
+flkty.exitFullscreen();
+```
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>toggleFullscreen</h3>
+
+<p>Expand or collapse carousel fullscreen view.</p>
+
+``` js
+// jQuery
+$carousel.flickity('toggleFullscreen')
+```
+``` js
+// vanilla JS
+flkty.toggleFullscreen();
 ```
 
 {{! ----------------------------------------------------------------- }}
@@ -533,6 +624,8 @@ flkty.unpausePlayer()
 ``` js
 // jQuery
 $carousel.flickity('destroy')
+```
+``` js
 // vanilla JS
 flkty.destroy()
 ```
@@ -568,6 +661,8 @@ flkty.destroy()
 ``` js
 // jQuery
 $carousel.flickity('reloadCells')
+```
+``` js
 // vanilla JS
 flkty.reloadCells()
 ```
@@ -581,6 +676,8 @@ flkty.reloadCells()
 ``` js
 // jQuery
 var cellElements = $carousel.flickity('getCellElements')
+```
+``` js
 // vanilla JS
 var cellElements = flkty.getCellElements()
 ```

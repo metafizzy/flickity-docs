@@ -2,222 +2,6 @@
 title: Options
 ---
 
-<h2>Setup</h2>
-
-<h3>cellSelector</h3>
-
-<p>Specify selector for cell elements. <code>cellSelector</code> is useful if you have other elements in your carousel elements that are not cells.</p>
-
-<div class="duo example">
-  <div class="duo__cell example__code">
-``` js
-cellSelector: '.carousel-cell'
-```
-
-``` html
-<div class="carousel">
-  <div class="static-banner">Static banner 1</div>
-  <div class="static-banner">Static banner 2</div>
-  <div class="carousel-cell"></div>
-  <div class="carousel-cell"></div>
-  <div class="carousel-cell"></div>
-  ...
-</div>
-```
-  </div>
-  {{> cell-selector }}
-</div>
-
-{{! ----------------------------------------------------------------- }}
-
-<h3>initialIndex</h3>
-
-<p>Zero-based index of the initial selected cell.</p>
-
-<div class="duo example">
-  <div class="duo__cell example__code">
-    ``` js
-    initialIndex: 2
-    ```
-  </div>
-  <div class="duo__cell example__demo">
-    <div class="carousel" data-flickity='{ "initialIndex": 2 }'>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-    </div>
-    {{> edit-demo default="vEdOKg" }}
-  </div>
-</div>
-
-{{! ----------------------------------------------------------------- }}
-
-<h3>accessibility</h3>
-
-<p>Enable keyboard navigation. Users can tab to a Flickity carousel, and pressing left &amp; right keys to change cells. Enabled by default <code><span class="comment">accessibility: true</span></code>.</p>
-
-<div class="duo example">
-  <div class="duo__cell example__code">
-    ``` js
-    accessibility: false
-    // disables being able to tab to Flickity
-    // and keyboard navigation
-    ```
-  </div>
-  <div class="duo__cell example__demo">
-    <div class="carousel" data-flickity='{ "accessibility": false }'>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-    </div>
-    {{> edit-demo default="NPyqrM" }}
-  </div>
-</div>
-
-{{! ----------------------------------------------------------------- }}
-
-<h3>setGallerySize</h3>
-
-<p>Sets the height of the carousel to the height of the tallest cell. Enabled by default <code><span class="comment">setGallerySize: true</span></code>.</p>
-
-<p>Use <code>setGallerySize: <span class="literal">false</span></code> if you prefer to size the carousel with CSS, rather than using the size of cells.</p>
-
-<div class="duo example">
-  <div class="duo__cell example__code">
-    ``` js
-    setGallerySize: false
-    ```
-
-    ``` css
-    /* carousel height */
-    .carousel {
-      height: 160px;
-    }
-
-    /* cell inherit height from carousel */
-    .carousel-cell {
-      height: 100%;
-    }
-    ```
-  </div>
-  <div class="duo__cell example__demo">
-    <div class="carousel carousel--set-carousel-size-disabled"
-      data-flickity='{ "setGallerySize": false }'>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-    </div>
-    {{> edit-demo default="jEzKNG" }}
-  </div>
-</div>
-
-<p>With <code>setGallerySize: <span class="literal">false</span></code>, you can set the size of the carousel to 100% width and height, for a "full-bleed" carousel.</p>
-
-<div class="example duo">
-  <div class="example__code duo__cell">
-    ``` js
-    setGallerySize: false
-    ```
-
-    ``` css
-    /* inherit height from parent */
-    .carousel { height: 100%; }
-
-    .carousel-cell { height: 100% }
-
-    /* move page dots into carousel */
-    .flickity-page-dots { bottom: 10px; }
-    ```
-  </div>
-  <div class="example__demo duo__cell example__demo--full-bleed">
-    <div class="carousel carousel--full-bleed" data-flickity>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-    </div>
-    {{> edit-demo default="VLrReY" }}
-  </div>
-</div>
-
-<p>You can size the carousel height as percentage of its width with <code><span class="attribute">padding-bottom</span></code> and <code><span class="class">.flickity-viewport</span></code> CSS.</p>
-
-<div class="duo example">
-  <div class="duo__cell example__code">
-    ``` js
-    setGallerySize: false
-    ```
-
-    ``` css
-    /* carousel height, as percentage of width */
-    .carousel {
-      padding-bottom: 33.3%;
-    }
-
-    /* viewport inherit size from carousel */
-    .carousel .flickity-viewport {
-      position: absolute;
-      width: 100%;
-    }
-
-    /* cell inherit height from carousel */
-    .carousel-cell {
-      height: 100%;
-    }
-    ```
-  </div>
-  <div class="duo__cell example__demo">
-    <div class="carousel carousel--set-carousel-size-disabled-percentage"
-      data-flickity='{ "setGallerySize": false }'>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-    </div>
-    {{> edit-demo default="dPmKyx" }}
-  </div>
-</div>
-
-{{! ----------------------------------------------------------------- }}
-
-<h3>resize</h3>
-
-<p>Adjusts sizes and positions when window is resized. Enabled by default <code><span class="comment">resize: true</span></code>.</p>
-
-<div class="duo example">
-  <div class="duo__cell example__code">
-    ``` js
-    resize: false
-    // disables resize logic
-    ```
-
-    ``` css
-    /* carousel has fixed width */
-    .carousel {
-      width: 300px;
-    }
-    ```
-  </div>
-  <div class="duo__cell example__demo">
-    <div class="carousel carousel--resize-option" data-flickity='{ "resize": false }'>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-      <div class="carousel-cell"></div>
-    </div>
-    {{> edit-demo default="yyvNaG" }}
-  </div>
-</div>
-
 {{! ----------------------------------------------------------------- }}
 
 <h2>Behavior</h2>
@@ -612,8 +396,6 @@ cellSelector: '.carousel-cell'
 
 <p>Use one Flickity carousel as navigation for another.</p>
 
-<p><code>asNavFor</code> requires <a href="#draggable"><code>draggable</code></a> to be enabled, and will not work with <code>draggable: false</code>.</p>
-
 <ul>
   <li>Clicking the nav carousel will select the content carousel.</li>
   <li>Selecting a cell in the content carousel will sync to the nav carousel.</li>
@@ -997,6 +779,225 @@ asNavFor: document.querySelector('.carousel-main')
   <p><code>bgLazyLoad</code> requires the <a href="https://github.com/metafizzy/flickity-bg-lazyload">flickity-bg-lazyload package</a>. This package is not included and <a href="https://github.com/metafizzy/flickity-bg-lazyload#install">must be installed separately</a>.</p>
 </div>
 
+{{! ----------------------------------------------------------------- }}
+
+<h2>Setup</h2>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>cellSelector</h3>
+
+<p>Specify selector for cell elements. <code>cellSelector</code> is useful if you have other elements in your carousel elements that are not cells.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+``` js
+cellSelector: '.carousel-cell'
+```
+
+``` html
+<div class="carousel">
+  <div class="static-banner">Static banner 1</div>
+  <div class="static-banner">Static banner 2</div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  <div class="carousel-cell"></div>
+  ...
+</div>
+```
+  </div>
+  {{> cell-selector }}
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>initialIndex</h3>
+
+<p>Zero-based index of the initial selected cell.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    initialIndex: 2
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel" data-flickity='{ "initialIndex": 2 }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    {{> edit-demo default="vEdOKg" }}
+  </div>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>accessibility</h3>
+
+<p>Enable keyboard navigation. Users can tab to a Flickity carousel, and pressing left &amp; right keys to change cells. Enabled by default <code><span class="comment">accessibility: true</span></code>.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    accessibility: false
+    // disables being able to tab to Flickity
+    // and keyboard navigation
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel" data-flickity='{ "accessibility": false }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    {{> edit-demo default="NPyqrM" }}
+  </div>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>setGallerySize</h3>
+
+<p>Sets the height of the carousel to the height of the tallest cell. Enabled by default <code><span class="comment">setGallerySize: true</span></code>.</p>
+
+<p>Use <code>setGallerySize: <span class="literal">false</span></code> if you prefer to size the carousel with CSS, rather than using the size of cells.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    setGallerySize: false
+    ```
+
+    ``` css
+    /* carousel height */
+    .carousel {
+      height: 160px;
+    }
+
+    /* cell inherit height from carousel */
+    .carousel-cell {
+      height: 100%;
+    }
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel carousel--set-carousel-size-disabled"
+      data-flickity='{ "setGallerySize": false }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    {{> edit-demo default="jEzKNG" }}
+  </div>
+</div>
+
+<p>With <code>setGallerySize: <span class="literal">false</span></code>, you can set the size of the carousel to 100% width and height, for a "full-bleed" carousel.</p>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    setGallerySize: false
+    ```
+
+    ``` css
+    /* inherit height from parent */
+    .carousel { height: 100%; }
+
+    .carousel-cell { height: 100% }
+
+    /* move page dots into carousel */
+    .flickity-page-dots { bottom: 10px; }
+    ```
+  </div>
+  <div class="example__demo duo__cell example__demo--full-bleed">
+    <div class="carousel carousel--full-bleed" data-flickity>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    {{> edit-demo default="VLrReY" }}
+  </div>
+</div>
+
+<p>You can size the carousel height as percentage of its width with <code><span class="attribute">padding-bottom</span></code> and <code><span class="class">.flickity-viewport</span></code> CSS.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    setGallerySize: false
+    ```
+
+    ``` css
+    /* carousel height, as percentage of width */
+    .carousel {
+      padding-bottom: 33.3%;
+    }
+
+    /* viewport inherit size from carousel */
+    .carousel .flickity-viewport {
+      position: absolute;
+      width: 100%;
+    }
+
+    /* cell inherit height from carousel */
+    .carousel-cell {
+      height: 100%;
+    }
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel carousel--set-carousel-size-disabled-percentage"
+      data-flickity='{ "setGallerySize": false }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    {{> edit-demo default="dPmKyx" }}
+  </div>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>resize</h3>
+
+<p>Adjusts sizes and positions when window is resized. Enabled by default <code><span class="comment">resize: true</span></code>.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    resize: false
+    // disables resize logic
+    ```
+
+    ``` css
+    /* carousel has fixed width */
+    .carousel {
+      width: 300px;
+    }
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel carousel--resize-option" data-flickity='{ "resize": false }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    {{> edit-demo default="yyvNaG" }}
+  </div>
+</div>
 
 {{! ----------------------------------------------------------------- }}
 

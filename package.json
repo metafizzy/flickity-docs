@@ -1,6 +1,6 @@
 {
   "name": "flickity-docs",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Documentation for Flickity",
   "main": "index.js",
   "scripts": {
@@ -35,5 +35,5 @@
   "bugs": {
     "url": "https://github.com/metafizzy/flickity-docs/issues"
   },
-  "homepage": "https://github.com/metafizzy/flickity-docs"
+  "homepage": "https://flickity.metafizzy.co"
 }

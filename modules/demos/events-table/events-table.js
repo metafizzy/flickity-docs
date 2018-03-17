@@ -52,8 +52,7 @@ FlickityDocs['events-table'] = function( elem ) {
   });
 
   flkty.on( 'settle', function( index ) {
-    // TODO use index argument
-    logEvent( 'settle', 'settled at cell ' + ( flkty.selectedIndex + 1 ) );
+    logEvent( 'settle', 'settled at cell ' + ( index + 1 ) );
   });
 
   flkty.on( 'staticClick', function( event, pointer, cellElem, cellIndex ) {

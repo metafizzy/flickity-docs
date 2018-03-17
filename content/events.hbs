@@ -106,34 +106,35 @@ flkty.once( 'eventName', function() {
 
 <h3>ready</h3>
 
-<p>Triggered after Flickity has been activated. Because <code>ready</code> may be triggered immediately, we recommend you bind listeners with the <a href="#on-option"><code>on</code> option</a>.</p>
+<p>Triggered after Flickity has been activated.<p>
 
-<div class="duo">
-  <div class="duo__cell">
-    ``` js
-    // jQuery
-    var $carousel = $('.carousel').flickity({
-      on: {
-        ready: function() {
-          console.log('Flickity is ready');
-        }
-      }
-    });
-    ```
-  </div>
-  <div class="duo__cell">
-    ```js
-    // vanilla JS
-    var flkty = new Flickity( '.carousel', {
-      on: {
-        ready: function() {
-          console.log('Flickity is ready');
-        }
-      }
-    });
-    ```
-  </div>
-</div>
+<p>With jQuery, bind event listener first, then initialize Flickity.</p>
+
+``` js
+// jQuery
+var $carousel = $('.carousel');
+// bind event listener first
+$carousel.on( 'ready.flickity', function() {
+  console.log('Flickity ready');
+});
+// initialize Flickity
+$carousel.flickity();
+```
+{{> edit-demo default="NYROXK" }}
+
+<p>With vanilla JS, bind listener with the <a href="#on-option"><code>on</code> option</a>, as the <code>ready</code> event may be triggered immediately.</p>
+
+``` js
+// vanilla JS
+var flkty = new Flickity( '.carousel', {
+  on: {
+    ready: function() {
+      console.log('Flickity ready');
+    }
+  }
+});
+```
+{{> edit-demo default="qoaJVp" }}
 
 {{! ----------------------------------------------------------------- }}
 
@@ -158,7 +159,7 @@ flkty.on( 'change', function( index ) {...});
   <span class="argument__description">Zero-based number of the selected slide.</span>
 </p>
 
-{{> edit-demo default="emVgqE" vanillaJS="ogEwXe" }}
+{{> edit-demo default="bvwxyO" vanillaJS="ZxpMdY" }}
 
 {{! ----------------------------------------------------------------- }}
 
@@ -198,7 +199,7 @@ flkty.on( 'select', function( index ) {...});
 ``` js
 // jQuery
 $carousel.on( 'settle.flickity', function( event, index ) {
-  console.log( 'Flickity settled at ' + flkty.selectedIndex )
+  console.log( 'Flickity settled at ' + index );
 });
 ```
 ```js

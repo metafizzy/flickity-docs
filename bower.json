@@ -18,6 +18,7 @@
     "flickity-as-nav-for": "^2.0.0",
     "flickity-bg-lazyload": "^1.0.0",
     "normalize.css": "^4.1.1",
+    "flickity-hash": "^1.0.0",
     "fizzy-ui-utils": "^2.0.0",
     "draggabilly": "^2.1.1",
     "fizzy-docs-modules": "metafizzy/fizzy-docs-modules"

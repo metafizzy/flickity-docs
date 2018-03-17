@@ -238,7 +238,7 @@ title: Options
   </div>
 </div>
 
-<p>For fullscreen image carousels, use CSS flexbox to center images in cells. This demo shows one cell each in the viewport.</p>
+<p>For fullscreen image carousels, use CSS to center images in cells. This demo shows one cell each in the viewport, centering with flexbox.</p>
 
 <div class="example duo">
   <div class="example__code duo__cell">
@@ -265,7 +265,7 @@ title: Options
       height: 200px;
       background: #222;
       /* center images in cells with flexbox */
-      display: flex; 
+      display: flex;
       align-items: center;
       justify-content: center;
     }
@@ -284,7 +284,7 @@ title: Options
     <div class="carousel carousel--not-counting"
       data-flickity='{ "fullscreen": true, "lazyLoad": 1 }'>
       {{#each fullscreen_images}}
-        <div class="carousel-cell carousel-cell--fullscreen-image">
+        <div class="carousel-cell carousel-cell--fullscreen-image carousel-cell--fullscreen-image-wide">
           <img data-flickity-lazyload="{{this}}" />
         </div>
       {{/each}}
@@ -293,7 +293,7 @@ title: Options
 </div>
 
 
-<p>This demo shows multiple cells in the viewport.</p>
+<p>This demo shows multiple cells in the viewport, vertically centered using <code>transform</code>.</p>
 
 <div class="example duo">
   <div class="example__code duo__cell">
@@ -308,10 +308,6 @@ title: Options
          allow images to set width */
       min-width: 100px;
       height: 200px;
-      /* center images in cells with flexbox */
-      display: flex; 
-      align-items: center;
-      justify-content: center;
     }
 
     .carousel.is-fullscreen .carousel-cell {
@@ -321,6 +317,10 @@ title: Options
     .carousel-cell img {
       display: block;
       max-height: 100%;
+      /* vertically center */
+      top: 50%;
+      position: relative;
+      transform: translateY(-50%)
     }
     ```
   </div>
@@ -433,7 +433,59 @@ asNavFor: document.querySelector('.carousel-main')
 </div>
 
 <div class="call-out">
-  <p><code>asNavFor</code> requires the <a href="https://github.com/metafizzy/flickity-as-nav-for">flickity-as-nav-for package</a>. It already <em>is</em> included with <code>flickity.pkgd.js</code>, but not with Flickity as a stand-alone package. If you are using Browserify or RequireJS without <code>flickity.pkgd.js</code>, you need to install and require <code>flickity-as-nav-for</code> separately. See details in <a href="extras.html">Extras</a>.</p>
+  <p><code>asNavFor</code> requires the <a href="https://github.com/metafizzy/flickity-as-nav-for">flickity-as-nav-for package</a>. It already <em>is</em> included with <code>flickity.pkgd.js</code>, but not with Flickity as a stand-alone package. If you are using Webpack or RequireJS without <code>flickity.pkgd.js</code>, you need to install and require <code>flickity-as-nav-for</code> separately. See details in <a href="extras.html">Extras</a>.</p>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>hash</h3>
+
+<p>Enables hash navigation to select slides with links and URLs. Changes page URL to selected cell <code>id</code>.</p>
+
+<div class="call-out">
+  <p>Hash behavior option requires the <a href="https://github.com/metafizzy/flickity-hash">flickity-hash package</a>. It is not included in <code>flickity.pkgd.js</code> and must be installed separately.</p>
+</div>
+
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    hash: true
+    ```
+
+    ``` html
+    <!-- add ids to cell elements -->
+    <div class="carousel">
+      <div class="carousel-cell" id="carousel-cell1">
+        ...</div>
+      <div class="carousel-cell" id="carousel-cell2">
+        ...</div>
+      <div class="carousel-cell" id="carousel-cell3">
+        ...</div>
+      ...
+    </div>
+
+    <!-- link to cells -->
+    <a href="#carousel-cell2">View cell 2</a>
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel" data-flickity='{ "hash": true }'>
+      <div class="carousel-cell" id="carousel-cell1"></div>
+      <div class="carousel-cell" id="carousel-cell2"></div>
+      <div class="carousel-cell" id="carousel-cell3"></div>
+      <div class="carousel-cell" id="carousel-cell4"></div>
+      <div class="carousel-cell" id="carousel-cell5"></div>
+    </div>
+    <p>
+      View:
+      <a href="#carousel-cell1">Cell 1</a>,
+      <a href="#carousel-cell2">Cell 2</a>,
+      <a href="#carousel-cell3">Cell 3</a>,
+      <a href="#carousel-cell4">Cell 4</a>,
+      <a href="#carousel-cell5">Cell 5</a>
+    </p>
+  </div>
 </div>
 
 {{! ----------------------------------------------------------------- }}

@@ -14,12 +14,18 @@
 .carousel-cell--fullscreen-image {
   width: 100%;
   height: 200px;
+  border-radius: 0;
+}
+
+.carousel-cell--fullscreen-image-wide {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: transparent;
-  border-radius: 0;
   background: #222;
+}
+
+.carousel.is-fullscreen .carousel-cell--fullscreen-image-wide {
+  background: transparent;
 }
 
 .carousel-cell--fullscreen-image-fit {
@@ -36,6 +42,14 @@
   opacity: 0;
   -webkit-transition: opacity 0.4s;
           transition: opacity 0.4s;
+}
+
+.carousel-cell--fullscreen-image-fit img {
+  /* HACK vertically center */
+  /* could use flexbox, but doesn't work in Chrome & Safari */
+  top: 50%;
+  position: relative;
+  transform: translateY(-50%)
 }
 
 /* fade in lazy loaded image */

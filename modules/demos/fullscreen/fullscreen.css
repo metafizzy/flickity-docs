@@ -25,6 +25,14 @@
   max-height: 100%;
 }
 
+/* ---- carousel-image-cell ---- */
+
+.carousel.is-fullscreen .carousel-image-cell img {
+  max-width: 100%;
+}
+
+/* ----  ---- */
+
 /* HACK, iOS adds width from font-size in button */
 .flickity-fullscreen-button {
   font-size: 12px;

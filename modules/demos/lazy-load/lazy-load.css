@@ -21,8 +21,7 @@
   margin: 0 auto;
   max-width: 100%;
   opacity: 0;
-  -webkit-transition: opacity 0.4s;
-          transition: opacity 0.4s;
+  transition: opacity 0.4s;
 }
 
 /* fade in lazy loaded image */
@@ -35,8 +34,7 @@
   height: 200px;
   min-width: 150px;
   opacity: 0;
-  -webkit-transition: opacity 0.4s;
-          transition: opacity 0.4s;
+  transition: opacity 0.4s;
 }
 /* fade in lazy loaded image */
 .carousel__lazy-image.flickity-lazyloaded,

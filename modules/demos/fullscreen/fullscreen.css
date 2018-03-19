@@ -40,8 +40,7 @@
   display: block;
   max-height: 100%;
   opacity: 0;
-  -webkit-transition: opacity 0.4s;
-          transition: opacity 0.4s;
+  transition: opacity 0.4s;
 }
 
 .carousel-cell--fullscreen-image-fit img {

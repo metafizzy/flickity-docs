@@ -33,6 +33,43 @@
 
 .carousel--not-counting .carousel-cell:before { content: none; }
 
+/* ---- carousel-image-cell ---- */
+/* frames single image in cell */
+
+.carousel-image-cell {
+  width: 66%;
+  height: 200px;
+  margin-right: 10px;
+  background: #222;
+  /* center images */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-image-cell img {
+  display: block;
+  max-height: 100%;
+}
+
+.carousel-image-cell--wide {
+  width: 100%;
+}
+
+.carousel.is-fullscreen .carousel-image-cell {
+  background: transparent;
+}
+
+/* ---- carousel__natural-image ---- */
+/* use natural sizes for cell size */
+
+.carousel__natural-image {
+  display: block;
+  height: 200px;
+  min-width: 150px;
+  margin-right: 10px;
+}
+
 /* ---- style ---- */
 
 .carousel--full-width .carousel-cell {

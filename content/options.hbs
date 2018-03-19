@@ -228,7 +228,7 @@ title: Options
     ```
   </div>
   <div class="example__demo duo__cell">
-    <div class="carousel carousel--fullscreen" data-flickity='{ "fullscreen": true }'>
+    <div class="carousel" data-flickity='{ "fullscreen": true }'>
       <div class="carousel-cell"></div>
       <div class="carousel-cell"></div>
       <div class="carousel-cell"></div>
@@ -282,11 +282,11 @@ title: Options
     ```
   </div>
   <div class="example__demo duo__cell">
-    <div class="carousel carousel--not-counting"
+    <div class="carousel"
       data-flickity='{ "fullscreen": true, "lazyLoad": 1 }'>
       {{#each fullscreen_images}}
-        <div class="carousel-cell carousel-cell--fullscreen-image carousel-cell--fullscreen-image-wide">
-          <img data-flickity-lazyload="{{this}}" />
+        <div class="carousel-image-cell carousel-image-cell--wide">
+          <img class="carousel__lazy-image" data-flickity-lazyload="{{this}}" />
         </div>
       {{/each}}
     </div>
@@ -327,12 +327,10 @@ title: Options
     ```
   </div>
   <div class="example__demo duo__cell">
-    <div class="carousel carousel--not-counting"
+    <div class="carousel"
       data-flickity='{ "fullscreen": true, "lazyLoad": 2 }'>
       {{#each fullscreen_images}}
-        <div class="carousel-cell carousel-cell--fullscreen-image carousel-cell--fullscreen-image-fit">
-          <img data-flickity-lazyload="{{this}}" />
-        </div>
+        <img class="carousel__natural-image carousel__natural-image--fullscreen carousel__lazy-image" data-flickity-lazyload="{{this}}" />
       {{/each}}
     </div>
     {{> edit-demo default="WzGgJY" }}
@@ -729,28 +727,29 @@ asNavFor: document.querySelector('.carousel-main')
     ``` css
     .carousel-image {
       min-width: 150px;
+      height: 200px;
     }
     ```
   </div>
   <div class="example__demo duo__cell">
     <div class="carousel carousel--not-counting" data-flickity='{ "lazyLoad": true }'>
-      <img class="carousel__lazy-image"
+      <img class="carousel__lazy-image carousel__natural-image"
       data-flickity-lazyload="https://i.imgur.com/9xYjgCk.jpg" alt="tulip" />
-      <img class="carousel__lazy-image"
+      <img class="carousel__lazy-image carousel__natural-image"
       data-flickity-lazyload="https://i.imgur.com/8lEJtbg.jpg" alt="grapes" />
-      <img class="carousel__lazy-image"
+      <img class="carousel__lazy-image carousel__natural-image"
       data-flickity-lazyload="https://i.imgur.com/ERMbVdn.jpg" alt="raspberries" />
-      <img class="carousel__lazy-image"
+      <img class="carousel__lazy-image carousel__natural-image"
       data-flickity-lazyload="https://i.imgur.com/lBKi66i.jpg" alt="wolf" />
-      <img class="carousel__lazy-image"
+      <img class="carousel__lazy-image carousel__natural-image"
       data-flickity-lazyload="https://i.imgur.com/4O7U1Ob.jpg" alt="sea" />
-      <img class="carousel__lazy-image"
+      <img class="carousel__lazy-image carousel__natural-image"
       data-flickity-lazyload="https://i.imgur.com/4ifgQaR.jpg" alt="green beads" />
-      <img class="carousel__lazy-image"
+      <img class="carousel__lazy-image carousel__natural-image"
       data-flickity-lazyload="https://i.imgur.com/qKhkOKC.jpg" alt="gulls" />
-      <img class="carousel__lazy-image"
+      <img class="carousel__lazy-image carousel__natural-image"
       data-flickity-lazyload="https://i.imgur.com/LFelADP.jpg" alt="touch" />
-      <img class="carousel__lazy-image"
+      <img class="carousel__lazy-image carousel__natural-image"
       data-flickity-lazyload="https://i.imgur.com/OZmQIVL.jpg" alt="van" />
     </div>
     {{> edit-demo default="RPLRLZ" }}

@@ -1,38 +1,9 @@
 /* ---- lazyload ---- */
 
-.carousel--lazyload-cells .carousel-cell {
-  height: 200px;
-  margin-right: 2px;
-  background: #222;
-  border-radius: 0;
-}
-
-.carousel--lazyload-adj-cells .carousel-cell {
-  width: 25%;
-  height: 160px;
-  margin-right: 2px;
-  background: #222;
-  border-radius: 0;
-}
-
-.carousel-cell__lazy-image {
-  display: block;
-  max-height: 100%;
-  margin: 0 auto;
-  max-width: 100%;
-  opacity: 0;
-  transition: opacity 0.4s;
-}
-
-/* fade in lazy loaded image */
-.carousel-cell__lazy-image.flickity-lazyloaded,
-.carousel-cell__lazy-image.flickity-lazyerror {
-  opacity: 1;
-}
+/* ---- carousel__lazy-image ---- */
+/* general purpose */
 
 .carousel__lazy-image {
-  height: 200px;
-  min-width: 150px;
   opacity: 0;
   transition: opacity 0.4s;
 }
@@ -40,4 +11,10 @@
 .carousel__lazy-image.flickity-lazyloaded,
 .carousel__lazy-image.flickity-lazyerror {
   opacity: 1;
+}
+
+/* ---- lazyload-adj-cells ---- */
+
+.carousel--lazyload-adj-cells .carousel-image-cell {
+  width: 25%;
 }

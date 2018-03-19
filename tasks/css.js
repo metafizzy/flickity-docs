@@ -14,7 +14,9 @@ var cssSrc = [
   // base
   'css/*.css',
   // modules
-  'modules/*/**/*.css'
+  'modules/*/*.css',
+  // demos & submodules
+  'modules/*/*/**/*.css'
 ];
 
 gulp.task( 'css', function() {

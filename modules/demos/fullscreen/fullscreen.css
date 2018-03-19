@@ -22,4 +22,10 @@
 
 .carousel.is-fullscreen .carousel__natural-image--fullscreen {
   height: auto;
+  max-height: 100%;
+}
+
+/* HACK, iOS adds width from font-size in button */
+.flickity-fullscreen-button {
+  font-size: 12px;
 }

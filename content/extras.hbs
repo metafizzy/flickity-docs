@@ -90,156 +90,6 @@ title: Extras
 
 {{! ----------------------------------------------------------------- }}
 
-<h3>RequireJS</h3>
-
-<p>Flickity supports <a href="http://requirejs.org/">RequireJS</a>.</p>
-
-<p>You can require <code>flickity.pkgd.js</code>.</p>
-
-``` js
-requirejs( [
-  'path/to/flickity.pkgd.js',
-], function( Flickity ) {
-  var flickity = new Flickity( '.carousel', {...});
-});
-```
-
-<p>To use Flickity as a jQuery plugin with RequireJS and flickity.pkgd.js, you need to call <a href="https://www.npmjs.com/package/jquery-bridget">jQuery Bridget</a>.</p>
-
-``` js
-// require the require function
-requirejs( [ 'require', 'jquery', 'path/to/flickity.pkgd.js' ],
-  function( require, $, Flickity ) {
-    // require jquery-bridget, it's included in flickity.pkgd.js
-    require( [ 'jquery-bridget/jquery-bridget' ],
-    function( jQueryBridget ) {
-      // make Flickity a jQuery plugin
-      jQueryBridget( 'flickity', Flickity, $ );
-      // now you can use $().flickity()
-      $('.carousel').flickity({...});
-    }
-  );
-});
-```
-
-<p>Or, you can manage dependencies with <a href="http://bower.io">Bower</a>. Set <code>baseUrl: <span class="string">"bower_components/"</span></code> and set a config path for all your application code.</p>
-
-``` js
-requirejs.config({
-  baseUrl: 'bower_components/',
-  paths: {
-    app: '../'
-  }
-});
-
-requirejs( [
-  'flickity/js/index',
-  'app/my-component.js'
-], function( Flickity, myComp ) {
-  var flkty = new Flickity( '.carousel', {...});
-});
-```
-
-<p>You can require Bower dependencies and use Flickity as a jQuery plugin with jQuery Bridget.</p>
-
-``` js
-requirejs.config({
-  baseUrl: '../bower_components',
-  paths: {
-    jquery: 'jquery/jquery'
-  }
-});
-
-requirejs( [
-    'jquery',
-    'flickity/js/index',
-    'jquery-bridget/jquery-bridget'
-  ],
-  function( $, Flickity ) {
-    // make Flickity a jQuery plugin
-    $.bridget( 'flickity', Flickity, $ );
-    // now you can use $().flickity()
-    $('.carousel').flickity({...});
-});
-```
-
-<p>As a stand-alone package, Flickity does not include <code>imagesLoaded</code>, <code>asNavFor</code>, and <code>bgLazyLoad</code> code. You can require these packages separately.</p>
-
-``` js
-requirejs( [
-    'flickity-imagesloaded/flickity-imagesloaded',
-    'flickity-as-nav-for/as-nav-for'
-  ],
-  function( Flickity ) {
-    // now use imagesLoaded and asNavFor
-    var flkty = new Flickity( '.carousel-a', {
-      imagesLoaded: true,
-      asNavFor: '.carousel-b'
-    });
-});
-```
-
-{{! ----------------------------------------------------------------- }}
-
-<h3>Browserify</h3>
-
-<p>Flickity works with <a href="http://browserify.org/">Browserify</a>. Install <a href="https://www.npmjs.com/package/flickity">Flickity with npm</a>.</p>
-
-``` bash
-npm install flickity
-```
-
-``` js
-var Flickity = require('flickity');
-
-var flickity = new Flickity( '.carousel', {
-  // options
-});
-```
-
-<p>To use Flickity as a jQuery plugin with Browserify, you need to call <a href="https://www.npmjs.com/package/jquery-bridget">jQuery Bridget</a>.</p>
-
-``` bash
-npm install jquery-bridget
-```
-
-``` js
-// main.js
-var $ = require('jquery');
-var jQueryBridget = require('jquery-bridget');
-var Flickity = require('flickity');
-
-// make Flickity a jQuery plugin
-jQueryBridget( 'flickity', Flickity, $ );
-// now you can use $().flickity()
-$('.carousel').flickity({...});
-```
-
-<p>As a stand-alone package, Flickity does not include <code>imagesLoaded</code>, <code>asNavFor</code>, and <code>bgLazyLoad</code> code. You can install and require the
-  <a href="https://www.npmjs.com/package/flickity-imagesloaded"><code>flickity-imagesloaded</code></a>,
-  <a href="https://www.npmjs.com/package/flickity-as-nav-for"><code>flickity-as-nav-for</code></a>, and
-  <a href="https://www.npmjs.com/package/flickity-bg-lazyload"><code>flickity-bg-lazyload</code></a>
-  packages separately.</p>
-
-``` bash
-npm install flickity-imagesloaded
-npm install flickity-as-nav-for
-npm install flickity-bg-lazyload
-```
-
-``` js
-var Flickity = require('flickity-imagesloaded');
-require('flickity-as-nav-for');
-
-// now use imagesLoaded and asNavFor
-var flkty = new Flickity( '.carousel-a', {
-  imagesLoaded: true,
-  asNavFor: '.carousel-b'
-});
-```
-
-{{! ----------------------------------------------------------------- }}
-
 <h3>Webpack</h3>
 
 <p>Install Flickity with npm.</p>
@@ -259,19 +109,153 @@ var flkty = new Flickity( '.carousel', {
 });
 ```
 
-<p>Run webpack.</p>
+<p>Run <code>webpack</code>.</p>
 
 ``` bash
 webpack main.js bundle.js
 ```
 
-<p><code>imagesLoaded</code>, <code>asNavFor</code>, <code>bgLazyLoad</code> and jQuery plugin functionality need to be installed separately, <a href="#browserify">similar to using Browserify</a>.</p>
+<p>Install and require add-on features for <code>imagesLoaded</code>, <code>asNavFor</code>, <code>fullscreen</code>, <code>bgLazyLoad</code>, and <code>hash</code>.</p>
+
+``` bash
+npm install flickity-imagesloaded
+npm install flickity-fullscreen
+```
+
+``` js
+var Flickity = require('flickity-imagesloaded');
+require('flickity-fullscreen');
+
+// now use imagesLoaded and asNavFor
+var flkty = new Flickity( '.carousel', {
+  imagesLoaded: true,
+  fullscreen: true
+});
+```
+
+<p>To use Flickity as a jQuery plugin with Webpack, you need to call <a href="https://www.npmjs.com/package/jquery-bridget">jQuery Bridget</a> and <code>Flickity.setJQuery()</code>.</p>
+
+``` bash
+npm install jquery-bridget
+```
+
+``` js
+var $ = require('jquery');
+var jQueryBridget = require('jquery-bridget');
+var Flickity = require('flickity');
+
+// make Flickity a jQuery plugin
+Flickity.setJQuery( $ );
+jQueryBridget( 'flickity', Flickity, $ );
+// now you can use $().flickity()
+var $carousel = $('.carousel').flickity({...});
+```
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>Browserify</h3>
+
+<p>Follow <a href="#webpack">Webpack instructions</a>. Then run <code>browserify</code>.</p>
+
+``` bash
+browserify main.js -o bundle.js
+```
+
+{{! ----------------------------------------------------------------- }}
+
+<h3>RequireJS</h3>
+
+<p>Flickity supports <a href="http://requirejs.org/">RequireJS</a>.</p>
+
+<p>You can require <code>flickity.pkgd.js</code>.</p>
+
+``` js
+requirejs( [
+  'path/to/flickity.pkgd.js',
+], function( Flickity ) {
+  var flkty = new Flickity( '.carousel', {...});
+});
+```
+
+<p>Install and require add-on features for <code>imagesLoaded</code>, <code>asNavFor</code>, <code>fullscreen</code>, <code>bgLazyLoad</code>, and <code>hash</code>.</p>
+
+``` js
+requirejs( [
+  'path/to/flickity.pkgd.js',
+  'path/to/flickity-imagesloaded/flickity-imagesloaded.js',
+  'path/to/flickity-fullscreen/fullscreen.js',
+], function( Flickity ) {
+  var flkty = new Flickity( '.carousel', {
+    imagesLoaded: true,
+    fullscreen: true,
+  });
+});
+```
+
+<p>To use Flickity as a jQuery plugin with RequireJS and <code>flickity.pkgd.js</code>, you need to call <a href="https://www.npmjs.com/package/jquery-bridget">jQuery Bridget</a>.</p>
+
+``` js
+// require the require function
+requirejs( [ 'require', 'jquery', 'path/to/flickity.pkgd.js' ],
+  function( require, $, Flickity ) {
+    // require jquery-bridget, it's included in flickity.pkgd.js
+    require( [ 'jquery-bridget/jquery-bridget' ],
+    function( jQueryBridget ) {
+      // make Flickity a jQuery plugin
+      jQueryBridget( 'flickity', Flickity, $ );
+      // now you can use $().flickity()
+      var $carousel = $('.carousel').flickity({...});
+    }
+  );
+});
+```
+
+<p>Or, you can manage dependencies with npm or Bower. Set <code>baseUrl</code> to the packages folder and set a config path for all your application code.</p>
+
+``` js
+requirejs.config({
+  baseUrl: 'node_modules/',
+  paths: {
+    app: '../'
+  }
+});
+
+requirejs( [
+  'flickity/js/index',
+  'app/my-component.js'
+], function( Flickity, myComp ) {
+  var flkty = new Flickity( '.carousel', {...});
+});
+```
+
+<p>To use Flickity as a jQuery plugin with RequireJS and a package manager, you need to install and call <a href="https://github.com/desandro/jquery-bridget">jQuery Bridget</a>.</p>
+
+``` js
+requirejs.config({
+  baseUrl: 'node_modules/',
+  paths: {
+    jquery: 'jquery/jquery'
+  }
+});
+
+requirejs( [
+    'jquery',
+    'flickity/js/index',
+    'jquery-bridget/jquery-bridget'
+  ],
+  function( $, Flickity ) {
+    // make Flickity a jQuery plugin
+    $.bridget( 'flickity', Flickity, $ );
+    // now you can use $().flickity()
+    var $carousel = $('.carousel').flickity({...});
+});
+```
 
 {{! ----------------------------------------------------------------- }}
 
 <h2>Browser support</h2>
 
-<p>Flickity v2 supports IE10+, Android 4+, Safari for iOS 5+, Firefox 16+, and Chrome 12+.</p>
+<p>Flickity v2.1 supports Chrome 33+, Safari 9+ (mobile &amp; desktop), IE11+, Edge 12+, and Firefox 23+.</p>
 
 <p>For IE8+ and Android 2.3+ support, try <a href="http://flickity.metafizzy.co/v1/">Flickity v1</a>.</p>
 

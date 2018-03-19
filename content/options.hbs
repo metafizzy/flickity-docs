@@ -442,7 +442,7 @@ asNavFor: document.querySelector('.carousel-main')
 </div>
 
 <div class="call-out">
-  <p><code>asNavFor</code> requires the <a href="https://github.com/metafizzy/flickity-as-nav-for">flickity-as-nav-for package</a>. It already <em>is</em> included with <code>flickity.pkgd.js</code>, but not with Flickity as a stand-alone package. If you are using Webpack or RequireJS without <code>flickity.pkgd.js</code>, you need to install and require <code>flickity-as-nav-for</code> separately. See details in <a href="extras.html">Extras</a>.</p>
+  <p><code>asNavFor</code> requires the <a href="https://github.com/metafizzy/flickity-as-nav-for">flickity-as-nav-for package</a>. It already <em>is</em> included with <code>flickity.pkgd.js</code>, but not with Flickity as a stand-alone package. If you are using Webpack or RequireJS without <code>flickity.pkgd.js</code>, you need to install and require <code>flickity-as-nav-for</code> separately. See details in <a href="extras.html#module-loaders">Extras</a>.</p>
 </div>
 
 {{! ----------------------------------------------------------------- }}
@@ -452,9 +452,8 @@ asNavFor: document.querySelector('.carousel-main')
 <p>Enables hash navigation to select slides with links and URLs. Changes page URL to selected cell <code>id</code>.</p>
 
 <div class="call-out">
-  <p>Hash behavior option requires the <a href="https://github.com/metafizzy/flickity-hash">flickity-hash package</a>. It is not included in <code>flickity.pkgd.js</code> and must be installed separately.</p>
+  <p>Hash behavior option requires the <a href="https://github.com/metafizzy/flickity-hash">flickity-hash package</a>. It is not included in <code>flickity.pkgd.js</code> and <a href="https://github.com/metafizzy/flickity-hash#install">must be installed separately</a>.</p>
 </div>
-
 
 <div class="example duo">
   <div class="example__code duo__cell">
@@ -771,6 +770,10 @@ asNavFor: document.querySelector('.carousel-main')
 
 <p>Loads cell background image when a cell is selected.</p>
 
+<div class="call-out">
+  <p><code>bgLazyLoad</code> requires the <a href="https://github.com/metafizzy/flickity-bg-lazyload">flickity-bg-lazyload package</a>. This package is not included and <a href="https://github.com/metafizzy/flickity-bg-lazyload#install">must be installed separately</a>.</p>
+</div>
+
 <p>Set the background image's URL to load with <code>data-flickity-bg-lazyload</code>.</p>
 
 ``` html
@@ -835,10 +838,6 @@ asNavFor: document.querySelector('.carousel-main')
 </div>
 
 <p>After loading the background image, Flickity will add <code>flickity-bg-lazyloaded</code> class to the element, or <code>flickity-lazyerror</code> if the image was broken.</p>
-
-<div class="call-out">
-  <p><code>bgLazyLoad</code> requires the <a href="https://github.com/metafizzy/flickity-bg-lazyload">flickity-bg-lazyload package</a>. This package is not included and <a href="https://github.com/metafizzy/flickity-bg-lazyload#install">must be installed separately</a>.</p>
-</div>
 
 {{! ----------------------------------------------------------------- }}
 

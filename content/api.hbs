@@ -740,6 +740,33 @@ var flkty = Flickity.data( element )
 
 {{! ----------------------------------------------------------------- }}
 
+<h3>Flickity.setJQuery()</h3>
+
+<p>Set jQuery for internal use in Flickity. Useful for using Flickity with jQuery and <a href="extras.html#module-loaders">Webpack or Browserify</a>.</p>
+
+``` js
+Flickity.setJQuery( $ )
+```
+
+<p class="argument">
+  <code class="argument__code">$</code>
+  <span class="argument__type"><i>jQuery</i></span>
+</p>
+
+``` js
+var $ = require('jquery');
+var jQueryBridget = require('jquery-bridget');
+var Flickity = require('flickity');
+
+// make Flickity a jQuery plugin
+Flickity.setJQuery( $ );
+jQueryBridget( 'flickity', Flickity, $ );
+// now you can use $().flickity()
+var $carousel = $('.carousel').flickity({...});
+```
+
+{{! ----------------------------------------------------------------- }}
+
 <h2>Properties</h2>
 
 <div class="call-out">

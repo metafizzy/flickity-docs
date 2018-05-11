@@ -4,16 +4,11 @@
 code .string,
 code .tag .value { color: #0A2; }
 code .number, /* integer */
-code .cp, /* doctype */
 code .literal { color: #07D; } /*boolean*/
 code .keyword { color: #E31; } /* keyword */
-code .kd, /* storage */
 code .attribute { color: #D31; } /* markup attribute */
 code .title  { color: #39A; }
 code .params  { color: #98D; }
-code .p  { color: #EDB; } /* punctuation */
-code .o  { color: #F63; }   /* operator */
-code .nb { color: #AA97AC;} /* support */
 
 /* comment */
 code .comment { color: #999; font-style: italic; }
@@ -24,7 +19,6 @@ code .id { color: #567; } /* css id */
 code .class { color: #B27; }  /* CSS class */
 code .rules { color: #431; }
 code .value  { color: #555; } /* CSS value */
-code .nd,
 code .pseudo { color: #38D; } /* CSS pseudo selector */
 code .hexcolor { color: #F63; }
 code .at_rule { color: #088; }

@@ -584,7 +584,6 @@ flkty.on( 'lazyLoad', function( event, cellElement ) {
 
 {{! ----------------------------------------------------------------- }}
 
-
 <h3>bgLazyLoad</h3>
 
 <p>Triggered after a background image has been loaded with <a href="options.html#bglazyload"><code>bgLazyLoad</code></a>.</p>
@@ -609,3 +608,24 @@ flkty.on( 'bgLazyLoad', function( event, element ) {...});
   <span class="argument__description">The element of the background image.</span>
 </p>
 
+{{! ----------------------------------------------------------------- }}
+
+<h3>fullscreenChange</h3>
+
+<p>Triggered after entering or exiting <a href="options.html#fullscreen">fullscreen</a> view.</p>
+
+
+``` js
+// jQuery
+$carousel.on( 'fullscreenChange.flickity', function( event, isFullscreen ) {...});
+```
+```js
+// vanilla JS
+flkty.on( 'fullscreenChange', function( isFullscreen ) {...});
+```
+
+<p class="argument">
+  <code class="argument__code"><span class="params">isFullscreen</span></code>
+  <span class="argument__type"><i>Boolean</i></span>
+  <span class="argument__description"><code>true</code> if viewing fullscreen, <code>false</code> if exiting fullscreen</span>
+</p>

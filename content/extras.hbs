@@ -123,13 +123,14 @@ npm install flickity-fullscreen
 ```
 
 ``` js
-var Flickity = require('flickity-imagesloaded');
+var Flickity = require('flickity');
+require('flickity-imagesloaded');
 require('flickity-fullscreen');
 
-// now use imagesLoaded and asNavFor
+// now use imagesLoaded and fullscreen
 var flkty = new Flickity( '.carousel', {
   imagesLoaded: true,
-  fullscreen: true
+  fullscreen: true,
 });
 ```
 

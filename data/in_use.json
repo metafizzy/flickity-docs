@@ -10,24 +10,19 @@
     "image": "https://i.imgur.com/ndBOIk4.jpg"
   },
   {
+    "title": "Comedy Central",
+    "url": "http://www.cc.com/video-clips/1vqhgg/broad-city-happy-friendiversary",
+    "image": "img/in-use/comedy-central.jpg"
+  },
+  {
+    "title": "Cotton Bureau",
+    "url": "https://cottonbureau.com/products/fizzy-bear",
+    "image": "https://i.imgur.com/jGFnPzd.jpg"
+  },
+  {
     "title": "SXSW Conference",
     "url": "https://www.sxsw.com",
     "image": "https://i.imgur.com/l8hfIml.jpg"
-  },
-  {
-    "title": "sessún",
-    "url": "https://boutique.sessun.com/en/",
-    "image": "https://i.imgur.com/NyuuOvd.jpg"
-  },
-  {
-    "title": "CustomInk",
-    "url": "https://www.customink.com/products/styles/next-level-tri-blend-t-shirt/186900",
-    "image": "https://i.imgur.com/qz1Q91n.jpg"
-  },
-  {
-    "title": "The Field",
-    "url": "http://www.thefieldmag.com/photo/devils-peak-fire-lookout-mt-hood-oregon-film-photo",
-    "image": "https://i.imgur.com/YUwdxEL.jpg"
   },
   {
     "title": "Engadget",
@@ -40,9 +35,9 @@
     "image": "https://i.imgur.com/Y8bQw1t.jpg"
   },
   {
-    "title": "We Doki Doki",
-    "url": "http://thesoundofsilence.org/wedokidoki/",
-    "image": "https://i.imgur.com/GtANoGG.jpg"
+    "title": "CustomInk",
+    "url": "https://www.customink.com/products/styles/next-level-tri-blend-t-shirt/186900",
+    "image": "https://i.imgur.com/qz1Q91n.jpg"
   },
   {
     "title": "Artsy",
@@ -53,11 +48,6 @@
     "title": "Codrops Photography Website Concept",
     "url": "http://tympanus.net/Development/PhotographyWebsiteConcept/",
     "image": "https://i.imgur.com/KwkBANB.jpg"
-  },
-  {
-    "title": "Cotton Bureau",
-    "url": "https://cottonbureau.com/products/fizzy-bear",
-    "image": "https://i.imgur.com/jGFnPzd.jpg"
   },
   {
     "title": "District Shopify theme",
@@ -83,10 +73,5 @@
     "title": "Rookie",
     "url": "http://www.rookiemag.com/",
     "image": "https://i.imgur.com/dkTEqLp.jpg"
-  },
-  {
-    "title": "Danny Ryan",
-    "url": "http://dannyryan.uk/",
-    "image": "https://i.imgur.com/BStlPGb.png"
   }
 ]

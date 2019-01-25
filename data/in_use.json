@@ -15,6 +15,11 @@
     "image": "img/in-use/comedy-central.jpg"
   },
   {
+    "title": "Field Mag",
+    "url": "https://www.fieldmag.com/articles/vw-bus-america-roadtrip",
+    "image": "img/in-use/fieldmag-v2.jpg"
+  },
+  {
     "title": "Cotton Bureau",
     "url": "https://cottonbureau.com/products/fizzy-bear",
     "image": "https://i.imgur.com/jGFnPzd.jpg"
@@ -53,16 +58,6 @@
     "title": "District Shopify theme",
     "url": "http://district-theme-demo.myshopify.com/",
     "image": "https://i.imgur.com/msauCzq.jpg"
-  },
-  {
-    "title": "Vibrant Media",
-    "url": "http://vibrantmedia.com/",
-    "image": "https://i.imgur.com/bzZ7g7P.jpg"
-  },
-  {
-    "title": "Ernst & Young",
-    "url": "http://www.ey.com/",
-    "image": "https://i.imgur.com/y7SDvBy.jpg"
   },
   {
     "title": "Tony Hornecker",

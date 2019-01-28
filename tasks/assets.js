@@ -11,6 +11,6 @@ gulp.task( 'assets', function() {
 });
 
 // copy prod assets
-gulp.task( 'prod-assets', [ 'fonts', 'assets' ] );
+gulp.task( 'prod-assets', gulp.parallel( 'fonts', 'assets' ) );
 
 module.exports = function() {};

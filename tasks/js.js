@@ -43,22 +43,13 @@ var jsSrc = [
 ];
 
 // concat & minify js
-gulp.task( 'docs-js', function() {
-  gulp.src( jsSrc )
+gulp.task( 'js', function() {
+  return gulp.src( jsSrc )
     .pipe( uglify() )
     .pipe( concat('flickity-docs.min.js') )
     .pipe( gulp.dest('build/js') );
 });
 
-gulp.task( 'copy-js', function() {
-  gulp.src('bower_components/jquery/dist/jquery.min.js')
-    .pipe( gulp.dest('build/js') );
-});
-
-gulp.task( 'js', [ 'docs-js', 'copy-js' ] );
-
 module.exports = function( site ) {
-
   site.data.js_paths = getGlobPaths( jsSrc );
-
 };

@@ -12,11 +12,6 @@ var site = {
     isDev: process.argv[2] == 'dev',
     isExport: process.argv[2] == 'export',
   },
-  // src to watch, tasks to trigger
-  watches: [],
-  watch: function( src, tasks ) {
-    site.watches.push( [ src, tasks ] );
-  }
 };
 
 // ----- tasks ----- //
@@ -30,30 +25,26 @@ require('./tasks/content')( site );
 
 // ----- default ----- //
 
-gulp.task( 'default', [
+gulp.task( 'default', gulp.parallel(
   'hint',
   'content',
   'js',
   'css',
   'dist',
   'prod-assets'
-] );
+));
 
 // ----- export ----- //
 
 // version of site used in flickity-docs.zip
 
-gulp.task( 'export', [ 'default' ] );
+gulp.task( 'export', gulp.parallel( 'default' ) );
 
 // ----- watch ----- //
 
-gulp.task( 'dev', [
+gulp.task( 'dev', gulp.parallel(
   'hint',
   'dist',
   'prod-assets',
   'content'
-], function() {
-  site.watches.forEach( function( watchable ) {
-    gulp.watch.apply( gulp, watchable );
-  });
-});
+));

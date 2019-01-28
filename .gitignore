@@ -5,5 +5,4 @@ lib/
 fonts/
 *.mp4
 *.gif
-package-lock.json
 assets/img/in-use/

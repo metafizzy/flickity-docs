@@ -6,7 +6,7 @@ module.exports = function() {
     var contents = file.contents.toString();
     contents = '{{#extend "page"}}{{#content "main"}}' + contents +
       '{{/content}}{{/extend}}';
-    file.contents = new Buffer( contents );
+    file.contents = Buffer.from( contents );
     next( null, file );
   });
 };

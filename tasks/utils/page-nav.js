@@ -3,7 +3,9 @@ var transfob = require('transfob');
 
 module.exports = function pageNav() {
   return transfob( function( file, enc, next ) {
-    var $ = cheerio.load( file.contents.toString() );
+    var $ = cheerio.load( file.contents.toString(), {
+      recognizeSelfClosing: true, // for inline SVG
+    });
     var pageNavHtml = '\n';
     // query each h2, h3, h4
     $('.main h2, .main h3, .main h4').each( function( i, header ) {
@@ -23,7 +25,7 @@ module.exports = function pageNav() {
     // add pageNavHtml to page
     $('.page-nav').html( pageNavHtml );
 
-    file.contents = new Buffer( $.html() );
+    file.contents = Buffer.from( $.html() );
     next( null, file );
   });
 };

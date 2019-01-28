@@ -44,7 +44,7 @@ module.exports = function() {
   return transfob( function( file, enc, next ) {
     var contents = file.contents.toString();
     contents = contents.replace( /\n( *)```([^```]+)```/gi, replaceCodeBlock );
-    file.contents = new Buffer( contents );
+    file.contents = Buffer.from( contents );
     next( null, file );
   });
 };

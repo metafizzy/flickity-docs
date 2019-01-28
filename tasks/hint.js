@@ -13,7 +13,6 @@ gulp.task( 'hint-tasks', function() {
     .pipe( jshint.reporter('default') );
 });
 
-gulp.task( 'hint', [ 'hint-js', 'hint-tasks' ]);
+gulp.task( 'hint', gulp.parallel( 'hint-js', 'hint-tasks' ) );
 
-module.exports = function() {
-};
+module.exports = function() {};

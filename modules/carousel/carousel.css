@@ -168,6 +168,12 @@
   height: 220px;
 }
 
+/* ---- bg-lazyload ---- */
+
+.carousel--fade {
+  background: #222;
+}
+
 /* ---- large device media query ---- */
 
 @media screen and ( min-width: 768px ) {

@@ -347,6 +347,35 @@ title: Options
 
 {{! ----------------------------------------------------------------- }}
 
+<h3>fade</h3>
+
+<p>Fades between transitioning slides instead of moving.</p>
+
+<div class="call-out">
+  <p>Fade functionality requires the <a href="https://github.com/metafizzy/flickity-fade">flickity-fade package</a>. It is not included in <code>flickity.pkgd.js</code> and <a href="https://github.com/metafizzy/flickity-fade#install">must be installed separately</a>.</p>
+</div>
+
+<div class="example duo">
+  <div class="example__code duo__cell">
+    ``` js
+    fade: true
+    ```
+  </div>
+  <div class="example__demo duo__cell">
+    <div class="carousel carousel--fade"
+      data-flickity='{ "fade": true, "imagesLoaded": true }'>
+      {{#each fullscreen_images}}
+        <div class="carousel-image-cell carousel-image-cell--wide">
+          <img src="{{this}}" />
+        </div>
+      {{/each}}
+    </div>
+    {{> edit-demo default="RvGmxY" }}
+  </div>
+</div>
+
+{{! ----------------------------------------------------------------- }}
+
 <h3>adaptiveHeight</h3>
 
 <p>Changes height of carousel to fit height of selected slide.</p>
@@ -892,6 +921,33 @@ cellSelector: '.carousel-cell'
     {{> edit-demo default="vEdOKg" }}
   </div>
 </div>
+
+<p>Set to a selector string to select the slide with that cell.</p>
+
+<div class="duo example">
+  <div class="duo__cell example__code">
+    ``` js
+    initialIndex: '.is-initial-select'
+    ```
+    ``` html
+    <div class="carousel-cell"></div>
+    <div class="carousel-cell"></div>
+    <div class="carousel-cell is-initial-select"></div>
+    <div class="carousel-cell"></div>
+    ```
+  </div>
+  <div class="duo__cell example__demo">
+    <div class="carousel" data-flickity='{ "initialIndex": ".is-initial-select" }'>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell is-initial-select"></div>
+      <div class="carousel-cell"></div>
+      <div class="carousel-cell"></div>
+    </div>
+    {{> edit-demo default="MLjdBe" }}
+  </div>
+</div>
+
 
 {{! ----------------------------------------------------------------- }}
 

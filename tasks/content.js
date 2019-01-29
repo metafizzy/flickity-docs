@@ -16,6 +16,8 @@ var partialsSrc = [
 ];
 var dataSrc = 'data/*.json';
 var pageTemplateSrc = 'templates/*.hbs';
+var contentSrcs = [ contentSrc, pageTemplateSrc, dataSrc ]
+  .concat( partialsSrc );
 
 // ----- page template ----- //
 
@@ -89,11 +91,13 @@ module.exports = function( site ) {
       .pipe( gulp.dest('build') );
   });
 
-  var content = gulp.task( 'content',
-    gulp.series( 'getPageTemplate', 'buildPages' ) );
+  var content = gulp.series( 'getPageTemplate', 'buildPages' );
+
+  gulp.task( 'content', content );
 
   if ( site.data.isDev ) {
-    gulp.watch( [ contentSrc, pageTemplateSrc, dataSrc, partialsSrc ], content );
+    console.log(  contentSrcs.join(','));
+    gulp.watch( contentSrcs, content );
   }
 
 };

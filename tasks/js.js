@@ -11,7 +11,6 @@ var jsSrc = [
   'bower_components/fizzy-ui-utils/utils.js',
   'bower_components/unipointer/unipointer.js',
   'bower_components/unidragger/unidragger.js',
-  'bower_components/tap-listener/tap-listener.js',
   // flickity
   'bower_components/flickity/js/cell.js',
   'bower_components/flickity/js/slide.js',
@@ -30,6 +29,7 @@ var jsSrc = [
   'bower_components/flickity-bg-lazyload/bg-lazyload.js',
   'bower_components/flickity-fullscreen/fullscreen.js',
   'bower_components/flickity-hash/hash.js',
+  'bower_components/flickity-fade/flickity-fade.js',
   // draggabilly
   'bower_components/draggabilly/draggabilly.js',
   // fizzy docs modules

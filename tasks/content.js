@@ -7,8 +7,6 @@ var transfob = require('transfob');
 var pageNav = require('./utils/page-nav');
 var highlightCodeBlock = require('./utils/highlight-code-block');
 var hb = require('gulp-hb');
-var hbLayouts = require('handlebars-layouts');
-var extendPageLayout = require('./utils/extend-page-layout');
 
 // sources
 var contentSrc = 'content/**/*.hbs';
@@ -38,7 +36,17 @@ var helpers = {
 
 module.exports = function( site ) {
 
-  var content = gulp.task( 'content', function() {
+  var pageTemplate;
+
+  gulp.task( 'getPageTemplate', function() {
+    return gulp.src('templates/page.hbs')
+       .pipe( transfob( function( file, enc, next ) {
+         pageTemplate = file.contents.toString();
+         next( null, file );
+       }));
+  });
+
+  gulp.task( 'buildPages', function() {
     // exclude 404 if export
     var filterQuery = site.data.isExport ? [ '**', '!**/404.*'] : '**';
 
@@ -51,12 +59,17 @@ module.exports = function( site ) {
         property: 'data.page',
         remove: true
       }) )
-      .pipe( extendPageLayout() )
-      // add file path data
       .pipe( transfob( function( file, enc, next ) {
+        // add file path data
         file.rootPath = path.relative( file.path, file.cwd + '/content/' )
           .replace( /\.\.$/, '' );
         file.basename = path.basename( file.path, '.hbs' );
+        // wrap contents in page template
+        var contents = file.contents.toString();
+        var templateParts = pageTemplate.split('{{{main}}}');
+        contents = templateParts[0] + contents + templateParts[1];
+        file.contents = Buffer.from( contents );
+
         next( null, file );
       }))
       .pipe( hb()
@@ -68,7 +81,6 @@ module.exports = function( site ) {
         } )
         .data( dataSrc )
         .data( site.data )
-        .helpers( hbLayouts )
         .helpers( helpers )
       )
       .pipe( highlightCodeBlock() )
@@ -76,6 +88,9 @@ module.exports = function( site ) {
       .pipe( rename({ extname: '.html' }) )
       .pipe( gulp.dest('build') );
   });
+
+  var content = gulp.task( 'content',
+    gulp.series( 'getPageTemplate', 'buildPages' ) );
 
   if ( site.data.isDev ) {
     gulp.watch( [ contentSrc, pageTemplateSrc, dataSrc, partialsSrc ], content );

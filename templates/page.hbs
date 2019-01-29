@@ -45,9 +45,8 @@
 
     <ul class="page-nav" data-js="page-nav"></ul>
 
-{{! no leading whitespace because handlebars preserves it, messes with code blocks
-https://github.com/wycats/handlebars.js/issues/858 }}
-{{#block "main"}}{{/block}}
+{{! remove preceding whitespace for <pre><code> blocks }}
+{{{main}}}
   </div>
 </div>
 

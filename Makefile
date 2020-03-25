@@ -7,7 +7,7 @@ zip:
 	rm -rf flickity-docs
 
 deploy:
-	s3cmd -c ~/.s3cfg-fizzy sync --cf-invalidate build/. s3://flickity.metafizzy.co/
+	netlify deploy --dir=build
 
 gulp:
 	gulp

@@ -6,3 +6,4 @@ fonts/
 *.mp4
 *.gif
 assets/img/in-use/
+.netlify

@@ -65,7 +65,7 @@ module.exports = function( site ) {
         // add file path data
         file.rootPath = path.relative( file.path, file.cwd + '/content/' )
           .replace( /\.\.$/, '' );
-        file.basename = path.basename( file.path, '.hbs' );
+        file.namebase = path.basename( file.path, '.hbs' );
         // wrap contents in page template
         var contents = file.contents.toString();
         var templateParts = pageTemplate.split('{{{main}}}');

@@ -11,7 +11,7 @@ module.exports = function getGlobPaths( src ) {
   src.forEach( function( path ) {
     if ( glob.hasMagic( path ) ) {
       var files = glob.sync( path );
-      paths = paths.concat( files )
+      paths = paths.concat( files );
     } else {
       paths.push( path );
     }

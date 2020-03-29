@@ -18,7 +18,6 @@ var site = {
 
 require('./tasks/assets')( site );
 require('./tasks/dist')( site );
-require('./tasks/hint')( site );
 require('./tasks/js')( site );
 require('./tasks/css')( site );
 require('./tasks/content')( site );
@@ -26,7 +25,6 @@ require('./tasks/content')( site );
 // ----- default ----- //
 
 gulp.task( 'default', gulp.parallel(
-  'hint',
   'content',
   'js',
   'css',
@@ -43,7 +41,6 @@ gulp.task( 'export', gulp.parallel( 'default' ) );
 // ----- watch ----- //
 
 gulp.task( 'dev', gulp.parallel(
-  'hint',
   'dist',
   'prod-assets',
   'content'

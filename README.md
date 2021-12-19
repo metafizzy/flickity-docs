@@ -11,7 +11,7 @@ Building these docs requires [npm](https://npmjs.com), [Bower](http://bower.io),
 ``` bash
 npm install
 bower install
-gulp
+npx gulp
 ```
 
 This will build the docs in `build/`.

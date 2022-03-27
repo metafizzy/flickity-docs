@@ -1,8 +1,8 @@
+/* globals FlickityDocs, FizzyDocs */
+
 ( function() {
-'use strict';
 
-// init all modules, based on their data-js attribute
-
+  // init all modules, based on their data-js attribute
   let jsModuleElems = document.querySelectorAll('[data-js]');
   for ( let i = 0; i < jsModuleElems.length; i++ ) {
     let elem = jsModuleElems[i];

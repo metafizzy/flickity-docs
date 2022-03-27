@@ -1,5 +1,4 @@
 FlickityDocs.parallax = function( elem ) {
-  'use strict';
 
   let carousel = elem.querySelector('.carousel');
   let flkty = new Flickity( carousel );
@@ -19,6 +18,7 @@ FlickityDocs.parallax = function( elem ) {
   flkty.reposition();
 
   function moveParallaxLayer( layer, layerRatio, progress ) {
-    layer.style.left = ( 0.5 - ( 0.5 + progress * 4 ) * cellRatio * layerRatio ) * 100 + '%';
+    let decimal = 0.5 - ( 0.5 + progress * 4 ) * cellRatio * layerRatio;
+    layer.style.left = decimal * 100 + '%';
   }
 };

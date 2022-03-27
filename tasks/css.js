@@ -27,5 +27,5 @@ gulp.task( 'css', function() {
 } );
 
 module.exports = function( site ) {
-  site.data.css_paths = getGlobPaths( cssSrc );
+  site.data.cssPaths = getGlobPaths( cssSrc );
 };

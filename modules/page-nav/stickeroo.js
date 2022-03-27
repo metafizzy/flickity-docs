@@ -1,5 +1,4 @@
 ( function( window ) {
-'use strict';
 
 // -------------------------- Stickeroo -------------------------- //
 
@@ -21,7 +20,7 @@ Stickeroo.prototype.onresize = function() {
   let afterContent = getComputedStyle( this.element, ':after' ).content;
   let size = getSize( this.element );
   // activate if :after { content: 'sticky' } and fits in window
-  if ( afterContent.indexOf('sticky') != -1 && size.innerHeight <= window.innerHeight ) {
+  if ( afterContent.indexOf('sticky') !== -1 && size.innerHeight <= window.innerHeight ) {
     this.activate();
   } else {
     this.deactivate();
@@ -73,9 +72,7 @@ function throttleProto( _class, methodName, threshold ) {
 
 Stickeroo.prototype.onscroll = function() {
   let isFixed = window.pageYOffset >= this.originalY;
-  if ( isFixed == this.isFixed ) {
-    return;
-  }
+  if ( isFixed === this.isFixed ) return;
 
   this.element.classList.toggle('is-fixed');
   this.isFixed = isFixed;

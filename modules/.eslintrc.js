@@ -8,6 +8,12 @@ module.exports = {
     ecmaVersion: 2018,
   },
   globals: {
+    Draggabilly: false,
+    filterBind: false,
+    Flickity: false,
+    FlickityDocs: false,
+    getSize: false,
+    utils: false,
   },
   rules: {
     'prefer-object-spread': 'error',

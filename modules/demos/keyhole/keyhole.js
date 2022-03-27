@@ -1,5 +1,4 @@
 FlickityDocs.keyhole = function( elem ) {
-  'use strict';
 
   let transformProp = typeof elem.style.transform == 'string' ?
     'transform' : 'WebkitTransform';

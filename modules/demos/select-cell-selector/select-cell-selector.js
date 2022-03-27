@@ -1,5 +1,4 @@
 FlickityDocs['select-cell-selector'] = function( elem ) {
-  'use strict';
 
   let flkty = new Flickity( elem.querySelector('.carousel'), {
     groupCells: true,

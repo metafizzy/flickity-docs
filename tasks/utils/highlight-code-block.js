@@ -6,10 +6,11 @@ highlightjs.configure({
 });
 
 let hljsJavascript = highlightjs.getLanguage('javascript');
-// highlight Packery
+// highlight Flickity & flkty
+/* eslint-disable camelcase */
 hljsJavascript.keywords.flickity_keyword = 'Flickity';
-// highlight packery variables
 hljsJavascript.keywords.flickity_var = 'flkty';
+/* eslint-enable camelcase */
 
 hljsJavascript.contains.push({
   className: 'jquery_var',
@@ -32,11 +33,12 @@ function replaceCodeBlock( match, leadingWhiteSpace, block ) {
     block = block.replace( reLeadingWhiteSpace, '' );
   }
   // highlight code
-  let highlighted = language ? highlightjs.highlight( language, block, true ).value : block;
+  let highlighted = language ? highlightjs.highlight( language, block, true ).value :
+    block;
   // wrap in <pre><code>
-  let html = '\n<pre><code' +
-    ( language ? ' class="' + language + '"' : '' ) + '>' +
-    highlighted + '</code></pre>';
+  let html = `<pre>
+      <code class=${language || ''}>${highlighted}</code>
+    </pre>`;
   return html;
 }
 

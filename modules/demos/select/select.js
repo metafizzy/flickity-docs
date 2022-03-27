@@ -1,5 +1,4 @@
 FlickityDocs.select = function( elem ) {
-  'use strict';
 
   let utils = window.fizzyUIUtils;
 

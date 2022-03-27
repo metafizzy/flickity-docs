@@ -1,5 +1,4 @@
 FlickityDocs['progress-bar'] = function( elem ) {
-  'use strict';
 
   let carousel = elem.querySelector('.carousel');
   let progressBar = elem.querySelector('.progress-bar__bar');

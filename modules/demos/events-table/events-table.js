@@ -1,5 +1,4 @@
 FlickityDocs['events-table'] = function( elem ) {
-  'use strict';
 
   let table = elem.querySelector('.event-table');
   let tbody = table.querySelector('tbody');
@@ -31,7 +30,7 @@ FlickityDocs['events-table'] = function( elem ) {
     row.appendChild( eventCell );
     row.appendChild( messageCell );
     let rows = tbody.children;
-    if ( rows.length == 1 ) {
+    if ( rows.length === 1 ) {
       tbody.appendChild( row );
     } else {
       tbody.insertBefore( row, rows[1] );

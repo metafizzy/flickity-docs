@@ -1,5 +1,4 @@
 FlickityDocs['arrow-wiz'] = function( elem ) {
-  'use strict';
 
   let wiz = elem;
 
@@ -8,6 +7,7 @@ FlickityDocs['arrow-wiz'] = function( elem ) {
   let canvasWidth = canvas.width;
   let canvasHeight = canvas.height;
 
+  /* eslint-disable-next-line max-params */
   function line( ax, ay, bx, by, color ) {
     if ( color ) {
       ctx.strokeStyle = color;

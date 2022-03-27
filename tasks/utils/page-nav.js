@@ -3,6 +3,7 @@ let transfob = require('transfob');
 
 module.exports = function pageNav() {
   return transfob( function( file, enc, next ) {
+    /* eslint-disable-next-line id-length */
     let $ = cheerio.load( file.contents.toString(), {
       recognizeSelfClosing: true, // for inline SVG
     } );
@@ -14,15 +15,16 @@ module.exports = function pageNav() {
       let title = $header.text();
       let slug = title.replace( /[^\w\d]+/gi, '-' )
         // trim trailing hyphens
-        .replace( /^\-+/, '' )
-        .replace( /\-+$/, '' )
+        .replace( /^-+/, '' )
+        .replace( /-+$/, '' )
         .toLowerCase();
       // set id slug
       $header.attr( 'id', slug );
       // add item to pageNav
-      pageNavHtml += '<li class="page-nav__item page-nav__item--' +
-        header.name + '">' + '<a href="#' + slug + '">' + title +
-        '</a></li>\n';
+
+      pageNavHtml += `<li class="page-nav__item page-nav__item--${header.name}">
+        <a href="#${slug}">${title}</a>
+      </li>`;
     } );
     // add pageNavHtml to page
     $('.page-nav').html( pageNavHtml );

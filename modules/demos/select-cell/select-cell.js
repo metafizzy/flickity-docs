@@ -1,5 +1,4 @@
 FlickityDocs['select-cell'] = function( elem ) {
-  'use strict';
 
   let utils = window.fizzyUIUtils;
 

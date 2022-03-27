@@ -1,5 +1,4 @@
 FlickityDocs['select-instant'] = function( elem ) {
-  'use strict';
 
   let utils = window.fizzyUIUtils;
 

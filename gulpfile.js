@@ -9,8 +9,8 @@ let site = {
     productName: 'Flickity',
     description: 'Touch, responsive, flickable carousels',
     majorVersion: 2,
-    isDev: process.argv[2] == 'dev',
-    isExport: process.argv[2] == 'export',
+    isDev: process.argv[2] === 'dev',
+    isExport: process.argv[2] === 'export',
   },
 };
 

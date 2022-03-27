@@ -51,5 +51,5 @@ gulp.task( 'js', function() {
 } );
 
 module.exports = function( site ) {
-  site.data.js_paths = getGlobPaths( jsSrc );
+  site.data.jsPaths = getGlobPaths( jsSrc );
 };

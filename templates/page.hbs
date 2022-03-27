@@ -8,7 +8,7 @@
   <title>{{productName}} v2 &middot; {{#if page.is_homepage}}{{description}}{{else}}{{page.title}}{{/if}}</title>
 
   {{#if isDev}}
-    {{#each css_paths}}
+    {{#each cssPaths}}
       <link rel="stylesheet" href="../{{this}}" />
     {{/each}}
   {{else}}
@@ -55,7 +55,7 @@
 {{> site-footer flickity=true}}
 
 {{#if isDev}}
-  {{#each js_paths}}
+  {{#each jsPaths}}
     <script src="../{{this}}"></script>
   {{/each}}
 {{else}}

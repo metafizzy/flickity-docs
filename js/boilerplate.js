@@ -1,13 +1,12 @@
 // boilerplate
 ( function() {
-'use strict';
 
 // global namespace
 let FlickityDocs = window.FlickityDocs = {};
 
 // ----- utils ----- //
 
-window.utils = fizzyUIUtils;
+window.utils = window.fizzyUIUtils;
 
 // ----- helpers ----- //
 
@@ -24,9 +23,7 @@ FlickityDocs.makeCellElem = function( num ) {
 
 window.filterBind = function( elem, type, selector, listener ) {
   elem.addEventListener( type, function( event ) {
-    if ( matchesSelector( event.target, selector ) ) {
-      listener( event );
-    }
+    if ( event.target.matches( selector ) ) listener( event );
   } );
 };
 

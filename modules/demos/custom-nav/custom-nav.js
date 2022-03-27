@@ -1,5 +1,4 @@
 FlickityDocs['custom-nav'] = function( elem ) {
-  'use strict';
 
   let carousel = elem.querySelector('.carousel');
   let flkty = new Flickity( carousel, {

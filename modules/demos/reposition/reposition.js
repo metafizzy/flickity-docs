@@ -1,8 +1,8 @@
 FlickityDocs.reposition = function( elem ) {
   'use strict';
 
-  var carousel = elem.querySelector('.carousel');
-  var flkty = new Flickity( carousel );
+  let carousel = elem.querySelector('.carousel');
+  let flkty = new Flickity( carousel );
 
   flkty.on( 'staticClick', function( event, pointer, cellElement ) {
     if ( !cellElement ) {
@@ -10,6 +10,6 @@ FlickityDocs.reposition = function( elem ) {
     }
     cellElement.classList.toggle('is-expanded');
     flkty.reposition();
-  });
+  } );
 
 };

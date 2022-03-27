@@ -1,4 +1,4 @@
-var glob = require('glob');
+let glob = require('glob');
 
 /**
  * takes glob src and returns expanded paths
@@ -6,16 +6,16 @@ var glob = require('glob');
  * @returns {Array} paths
  */
 module.exports = function getGlobPaths( src ) {
-  var paths = [];
+  let paths = [];
   // expand paths
   src.forEach( function( path ) {
     if ( glob.hasMagic( path ) ) {
-      var files = glob.sync( path );
+      let files = glob.sync( path );
       paths = paths.concat( files );
     } else {
       paths.push( path );
     }
-  });
+  } );
 
   return paths;
 };

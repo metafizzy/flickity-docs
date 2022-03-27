@@ -1,11 +1,11 @@
 FlickityDocs.destroy = function( elem ) {
   'use strict';
 
-  var carousel = elem.querySelector('.carousel');
-  var flkty = new Flickity( carousel );
-  var isFlickity = true;
+  let carousel = elem.querySelector('.carousel');
+  let flkty = new Flickity( carousel );
+  let isFlickity = true;
 
-  var button = elem.querySelector('.button');
+  let button = elem.querySelector('.button');
   button.addEventListener( 'click', function() {
     if ( isFlickity ) {
       flkty.destroy();
@@ -13,6 +13,6 @@ FlickityDocs.destroy = function( elem ) {
       flkty = new Flickity( carousel );
     }
     isFlickity = !isFlickity;
-  });
+  } );
 
 };

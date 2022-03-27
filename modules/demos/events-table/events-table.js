@@ -1,28 +1,28 @@
 FlickityDocs['events-table'] = function( elem ) {
   'use strict';
 
-  var table = elem.querySelector('.event-table');
-  var tbody = table.querySelector('tbody');
+  let table = elem.querySelector('.event-table');
+  let tbody = table.querySelector('tbody');
 
-  var carousel = elem.querySelector('.carousel');
-  var flkty = new Flickity( carousel, {
+  let carousel = elem.querySelector('.carousel');
+  let flkty = new Flickity( carousel, {
     on: {
       ready: function() {
         logEvent('ready');
       },
     },
-  });
+  } );
 
   function logEvent( type, message ) {
-    var row = document.createElement('tr');
-    var timeCell = document.createElement('td');
-    var eventCell = document.createElement('td');
-    var messageCell = document.createElement('td');
+    let row = document.createElement('tr');
+    let timeCell = document.createElement('td');
+    let eventCell = document.createElement('td');
+    let messageCell = document.createElement('td');
     timeCell.className = 'event-table__time';
     eventCell.className = 'event-table__event';
     messageCell.className = 'event-table__message';
-    var now = new Date();
-    var timestamp = now.getHours() + ':' + now.getMinutes() + ':' +
+    let now = new Date();
+    let timestamp = now.getHours() + ':' + now.getMinutes() + ':' +
       now.getSeconds() + '.' + now.getMilliseconds();
     timeCell.textContent = timestamp;
     eventCell.textContent = type;
@@ -30,14 +30,14 @@ FlickityDocs['events-table'] = function( elem ) {
     row.appendChild( timeCell );
     row.appendChild( eventCell );
     row.appendChild( messageCell );
-    var rows = tbody.children;
+    let rows = tbody.children;
     if ( rows.length == 1 ) {
       tbody.appendChild( row );
     } else {
       tbody.insertBefore( row, rows[1] );
     }
 
-    var lastRow = tbody.children[11];
+    let lastRow = tbody.children[11];
     if ( lastRow ) {
       tbody.removeChild( lastRow );
     }
@@ -45,20 +45,20 @@ FlickityDocs['events-table'] = function( elem ) {
 
   flkty.on( 'change', function( index ) {
     logEvent( 'change', 'changed to cell ' + ( index + 1 ) );
-  });
+  } );
 
   flkty.on( 'select', function( index ) {
     logEvent( 'select', 'selected cell ' + ( index + 1 ) );
-  });
+  } );
 
   flkty.on( 'settle', function( index ) {
     logEvent( 'settle', 'settled at cell ' + ( index + 1 ) );
-  });
+  } );
 
   flkty.on( 'staticClick', function( event, pointer, cellElem, cellIndex ) {
-    var  message = cellElem ? 'clicked cell ' + cellIndex : '';
+    let message = cellElem ? 'clicked cell ' + cellIndex : '';
     logEvent( 'staticClick', message );
-  });
+  } );
 
   function getListener( eventType ) {
     return function() {
@@ -73,10 +73,10 @@ FlickityDocs['events-table'] = function( elem ) {
     'dragEnd',
     'pointerDown',
     'pointerMove',
-    'pointerUp'
-  ].forEach( function ( eventType ) {
-    var listener = getListener( eventType );
+    'pointerUp',
+  ].forEach( function( eventType ) {
+    let listener = getListener( eventType );
     flkty.on( eventType, listener );
-  });
+  } );
 
 };

@@ -1,9 +1,9 @@
-var gulp = require('gulp');
-var concat = require('gulp-concat');
-var uglify = require('gulp-uglify');
-var getGlobPaths = require('./utils/get-glob-paths');
+let gulp = require('gulp');
+let concat = require('gulp-concat');
+let uglify = require('gulp-uglify');
+let getGlobPaths = require('./utils/get-glob-paths');
 
-var jsSrc = [
+let jsSrc = [
   // dependencies
   'bower_components/get-size/get-size.js',
   'bower_components/desandro-matches-selector/matches-selector.js',
@@ -48,7 +48,7 @@ gulp.task( 'js', function() {
     .pipe( uglify() )
     .pipe( concat('flickity-docs.min.js') )
     .pipe( gulp.dest('build/js') );
-});
+} );
 
 module.exports = function( site ) {
   site.data.js_paths = getGlobPaths( jsSrc );

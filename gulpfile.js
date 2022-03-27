@@ -1,9 +1,9 @@
-var gulp = require('gulp');
+let gulp = require('gulp');
 
 // ----- site ----- //
 
 // stuff used across tasks
-var site = {
+let site = {
   // templating data
   data: {
     productName: 'Flickity',
@@ -25,23 +25,23 @@ require('./tasks/content')( site );
 // ----- default ----- //
 
 gulp.task( 'default', gulp.parallel(
-  'content',
-  'js',
-  'css',
-  'dist',
-  'prod-assets'
-));
+    'content',
+    'js',
+    'css',
+    'dist',
+    'prod-assets',
+) );
 
 // ----- export ----- //
 
 // version of site used in flickity-docs.zip
 
-gulp.task( 'export', gulp.parallel( 'default' ) );
+gulp.task( 'export', gulp.parallel('default') );
 
 // ----- watch ----- //
 
 gulp.task( 'dev', gulp.parallel(
-  'dist',
-  'prod-assets',
-  'content'
-));
+    'dist',
+    'prod-assets',
+    'content',
+) );

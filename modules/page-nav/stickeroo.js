@@ -18,8 +18,8 @@ function Stickeroo( element ) {
 Stickeroo.prototype.handleEvent = utils.handleEvent;
 
 Stickeroo.prototype.onresize = function() {
-  var afterContent = getComputedStyle( this.element, ':after' ).content;
-  var size = getSize( this.element );
+  let afterContent = getComputedStyle( this.element, ':after' ).content;
+  let size = getSize( this.element );
   // activate if :after { content: 'sticky' } and fits in window
   if ( afterContent.indexOf('sticky') != -1 && size.innerHeight <= window.innerHeight ) {
     this.activate();
@@ -52,11 +52,10 @@ Stickeroo.prototype.deactivate = function() {
   window.removeEventListener( 'scroll', this );
 };
 
-
 function throttleProto( _class, methodName, threshold ) {
   // original method
-  var method = _class.prototype[ methodName ];
-  var timeoutName = methodName + 'Timeout';
+  let method = _class.prototype[ methodName ];
+  let timeoutName = methodName + 'Timeout';
 
   _class.prototype[ methodName ] = function() {
     if ( this[ timeoutName ] ) {
@@ -64,7 +63,7 @@ function throttleProto( _class, methodName, threshold ) {
     }
 
     method.apply( this, arguments );
-    var _this = this;
+    let _this = this;
     this[ timeoutName ] = setTimeout( function() {
       method.apply( _this, arguments );
       delete _this[ timeoutName ];
@@ -73,7 +72,7 @@ function throttleProto( _class, methodName, threshold ) {
 }
 
 Stickeroo.prototype.onscroll = function() {
-  var isFixed = window.pageYOffset >= this.originalY;
+  let isFixed = window.pageYOffset >= this.originalY;
   if ( isFixed == this.isFixed ) {
     return;
   }
@@ -86,4 +85,4 @@ throttleProto( Stickeroo, 'onscroll', 50 );
 
 window.Stickeroo = Stickeroo;
 
-})( window );
+} )( window );

@@ -1,12 +1,12 @@
 FlickityDocs['arrow-wiz'] = function( elem ) {
   'use strict';
 
-  var wiz = elem;
+  let wiz = elem;
 
-  var canvas = wiz.querySelector('canvas');
-  var ctx = canvas.getContext('2d');
-  var canvasWidth = canvas.width;
-  var canvasHeight = canvas.height;
+  let canvas = wiz.querySelector('canvas');
+  let ctx = canvas.getContext('2d');
+  let canvasWidth = canvas.width;
+  let canvasHeight = canvas.height;
 
   function line( ax, ay, bx, by, color ) {
     if ( color ) {
@@ -19,18 +19,18 @@ FlickityDocs['arrow-wiz'] = function( elem ) {
     ctx.closePath();
   }
 
-  var lightLineColor = 'hsla(210, 50%, 50%, 0.25)';
-  var darkLineColor = 'hsla(210, 50%, 50%, 0.5)';
+  let lightLineColor = 'hsla(210, 50%, 50%, 0.25)';
+  let darkLineColor = 'hsla(210, 50%, 50%, 0.5)';
 
   function renderGrid() {
-    var i, color;
-    for ( i=0; i < 11; i++ ) {
-      var y = i * 20 + 0.5;
+    let i, color;
+    for ( i = 0; i < 11; i++ ) {
+      let y = i * 20 + 0.5;
       color = i % 5 ? lightLineColor : darkLineColor;
       line( 0, y, canvasWidth, y, color );
     }
-    for ( i=0; i < 11; i++ ) {
-      var x = i * 20 + 0.5;
+    for ( i = 0; i < 11; i++ ) {
+      let x = i * 20 + 0.5;
       color = i % 5 ? lightLineColor : darkLineColor;
       line( x, 0, x, canvasHeight, color );
     }
@@ -43,25 +43,25 @@ FlickityDocs['arrow-wiz'] = function( elem ) {
 
   // ----- control points ----- //
 
-  var controlPoints = [];
+  let controlPoints = [];
 
-  var draggies = [];
-  for ( var i=0; i < 4; i++ ) {
-    var pointElem = wiz.querySelector( '.arrow-wiz-illo__point--' + i );
-    var draggie = new Draggabilly( pointElem, {
+  let draggies = [];
+  for ( let i = 0; i < 4; i++ ) {
+    let pointElem = wiz.querySelector( '.arrow-wiz-illo__point--' + i );
+    let draggie = new Draggabilly( pointElem, {
       containment: true,
-      grid: [ 10, 10 ]
-    });
-    var onDragMove = getOnDragMove( draggie, i );
+      grid: [ 10, 10 ],
+    } );
+    let onDragMove = getOnDragMove( draggie, i );
     draggie.on( 'dragMove', onDragMove );
     draggies.push( draggie );
-    controlPoints[ i ] = calcDraggiePoint( draggie );
+    controlPoints[i] = calcDraggiePoint( draggie );
   }
 
   function getOnDragMove( draggie, index ) {
     return function onDragMove() {
       // set control point
-      var point = calcDraggiePoint( draggie );
+      let point = calcDraggiePoint( draggie );
       controlPoints[ index ] = point;
       render();
     };
@@ -70,7 +70,7 @@ FlickityDocs['arrow-wiz'] = function( elem ) {
   function calcDraggiePoint( draggie ) {
     return {
       x: draggie.position.x / 2,
-      y: 50 - draggie.position.y / 2
+      y: 50 - draggie.position.y / 2,
     };
   }
 
@@ -98,7 +98,7 @@ FlickityDocs['arrow-wiz'] = function( elem ) {
 
   // -----  ----- //
 
-  var codeElem = wiz.querySelector('.arrow-wiz-code code');
+  let codeElem = wiz.querySelector('.arrow-wiz-code code');
 
   function renderCode() {
     codeElem.textContent = 'arrowShape: { \n' +
@@ -111,14 +111,14 @@ FlickityDocs['arrow-wiz'] = function( elem ) {
 
   // -----  ----- //
 
-  var flkty = new Flickity( wiz.querySelector('.carousel'), {
-    initialIndex: 2
-  });
-  var prevPath = flkty.prevButton.element.querySelector('path');
-  var nextPath = flkty.nextButton.element.querySelector('path');
+  let flkty = new Flickity( wiz.querySelector('.carousel'), {
+    initialIndex: 2,
+  } );
+  let prevPath = flkty.prevButton.element.querySelector('path');
+  let nextPath = flkty.nextButton.element.querySelector('path');
 
   function renderFlickity() {
-    var movements =  'M ' + controlPoints[0].x + ',50' +
+    let movements = 'M ' + controlPoints[0].x + ',50' +
       ' L ' + controlPoints[1].x + ',' + ( 50 + controlPoints[1].y ) +
       ' L ' + controlPoints[2].x + ',' + ( 50 + controlPoints[2].y ) +
       ' L ' + controlPoints[3].x + ',50 ' +

@@ -1,17 +1,17 @@
 FlickityDocs.previous = function( elem ) {
   'use strict';
 
-  var carousel = elem.querySelector('.carousel');
-  var flkty = new Flickity( carousel );
+  let carousel = elem.querySelector('.carousel');
+  let flkty = new Flickity( carousel );
 
-  var previousButton = elem.querySelector('.button--previous');
+  let previousButton = elem.querySelector('.button--previous');
   previousButton.addEventListener( 'click', function() {
     flkty.previous();
-  });
+  } );
 
-  var previousWrappedButton = elem.querySelector('.button--previous-wrapped');
+  let previousWrappedButton = elem.querySelector('.button--previous-wrapped');
   previousWrappedButton.addEventListener( 'click', function() {
     flkty.previous( true );
-  });
+  } );
 
 };

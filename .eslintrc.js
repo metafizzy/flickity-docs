@@ -12,5 +12,7 @@ module.exports = {
   rules: {
     'prefer-object-spread': 'error',
   },
-  ignorePatterns: [],
+  ignorePatterns: [
+    'bower_components',
+  ],
 };

@@ -6,7 +6,7 @@ gulp.task( 'fonts', function() {
 } );
 
 gulp.task( 'assets', function() {
-  return gulp.src('assets/**/*.*')
+  return gulp.src('assets/**/*')
     .pipe( gulp.dest('build') );
 } );
 

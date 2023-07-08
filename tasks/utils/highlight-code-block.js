@@ -21,24 +21,25 @@ let reFirstLine = /.*\n/;
 
 function replaceCodeBlock( match, leadingWhiteSpace, block ) {
   let langMatch = block.match( reFirstLine );
-  let language = langMatch && langMatch[0];
-  // remove first line
-  block = block.replace( reFirstLine, '' );
-  if ( language ) {
-    language = language.trim();
-  }
+  let language = langMatch && langMatch[0] || '';
   // remove leading whitespace from code block
   if ( leadingWhiteSpace && leadingWhiteSpace.length ) {
     let reLeadingWhiteSpace = new RegExp( '^' + leadingWhiteSpace, 'gim' );
     block = block.replace( reLeadingWhiteSpace, '' );
   }
+  // remove first line
+  block = block.replace( reFirstLine, '' );
+
   // highlight code
-  let highlighted = language ? highlightjs.highlight( language, block, true ).value :
-    block;
+  let highlighted = block;
+  if ( language ) {
+    highlighted = highlightjs.highlight( block, {
+      language: language.trim(),
+      illegal: false,
+    } ).value;
+  }
   // wrap in <pre><code>
-  let html = `<pre>
-      <code class=${language || ''}>${highlighted}</code>
-    </pre>`;
+  let html = `<pre><code class="${language}">${highlighted}</code></pre>`;
   return html;
 }
 

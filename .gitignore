@@ -7,3 +7,4 @@ fonts/
 *.gif
 assets/img/in-use/
 .netlify
+.vercel

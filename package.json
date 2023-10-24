@@ -10,8 +10,8 @@
     "build": "npm run lint && npm run buildExport && npx gulp",
     "zip": "rm -rf build/flickity-docs.zip && cp -r build docs && zip -rq build/flickity-docs.zip docs/ && rm -rf docs",
     "buildExport": "rm -rf build/ && npx gulp export && npm run zip",
-    "deploy": "vercel deploy --cwd build/",
-    "deployProd": "vercel deploy --cwd build --prod"
+    "deploy": "netlify deploy --dir=build",
+    "deployProd": "netlify deploy --dir=build --prod"
   },
   "dependencies": {
     "cheerio": "^1.0.0-rc.10",
